@@ -127,7 +127,7 @@
 									<div class="row">
 										<div class="col-xl-6">
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Address </label>
+												<label class="col-lg-3 col-form-label">Address</label>
 												<div class="col-lg-9">
 													<textarea rows="5" cols="5" class="form-control"
 														placeholder=""></textarea>

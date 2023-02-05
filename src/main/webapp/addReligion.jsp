@@ -41,7 +41,7 @@
 									</div>
 
 									<div class="text-end">
-										<button type="submit" class="btn btn-primary">Submit</button>
+										<button type="submit" class="btn btn-primary">Save</button>
 										<button type="submit" class="btn btn-danger">Reset</button>
 									</div>
 								</form>

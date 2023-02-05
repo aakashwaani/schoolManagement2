@@ -38,10 +38,12 @@
 								<h5 class="card-title">Class Form -</h5>
 							</div>
 							<div class="card-body">
-								<form action="DB/addClassDB.jsp" method="post">
+								<form action="DB/addClassDB.jsp" method="post"
+									class="needs-validation" novalidate>
 									<div class="form-group">
-										<label> Select Section</label> <select class="form-control "
-											name="sectionId">
+										<label for="validationCustom01"> Select Section</label> <select
+											class="form-control" name="sectionId" id="validationCustom01"
+											required>
 
 											<%
 											try {
@@ -66,12 +68,16 @@
 									</div>
 
 									<div class="form-group">
-										<label> Class Name</label> <input type="text" name="className"
-											class="form-control">
+										<label for="validationCustom01"> Class Name</label> <input
+											type="text" name="className" class="form-control"
+											id="validationCustom01" required>
+										<div class="valid-feedback">Looks good!</div>
+										<div class="invalid-feedback">Please Provide Section
+											Name.</div>
 									</div>
 									<div class="form-group ">
 										<label for="validationCustom01">Status</label> <select
-											class="form-control " id="validationCustom01" required
+											class="form-control" id="validationCustom01" required
 											name="status">
 											<option>Active</option>
 											<option>In-Active</option>
