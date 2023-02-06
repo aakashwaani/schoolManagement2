@@ -34,12 +34,27 @@
 								<h5 class="card-title">Religion Form</h5>
 							</div>
 							<div class="card-body">
-								<form action="#">
+								<form action="./DB/religionDB.jsp" class="needs-validation"
+									novalidate>
 									<div class="form-group">
-										<label> Religion Name</label> 
-										<input type="text" class="form-control">
+										<label for="validationCustom01"> Religion Name</label> <input
+											type="text" class="form-control" name="religionName" id="validationCustom01"
+											required>
+										<div class="valid-feedback">Looks good!</div>
+										<div class="invalid-feedback">Please Provide Religion
+											Name.</div>
 									</div>
-
+									<div class="form-group row">
+										<label for="validationCustom01">Status</label> <select
+											class="form-control" id="validationCustom01" required
+											name="status">
+											<option>Active</option>
+											<option>In-Active</option>
+										</select>
+										<div class="valid-feedback">Looks good!</div>
+										<div class="invalid-feedback">Please Provide Section
+											Name.</div>
+									</div>
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Save</button>
 										<button type="submit" class="btn btn-danger">Reset</button>

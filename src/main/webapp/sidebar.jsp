@@ -20,7 +20,7 @@
 						<span class="menu-arrow"></span></a>
 					<ul>
 						<li><a href="addAcademicYear.jsp">Academic Year Entry</a></li>
-						<li><a href="updateAcademicYear.jsp">Academic Year Change</a></li>
+						<li><a href="academicYearChange.jsp">Academic Year Change</a></li>
 
 					</ul></li>
 				<li class="submenu"><a href="#"><i class="fas fa-building"></i>

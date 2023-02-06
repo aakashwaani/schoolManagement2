@@ -17,6 +17,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	String s1 = request.getParameter("academicYear");
 	String s2 = request.getParameter("startmonthNumber");
 	String s3 = request.getParameter("nextAcademicYearDate");
+	String id = request.getParameter("id");
 	out.print(s1 + "\n");
 	out.print(s2 + "\n");
 	out.print(s3 + "\n");
@@ -25,11 +26,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	try {
 		out.print(s1);
 		Connection con = ConnectionProvider.getConnection();
-		String query = "UPDATE academicyear	SET WHERE condition; ";
+		String query = "UPDATE academicyear	SET academicYear = ?,startmonthNumber = ?, nextAcademicYearDate = ?  WHERE academicYearId = ?; ";
 		PreparedStatement pstm = con.prepareStatement(query);
 		pstm.setString(1, s1);
 		pstm.setString(2, s2);
 		pstm.setString(3, s3);
+		pstm.setString(4, id);
+
 		i = pstm.executeUpdate();
 		out.print(" \n" + i);
 
@@ -45,7 +48,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	Swal.fire({
 		
 		icon: 'success',
-		  title: 'Section Added Successfully ' ,
+		  title: 'Academic Year Updated Successfully ' ,
 		  confirmButtonText: 'Ok',
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */
@@ -61,7 +64,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		
 		Swal.fire({
 			icon: 'error',
-			  title: 'Section cannot be added ' ,
+			  title: 'Academic Year Cannot be Updated.  ' ,
 			  confirmButtonText: 'Ok',
 			}).then((result) => {
 			  /* Read more about isConfirmed, isDenied below */

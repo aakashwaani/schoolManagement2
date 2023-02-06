@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
@@ -70,7 +70,7 @@
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide School
-														Code</div>
+														Code.</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -81,7 +81,7 @@
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide UIDIAS
-														No</div>
+														No.</div>
 												</div>
 											</div>
 										</div>
@@ -98,27 +98,46 @@
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Email</label>
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Email</label>
 												<div class="col-lg-12">
-													<input type="text" class="form-control">
+													<input type="email" class="form-control"
+														id="validationCustom01" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide valid
+														Email-Id.</div>
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Mobile</label>
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Mobile</label>
 												<div class="col-lg-12">
-													<input type="password" class="form-control">
+													<input type="number" class="form-control"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Mobile
+														No.</div>
+
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Logo</label>
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Logo</label>
 												<div class="col-lg-12">
-													<input type="file" class="form-control">
+													<input type="file" id="validationCustom01"
+														class="form-control" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Upload Logo.</div>
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Banner</label>
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Banner</label>
 												<div class="col-lg-12">
-													<input type="file" class="form-control">
+													<input type="file" id="validationCustom01"
+														class="form-control" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Upload Banner.</div>
 												</div>
 											</div>
 										</div>
@@ -127,32 +146,47 @@
 									<div class="row">
 										<div class="col-xl-6">
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Address</label>
+												<label id="validationCustom01"
+													class="col-lg-3 col-form-label">Address</label>
 												<div class="col-lg-9">
 													<textarea rows="5" cols="5" class="form-control"
-														placeholder=""></textarea>
+														placeholder="" id="validationCustom01" required></textarea>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Address.</div>
 												</div>
+
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">City</label>
+												<label id="validationCustom01"
+													class="col-lg-3 col-form-label">City</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control">
+													<input type="text" class="form-control"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide City
+														Name.</div>
 												</div>
 											</div>
 										</div>
 										<div class="col-xl-6">
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">State</label>
+												<label class="col-lg-3 col-form-label"
+													id="validationCustom01">State</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control">
+													<input type="text" class="form-control"
+														id="validationCustom01" required>
+														<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide State Name.</div>
 												</div>
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Postal Code</label>
+												<label class="col-lg-3 col-form-label" id="validationCustom01">Postal Code</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" id="validationCustom01" required>
+														<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Postal Code.</div>
 												</div>
 											</div>
 										</div>
@@ -160,7 +194,7 @@
 									<div class="text-end">
 										<button class="btn btn-primary " type="submit">Submit
 											Form</button>
-											<button class="btn btn-danger" type="reset"> Reset</button>
+										<button class="btn btn-danger" type="reset">Reset</button>
 									</div>
 								</form>
 							</div>

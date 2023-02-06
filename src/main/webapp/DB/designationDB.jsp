@@ -14,27 +14,28 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 <body>
 
 	<%
-	String s1 = request.getParameter("sectionId");
-	String s2 = request.getParameter("className");
-	String s3 = request.getParameter("status");
-	
+	String designationName = request.getParameter("designationName");
+	String status = request.getParameter("status");
 
+
+	
 	int i = 0;
 	try {
-		out.print(s1);
+		
 		Connection con = ConnectionProvider.getConnection();
-		String query = "insert into studClass(className,sectionId,status) values(?,?,?)";
+		String query = "insert into designation(designationName,status)values(?,?)";
 		PreparedStatement pstm = con.prepareStatement(query);
-		pstm.setString(1, s2);
-		pstm.setString(2, s1);
-		pstm.setString(3,s3);
+		pstm.setString(1, designationName);
+		pstm.setString(2, status);
 		i = pstm.executeUpdate();
-
+		out.print(" \n" + i);
+		
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-
-	if (i == 1) {
+	
+	
+	if (i==1) {
 	%>
 
 	<script type="text/javascript">
@@ -42,34 +43,38 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	Swal.fire({
 		
 		icon: 'success',
-		  title: 'Class Added Successfully ' ,
+		  title: 'Designation Added Successfully ' ,
 		  confirmButtonText: 'Ok',
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../addClass.jsp";
+			window.location.href = "../addDesignation.jsp";
 
 		})
 			</script>
 
-	<%
-	} else {
-	%>
-	<script type="text/javascript">
+		<%
+	}else{
+		
+		%>
+			<script type="text/javascript">
 		
 		Swal.fire({
 			icon: 'error',
-			  title: 'Class cannot be added ' ,
+			  title: 'Designation cannot be added ' ,
 			  confirmButtonText: 'Ok',
 			}).then((result) => {
 			  /* Read more about isConfirmed, isDenied below */
-				window.location.href = "../addClass.jsp";
+				window.location.href = "../addDesignation.jsp";
 
 			})
 			
 			</script>
 
-	<%
+		<%
 	}
-	%>
+	%>	
+
+	
+
 
 </body>

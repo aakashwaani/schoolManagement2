@@ -75,8 +75,9 @@
 										<div class="invalid-feedback">Please Provide Section
 											Name.</div>
 									</div>
-									<div class="form-group ">
-										<label for="validationCustom01">Status</label> <select
+									<div class="form-group">
+										<label for="validationCustom01">Status</label> 
+										<select
 											class="form-control" id="validationCustom01" required
 											name="status">
 											<option>Active</option>
@@ -87,7 +88,7 @@
 											Name.</div>
 									</div>
 									<div class="text-end">
-										<button type="submit" class="btn btn-primary">Submit</button>
+										<button type="submit" class="btn btn-primary">Save</button>
 										<button type="submit" class="btn btn-danger">Reset</button>
 									</div>
 								</form>

@@ -12,9 +12,8 @@
 
 
 		<div class="content container-fluid">
-		<h1>Hii</h1>
-		</div>
 
+		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
 

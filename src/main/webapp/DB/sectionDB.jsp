@@ -14,8 +14,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 <body>
 
 	<%
-	String ss1 = request.getParameter("sectionName");
-	String ss2 = request.getParameter("status");
+	String sectionName = request.getParameter("sectionName");
+	String status = request.getParameter("status");
 
 
 	
@@ -25,8 +25,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		Connection con = ConnectionProvider.getConnection();
 		String query = "insert into section(sectionName,status)values(?,?)";
 		PreparedStatement pstm = con.prepareStatement(query);
-		pstm.setString(1, ss1);
-		pstm.setString(2, ss2);
+		pstm.setString(1, sectionName);
+		pstm.setString(2, status);
 		i = pstm.executeUpdate();
 		out.print(" \n" + i);
 		

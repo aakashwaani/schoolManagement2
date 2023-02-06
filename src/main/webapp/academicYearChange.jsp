@@ -29,39 +29,6 @@
 					</div>
 				</div>
 
-
-				<div class="row">
-					<div class="col-md-8">
-						<div class="card">
-							<div class="card-header">
-								<h5 class="card-title">Academic Year Details -</h5>
-							</div>
-							<div class="card-body">
-								<form action="DB/academicYearDB.jsp" method="post">
-									<div class="form-group">
-										<label> Starting Academic Year (Ex. 2020)</label> <input
-											type="text" name="academicYear" class="form-control">
-									</div>
-									<div class="form-group">
-										<label>  Academic Year Start Month Number </label> <input
-											type="text" name="startmonthNumber" class="form-control">
-
-									</div>
-
-									<div class="form-group">
-										<label> Next Academic Year Date</label> <input type="date"
-											name="nextAcademicYearDate" class="form-control">
-									</div>
-									<div class="text-end">
-										<button type="submit" class="btn btn-primary">Submit</button>
-										<button type="submit" class="btn btn-danger">Reset</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-header">

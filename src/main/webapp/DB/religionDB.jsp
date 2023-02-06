@@ -1,7 +1,9 @@
-<%@page import="java.sql.*"%>
-<%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%@page import="java.sql.*"%>
+<%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
+
 <script
 	src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
@@ -14,21 +16,19 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 <body>
 
 	<%
-	String s1 = request.getParameter("sectionId");
-	String s2 = request.getParameter("className");
-	String s3 = request.getParameter("status");
-	
+	String religionName = request.getParameter("religionName");
+	String status = request.getParameter("status");
 
 	int i = 0;
 	try {
-		out.print(s1);
+
 		Connection con = ConnectionProvider.getConnection();
-		String query = "insert into studClass(className,sectionId,status) values(?,?,?)";
+		String query = "insert into religion(religionName,status)values(?,?)";
 		PreparedStatement pstm = con.prepareStatement(query);
-		pstm.setString(1, s2);
-		pstm.setString(2, s1);
-		pstm.setString(3,s3);
+		pstm.setString(1, religionName);
+		pstm.setString(2, status);
 		i = pstm.executeUpdate();
+		out.print(" \n" + i);
 
 	} catch (Exception e) {
 		e.printStackTrace();
@@ -42,11 +42,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	Swal.fire({
 		
 		icon: 'success',
-		  title: 'Class Added Successfully ' ,
+		  title: 'Religion Added Successfully ' ,
 		  confirmButtonText: 'Ok',
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../addClass.jsp";
+			window.location.href = "../addReligion.jsp";
 
 		})
 			</script>
@@ -58,11 +58,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		
 		Swal.fire({
 			icon: 'error',
-			  title: 'Class cannot be added ' ,
+			  title: 'Religion cannot be added ' ,
 			  confirmButtonText: 'Ok',
 			}).then((result) => {
 			  /* Read more about isConfirmed, isDenied below */
-				window.location.href = "../addClass.jsp";
+				window.location.href = "../addReligion.jsp";
 
 			})
 			
@@ -71,5 +71,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	<%
 	}
 	%>
+
 
 </body>

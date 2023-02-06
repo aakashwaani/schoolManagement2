@@ -20,7 +20,7 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Academic Year Details</h3>
+							<h3 class="page-title">Update Academic Year Details</h3>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
 								<li class="breadcrumb-item active">Academic Year</li>
@@ -35,17 +35,17 @@
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Academic Year Details -</h5>
+								<h5 class="card-title">Update Academic Year Details -</h5>
 							</div>
 							<div class="card-body">
 								<%
 								int id = Integer.parseInt(request.getParameter("id"));
 								Connection con = ConnectionProvider.getConnection();
 								Statement stmt = con.createStatement();
-								ResultSet rs = stmt.executeQuery("select * from academicyear where academiYearId=" + id + ";");
+								ResultSet rs = stmt.executeQuery("select * from academicyear where academicYearId=" + id + ";");
 								rs.next();
 								%>
-								<form action="DB/academicYearDB.jsp" method="post">
+								<form action="DB/updateacademicYearDB.jsp?id=<%=id %>" method="post">
 									<div class="form-group">
 										<label> Starting Academic Year (Ex. 2020)</label> <input
 											type="text" name="academicYear"
