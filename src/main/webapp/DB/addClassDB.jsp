@@ -2,6 +2,10 @@
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html>
+
+<head>
 <script
 	src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
