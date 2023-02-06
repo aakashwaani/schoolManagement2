@@ -131,7 +131,7 @@
 											<td><%=rs.getString("status")%></td>
 											<td class="">
 												<div class="actions ">
-													<a href="edit-department.html"
+													<a href="updateClass.jsp?id=<%=rs.getInt("classId") %>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>

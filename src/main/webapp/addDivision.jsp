@@ -11,8 +11,8 @@
 </head>
 <body>
 	<%
-	Connection con = ConnectionProvider.getConnection();
-	Statement stmt = con.createStatement();
+	Connection con1 = ConnectionProvider.getConnection();
+	Statement stmt1 = con1.createStatement();
 	%>
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
@@ -50,7 +50,7 @@
 											<%
 											try {
 
-												ResultSet rs = stmt.executeQuery("select * from section");
+												ResultSet rs = stmt1.executeQuery("select * from section");
 												while (rs.next()) {
 											%>
 
@@ -74,7 +74,7 @@
 
 											<%
 											try {
-												ResultSet rs = stmt.executeQuery("select * from studClass");
+												ResultSet rs = stmt1.executeQuery("select * from studClass");
 												while (rs.next()) {
 											%>
 
@@ -97,7 +97,18 @@
 											type="text" id="validationCustom01" name="divisionName"
 											class="form-control" required>
 									</div>
-									
+									<div class="form-group row">
+										<label for="validationCustom01">Status</label> <select
+											class="form-control" id="validationCustom01" required
+											name="status">
+											<option>Active</option>
+											<option>In-Active</option>
+										</select>
+										<div class="valid-feedback">Looks good!</div>
+										<div class="invalid-feedback">Please Provide Section
+											Name.</div>
+									</div>
+
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Save</button>
 										<button type="submit" class="btn btn-danger">Reset</button>
@@ -107,7 +118,64 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header">
 
+							<h5 class="card-title">Division Details -</h5>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class=" mb-0 table table-striped ">
+									<thead class="bg-primary">
+
+										<tr>
+											<th>Serial No.</th>
+											<th>Division Name</th>
+											<th>Status</th>
+											<th>Update</th>
+										</tr>
+									</thead>
+									<tbody>
+										<%
+										try {
+											int cnt = 1;
+											Connection con = ConnectionProvider.getConnection();
+											Statement stmt = con1.createStatement();
+											ResultSet rs = stmt1.executeQuery("select * from division");
+											while (rs.next()) {
+										%>
+
+										<tr>
+											<td><%=cnt%></td>
+											<td><%=rs.getString("division")%></td>
+											<td><%=rs.getString("status")%></td>
+											<td class="">
+												<div class="actions ">
+													<a href="updateDivision.jsp?id=<%=rs.getInt("divisionId")%>"
+														class="btn btn-sm bg-danger-light"> <i
+														class="feather-edit"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+
+
+										<%
+										cnt++;
+										}
+
+										} catch (Exception e) {
+										e.printStackTrace();
+										}
+										%>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</div>

@@ -123,7 +123,7 @@
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">Logo</label>
-												<div class="col-lg-12">
+												<div class="col-lg-6">
 													<input type="file" id="validationCustom01"
 														class="form-control" required>
 													<div class="valid-feedback">Looks good!</div>

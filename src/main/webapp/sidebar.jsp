@@ -37,7 +37,7 @@
 						<li><a href="">Year-Wise Class</a></li>
 						<li><a href="">Assign Class</a></li>
 						<li><a href="">Unassign Class</a></li>
-						<li><a href="">Shift Classes</a></li>
+						<li><a href="shiftClass.jsp">Shift Classes</a></li>
 
 
 					</ul></li>
