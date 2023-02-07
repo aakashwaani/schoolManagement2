@@ -23,7 +23,7 @@
 
 							<div class="card-body">
 								<h5 class="card-title">Genral Information</h5>
-								<form action="#" class="needs-validation" novalidate>
+								<form action="#" class="needs-validation" novalidate enctype="multipart/form-data">
 
 									<div class="row">
 										<div class="col-xl-6">
@@ -31,7 +31,7 @@
 												<label for="validationCustom01" class="col-form-label col-lg-3">School
 													Registration Number</label>
 												<div class="col-lg-12">
-													<input type="text" class="form-control"
+													<input type="text" name="schoolRegistrationNo" class="form-control"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide
@@ -43,7 +43,7 @@
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">School Name</label>
 												<div class="col-lg-12">
-													<input type="text" class="form-control"
+													<input type="text" class="form-control" name="schoolName"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide School
@@ -56,7 +56,7 @@
 													class="col-lg-3 col-form-label">Society Name</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
-														id="validationCustom01" required>
+														id="validationCustom01" name="societyName" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Society
 														Name.</div>
@@ -66,7 +66,7 @@
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">School Code.</label>
 												<div class="col-lg-12">
-													<input type="number" class="form-control"
+													<input type="number" class="form-control" name="schoolCode"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide School
@@ -78,7 +78,7 @@
 													class="col-lg-3 col-form-label">UIDIAS No.</label>
 												<div class="col-lg-12">
 													<input type="number" class="form-control"
-														id="validationCustom01" required>
+														id="validationCustom01" name="UIDIASNo" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide UIDIAS
 														No.</div>
@@ -88,10 +88,10 @@
 										<div class="col-xl-6">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">School Name</label>
+													class="col-lg-3 col-form-label">Principal Name</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
-														id="validationCustom01" required>
+														id="validationCustom01" name="principalName" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide School
 														Name.</div>
@@ -102,7 +102,7 @@
 													class="col-lg-3 col-form-label">Email</label>
 												<div class="col-lg-12">
 													<input type="email" class="form-control"
-														id="validationCustom01" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+														id="validationCustom01" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="schoolEmail" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide valid
 														Email-Id.</div>
@@ -113,7 +113,7 @@
 													class="col-lg-3 col-form-label">Mobile</label>
 												<div class="col-lg-12">
 													<input type="number" class="form-control"
-														id="validationCustom01" required>
+														id="validationCustom01" name="mobileNo" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Mobile
 														No.</div>
@@ -125,7 +125,7 @@
 													class="col-lg-3 col-form-label">Logo</label>
 												<div class="col-lg-12">
 													<input type="file" id="validationCustom01"
-														class="form-control" required>
+														class="form-control" name="schoolLogo" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Upload Logo.</div>
 												</div>
@@ -135,7 +135,7 @@
 													class="col-lg-3 col-form-label">Banner</label>
 												<div class="col-lg-12">
 													<input type="file" id="validationCustom01"
-														class="form-control" required>
+														class="form-control" name="schoolBanner" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Upload Banner.</div>
 												</div>
@@ -150,7 +150,7 @@
 													class="col-lg-3 col-form-label">Address</label>
 												<div class="col-lg-9">
 													<textarea rows="5" cols="5" class="form-control"
-														placeholder="" id="validationCustom01" required></textarea>
+														placeholder="" id="validationCustom01" name="Address" required></textarea>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Address.</div>
 												</div>
@@ -162,7 +162,7 @@
 													class="col-lg-3 col-form-label">City</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
-														id="validationCustom01" required>
+														id="validationCustom01" name="city" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide City
 														Name.</div>
@@ -175,7 +175,7 @@
 													id="validationCustom01">State</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
-														id="validationCustom01" required>
+														id="validationCustom01" name="state" required>
 														<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide State Name.</div>
 												</div>
@@ -184,7 +184,7 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label" id="validationCustom01">Postal Code</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" id="validationCustom01" required>
+													<input type="text" class="form-control" id="validationCustom01" name="postalCode" required>
 														<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Postal Code.</div>
 												</div>
