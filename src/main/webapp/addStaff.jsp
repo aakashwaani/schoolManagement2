@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -35,14 +39,14 @@
 							<div class="card-body">
 								<form action="#">
 									<div class="row">
-									
+
 										<div class="col-xl-6">
-										
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Select Staff
 													Role </label>
 												<div class="col-lg-9">
-													<select class="form-control">
+													<select class="form-control form-select">
 														<option>Select</option>
 														<option value="1">Admin</option>
 														<option value="2">Principal</option>
@@ -94,7 +98,29 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Designation</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control">
+													<select class="form-control form-select" name="designationId"
+														id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from designation");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("designationId")%>">
+															<%=rs.getString("designationName")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
 												</div>
 											</div>
 										</div>
@@ -133,16 +159,28 @@
 												<label class="col-lg-3 col-form-label">Caste
 													Category</label>
 												<div class="col-lg-9">
-													<select class="form-control">
-														<option>Select</option>
-														<option value="1"></option>
-														<option value="2"></option>
-														<option value="3"></option>
-														<option value="4"></option>
-														<option value="5"></option>
-														<option value="6"></option>
-														<option value="7"></option>
-														<option value="8"></option>
+													<select class="form-control form-select" name="castId"
+														id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from casts");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("castId")%>">
+															<%=rs.getString("castName")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
 													</select>
 												</div>
 											</div>

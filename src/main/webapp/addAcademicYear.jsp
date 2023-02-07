@@ -37,20 +37,29 @@
 								<h5 class="card-title">Academic Year Details -</h5>
 							</div>
 							<div class="card-body">
-								<form action="DB/academicYearDB.jsp" method="post">
+								<form action="DB/academicYearDB.jsp" class="needs-validation"
+									novalidate method="post">
 									<div class="form-group">
-										<label> Starting Academic Year (Ex. 2020)</label> <input
-											type="text" name="academicYear" class="form-control">
+										<label for="validationCustom01"> Starting Academic
+											Year (Ex. 2020)</label> <input type="text" name="academicYear"
+											class="form-control" id="validationCustom01" required>
+										<div class="valid-feedback">Looks good!</div>
+										<div class="invalid-feedback">Please Provide
+										Academic Year.</div>
 									</div>
 									<div class="form-group">
-										<label>  Academic Year Start Month Number </label> <input
-											type="text" name="startmonthNumber" class="form-control">
+										<label for="validationCustom01"> Academic Year Start
+											Month Number </label> <input type="text" name="startmonthNumber"
+											class="form-control" id="validationCustom01" required>
+										<div class="valid-feedback">Looks good!</div>
+										<div class="invalid-feedback">Please Provide  Academic Year Start
+											Month Number.</div>
 
 									</div>
 
 									<div class="form-group">
-										<label> Next Academic Year Date</label> <input type="date"
-											name="nextAcademicYearDate" class="form-control">
+										<label for="validationCustom01"> Next Academic Year Date</label> <input type="date" 
+											name="nextAcademicYearDate" class="form-control" id="validationCustom01" required>
 									</div>
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Submit</button>
@@ -61,18 +70,18 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-header">
-						
+
 							<h5 class="card-title">Section Details -</h5>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
 								<table class=" mb-0 table table-striped ">
 									<thead class="bg-primary">
-	
+
 										<tr>
 											<th>Serial No.</th>
 											<th>Academic Year</th>
@@ -95,10 +104,11 @@
 											<td><%=cnt%></td>
 											<td><%=rs.getString("academicyear")%></td>
 											<td><%=rs.getString("startmonthNumber")%></td>
-											<td><%=rs.getString("nextAcademicYearDate") %></td>
+											<td><%=rs.getString("nextAcademicYearDate")%></td>
 											<td class="">
 												<div class="actions ">
-													<a href="updateAcademicYear.jsp?id=<%=rs.getInt("academicYearId") %>"
+													<a
+														href="updateAcademicYear.jsp?id=<%=rs.getInt("academicYearId")%>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>
