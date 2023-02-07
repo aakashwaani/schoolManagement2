@@ -10,6 +10,7 @@
 					<ul>
 						<li><a href="addSchool.jsp">School Add</a></li>
 						<li><a href="updateSchool.jsp">School Update</a></li>
+						<li><a href="schoolList.jsp">School List</a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-graduation-cap"></i> <span> Prerequisites</span> <span

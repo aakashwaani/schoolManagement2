@@ -41,12 +41,27 @@
 									<div class="row">
 
 										<div class="col-xl-6">
-
+											<div class="col-lg-4 col-md-4">
+												<div class="profile-user-box">
+													<div class="profile-user-img">
+														<img src="assets/img/profiles/avatar-18.jpg" alt="Profile">
+														<div
+															class="form-group students-up-files profile-edit-icon mb-0">
+															<div class="uplod d-flex">
+																<label class="file-upload profile-upbtn mb-0"> <i
+																	class="feather-edit-3"></i><input type="file">
+																</label>
+															</div>
+														</div>
+													</div>
+													
+												</div>
+											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Select Staff
 													Role </label>
 												<div class="col-lg-9">
-													<select class="form-control form-select">
+													<select class="form-control form-select" name="staffRole">
 														<option>Select</option>
 														<option value="1">Admin</option>
 														<option value="2">Principal</option>
@@ -63,13 +78,13 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Full Name</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="fullName">
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Mobile No</label>
 												<div class="col-lg-9">
-													<input type="number" class="form-control">
+													<input type="number" class="form-control" name="mobNo">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -92,14 +107,14 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Joining Date</label>
 												<div class="col-lg-9">
-													<input type="date" class="form-control">
+													<input type="date" name="joiningDate" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Designation</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="designationId"
-														id="validationCustom01" required>
+													<select class="form-control form-select"
+														name="designationId" id="validationCustom01" required>
 
 														<%
 														try {
@@ -123,36 +138,64 @@
 													</select>
 												</div>
 											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label">Caste </label>
+												<div class="col-lg-9">
+													<select class="form-control form-select" name="castId"
+														id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from casts");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("castId")%>">
+															<%=rs.getString("castName")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
+												</div>
+											</div>
 										</div>
 										<div class="col-xl-6">
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Employee Id</label>
 												<div class="col-lg-9">
-													<input type="number" class="form-control">
+													<input type="number" name="employeeId" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Date Of Birth</label>
 												<div class="col-lg-9">
-													<input type="date" class="form-control">
+													<input type="date" name="DOB" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Email ID</label>
 												<div class="col-lg-9">
-													<input type="email" class="form-control">
+													<input type="email" name="email" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Qualification</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control">
+													<input type="text" name="qualification" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Salary</label>
 												<div class="col-lg-9">
-													<input type="number" class="form-control">
+													<input type="number" name="salary" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -187,11 +230,11 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-xl-8">
+										<div class="col-xl-7">
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Address </label>
 												<div class="col-lg-12">
-													<textarea rows="6" cols="6" class="form-control"
+													<textarea rows="6" cols="6" class="form-control" name="address"
 														placeholder=""></textarea>
 												</div>
 											</div>
