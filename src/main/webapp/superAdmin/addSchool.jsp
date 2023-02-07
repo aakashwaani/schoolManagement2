@@ -23,7 +23,7 @@
 
 							<div class="card-body">
 								<h5 class="card-title">Genral Information</h5>
-								<form action="#" class="needs-validation" novalidate>
+								<form action="#" class="needs-validation" novalidate >
 
 									<div class="row">
 										<div class="col-xl-6">
@@ -88,7 +88,7 @@
 										<div class="col-xl-6">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">School Name</label>
+													class="col-lg-3 col-form-label">Principal Name</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
 														id="validationCustom01" required>
