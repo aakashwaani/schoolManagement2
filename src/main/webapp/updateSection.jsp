@@ -20,7 +20,7 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Update Class Details</h3>
+							<h3 class="page-title">Update Section Details</h3>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
 								<li class="breadcrumb-item active">Academic Year</li>
@@ -35,7 +35,7 @@
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Update Religion Details -</h5>
+								<h5 class="card-title">Update Section Details -</h5>
 							</div>
 							<div class="card-body">
 								<%
@@ -48,7 +48,7 @@
 								<form action="DB/updateSectionDB.jsp?id=<%=id%>"
 									method="post">
 									<div class="form-group row">
-										<label> Class Name</label> <input type="text" name="sectionName"
+										<label> Section Name</label> <input type="text" name="sectionName"
 											value="<%=rs.getString("sectionName")%>" class="form-control">
 									</div>
 
