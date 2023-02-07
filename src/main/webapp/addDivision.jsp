@@ -35,7 +35,7 @@
 
 
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-xl-8">
 						<div class="card">
 							<div class="card-header">
 								<h5 class="card-title">Division Form -</h5>
@@ -43,7 +43,7 @@
 							<div class="card-body">
 								<form action="DB/divisionDB.jsp" method="post"
 									class="needs-validation" no-validate>
-									<div class="form-group">
+									<div class="form-group row">
 										<label> Select Section</label> <select class="form-control"
 											name="sectionId">
 
@@ -67,8 +67,8 @@
 											%>
 										</select>
 									</div>
-									<div class="form-group">
-										<label> Select Class</label> <select class="form-control"
+									<div class="form-group row">
+										<label> Select Class</label> <select class="form-control form-select"
 											name="classId">
 
 
@@ -92,14 +92,14 @@
 										</select>
 									</div>
 
-									<div class="form-group">
+									<div class="form-group row">
 										<label for="validationCustom01"> Division Name</label> <input
 											type="text" id="validationCustom01" name="divisionName"
 											class="form-control" required>
 									</div>
 									<div class="form-group row">
 										<label for="validationCustom01">Status</label> <select
-											class="form-control" id="validationCustom01" required
+											class="form-control form-select" id="validationCustom01" required
 											name="status">
 											<option>Active</option>
 											<option>In-Active</option>

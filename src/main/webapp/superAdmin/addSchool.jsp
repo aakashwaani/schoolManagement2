@@ -26,9 +26,9 @@
 								<form action="#" class="needs-validation" novalidate>
 
 									<div class="row">
-										<div class="col-xl-12">
+										<div class="col-xl-6">
 											<div class="form-group row">
-												<label for="validationCustom01" class="form-label">School
+												<label for="validationCustom01" class="col-form-label col-lg-3">School
 													Registration Number</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
@@ -85,7 +85,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-xl-12">
+										<div class="col-xl-6">
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">School Name</label>
@@ -123,7 +123,7 @@
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">Logo</label>
-												<div class="col-lg-6">
+												<div class="col-lg-12">
 													<input type="file" id="validationCustom01"
 														class="form-control" required>
 													<div class="valid-feedback">Looks good!</div>
