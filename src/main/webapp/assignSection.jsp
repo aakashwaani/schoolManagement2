@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
+<%@page import="java.sql.Connection"%>
+<!DOCTYPE html>
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
@@ -36,12 +40,32 @@
 							<div class="card-body">
 								<form action="#">
 									<div class="form-group">
-										<label> Select Section</label> <select class="form-control">
-											<option></option>
-											<option></option>
-											<option></option>
+										<label for="validationCustom01"> Select Section</label> <select
+											class="form-control form-select" name="sectionId" id="validationCustom01"
+											required>
+
+											<%
+											try {
+												Connection con = ConnectionProvider.getConnection();
+												Statement stmt = con.createStatement();
+												ResultSet rs = stmt.executeQuery("select * from section");
+												while (rs.next()) {
+											%>
+
+
+
+											<option value="<%=rs.getInt("sectionId")%>">
+												<%=rs.getString("sectionName")%></option>
+											<%
+											}
+
+											} catch (Exception e) {
+											e.printStackTrace();
+											}
+											%>
 										</select>
 									</div>
+
 
 									<div class="form-group">
 										<label> Select Co-ordinator</label> <select
