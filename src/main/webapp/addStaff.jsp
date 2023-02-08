@@ -227,29 +227,8 @@
 												<label class="col-lg-3 col-form-label">Caste
 													Category</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="castId"
+													<input class="form-control" name="castId"
 														id="validationCustom01" required>
-
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from casts");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("castId")%>">
-															<%=rs.getString("castName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
 												</div>
 											</div>
 										</div>
