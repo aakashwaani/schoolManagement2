@@ -4,7 +4,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
 <%@page import="java.sql.Connection"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html >
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
@@ -39,24 +39,30 @@
 							<div class="card-body">
 								<form action="#">
 									<div class="row">
+										<div class="profile-pic-wrapper">
+											<div class="pic-holder">
+												<!-- uploaded pic shown here -->
+												<img id="profilePic" class="pic"
+													src="https://source.unsplash.com/random/150x150?person">
 
-										<div class="col-xl-6">
-											<div class="col-lg-4 col-md-4">
-												<div class="profile-user-box">
-													<div class="profile-user-img">
-														<img src="assets/img/profiles/avatar-18.jpg" alt="Profile">
-														<div
-															class="form-group students-up-files profile-edit-icon mb-0">
-															<div class="uplod d-flex">
-																<label class="file-upload profile-upbtn mb-0"> <i
-																	class="feather-edit-3"></i><input type="file">
-																</label>
-															</div>
+												<Input class="uploadProfileInput" type="file"
+													name="profile_pic" id="newProfilePhoto" accept="image/*"
+													style="opacity: 0;" /> <label for="newProfilePhoto"
+													class="upload-file-block">
+													<div class="text-center">
+														<div class="mb-2">
+															<i class="fa fa-camera fa-2x"></i>
+														</div>
+														<div class="text-uppercase">
+															Update <br /> Profile Photo
 														</div>
 													</div>
-													
-												</div>
+												</label>
 											</div>
+
+										</div>
+										<div class="col-xl-6">
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Select Staff
 													Role </label>
@@ -138,8 +144,8 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Designation</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select"
-														name="designationId" id="validationCustom01" required>
+													<select class="form-control form-select" name="designationId"
+														id="validationCustom01" required>
 
 														<%
 														try {
@@ -164,35 +170,16 @@
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Caste </label>
+												<label class="col-lg-3 col-form-label">Caste
+													Category</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="castId"
-														id="validationCustom01" required>
-
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from casts");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("castId")%>">
-															<%=rs.getString("castName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
+													<input type="text" name="casteCategory"
+														class="form-control" required>
 												</div>
 											</div>
 										</div>
 										<div class="col-xl-6">
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Employee Id</label>
 												<div class="col-lg-9">
@@ -214,7 +201,8 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Qualification</label>
 												<div class="col-lg-9">
-													<input type="text" name="qualification" class="form-control">
+													<input type="text" name="qualification"
+														class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -238,8 +226,8 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Address </label>
 												<div class="col-lg-12">
-													<textarea rows="6" cols="6" class="form-control" name="address"
-														placeholder=""></textarea>
+													<textarea rows="6" cols="6" class="form-control"
+														name="address" placeholder=""></textarea>
 												</div>
 											</div>
 										</div>
