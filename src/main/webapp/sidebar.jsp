@@ -52,7 +52,9 @@
 						<span> Staff</span> <span class="menu-arrow"></span></a>
 					<ul>
 						<li><a href="addStaff.jsp">Add Staff</a></li>
+						<li><a href="addStaffRole.jsp">Add Staff Role</a></li>
 						<li><a href="updateStaff.jsp">Update Staff</a></li>
+						
 						
 					</ul></li>
 				<li class="submenu"><a href="#"><i class="fas fa-user"></i> <span> Student</span> <span

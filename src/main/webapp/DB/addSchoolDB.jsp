@@ -93,7 +93,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		  confirmButtonText: 'Ok',
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../addSchool.jsp";
+			window.location.href = "../superAdmin/addSchool.jsp";
 
 		})
 			</script>
@@ -108,7 +108,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		  confirmButtonText: 'Ok',
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../addSchool.jsp";
+			window.location.href = "../superAdmin/addSchool.jsp";
 
 		})
 		
