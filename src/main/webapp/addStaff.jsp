@@ -62,25 +62,50 @@
 													Role </label>
 												<div class="col-lg-9">
 													<select class="form-control form-select" name="staffRole">
-														<option>Select</option>
-														<option value="1">Admin</option>
-														<option value="2">Principal</option>
-														<option value="3">Vice Principal</option>
-														<option value="4">Co-Ordinator</option>
-														<option value="5">Teacher</option>
-														<option value="6">Non-Teaching Staff</option>
-														<option value="7">Operator</option>
-														<option value="8">Peon</option>
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from staffrole");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("staffRoleId")%>">
+															<%=rs.getString("staffRole")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
 
 													</select>
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Full Name</label>
+												<label class="col-lg-3 col-form-label">First Name</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" name="fullName">
+													<input type="text" class="form-control" name="firstName">
 												</div>
 											</div>
+											
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label">Middle Name</label>
+												<div class="col-lg-9">
+													<input type="text" class="form-control" name="middleName">
+												</div>
+											</div>
+											
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label">LastName Name</label>
+												<div class="col-lg-9">
+													<input type="text" class="form-control" name="lastName">
+												</div>
+											</div>
+											
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Mobile No</label>
 												<div class="col-lg-9">

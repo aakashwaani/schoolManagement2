@@ -23,7 +23,7 @@
 
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
-								<form action="#" class="needs-validation" novalidate enctype="multipart/form-data">
+								<form action="../DB/addSchoolDB.jsp" enctype="multipart/form-data" method="POST"   class="needs-validation"  novalidate >
 
 
 									<div class="row">
@@ -163,7 +163,7 @@
 													class="col-lg-3 col-form-label">City</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
-														id="validationCustom01" name="city" required>
+														id="validationCustom01" name="City" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide City
 														Name.</div>
@@ -176,7 +176,7 @@
 													id="validationCustom01">State</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
-														id="validationCustom01" name="state" required>
+														id="validationCustom01" name="State" required>
 														<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide State Name.</div>
 												</div>
