@@ -10977,13 +10977,12 @@ body[data-layout-mode=dark] .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-o
 
 
 @media ( max-width : 996px) {
-	.profile-pic-wrapper {
+.profile-pic-wrapper {
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-align-items:center;
-}
+align-items:center;}
 	
 }

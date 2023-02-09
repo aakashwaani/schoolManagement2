@@ -45,7 +45,7 @@
 												<img id="profilePic" class="pic"
 													src="https://source.unsplash.com/random/150x150?person">
 
-												<Input class="uploadProfileInput" type="file"
+												<input class="uploadProfileInput" type="file"
 													name="profile_pic" id="newProfilePhoto" accept="image/*"
 													style="opacity: 0;" /> <label for="newProfilePhoto"
 													class="upload-file-block">
@@ -59,7 +59,6 @@
 													</div>
 												</label>
 											</div>
-
 										</div>
 										<div class="col-xl-6">
 
