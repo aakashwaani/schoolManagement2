@@ -60,8 +60,8 @@
 				<li class="submenu"><a href="#"><i class="fas fa-user"></i> <span> Student</span> <span
 						class="menu-arrow"></span></a>
 					<ul>
-						<li><a href="fees-collections.html">Short Entry Form</a></li>
-						<li><a href="">Full Entry Form</a></li>
+						<li><a href="shortEntryForm.jsp">Short Entry Form</a></li>
+						<li><a href="fullEntryForm.jsp">Full Entry Form</a></li>
 						<li><a href="">View</a></li>
 						<li><a href="">Download Details</a></li>
 						<li><a href="">Generate I-card</a></li>

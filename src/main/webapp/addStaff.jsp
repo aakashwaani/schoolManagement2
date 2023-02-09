@@ -49,6 +49,7 @@
 													name="staffProfilePic" name="profile_pic"
 													id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
 												<label for="newProfilePhoto" class="upload-file-block">
+
 													<div class="text-center">
 														<div class="mb-2">
 															<i class="fa fa-camera fa-2x"></i>
@@ -59,7 +60,6 @@
 													</div>
 												</label>
 											</div>
-
 										</div>
 										<div class="col-xl-6">
 
