@@ -25,7 +25,7 @@
 							<div class="card-body">
 								<h5 class="card-title">Genral Information</h5>
 									
-								<form method="post" action="DB/addSchoolDB.jsp" class="needs-validation" novalidate enctype="multipart/form-data">
+								<form id="addSchoolForm" class="needs-validation" novalidate >
 									
 									<div class="row">
 										<div class="col-xl-12">
@@ -162,8 +162,7 @@
 										</div>
 									</div>
 									<div class="text-end">
-										<button class="btn btn-primary " type="submit">Submit
-											Form</button>
+										<input class="btn btn-primary " type="button" id="schoolDBSubmitButton" value="Submit Form">
 											<button class="btn btn-danger" type="reset"> Reset</button>
 									</div>
 								</form>
@@ -176,5 +175,32 @@
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
+	
+	<script type="text/javascript">
+	
+	
+	
+	
+	/*
+	$("#schoolDBSubmitButton").click(function(event){
+		event.preventDefault()
+		$.ajax({
+			url:'DB/addSchoolDB.jsp',
+			method:'GET',
+			enctype:'multipart/form-data',
+			data: $('#addSchoolForm').serelize(),
+			success:function(response){
+			if(response.trim()=="1"){
+				alert("SuccessFul")
+			}	
+			else{
+				alert("Fail")
+			}
+			}
+		})
+	})
+	*/
+	</script>
+	
 </body>
 </html>

@@ -5,7 +5,7 @@
 <head>
 <jsp:include page="link.jsp"></jsp:include>
 </head>
-<body>
+<body>	
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 
@@ -23,17 +23,19 @@
 
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
-								<form action="../DB/addSchoolDB.jsp" enctype="multipart/form-data" method="POST"   class="needs-validation"  novalidate >
+								<form id="addSchoolForm"
+									class="needs-validation" novalidate>
 
 
 									<div class="row">
 										<div class="col-xl-6">
 											<div class="form-group row">
-												<label for="validationCustom01" class="col-form-label col-lg-3">School
-													Registration Number</label>
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3">School Registration
+													Number</label>
 												<div class="col-lg-12">
-													<input type="text" name="schoolRegistrationNo" class="form-control"
-														id="validationCustom01" required>
+													<input type="text" name="schoolRegistrationNo"
+														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide
 														Registration Number.</div>
@@ -103,7 +105,9 @@
 													class="col-lg-3 col-form-label">Email</label>
 												<div class="col-lg-12">
 													<input type="email" class="form-control"
-														id="validationCustom01" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="schoolEmail" required>
+														id="validationCustom01"
+														pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+														name="schoolEmail" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide valid
 														Email-Id.</div>
@@ -151,7 +155,8 @@
 													class="col-lg-3 col-form-label">Address</label>
 												<div class="col-lg-9">
 													<textarea rows="5" cols="5" class="form-control"
-														placeholder="" id="validationCustom01" name="Address" required></textarea>
+														placeholder="" id="validationCustom01" name="Address"
+														required></textarea>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Address.</div>
 												</div>
@@ -177,17 +182,21 @@
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
 														id="validationCustom01" name="State" required>
-														<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide State Name.</div>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide State
+														Name.</div>
 												</div>
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label" id="validationCustom01">Postal Code</label>
+												<label class="col-lg-3 col-form-label"
+													id="validationCustom01">Postal Code</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" id="validationCustom01" name="postalCode" required>
-														<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Postal Code.</div>
+													<input type="text" class="form-control"
+														id="validationCustom01" name="postalCode" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Postal
+														Code.</div>
 												</div>
 											</div>
 										</div>
@@ -205,6 +214,38 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#addSchoolForm").on('submit', function(event) {
+				event.preventDefault();
+				//var f = $(this).serialize();
+				let f = new FormData($(this)[0])
+				console.log(f)
+				
+				$.ajax({
+					type : 'POST',
+		            enctype: 'multipart/form-data',
+					url : "../DB/addSchoolDB.jsp",
+					data: f,
+					processData: false,
+			        contentType: false,
+			        cache: false,
+					success : function(responce){
+						if(responce.trim() == '1'){
+							alert("Successful Registered")
+						}
+						else{
+							 alert("Failed to Register")
+						}
+					}
+					
+					
+				})
+			})
+		})
+	</script>
 
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>

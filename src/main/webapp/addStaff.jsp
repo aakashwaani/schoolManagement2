@@ -37,7 +37,7 @@
 								<h5 class="card-title">Add New Staff Entry -</h5>
 							</div>
 							<div class="card-body">
-								<form action="#">
+								<form action="DB/addStaffDB.jsp" method="POST" enctype="multipart/form-data">
 									<div class="row">
 										<div class="profile-pic-wrapper">
 											<div class="pic-holder">
@@ -46,9 +46,9 @@
 													src="https://source.unsplash.com/random/150x150?person">
 
 												<Input class="uploadProfileInput" type="file"
-													name="profile_pic" id="newProfilePhoto" accept="image/*"
-													style="opacity: 0;" /> <label for="newProfilePhoto"
-													class="upload-file-block">
+													name="staffProfilePic" name="profile_pic"
+													id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
+												<label for="newProfilePhoto" class="upload-file-block">
 													<div class="text-center">
 														<div class="mb-2">
 															<i class="fa fa-camera fa-2x"></i>
@@ -97,25 +97,25 @@
 													<input type="text" class="form-control" name="firstName">
 												</div>
 											</div>
-											
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Middle Name</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control" name="middleName">
 												</div>
 											</div>
-											
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">LastName Name</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control" name="lastName">
 												</div>
 											</div>
-											
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Mobile No</label>
 												<div class="col-lg-9">
-													<input type="number" class="form-control" name="mobNo">
+													<input type="number" class="form-control" name="moblileNo">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -144,8 +144,8 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Designation</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="designationId"
-														id="validationCustom01" required>
+													<select class="form-control form-select"
+														name="designation" id="validationCustom01" required>
 
 														<%
 														try {
@@ -189,7 +189,7 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Date Of Birth</label>
 												<div class="col-lg-9">
-													<input type="date" name="DOB" class="form-control">
+													<input type="date" name="dateofBirth" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -212,11 +212,30 @@
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Caste
-													Category</label>
+												<label class="col-lg-3 col-form-label">Caste Id</label>
 												<div class="col-lg-9">
-													<input class="form-control" name="castId"
-														id="validationCustom01" required>
+													<select class="form-control form-select" name="staffRole">
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from casts");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("castId")%>">
+															<%=rs.getString("castName")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+
+													</select>
 												</div>
 											</div>
 										</div>
@@ -246,5 +265,13 @@
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
+	
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		console.log("Hello")
+	});
+	
+	</script>
 </body>
 </html>

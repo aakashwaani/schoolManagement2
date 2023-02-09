@@ -12,7 +12,7 @@
 
 
 		<div class="content container-fluid">
-
+		
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
