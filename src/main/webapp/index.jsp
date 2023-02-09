@@ -12,7 +12,7 @@
 
 
 		<div class="content container-fluid">
-
+			<h1>My First Commit</h1>
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
