@@ -24,21 +24,21 @@
 
 							<div class="card-body">
 								<h5 class="card-title">Genral Information</h5>
-									
-								<form id="addSchoolForm" class="needs-validation" novalidate >
-									
+
+								<form id="addSchoolForm" class="needs-validation" novalidate>
+
 									<div class="row">
 										<div class="col-xl-12">
 											<div class="form-group row">
 												<label for="validationCustom01" class="form-label">School
 													Registration Number</label>
-													<div class="col-lg-12">
-														<input name="schoolRegistrationNo" type="text" class="form-control"
-														id="validationCustom01" required>
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide
-															Registration Number.</div>
-															
+												<div class="col-lg-12">
+													<input name="schoolRegistrationNo" type="text"
+														class="form-control" id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide
+														Registration Number.</div>
+
 												</div>
 											</div>
 											<div class="form-group row">
@@ -53,8 +53,8 @@
 
 												</div>
 											</div>
-								<!--  schoolId, schoolRegistrationNo, societyName, schoolCode, UIDIASNo, principalName, mobileNo, schoolLogo, schoolBanner, Address, City, State, postalCode -->							
-											
+											<!--  schoolId, schoolRegistrationNo, societyName, schoolCode, UIDIASNo, principalName, mobileNo, schoolLogo, schoolBanner, Address, City, State, postalCode -->
+
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">Society Name</label>
@@ -94,8 +94,8 @@
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">Principal Name</label>
 												<div class="col-lg-12">
-													<input name="principalName" type="text" class="form-control"
-														id="validationCustom01" required>
+													<input name="principalName" type="text"
+														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide School
 														Name.</div>
@@ -116,7 +116,8 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Logo</label>
 												<div class="col-lg-12">
-													<input name="schoolLogo" type="file" class="form-control" name="schoolLogo">
+													<input name="schoolLogo" type="file" class="form-control"
+														name="schoolLogo">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -133,8 +134,8 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Address </label>
 												<div class="col-lg-9">
-													<textarea name="Address" rows="5" cols="5" class="form-control"
-														placeholder=""></textarea>
+													<textarea name="Address" rows="5" cols="5"
+														class="form-control" placeholder=""></textarea>
 												</div>
 											</div>
 
@@ -162,8 +163,9 @@
 										</div>
 									</div>
 									<div class="text-end">
-										<input class="btn btn-primary " type="button" id="schoolDBSubmitButton" value="Submit Form">
-											<button class="btn btn-danger" type="reset"> Reset</button>
+										<input class="btn btn-primary " type="submit"
+											value="Submit Form">
+										<button class="btn btn-danger" type="reset">Reset</button>
 									</div>
 								</form>
 							</div>
@@ -175,32 +177,34 @@
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
-	
+
 	<script type="text/javascript">
-	
-	
-	
-	
-	/*
-	$("#schoolDBSubmitButton").click(function(event){
-		event.preventDefault()
-		$.ajax({
-			url:'DB/addSchoolDB.jsp',
-			method:'GET',
-			enctype:'multipart/form-data',
-			data: $('#addSchoolForm').serelize(),
-			success:function(response){
-			if(response.trim()=="1"){
-				alert("SuccessFul")
-			}	
-			else{
-				alert("Fail")
-			}
-			}
+		$(document).ready(function() {
+			console.log("Working")
+			
+			$('#addSchoolForm').on('submit',function(event){
+				event.preventDefault();
+				let f = new FormData(this)
+				console.log(f);
+				$.ajax({
+					enctype : 'multipart/form-data',
+					type : 'POST',
+					data : f,
+					url:'../DB/addSchoolDB.jsp',
+					processData:false,
+					contentType : false,
+					success:function(response){
+						console.log(response)
+					},
+					error:function(err){
+						console.log(err)
+					}
+					
+				})
+			})
+
 		})
-	})
-	*/
 	</script>
-	
+
 </body>
 </html>

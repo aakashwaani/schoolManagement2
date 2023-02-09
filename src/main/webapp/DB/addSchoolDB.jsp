@@ -2,21 +2,11 @@
 	pageEncoding="ISO-8859-1"%>
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@page import="java.sql.*"%>
 
-<%@ page import="java.sql.*"%>
-<script
-	src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
-"></script>
-<link
-	href="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
-"
-	rel="stylesheet"></link>
-<body>
 
 	<%
-	int done = 0;
+		int done = 0;
 
 	try {
 		MultipartRequest m = new MultipartRequest(request,
@@ -63,7 +53,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		pstm.setString(14, postalCode);
 
 		done = pstm.executeUpdate();
-		System.out.println(done);
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
@@ -71,14 +60,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	if (done > 0) {
 	%>
 	1
-
 	<%
 	} else {
 	%>
 	0
-
 	<%
 	}
 	%>
-
-</body>
