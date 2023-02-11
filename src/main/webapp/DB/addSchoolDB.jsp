@@ -2,21 +2,11 @@
 	pageEncoding="ISO-8859-1"%>
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@page import="java.sql.*"%>
 
-<%@ page import="java.sql.*"%>
-<script
-	src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
-"></script>
-<link
-	href="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
-"
-	rel="stylesheet"></link>
-<body>
 
 	<%
-	int done = 0;
+		int done = 0;
 
 	try {
 		MultipartRequest m = new MultipartRequest(request,
@@ -40,20 +30,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		String State = m.getParameter("State");
 		String postalCode = m.getParameter("postalCode");
 
-		out.print(schoolName + "\n");
-		out.print(schoolRegistrationNo + "\n");
-		out.print(societyName + "\n");
-		out.print(schoolCode + "\n");
-		out.print(UIDIASNo + "\n");
-		out.print(principalName + "\n");
-		out.print(schoolEmail + "\n");
-		out.print(mobileNo + "\n");
-		out.print(schoolLogo + "\n");
-		out.print(schoolBanner + "\n");
-		out.print(Address + "\n");
-		out.print(City + "\n");
-		out.print(State + "\n");
-		out.print(postalCode + "\n");
 
 		String addSchoolQuery = "insert into schools(schoolName, schoolRegistrationNo, societyName, schoolCode, UIDIASNo, principalName, schoolEmail, mobileNo, schoolLogo, schoolBanner, Address, City, State, postalCode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement pstm = null;
@@ -77,45 +53,17 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		pstm.setString(14, postalCode);
 
 		done = pstm.executeUpdate();
-
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
 
-	if (done == 1) {
+	if (done > 0) {
 	%>
-	<script type="text/javascript">
-
-	Swal.fire({
-		
-		icon: 'success',
-		  title: 'Class Added Successfully ' ,
-		  confirmButtonText: 'Ok',
-		}).then((result) => {
-		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../superAdmin/addSchool.jsp";
-
-		})
-			</script>
+	1
 	<%
 	} else {
 	%>
-	<script type="text/javascript">
-	
-	Swal.fire({
-		icon: 'error',
-		  title: 'Class cannot be added ' ,
-		  confirmButtonText: 'Ok',
-		}).then((result) => {
-		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../superAdmin/addSchool.jsp";
-
-		})
-		
-		</script>
-
+	0
 	<%
 	}
 	%>
-	
-	</body>

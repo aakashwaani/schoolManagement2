@@ -49,7 +49,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */
 			window.location.href = "../addCast.jsp";
-
 		})
 			</script>
 

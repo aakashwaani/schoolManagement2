@@ -1,19 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.*"%>
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
-<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.*"%>
 <!DOCTYPE html >
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
+
+<link
+	href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
+"
+	rel="stylesheet"></link>
 </head>
 <body>
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
-
-
 		<jsp:include page="sidebar.jsp"></jsp:include>
 
 		<div class="page-wrapper">
@@ -37,18 +40,19 @@
 								<h5 class="card-title">Add New Staff Entry -</h5>
 							</div>
 							<div class="card-body">
-								<form action="#">
+								<form id="addStaffForm" action="DB/addStaffDB.jsp" method="POST"
+									enctype="multipart/form-data">
 									<div class="row">
-										<div class="profile-pic-wrapper">
+										<!--  <div class="profile-pic-wrapper">
 											<div class="pic-holder">
-												<!-- uploaded pic shown here -->
 												<img id="profilePic" class="pic"
 													src="https://source.unsplash.com/random/150x150?person">
 
-												<input class="uploadProfileInput" type="file"
-													name="profile_pic" id="newProfilePhoto" accept="image/*"
-													style="opacity: 0;" /> <label for="newProfilePhoto"
-													class="upload-file-block">
+												<Input class="uploadProfileInput" type="file"
+													name="staffProfilePic"
+													id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
+												<label for="newProfilePhoto" class="upload-file-block">
+
 													<div class="text-center">
 														<div class="mb-2">
 															<i class="fa fa-camera fa-2x"></i>
@@ -60,13 +64,23 @@
 												</label>
 											</div>
 										</div>
+										-->
 										<div class="col-xl-6">
-
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Staff Profile Pic</label>
+												<div class="col-lg-9 ">
+													<input type="file" id="validationCustom01"
+														class="form-control" name="staffProfilePic">
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Upload Banner.</div>
+												</div>
+											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Select Staff
 													Role </label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="staffRole">
+													<select class="form-control form-select" name="staffRoleId">
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -90,31 +104,32 @@
 													</select>
 												</div>
 											</div>
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">First Name</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control" name="firstName">
 												</div>
 											</div>
-											
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Middle Name</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control" name="middleName">
 												</div>
 											</div>
-											
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">LastName Name</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control" name="lastName">
 												</div>
 											</div>
-											
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Mobile No</label>
 												<div class="col-lg-9">
-													<input type="number" class="form-control" name="mobNo">
+													<input type="number" class="form-control" name="moblileNo">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -143,8 +158,8 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Designation</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="designationId"
-														id="validationCustom01" required>
+													<select class="form-control form-select"
+														name="designationId" id="validationCustom01" required>
 
 														<%
 														try {
@@ -188,7 +203,7 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Date Of Birth</label>
 												<div class="col-lg-9">
-													<input type="date" name="DOB" class="form-control">
+													<input type="date" name="dateofBirth" class="form-control">
 												</div>
 											</div>
 											<div class="form-group row">
@@ -211,12 +226,9 @@
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Caste
-													Category</label>
+												<label class="col-lg-3 col-form-label">Caste Id</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="castId"
-														id="validationCustom01" required>
-
+													<select class="form-control form-select" name="staffCastId">
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -236,6 +248,7 @@
 														e.printStackTrace();
 														}
 														%>
+
 													</select>
 												</div>
 											</div>
@@ -247,7 +260,7 @@
 												<label class="col-lg-3 col-form-label">Address </label>
 												<div class="col-lg-12">
 													<textarea rows="6" cols="6" class="form-control"
-														name="address" placeholder=""></textarea>
+														name="staffAddress" placeholder=""></textarea>
 												</div>
 											</div>
 										</div>
@@ -264,7 +277,54 @@
 			</div>
 		</div>
 	</div>
-
+<script
+	src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
+"></script>
 	<jsp:include page="footer.jsp"></jsp:include>
+
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$("#addStaffForm").on('submit', function(event) {
+			event.preventDefault();
+			//var f = $(this).serialize();
+			let f = new FormData($(this)[0])
+			console.log(f)
+
+			$.ajax({
+				type : 'POST',
+				enctype : 'multipart/form-data',
+				url : 'DB/addStaffDB.jsp',
+				data : f,
+				processData : false,
+				contentType : false,
+				cache : false,
+				success : function(responce) {
+					console.log(responce.trim())
+					if (responce.trim() == "1") {
+						 $("#addStaffForm")[0].reset()
+						Swal.fire({
+							icon: 'success',
+							  title: 'School Added Successfully ' ,
+							  confirmButtonText: 'Ok',
+							}).then((result) => {
+							  /* Read more about isConfirmed, isDenied below */
+							})
+					} else {
+						Swal.fire({
+							icon: 'error',
+							  title: 'School cannot be added Something went Wrong' ,
+							  confirmButtonText: 'Ok',
+							}).then((result) => {
+							  /* Read more about isConfirmed, isDenied below */
+							})
+					}
+				}
+			})
+		})
+	})
+	
+	</script>
 </body>
 </html>
