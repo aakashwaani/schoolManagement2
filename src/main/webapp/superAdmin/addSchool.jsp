@@ -29,8 +29,8 @@
 									<div class="row">
 										<div class="col-xl-6">
 											<div class="form-group row">
-												<label for="validationCustom01" class="col-form-label col-lg-3">School
-													Registration Number</label>
+												<label for="validationCustom01" class="col-form-label col-lg-3"><span class="mx-2"><i class="fas fa-university"></i></span>School
+													Registration Number -</label>
 												<div class="col-lg-12">
 													<input type="text" name="schoolRegistrationNo" class="form-control"
 														id="validationCustom01" required>
@@ -42,7 +42,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">School Name</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fas fa-school"></i></span>School Name -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control" name="schoolName"
 														id="validationCustom01" required>
@@ -54,7 +54,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">Society Name</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fas fa-users"></i></span>Society Name -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
 														id="validationCustom01" name="societyName" required>
@@ -65,7 +65,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">School Code.</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fas fa-school"></i></span>School Code -</label>
 												<div class="col-lg-12">
 													<input type="number" class="form-control" name="schoolCode"
 														id="validationCustom01" required>
@@ -76,7 +76,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">UIDIAS No.</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fas fa-address-card"></i></span>UIDIAS No -</label>
 												<div class="col-lg-12">
 													<input type="number" class="form-control"
 														id="validationCustom01" name="UIDIASNo" required>
@@ -89,7 +89,7 @@
 										<div class="col-xl-6">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">Principal Name</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fa-solid fa-user-tie"></i></span>Principal Name -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
 														id="validationCustom01" name="principalName" required>
@@ -100,7 +100,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">Email</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fa-solid fa-envelope"></i></span>Email -</label>
 												<div class="col-lg-12">
 													<input type="email" class="form-control"
 														id="validationCustom01" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="schoolEmail" required>
@@ -111,7 +111,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">Mobile</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fa-solid fa-mobile"></i></span>Mobile -</label>
 												<div class="col-lg-12">
 													<input type="number" class="form-control"
 														id="validationCustom01" name="mobileNo" required>
@@ -123,7 +123,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">Logo</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fa-solid fa-school-circle-check"></i></span>Logo -</label>
 												<div class="col-lg-12">
 													<input type="file" id="validationCustom01"
 														class="form-control" name="schoolLogo" required>
@@ -133,7 +133,7 @@
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label">Banner</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fa-solid fa-school-circle-check"></i></span>Banner -</label>
 												<div class="col-lg-12">
 													<input type="file" id="validationCustom01"
 														class="form-control" name="schoolBanner" required>
@@ -148,7 +148,7 @@
 										<div class="col-xl-6">
 											<div class="form-group row">
 												<label id="validationCustom01"
-													class="col-lg-3 col-form-label">Address</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fa-sharp fa-solid fa-location-dot"></i></span>Address -</label>
 												<div class="col-lg-9">
 													<textarea rows="5" cols="5" class="form-control"
 														placeholder="" id="validationCustom01" name="Address" required></textarea>
@@ -160,7 +160,7 @@
 
 											<div class="form-group row">
 												<label id="validationCustom01"
-													class="col-lg-3 col-form-label">City</label>
+													class="col-lg-3 col-form-label"><span class="mx-2"><i class="fa-sharp fa-solid fa-city"></i></span>City -</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
 														id="validationCustom01" name="City" required>
@@ -173,7 +173,7 @@
 										<div class="col-xl-6">
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label"
-													id="validationCustom01">State</label>
+													id="validationCustom01"><span class="mx-2"><i class="fa-solid fa-tree-city"></i></span>State -</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
 														id="validationCustom01" name="State" required>
@@ -183,7 +183,7 @@
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label" id="validationCustom01">Postal Code</label>
+												<label class="col-lg-3 col-form-label" id="validationCustom01"><span class="mx-2"><i class="fa-sharp fa-solid fa-mailbox-flag-up"></i></span>Postal Code -</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control" id="validationCustom01" name="postalCode" required>
 														<div class="valid-feedback">Looks good!</div>
