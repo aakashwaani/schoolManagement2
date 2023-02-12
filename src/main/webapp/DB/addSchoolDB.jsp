@@ -7,11 +7,12 @@
 
 
 	<%
+	System.out.println("Working");
 		int done = 0;
 
 	try {
 		MultipartRequest m = new MultipartRequest(request,
-		"C:/Users/prati/eclipse-workspace/schoolManagement2/src/main/webapp/img", 1048 * 1048 * 1048);
+		"C:/Users/Akash/eclipse-workspace/schoolManagement1/src/main/webapp/img", 1048 * 1048 * 1048);
 
 		Connection con = ConnectionProvider.getConnection();
 		//schoolId, schoolRegistrationNo, societyName, schoolCode, UIDIASNo, principalName, mobileNo, schoolLogo, schoolBanner, Address, City, State, postalCode
