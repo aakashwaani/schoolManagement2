@@ -33,12 +33,10 @@
 									<div class="row">
 										<div class="col-xl-6">
 											<div class="form-group row">
-												<<<<<<< HEAD <label for="validationCustom01"
+												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="mx-2"><i
 														class="fas fa-university"></i></span>School Registration Number -</label>
-												======= <label for="validationCustom01"
-													class="col-form-label col-lg-3">School Registration
-													Number</label> >>>>>>> 0934d05b59ed063057c6de367c99f149fa165307
+										
 												<div class="col-lg-12">
 													<input type="text" name="schoolRegistrationNo"
 														class="form-control" id="validationCustom01">

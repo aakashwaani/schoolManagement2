@@ -102,7 +102,7 @@
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Email</label>
 												<div class="col-lg-12">
-													<input name="schoolEmail" type="text" class="form-control">
+													<input name="schoolEmail" type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 												</div>
 											</div>
 											<div class="form-group row">
