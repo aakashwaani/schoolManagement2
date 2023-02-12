@@ -36,8 +36,10 @@
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-user"></i></span> Student First Name -</label>
+													class="col-form-label col-lg-3">
+													<span class="px-1">
+													<i class="fas fa-user"></i></span> 
+													Student First Name -</label>
 												<div class="col-lg-12">
 													<input type="text" name="schoolRegistrationNo"
 														class="form-control" id="validationCustom01" required>
