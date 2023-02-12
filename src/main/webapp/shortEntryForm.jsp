@@ -22,12 +22,12 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">New Student (Short Entry Form)</h5>
+								<h5 class="card-title">New Student (Short Entry Form) -</h5>
 							</div>
 
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
-								<form action=""  method="POST"
+								<form action="DB/studentShortFormDB.jsp"  method="POST"
 									class="needs-validation" novalidate>
 
 
@@ -38,7 +38,7 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span> Student First Name -</label>
 												<div class="col-lg-12">
-													<input type="text" name="schoolRegistrationNo"
+													<input type="text" name="studentFirstName"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide First
@@ -51,7 +51,7 @@
 													class="col-lg-3 col-form-label"><span class="px-1"><i
 														class="fa-solid fa-address-card"></i></span>Student PRN Number -</label>
 												<div class="col-lg-12">
-													<input type="number" class="form-control" name="schoolName"
+													<input type="number" class="form-control" name="studentPRNNumber"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Middle
@@ -83,7 +83,7 @@
 													class="px-1"><i class="fa-solid fa-address-card"></i></span>Caste
 													Category -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="castId"
+													<select class="form-control form-select" name="castCategory"
 														id="validationCustom01" required>
 
 														<%
@@ -114,7 +114,7 @@
 														class="fa-solid fa-calendar-days"></i></span>Academic Year - </label>
 												<div class="col-lg-12">
 													<input type="date" class="form-control"
-														id="validationCustom01" name="studentDOB" required>
+														id="validationCustom01" name="academicYear" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide valid
 														Academic Year.</div>
@@ -124,11 +124,9 @@
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label"><span class="mx-1"><i class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select"
+													<input class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
-														<option></option>
-														<option></option>
-													</select>
+													</input>
 												</div>
 											</div>
 											
@@ -140,7 +138,7 @@
 														class="fas fa-user "></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
-														id="validationCustom01" name="principalName" required>
+														id="validationCustom01" name="studentMiddleName" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Middle
 														Name.</div>
@@ -153,11 +151,11 @@
 												<div class="col-lg-12">
 													<input type="date" class="form-control"
 														id="validationCustom01"
-														pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-														name="schoolEmail" required>
+														p
+														name="dateOfAdmission" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide valid
-														Email-Id.</div>
+														Date Of Admission</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -166,7 +164,7 @@
 														class="fa-solid fa-mobile"></i></span>Contact No -</label>
 												<div class="col-lg-12">
 													<input type="number" class="form-control"
-														id="validationCustom01" name="mobileNo" required>
+														id="validationCustom01" name="contactNo" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Contact
 														No.</div>
@@ -178,7 +176,7 @@
 													class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion -
 												</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="rseligionId"
+													<select class="form-control form-select" name="rseligion"
 														id="validationCustom01" required>
 
 														<%
@@ -208,7 +206,7 @@
 													class="px-1"><i class="fa-solid fa-user-plus"></i></span>Select Section -
 												</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="sectionId"
+													<select class="form-control form-select" name="selectSection"
 														id="validationCustom01" required>
 
 														<%
@@ -242,7 +240,7 @@
 														class="fas fa-user"></i></span>Student Last Name -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
-														id="validationCustom01" name="studentFirstName" required>
+														id="validationCustom01" name="studentLastName" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Last
 														Name.</div>
@@ -266,7 +264,7 @@
 														class="fa-solid fa-flag"></i></span>Nationality -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
-														id="validationCustom01" name="religion" required>
+														id="validationCustom01" name="nationality" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide
 														Religion.</div>
@@ -291,7 +289,7 @@
 													class="px-1"><i class="fa-solid fa-graduation-cap"></i></span>Select Class -
 												</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="classId"
+													<select class="form-control form-select" name="selectClass"
 														id="validationCustom01" required>
 
 														<%
