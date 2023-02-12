@@ -15,7 +15,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	rel="stylesheet"></link>
 </head>
 <body>
-	<div class="main-wrapper">
+	<div class="main-wrapper">	
 		<jsp:include page="header.jsp"></jsp:include>
 		<jsp:include page="sidebar.jsp"></jsp:include>
 
