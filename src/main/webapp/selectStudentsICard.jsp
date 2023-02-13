@@ -22,7 +22,7 @@
 			margin-bottom: -25px;
 			}
 			
-			#t3{
+			.card-header{
 				background-color: #C6FFAB;
 				font-weight: bold;
 				color: green;
@@ -59,19 +59,13 @@
 			
 		<div class="page-wrapper" id="p1">
 			<div class="content container-fluid">
-				<div class="page-header">
-					<div class="row">
-						<div class="col">
-							<h5 class="page-title">Student Information-</h5>
-						</div>
-					</div>
-				</div>
+			
 	   
 	  			<div class="row">
 					<div class="col-md-12">
 						<div class="card" id="id1">
 							<div class="card-header">
-								<h5 class="card-title"> Download Student Details in Excel Format- </h5>
+								<h5 class="card-title"> Select Student(s) for I-Card- </h5>
 							</div>
 					
 			
@@ -143,110 +137,55 @@
 										</tbody>	
 										</table>	
 											
+										<table class="table table-bordered ">
+										<tr><td style="text-align: center;">
+										<a href=""  class="btn btn-warning btn-sm"> <i class="fa-solid fa-magnifying-glass"></i> Search</a>
+										</td></tr>
+										</table>
+										
 									</div>
-								</div>
+									</div>
 							</div>
 						</div>
-						
-						<div class="row justify-content-center">
-								<div class="col-12" id="header">
-									<div class="card">
-										<div class="table-responsive">
-										<table class="table table-bordered table-striped table-highlight" id="t3">
-											<thead>
-												<tr> <td style="text-align: center;"> Select Details </td> </tr> 
-											</thead>
-											
-										</table>
-										</div>
-									</div>
-								</div>
-							</div>
 									
 			</form>
 										
+										
+										
 							<div class="row justify-content-center">
-								<div class="col-12" id="header">
+								<div class="col-12" id="c1">
 								<div class="table-responsive">
 								
 									<table class="table table-bordered table-striped">
 										<tbody>
-
-											<tr>
-												<td><input type="checkbox"> Stud Prn</td>
-												<td><input type="checkbox"> Stud Reg Id</td>
-												<td><input type="checkbox"> Sect Name</td>
-												<td><input type="checkbox"> Class Name</td>
+											<tr style="text-align: center;">
+												<th> Sr. No. </th>
+												<th> Academic Year </th>
+												<th> PRN </th>
+												<th> Roll No. </th>
+												<th> Full Name </th>
+												<th> Class and Division </th>
+												<th> Action(Y/N) <input type="checkbox"> </th>
 											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Div Name</td>
-												<td><input type="checkbox"> Stud Rollno</td>
-												<td><input type="checkbox"> Stud Fname</td>
-												<td><input type="checkbox"> Stud Mname</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Lname</td>
-												<td><input type="checkbox"> Stud Dob</td>
-												<td><input type="checkbox"> Stud Birth Place</td>
-												<td><input type="checkbox"> Stud Gender</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Address</td>
-												<td><input type="checkbox"> Stud Father Name</td>
-												<td><input type="checkbox"> Stud Parent Mobile1</td>
-												<td><input type="checkbox"> Stud Mother Name</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Mother Contact</td>
-												<td><input type="checkbox"> Stud Mobile</td>
-												<td><input type="checkbox"> Stud Parent Landline</td>
-												<td><input type="checkbox"> Stud Parent Email</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Email</td>
-												<td><input type="checkbox"> Stud Admission Date </td>
-												<td><input type="checkbox"> Nat Name</td>
-												<td><input type="checkbox"> Rel Name</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Cast Name </td>
-												<td><input type="checkbox"> Stud Cast </td>
-												<td><input type="checkbox"> Stud Aadhar </td>
-												<td><input type="checkbox"> Stud Previous School </td>
-											</tr>
-
 										</tbody>
-
-
 									</table>
+								</div>
+								</div>
+						</div>
+										
+										
+										</div>
+									</div>
 									</div>
 								</div>
-							</div> <br>
-
-
-
-			<div id="button" style="text-align: center;">
-				<a href="" id="button1" class="btn btn-success btn-sm"><i class="fa-solid fa-download"></i> Download </a>
-				<button type="reset" value="reset" class="btn btn-danger btn-sm"> <i class="fa-solid fa-xmark"></i> Reset </button>
-				<br> <br>
-			</div>
-
-
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 						
-									
+						
+
+			
+					
 	<div>
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>

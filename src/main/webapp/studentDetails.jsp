@@ -160,9 +160,11 @@
 										
 							<div class="row justify-content-center">
 								<div class="col-12" id="c1">
+								<div class="table-responsive">
+								
 									<table class="table table-bordered table-striped">
 										<tbody>
-											<tr>
+											<tr style="text-align: center;">
 												<th> Sr. No. </th>
 												<th> Academic Year </th>
 												<th> PRN </th>
@@ -173,6 +175,7 @@
 											</tr>
 										</tbody>
 									</table>
+								</div>
 								</div>
 						</div>
 										
