@@ -1,8 +1,4 @@
-/*
-Author       : Dreamguys
-Template Name: Preskool - Bootstrap Admin Template
-Version      : 1.0
-*/
+
 
 /*============================
  [Table of CSS]
@@ -1328,7 +1324,7 @@ a.bg-danger:focus, a.bg-danger:hover, button.bg-danger:focus, button.bg-danger:h
 	color: #fff;
 }
 
-.btn-warning.active:focus:not (:disabled ):not (.disabled ),
+.btn-warning.active:focus:not(:disabled ):not(.disabled ),
 	.btn-warning:active:focus:not (:disabled ):not (.disabled ), .show>.btn-warning.dropdown-toggle:focus
 	{
 	box-shadow: unset;
