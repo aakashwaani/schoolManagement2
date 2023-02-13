@@ -298,8 +298,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
 		$("#addStaffForm").on('submit', function(event) {
 			event.preventDefault();
 			//var f = $(this).serialize();
-			let f = new FormData($(this)[0])
-			console.log(f)
+			//let f = new FormData($(this)[0])
+			//console.log(f)
 
 			$.ajax({
 				type : 'POST',

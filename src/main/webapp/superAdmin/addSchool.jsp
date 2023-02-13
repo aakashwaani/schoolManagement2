@@ -27,7 +27,8 @@
 
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
-								<form id="addSchoolForm" class="needs-validation" novalidate>
+								<form id="addSchoolForm" class="needs-validation" novalidate
+									enctype="multipart/form-data" role="form">
 
 
 									<div class="row">
@@ -218,7 +219,7 @@
 										</div>
 									</div>
 									<div class="text-end">
-										<button class="btn btn-primary" type="submit">Submit
+										<button type="submit" class="btn btn-primary" id="submit">Submit
 											Form</button>
 										<button class="btn btn-danger" type="reset">Reset</button>
 									</div>
@@ -328,48 +329,49 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<jsp:include page="footer.jsp"></jsp:include>
 
-
-
 	<script type="text/javascript">
-	$(document).ready(function() {
-		$("#addSchoolForm").on('submit', function(event) {
-			event.preventDefault();
-			//var f = $(this).serialize();
-			let f = new FormData($(this)[0])
-			console.log(f)
+		$(document).ready(function() {
+			$("#submit").click(function(event) {
+				event.preventDefault();
+				//var f = $(this).serialize();
+				let f = new FormData($('#addSchoolForm')[0])
+				console.log(f)
 
-			$.ajax({
-				type : 'POST',
-				enctype : 'multipart/form-data',
-				url : '../DB/addSchoolDB.jsp',
-				data : f,
-				processData : false,
-				contentType : false,
-				cache : false,
-				success : function(responce) {
-					console.log(responce.trim())
-					if (responce.trim() == "1") {
-						 $("#addSchoolForm")[0].reset()
-						Swal.fire({
-							icon: 'success',
-							  title: 'Well Done ! Staff Added Successfully ' ,
-							  confirmButtonText: 'Ok',
-							}).then((result) => {
-							  /* Read more about isConfirmed, isDenied below */
-							})
-					} else {
-						Swal.fire({
+				$.ajax({
+					type : 'POST',
+					enctype : 'multipart/form-data',
+					url : '../DB/addSchoolDB.jsp',
+					data : f,
+					processData : false,
+					contentType : false,
+					cache : false,
+					success : function(responce) {
+						console.log(responce.trim())
+						if (responce.trim() == "1") {
+							$("#addSchoolForm")[0].reset()
+							Swal.fire({
+								icon: 'success',
+								  title: 'School Added Successfully ' ,
+								  confirmButtonText: 'Ok',
+								}).then((result) => {
+								  /* Read more about isConfirmed, isDenied below */
+									window.location.href = "./addSchool.jsp";
+						
+								})
+						} else {
+							Swal.fire({
 							icon: 'error',
-							  title: 'Staff cannot be added Something went Wrong !' ,
-							  confirmButtonText: 'Ok',
+							title: 'School cannot be added ' ,
+							confirmButtonText: 'Ok',
 							}).then((result) => {
-							  /* Read more about isConfirmed, isDenied below */
-							})
+							/* Read more about isConfirmed, isDenied below */
+							window.location.href = "./addSchool.jsp";
+							})												
+						}
 					}
-				}
+				})
 			})
 		})
-	})
 	</script>
 
 	<br>
