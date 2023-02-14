@@ -14,7 +14,7 @@
 
 <link rel="stylesheet" href="../assets/plugins/icons/flags/flags.css">
 
-
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
