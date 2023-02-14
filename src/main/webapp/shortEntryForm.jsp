@@ -27,7 +27,7 @@
 
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
-								<form action="DB/studentShortFormDB.jsp"  method="POST"
+								<form action="DB/studentShortFormDB.jsp" method="POST"
 									class="needs-validation" novalidate>
 
 
@@ -51,8 +51,8 @@
 													class="col-lg-3 col-form-label"><span class="px-1"><i
 														class="fa-solid fa-address-card"></i></span>Student PRN Number -</label>
 												<div class="col-lg-12">
-													<input type="number" class="form-control" name="studentPRNNumber"
-														id="validationCustom01" required>
+													<input type="number" class="form-control"
+														name="studentPRNNumber" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Middle
 														Name.</div>
@@ -83,8 +83,8 @@
 													class="px-1"><i class="fa-solid fa-address-card"></i></span>Caste
 													Category -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="castCategory"
-														id="validationCustom01" required>
+													<select class="form-control form-select"
+														name="castCategory" id="validationCustom01" required>
 
 														<%
 														try {
@@ -113,23 +113,42 @@
 													class="col-lg-3 col-form-label"><span class="px-1"><i
 														class="fa-solid fa-calendar-days"></i></span>Academic Year - </label>
 												<div class="col-lg-12">
-													<input type="date" class="form-control"
-														id="validationCustom01" name="academicYear" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide valid
-														Academic Year.</div>
+													<select class="form-control form-select"
+														name="academicYear" id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from academicyear");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("academicYearId")%>">
+															<%=rs.getString("academicYear")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
 												</div>
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="mx-1"><i class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
+													class="col-lg-3 col-form-label"><span class="mx-1"><i
+														class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
 												<div class="col-lg-12">
 													<input class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
 													</input>
 												</div>
 											</div>
-											
+
 										</div>
 										<div class="col-xl-4">
 											<div class="form-group row">
@@ -173,8 +192,8 @@
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion -
-												</label>
+													class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion
+													- </label>
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="rseligion"
 														id="validationCustom01" required>
@@ -203,11 +222,11 @@
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-user-plus"></i></span>Select Section -
-												</label>
+													class="px-1"><i class="fa-solid fa-user-plus"></i></span>Select
+													Section - </label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="selectSection"
-														id="validationCustom01" required>
+													<select class="form-control form-select"
+														name="selectSection" id="validationCustom01" required>
 
 														<%
 														try {
@@ -278,7 +297,7 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
-														<option>Please Select </option>
+														<option>Please Select</option>
 														<option>ADMITTED</option>
 														<option>NOT-ADMITTED</option>
 													</select>
@@ -286,8 +305,8 @@
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-graduation-cap"></i></span>Select Class -
-												</label>
+													class="px-1"><i class="fa-solid fa-graduation-cap"></i></span>Select
+													Class - </label>
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="selectClass"
 														id="validationCustom01" required>
@@ -313,7 +332,7 @@
 														%>
 													</select>
 												</div>
-											</div>	
+											</div>
 										</div>
 									</div>
 									<div class="text-end">

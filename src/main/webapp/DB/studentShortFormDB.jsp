@@ -13,10 +13,11 @@
 <body>
 
 	<%
+
 	try {
 		int done = 0;
 		Connection con = ConnectionProvider.getConnection();
-		
+
 		String studentFirstName = request.getParameter("studentFirstName");
 		String studentPRNNumber = request.getParameter("studentPRNNumber");
 		String gender = request.getParameter("gender");
@@ -48,9 +49,9 @@
 		out.println("nationality ->" + nationality + "\n");
 		out.println("admissionStatus ->" + admissionStatus + "\n");
 		out.println("selectClass ->" + selectClass + "\n");
-		
+
 		String query = "insert into studentdetails (firstName, prnNo, gender, castCategory, academicYearId, middleName, dateOfAdmission,studentMobile, religionId,selectSection,lastName,dateOfBirth,nationality,admissionStatus,selectClassId) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-		
+
 		PreparedStatement pstmt = null;
 		pstmt = con.prepareStatement(query);
 		pstmt.setString(1, studentFirstName);
@@ -70,7 +71,7 @@
 		pstmt.setString(15, selectClass);
 		done = pstmt.executeUpdate();
 		System.out.println(done);
-		
+
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
