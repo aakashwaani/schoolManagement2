@@ -1,3 +1,5 @@
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html>
@@ -85,25 +87,16 @@
 								<div class="table-responsive">
 									<table class="table table-bordered table-striped">
 										<tbody>
-											<tr><td style="text-align: center;"> <label> Academic Year </label> 
+											<tr><td style="text-align: center;"> <label> PRN Number </label> 
 													<select class="form-control">
 													<option value="">Select Academic Year</option>
-													<option value="1">2018-19</option>
-													<option value="2">2019-20</option>
-													<option value="3">2020-21</option>
-													<option value="4">2021-22</option>
-													<option value="5">2022-23</option>
-													<option value="6">2023-24</option>
+													
 													</select></td>
 
-											<td style="text-align: center;"><label> Select Selection </label>
+											<td style="text-align: center;"><label> Student Full Name </label>
 													 <select class="form-control">
 													<option value="">Select Selection</option>
-													<option value="1">SECONDARY 5TH AND 6TH</option>
-													<option value="2">SECONDARY 6TH AND 7TH</option>
-													<option value="3">SECONDARY 7TH AND 8TH</option>
-													<option value="4">SECONDARY 8TH AND 9TH</option>
-													<option value="5">SECONDARY 9TH AND 10TH</option>
+													
 													</select></td>
 
 											<td style="text-align: center;"><label> Select Class</label> 
@@ -164,7 +157,7 @@
 								
 									<table class="table table-bordered table-striped">
 										<tbody>
-											<tr style="text-align: center;">
+											<tr>
 												<th> Sr. No. </th>
 												<th> Academic Year </th>
 												<th> PRN </th>

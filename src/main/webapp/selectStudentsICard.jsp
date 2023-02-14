@@ -59,19 +59,13 @@
 			
 		<div class="page-wrapper" id="p1">
 			<div class="content container-fluid">
-				<div class="page-header">
-					<div class="row">
-						<div class="col">
-							<h5 class="page-title">Student Information-</h5>
-						</div>
-					</div>
-				</div>
+			
 	   
 	  			<div class="row">
 					<div class="col-md-12">
 						<div class="card" id="id1">
 							<div class="card-header">
-								<h5 class="card-title"> Student Details- </h5>
+								<h5 class="card-title"> Select Student(s) for I-Card- </h5>
 							</div>
 					
 			
@@ -168,10 +162,10 @@
 												<th> Sr. No. </th>
 												<th> Academic Year </th>
 												<th> PRN </th>
+												<th> Roll No. </th>
 												<th> Full Name </th>
 												<th> Class and Division </th>
-												<th> Status </th>
-												<th> Action </th>
+												<th> Action(Y/N) <input type="checkbox"> </th>
 											</tr>
 										</tbody>
 									</table>

@@ -22,7 +22,7 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">New Student (Short Entry Form)</h5>
+								<h5 class="card-title">New Student (Short Entry Form) -</h5>
 							</div>
 
 							<div class="card-body">
@@ -168,7 +168,7 @@
 												<div class="col-lg-12">
 													<input type="date" class="form-control"
 														id="validationCustom01"
-														pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+														p
 														name="dateOfAdmission" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide valid

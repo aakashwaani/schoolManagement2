@@ -40,8 +40,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 								<h5 class="card-title">Add New Staff Entry -</h5>
 							</div>
 							<div class="card-body">
-								<form id="addStaffForm" action="DB/addStaffDB.jsp" method="POST"
-									enctype="multipart/form-data">
+								<form id="addStaffForm" class="needs-validation" action="DB/addStaffDB.jsp" method="POST"
+									enctype="multipart/form-data" novalidate>
 									<div class="row">
 										<!--  <div class="profile-pic-wrapper">
 											<div class="pic-holder">
@@ -71,16 +71,17 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 													class="col-lg-3 col-form-label">Staff Profile Pic</label>
 												<div class="col-lg-9 ">
 													<input type="file" id="validationCustom01"
-														class="form-control" name="staffProfilePic">
+														class="form-control" name="staffProfilePic" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Upload Banner.</div>
+													<div class="invalid-feedback">Please Upload Staff Profile Pic.</div>
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Select Staff
-													Role </label>
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Select Staff Role </label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="staffRoleId">
+													<select class="form-control form-select" name="staffRoleId"
+														id="validationCustom01">
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -106,21 +107,24 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">First Name</label>
+												<label for="validationCustom01" class="col-lg-3 col-form-label">First Name</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" name="firstName">
+													<input type="text" class="form-control" name="firstName" id="validationCustom01">
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please choose a
+														username.</div>
 												</div>
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Middle Name</label>
+												<label for="validationCustom01" class="col-lg-3 col-form-label">Middle Name</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" name="middleName">
+													<input type="text" class="form-control" name="middleName" id="validationCustom01">
 												</div>
 											</div>
 
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">LastName Name</label>
+												<label class="col-lg-3 col-form-label">Last Name </label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control" name="lastName">
 												</div>
@@ -155,6 +159,45 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 													<input type="date" name="joiningDate" class="form-control">
 												</div>
 											</div>
+
+
+										</div>
+										<div class="col-xl-6">
+
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label">Employee Id</label>
+												<div class="col-lg-9">
+													<input type="number" name="employeeId" class="form-control">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label">Date Of Birth</label>
+												<div class="col-lg-9">
+													<input type="date" name="dateofBirth" class="form-control">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label">Email ID</label>
+												<div class="col-lg-9">
+													<input type="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Qualification</label>
+												<div class="col-lg-9">
+													<input type="text" name="qualification"
+														class="form-control" id="validationCustom01">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label">Salary</label>
+												<div class="col-lg-9">
+													<input type="number" name="salary" class="form-control"
+														required>
+												</div>
+											</div>
+
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Designation</label>
 												<div class="col-lg-9">
@@ -184,48 +227,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Caste
-													Category</label>
-												<div class="col-lg-9">
-													<input type="text" name="casteCategory"
-														class="form-control" required>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-6">
-
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Employee Id</label>
-												<div class="col-lg-9">
-													<input type="number" name="employeeId" class="form-control">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Date Of Birth</label>
-												<div class="col-lg-9">
-													<input type="date" name="dateofBirth" class="form-control">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Email ID</label>
-												<div class="col-lg-9">
-													<input type="email" name="email" class="form-control">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Qualification</label>
-												<div class="col-lg-9">
-													<input type="text" name="qualification"
-														class="form-control">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Salary</label>
-												<div class="col-lg-9">
-													<input type="number" name="salary" class="form-control">
-												</div>
-											</div>
-											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Caste Id</label>
 												<div class="col-lg-9">
 													<select class="form-control form-select" name="staffCastId">
@@ -250,6 +251,14 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 														%>
 
 													</select>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label">Caste Category</label>
+												<div class="col-lg-9">
+													<input type="text" name="casteCategory"
+														class="form-control" required>
 												</div>
 											</div>
 										</div>
@@ -277,8 +286,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 			</div>
 		</div>
 	</div>
-<script
-	src="
+	<script
+		src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
 "></script>
 	<jsp:include page="footer.jsp"></jsp:include>
@@ -306,7 +315,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
 						 $("#addStaffForm")[0].reset()
 						Swal.fire({
 							icon: 'success',
-							  title: 'School Added Successfully ' ,
+							  title: 'Well Done ! Staff Added Successfully ' ,
 							  confirmButtonText: 'Ok',
 							}).then((result) => {
 							  /* Read more about isConfirmed, isDenied below */
@@ -314,7 +323,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
 					} else {
 						Swal.fire({
 							icon: 'error',
-							  title: 'School cannot be added Something went Wrong' ,
+							  title: 'Staff cannot be added Something went Wrong !' ,
 							  confirmButtonText: 'Ok',
 							}).then((result) => {
 							  /* Read more about isConfirmed, isDenied below */
