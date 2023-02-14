@@ -60,6 +60,20 @@
 												</div>
 											</div>
 											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-address-card"></i></span>Gender -</label>
+												<div class="col-lg-12">
+													<input type="number" class="form-control" name="studentPRNNumber"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Gender
+														Name.</div>
+
+												</div>
+											</div>
+										<!-- 	
+											<div class="form-group row">
 												<label class="col-lg-3 col-form-label"><span
 													class="px-1"><i
 														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
@@ -78,6 +92,9 @@
 													</div>
 												</div>
 											</div>
+											 -->
+											
+											
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label"><span
 													class="px-1"><i class="fa-solid fa-address-card"></i></span>Caste
