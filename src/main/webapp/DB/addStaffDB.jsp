@@ -4,32 +4,23 @@
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 
 <%@ page import="java.sql.*"%>
-<script
-	src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
-"></script>
-<link
-	href="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
-"
-	rel="stylesheet"></link>
-<body>
+
 
 	<%
+	System.out.println("Hello");
 	int done = 0;
 
-	//try {
+	try {
 		MultipartRequest m = new MultipartRequest(request,
 		"C:/Users/prati/eclipse-workspace/schoolManagement2/src/main/webapp/img", 1048 * 1048 * 1048);
 
 		Connection con = ConnectionProvider.getConnection();
-//staffId, firstName, middleName, lastName, email, moblileNo, gender, joiningDate, dateofBirth, staffAddress, qualification, 
-//salary, casteCategory, staffRoleId, designationId, staffCastId, staffProfilePic, employeeId        
-		
-		
-        String firstName = m.getParameter("firstName");
-        String middleName = m.getParameter("middleName");
-        String lastName = m.getParameter("lastName");
+		//staffId, firstName, middleName, lastName, email, moblileNo, gender, joiningDate, dateofBirth, staffAddress, qualification, 
+		//salary, casteCategory, staffRoleId, designationId, staffCastId, staffProfilePic, employeeId        
+
+		String firstName = m.getParameter("firstName");
+		String middleName = m.getParameter("middleName");
+		String lastName = m.getParameter("lastName");
 		String email = m.getParameter("email");
 		String moblileNo = m.getParameter("moblileNo");
 		String gender = m.getParameter("gender");
@@ -39,95 +30,49 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		String qualification = m.getParameter("qualification");
 		String salary = m.getParameter("salary");
 		String casteCategory = m.getParameter("casteCategory");
-		String castId = m.getParameter("casteCategory");
+		String castId = m.getParameter("staffCastId");
 		String staffRoleId = m.getParameter("staffRoleId");
 		String designationId = m.getParameter("designationId");
 		String staffCastId = m.getParameter("staffCastId");
 		String employeeId = m.getParameter("employeeId");
-        String staffProfilePic = "/img/" + m.getFilesystemName("staffProfilePic");
-		
-        
-		out.print( "firstName - >" + firstName + "\n");
-        out.print( "middleName - >" +middleName + "\n");
-		out.print( "lastName - >" +lastName + "\n");
-		out.print( "email - >" +email + "\n");
-		out.print( "mob - >" +moblileNo + "\n");
-		out.print( "gender - >" +gender + "\n");
-		out.print( "jD - >" +joiningDate + "\n");
-		out.print( "DOB - >" +dateofBirth + "\n");
-		out.print( "s_address - >" +staffAddress + "\n");
-		out.print( "qulification - >" +qualification + "\n");
-		out.print( "sal - >" +salary + "\n");
-        out.print( "staffPor - >" +staffProfilePic + "\n");
-		out.print( "catCat - >" +casteCategory + "\n");
-		out.print( "staffRoleId - >" +staffRoleId + "\n");
-		out.print( "deg - >" +designationId + "\n");
-        out.print( "stffCasId - >" +staffCastId + "\n");
-        out.print( "empId - >" +employeeId + "\n");
+		String staffProfilePic = "/img/" + m.getFilesystemName("staffProfilePic");
 
+	
 
-/*
-		String addSchoolQuery = "insert into schools(schoolName, schoolRegistrationNo, societyName, schoolCode, UIDIASNo, principalName, schoolEmail, mobileNo, schoolLogo, schoolBanner, Address, City, State, postalCode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String addSchoolQuery = "insert into  staff(firstName, middleName, lastName, email, moblileNo, gender, joiningDate, dateofBirth, staffAddress, qualification, salary, casteCategory, staffRoleId, designationId, staffCastId, staffProfilePic, employeeId) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement pstm = null;
 
 		pstm = con.prepareStatement(addSchoolQuery);
-		pstm.setString(1, schoolName);
-		pstm.setString(2, schoolRegistrationNo);
-		pstm.setString(3, societyName);
+		pstm.setString(1, firstName);
+		pstm.setString(2, middleName);
+		pstm.setString(3, lastName);
 
-		pstm.setString(4, schoolCode);
-		pstm.setString(5, UIDIASNo);
-		pstm.setString(6, principalName);
-		pstm.setString(7, schoolEmail);
-		pstm.setString(8, mobileNo);
-		pstm.setString(9, schoolLogo);
-		pstm.setString(10, schoolBanner);
+		pstm.setString(4, email);
+		pstm.setString(5, moblileNo);
+		pstm.setString(6, gender);
+		pstm.setString(7, joiningDate);
+		pstm.setString(8, dateofBirth);
+		pstm.setString(9, staffAddress);
+		pstm.setString(10, qualification);
 
-		pstm.setString(11, Address);
-		pstm.setString(12, City);
-		pstm.setString(13, State);
-		pstm.setString(14, postalCode);
+		pstm.setString(11, salary);
+		pstm.setString(12, casteCategory);
+		pstm.setString(13, staffRoleId);
+		pstm.setString(14, designationId);
+		pstm.setString(15, staffCastId);
+		pstm.setString(16, staffProfilePic);
+		pstm.setString(17, employeeId);
 
 		done = pstm.executeUpdate();
-
+		System.out.println(done);
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-*/
+
 	if (done == 1) {
-	%>
-	<script type="text/javascript">
-
-	Swal.fire({
-		
-		icon: 'success',
-		  title: 'Class Added Successfully ' ,
-		  confirmButtonText: 'Ok',
-		}).then((result) => {
-		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../superAdmin/addSchool.jsp";
-
-		})
-			</script>
-	<%
+	out.print(1);
 	} else {
-	%>
-	<script type="text/javascript">
-	
-	Swal.fire({
-		icon: 'error',
-		  title: 'Class cannot be added ' ,
-		  confirmButtonText: 'Ok',
-		}).then((result) => {
-		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../superAdmin/addSchool.jsp";
-
-		})
-		
-		</script>
-
-	<%
+	out.print(0);
 	}
 	%>
-	
-	</body>
+
