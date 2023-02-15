@@ -99,14 +99,14 @@ selectTransportWay, selectSlab, slabFees, admissionStatus -->
 											<td><%=rs.getString("addressForCommunication")%></td>
 											<td><%=rs.getString("gender")%></td>
 											<td><%=rs.getString("dateOfAdmission")%></td>
-											<td>
+										<!--  	<td>
                                                     <h2 class="table-avatar">
                                                         <a class="avatar avatar-sm me-2"><img
                                                                 class="avatar-img rounded-circle"
                                                                 src="../<%= rs.getString("photograph")%>"
                                                                 alt="User Image"></a>
                                                     </h2>
-                                            </td>
+                                            </td>-->
 											<td><%=rs.getString("nationality")%></td>
 											<td><%=rs.getString("status")%></td>
 											<td><%=rs.getString("nameOfThePreviousSchool")%></td>
