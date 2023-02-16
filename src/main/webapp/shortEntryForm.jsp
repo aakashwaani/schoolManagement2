@@ -65,7 +65,7 @@
 														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
+														name="gender" id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option>Male</option>
@@ -140,12 +140,10 @@
 													class="col-lg-3 col-form-label"><span class="mx-1"><i
 														class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
-														<option></option>
-													</select>
+													<input type="text" class="form-control"
+														id="validationCustom01" name="selectFeesCategory" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide feesCategory</div>
 												</div>
 											</div>
 

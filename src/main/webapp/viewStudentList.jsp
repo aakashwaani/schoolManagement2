@@ -30,12 +30,11 @@
 							<div class="table-responsive">
 								<table class=" mb-0 table table-striped ">
 									<thead class="bg-primary">
-<!--  onlineRegId, prnNo, firstName, middleName, lastName, dateOfBirth, birthPlace, 
-religionId, castCategory, castId, addressForCommunication, gender, dateOfAdmission, 
-photograph, nationality, status, nameOfThePreviousSchool, nameOfTheFather, parentEmail, 
-fatherMobileNo, studentMobile, nameOfTheMother, studentEmail, motherMobileNo, landline, 
-aadharNumber, academicYearId, selectSection, selectClassId, classFees, selectFeesCategory, 
-selectTransportWay, selectSlab, slabFees, admissionStatus -->
+<!--  studentFirstName, onlineRegisteredId, dateOfBirth, dateOfAdmission, castId, studentMiddleName, 
+studentPRNNumber, birthPlace, photograph, castName, studentLastName, gender, nationality, status, 
+religionId, address, nameOfPreviousSchool, aadharNo, email, studentContactNo, studentFatherName, 
+parentsEmail, fatherContactNo, studentMotherName, motherContactNo, landline, academicYearId, sectionId, 
+classId, classFees, selectFeeCategory, SelectTransportWay, selectSlab, slabFees -->
 										<tr>
 											<th>onlineRegId</th>
 											<th>prnNo</th>
