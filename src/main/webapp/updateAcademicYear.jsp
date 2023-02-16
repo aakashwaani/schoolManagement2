@@ -46,7 +46,8 @@
 								ResultSet rs = stmt.executeQuery("select * from academicyear where academicYearId=" + id + ";");
 								rs.next();
 								%>
-								<form action="DB/updateacademicYearDB.jsp?id=<%=id %>" method="post">
+								<form action="DB/updateacademicYearDB.jsp?id=<%=id%>"
+									method="post" id="#updateAcademicYear">
 									<div class="form-group">
 										<label> Starting Academic Year (Ex. 2020)</label> <input
 											type="text" name="academicYear"
@@ -67,8 +68,8 @@
 											class="form-control" name="nextAcademicYearDate">
 									</div>
 									<div class="text-end">
-										<button type="submit" class="btn btn-primary">Update</button>
-										<button type="submit" class="btn btn-danger">Reset</button>
+										<button type="submit" class="btn btn-primary">Save</button>
+										<button type="reset" class="btn btn-danger">Reset</button>
 									</div>
 								</form>
 							</div>
@@ -79,7 +80,55 @@
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
+"></script>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#updateAcademicYear").submit(function(event) {
+				event.preventDefault();
+				//let f = new FormData($("#addAcademicYear")[0])
+				   if ($("#updateAcademicYear")[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							url : "f",
+							data:$("#updateAcademicYear").serialize(),
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$("#updateAcademicYear")[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'AcademicYear Updated Successfully ' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'AcademicYear cannot be added ' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $("updateAcademicYear").addClass('was-validated');
+				});
+			})
+		
+	</script>
+
 
 </body>
 </html>

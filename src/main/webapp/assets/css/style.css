@@ -175,8 +175,36 @@ ul, ol {
 /*-----------------
 	2. Table
 -----------------------*/
-
-
+table.table td h2 {
+	display: inline-block;
+	font-size: inherit;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+table.table td h2.table-avatar {
+    align-items: center;
+    display: inline-flex;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+	white-space: nowrap;
+}
+table.table td h2 a {
+	color: #333;
+}
+table.table td h2 a:hover {
+	color: #3d5ee1;
+}
+table.table td h2 span {
+	color: #888;
+	display: block;
+	font-size: 12px;
+	margin-top: 3px;
+}
 .settings-form {
 	margin-top: 20px;
 }

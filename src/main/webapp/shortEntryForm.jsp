@@ -65,7 +65,7 @@
 														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
+														name=gender id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option>Male</option>
@@ -122,7 +122,7 @@
 														class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
+														name="feesCategory" id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option></option>
@@ -174,7 +174,7 @@
 													class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion
 													- </label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="rseligion"
+													<select class="form-control form-select" name="religion"
 														id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>

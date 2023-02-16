@@ -42,8 +42,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 								<h5 class="card-title">Academic Year Details -</h5>
 							</div>
 							<div class="card-body">
-								<form id="addAcademicYear"
-									class="needs-validation" novalidate method="POST" role="form">
+								<form id="addAcademicYear" class="needs-validation" novalidate
+									method="POST" role="form">
 									<div class="form-group">
 										<label for="validationCustom01"> Starting Academic
 											Year (Ex. 2020)</label> <input type="text" name="academicYear"
@@ -108,7 +108,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 
 										<tr>
 											<td><%=cnt%></td>
-											<td><%=rs.getString("academicYearId")%></td>
+											<td><%=rs.getString("academicYear")%></td>
 											<td><%=rs.getString("startmonthNumber")%></td>
 											<td><%=rs.getString("nextAcademicYearDate")%></td>
 											<td class="">
@@ -143,13 +143,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 
 		<jsp:include page="footer.jsp"></jsp:include>
 		<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<script
-	src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script	src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
 "></script>
 	</div>
-	
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -173,6 +170,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
 										  confirmButtonText: 'Ok',
 										}).then((result) => {
 										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
 										})
 								} else {
 									Swal.fire({
