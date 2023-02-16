@@ -5,9 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link
-	href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
-	rel="stylesheet"></link>
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet"></link>
 <jsp:include page="link.jsp"></jsp:include>
 </head>
 <body>
@@ -27,7 +25,9 @@
 
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
-								<form id="addSchoolForm" class="needs-validation" novalidate>
+								<form action="./DB/addSchoolDB.jsp" id="addSchoolForm"
+									class="needs-validation" novalidate
+									enctype="multipart/form-data" method="POST" >
 
 
 									<div class="row">
@@ -36,14 +36,13 @@
 												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="mx-2"><i
 														class="fas fa-university"></i></span>School Registration Number -</label>
-										
+
 												<div class="col-lg-12">
 													<input type="text" name="schoolRegistrationNo"
-														class="form-control" id="validationCustom01">
+														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide
 														Registration Number.</div>
-
 												</div>
 											</div>
 											<div class="form-group row">
@@ -52,7 +51,7 @@
 														class="fas fa-school"></i></span>School Name -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control" name="schoolName"
-														id="validationCustom01">
+														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide School
 														Name.</div>
@@ -65,7 +64,7 @@
 														class="fas fa-users"></i></span>Society Name -</label>
 												<div class="col-lg-12">
 													<input type="text" class="form-control"
-														id="validationCustom01" name="societyName">
+														id="validationCustom01" name="societyName" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Society
 														Name.</div>
@@ -77,7 +76,7 @@
 														class="fas fa-school"></i></span>School Code -</label>
 												<div class="col-lg-12">
 													<input type="number" class="form-control" name="schoolCode"
-														id="validationCustom01">
+														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide School
 														Code.</div>
@@ -207,8 +206,7 @@
 												<label class="col-lg-3 col-form-label"
 													id="validationCustom01"><span class="mx-2"><i
 														class="fa-sharp fa-solid fa-mailbox-flag-up"></i></span>Postal
-													Code -</label> <label class="col-lg-3 col-form-label"
-													id="validationCustom01">Postal Code</label>
+													Code -</label>
 												<div class="col-lg-9">
 													<input type="text" class="form-control"
 														id="validationCustom01" name="postalCode">
@@ -220,7 +218,7 @@
 										</div>
 									</div>
 									<div class="text-end">
-										<button class="btn btn-primary " type="submit">Submit
+										<button type="submit" class="btn btn-primary" id="submit">Submit
 											Form</button>
 										<button class="btn btn-danger" type="reset">Reset</button>
 									</div>
@@ -240,9 +238,8 @@
 							<div class="table-responsive">
 								<table class=" mb-0 table table-striped ">
 									<thead class="bg-primary">
-										<!--  schoolId, schoolName, schoolRegistrationNo, societyName, schoolCode,
- UIDIASNo, principalName, schoolEmail, mobileNo, schoolLogo, schoolBanner, Address,
- City, State, postalCode -->
+										<!--  schoolId, schoolName, schoolRegistrationNo, societyName, schoolCode, UIDIASNo, principalName, schoolEmail, mobileNo, schoolLogo, schoolBanner, Address,
+											  City, State, postalCode -->
 										<tr>
 											<th>Serial No.</th>
 											<th>schoolCode</th>
@@ -322,8 +319,6 @@
 						</div>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
@@ -331,48 +326,56 @@
 		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<jsp:include page="footer.jsp"></jsp:include>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#addSchoolForm").on('submit', function(event) {
+			$("#addSchoolForm").submit(function(event) {
 				event.preventDefault();
-				//var f = $(this).serialize();
-				let f = new FormData($(this)[0])
-				console.log(f)
+				let f = new FormData($('#addSchoolForm')[0])
+				   if ($("#addSchoolForm")[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							enctype : "multipart/form-data",
+							url : '../DB/addSchoolDB.jsp',
+							data :f,
+							processData : false,
+							contentType : false,
+							cache : false,
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$("#addSchoolForm")[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'School Added Successfully ' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											window.location.href = "./addSchool.jsp";
 
-				$.ajax({
-					type : 'POST',
-					enctype : 'multipart/form-data',
-					url : '../DB/addSchoolDB.jsp',
-					data : f,
-					processData : false,
-					contentType : false,
-					cache : false,
-					success : function(responce) {
-						if (responce.trim() == '1') {
-							 $("#addSchoolForm")[0].reset()
-							Swal.fire({
-								icon: 'success',
-								  title: 'School Added Successfully ' ,
-								  confirmButtonText: 'Ok',
-								}).then((result) => {
-								  /* Read more about isConfirmed, isDenied below */
-								})
-						} else {
-							Swal.fire({
-								icon: 'error',
-								  title: 'School cannot be added Something went Wrong' ,
-								  confirmButtonText: 'Ok',
-								}).then((result) => {
-								  /* Read more about isConfirmed, isDenied below */
-								})
-						}
-					}
-				})
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'School cannot be added ' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									window.location.href = "./addSchool.jsp";
+									})												
+								}
+							}
+						})
+				    }
+				    $('#addSchoolForm').addClass('was-validated');
+				});
 			})
-		})
+		
 	</script>
+
 	<br>
-	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

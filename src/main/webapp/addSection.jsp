@@ -36,7 +36,7 @@
 								<h5 class="card-title">Add New Section</h5>
 							</div>
 							<div class="card-body">
-								<form action="./DB/sectionDB.jsp" method="post"
+								<form action="./DB/sectionDB.jsp" method="POST"
 									class="needs-validation" novalidate>
 									<div class="form-group row">
 										<label for="validationCustom01" class="">Section Name</label>
@@ -99,10 +99,10 @@
 										<tr>
 											<td><%=cnt%></td>
 											<td><%=rs.getString("sectionName")%></td>
-											<td><%=rs.getString("status") %></td>
+											<td><%=rs.getString("status")%></td>
 											<td class="">
 												<div class="actions ">
-													<a href="updateSection.jsp?id=<%=rs.getInt("sectionId") %>"
+													<a href="updateSection.jsp?id=<%=rs.getInt("sectionId")%>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>
@@ -112,8 +112,6 @@
 
 
 										<%
-										
-
 										cnt++;
 										}
 
@@ -133,6 +131,9 @@
 
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+	
 </body>
 </html>

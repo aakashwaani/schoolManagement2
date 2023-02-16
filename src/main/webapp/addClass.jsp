@@ -107,10 +107,9 @@
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
-									<thead class="bg-primary">
-
-										<tr>
+								<table class="table table-bordered">
+									<thead class="">
+										<tr class="text-center">
 											<th>Serial No.</th>
 											<th>Class Name</th>
 											<th>Status</th>
@@ -127,12 +126,12 @@
 											while (rs.next()) {
 										%>
 
-										<tr>
+										<tr class="text-center">
 											<td><%=cnt%></td>
 											<td><%=rs.getString("className")%></td>
 											<td><%=rs.getString("status")%></td>
-											<td class="">
-												<div class="actions ">
+											<td class="text-center">
+												<div class="actions">
 													<a href="updateClass.jsp?id=<%=rs.getInt("classId") %>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
