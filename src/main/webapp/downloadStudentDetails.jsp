@@ -130,13 +130,22 @@ body {
 																		<option value="4">D</option>
 																		<option value="5">E</option>
 																		<option value="6">F</option>
-																</select></td>
+																			</select></td>
+															<td style="text-align: center;"><label> Gender </label>
+																		<select class="form-control">
+																		<option value="">Select Gender</option>
+																		<option value="1">Male</option>
+																		<option value="2">Female</option>
+																		</select></td>
+
+
+
 
 																<td style="text-align: center;"><label>
-																		Name/PRN/Mobile No </label> <select class="form-control">
+																		Download Type </label> <select class="form-control">
 																		<option value="">Enter search keyword...</option>
-																		<option value="1">--</option>
-																		<option value="2">---</option>
+																		<option value="1">Excel</option>
+																		<option value="2">DOCS</option>
 																</select></td>
 															</tr>
 
