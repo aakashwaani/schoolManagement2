@@ -84,28 +84,24 @@
 
 									<tbody>
 										<tr>
-											<td>John</td>
-											<td>Doe</td>
-											<td>
-												<div class="checkbox">
-													<label><input type="checkbox" name="checkbox">
-														Student PRN </label>
-												</div>
-											</td>
-											<td>sd</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
 										</tr>
 										<tr>
-											<td>Mary</td>
-											<td>Moe</td>
+											<td></td>
+											<td></td>
 											<td></td>
 											<td></td>
 
 
 										</tr>
 										<tr>
-											<td>July</td>
-											<td>Dooley</td>
-											<td></td>	   		 
+											<td></td>
+											<td</td>
+											<td></td>
 											<td></td>
 										</tr>
 									</tbody>
