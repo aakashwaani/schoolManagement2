@@ -1,91 +1,27 @@
 
 
 
+(function($) {
+	(function() {
+		'use strict'
 
-$(document).on("change", ".uploadProfileInput", function () {
-  var triggerInput = this;
-  var currentImg = $(this).closest(".pic-holder").find(".pic").attr("src");
-  var holder = $(this).closest(".pic-holder");
-  var wrapper = $(this).closest(".profile-pic-wrapper");
-  $(wrapper).find('[role="alert"]').remove();
-  triggerInput.blur();
-  var files = !!this.files ? this.files : [];
-  if (!files.length || !window.FileReader) {
-    return;
-  }
-  if (/^image/.test(files[0].type)) {
-    // only image file
-    var reader = new FileReader(); // instance of the FileReader
-    reader.readAsDataURL(files[0]); // read the local file
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.querySelectorAll('.needs-validation')
 
-    reader.onloadend = function () {
-      $(holder).addClass("uploadInProgress");
-      $(holder).find(".pic").attr("src", this.result);
-      $(holder).append(
-        '<div class="upload-loader"><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div></div>'
-      );
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(forms)
+			.forEach(function(form) {
+				form.addEventListener('submit', function(event) {
+					if (!form.checkValidity()) {
+						event.preventDefault()
+						event.stopPropagation()
+					}
 
-      // Dummy timeout; call API or AJAX below
-      setTimeout(() => {
-        $(holder).removeClass("uploadInProgress");
-        $(holder).find(".upload-loader").remove();
-        // If upload successful
-        if (Math.random() < 0.9) {
-          $(wrapper).append(
-            '<div class="snackbar show" role="alert"><i class="fa fa-check-circle text-success"></i> Profile image updated successfully</div>'
-          );
+					form.classList.add('was-validated')
+				}, false)
+			})
+	})()
 
-          // Clear input after upload
-          $(triggerInput).val("");
-
-          setTimeout(() => {
-            $(wrapper).find('[role="alert"]').remove();
-          }, 3000);
-        } else {
-          $(holder).find(".pic").attr("src", currentImg);
-          $(wrapper).append(
-            '<div class="snackbar show" role="alert"><i class="fa fa-times-circle text-danger"></i> There is an error while uploading! Please try again later.</div>'
-          );
-
-          // Clear input after upload
-          $(triggerInput).val("");
-          setTimeout(() => {
-            $(wrapper).find('[role="alert"]').remove();
-          }, 3000);
-        }
-      }, 1500);
-    };
-  } else {
-    $(wrapper).append(
-      '<div class="alert alert-danger d-inline-block p-2 small" role="alert">Please choose the valid image.</div>'
-    );
-    setTimeout(() => {
-      $(wrapper).find('role="alert"').remove();
-    }, 3000);
-  }
-});
-
-
-
-(function ($) {
-	"use strict";
-     //forms validation
-     
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
 	// Variables declarations
 
 	var $wrapper = $('.main-wrapper');
@@ -94,13 +30,13 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Sidebar
 
-	var Sidemenu = function () {
+	var Sidemenu = function() {
 		this.$menuItem = $('#sidebar-menu a');
 	};
 
 	function init() {
 		var $this = Sidemenu;
-		$('#sidebar-menu a').on('click', function (e) {
+		$('#sidebar-menu a').on('click', function(e) {
 			if ($(this).parent().hasClass('submenu')) {
 				e.preventDefault();
 			}
@@ -123,7 +59,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 	// Mobile menu sidebar overlay
 
 	$('body').append('<div class="sidebar-overlay"></div>');
-	$(document).on('click', '#mobile_btn', function () {
+	$(document).on('click', '#mobile_btn', function() {
 		$wrapper.toggleClass('slide-nav');
 		$('.sidebar-overlay').toggleClass('opened');
 		$('html').addClass('menu-opened');
@@ -133,7 +69,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 	// toggle-password
 
 	if ($('.toggle-password').length > 0) {
-		$(document).on('click', '.toggle-password', function () {
+		$(document).on('click', '.toggle-password', function() {
 			$(this).toggleClass("feather-eye feather-eye-off");
 			var input = $(".pass-input");
 			if (input.attr("type") == "password") {
@@ -144,7 +80,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 		});
 	}
 	if ($('.reg-toggle-password').length > 0) {
-		$(document).on('click', '.reg-toggle-password', function () {
+		$(document).on('click', '.reg-toggle-password', function() {
 			$(this).toggleClass("feather-eye feather-eye-off");
 			var input = $(".pass-confirm");
 			if (input.attr("type") == "password") {
@@ -157,7 +93,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Sidebar overlay
 
-	$(".sidebar-overlay").on("click", function () {
+	$(".sidebar-overlay").on("click", function() {
 		$wrapper.removeClass('slide-nav');
 		$(".sidebar-overlay").removeClass("opened");
 		$('html').removeClass('menu-opened');
@@ -165,7 +101,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Logo Hide Btn
 
-	$(document).on("click", ".logo-hide-btn", function () {
+	$(document).on("click", ".logo-hide-btn", function() {
 		$(this).parent().hide();
 	});
 
@@ -178,7 +114,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Page Content Height Resize
 
-	$(window).resize(function () {
+	$(window).resize(function() {
 		if ($('.page-wrapper').length > 0) {
 			var height = $(window).height();
 			$(".page-wrapper").css("min-height", height);
@@ -226,12 +162,12 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Experience Add More
 
-	$(".settings-form").on('click', '.trash', function () {
+	$(".settings-form").on('click', '.trash', function() {
 		$(this).closest('.links-cont').remove();
 		return false;
 	});
 
-	$(document).on("click", ".add-links", function () {
+	$(document).on("click", ".add-links", function() {
 		var experiencecontent = '<div class="row form-row links-cont">' +
 			'<div class="form-group d-flex">' +
 			'<button class="btn social-icon"><i class="feather-github"></i></button>' +
@@ -256,9 +192,9 @@ $(document).on("change", ".uploadProfileInput", function () {
 				previous: 'fas fa-angle-left'
 			}
 		});
-		$('.datetimepicker').on('dp.show', function () {
+		$('.datetimepicker').on('dp.show', function() {
 			$(this).closest('.table-responsive').removeClass('table-responsive').addClass('temp');
-		}).on('dp.hide', function () {
+		}).on('dp.hide', function() {
 			$(this).closest('.temp').addClass('table-responsive').removeClass('temp')
 		});
 	}
@@ -285,7 +221,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 	// Zoom in
 
 	if ($('.zoom-screen .header-nav-list').length > 0) {
-		$('.zoom-screen .header-nav-list').on('click', function (e) {
+		$('.zoom-screen .header-nav-list').on('click', function(e) {
 			if (!document.fullscreenElement) {
 				document.documentElement.requestFullscreen();
 			} else {
@@ -298,13 +234,13 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Check all email
 
-	$(document).on('click', '#check_all', function () {
+	$(document).on('click', '#check_all', function() {
 		$('.checkmail').click();
 		return false;
 	});
 	if ($('.checkmail').length > 0) {
-		$('.checkmail').each(function () {
-			$(this).on('click', function () {
+		$('.checkmail').each(function() {
+			$(this).on('click', function() {
 				if ($(this).closest('tr').hasClass('checked')) {
 					$(this).closest('tr').removeClass('checked');
 				} else {
@@ -316,7 +252,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Mail important
 
-	$(document).on('click', '.mail-important', function () {
+	$(document).on('click', '.mail-important', function() {
 		$(this).find('i.fa').toggleClass('fa-star').toggleClass('fa-star-o');
 	});
 
@@ -348,7 +284,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 		var wHeight = $(window).height() - 60;
 		$slimScrolls.height(wHeight);
 		$('.sidebar .slimScrollDiv').height(wHeight);
-		$(window).resize(function () {
+		$(window).resize(function() {
 			var rHeight = $(window).height() - 60;
 			$slimScrolls.height(rHeight);
 			$('.sidebar .slimScrollDiv').height(rHeight);
@@ -357,7 +293,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Small Sidebar
 
-	$(document).on('click', '#toggle_btn', function () {
+	$(document).on('click', '#toggle_btn', function() {
 		if ($('body').hasClass('mini-sidebar')) {
 			$('body').removeClass('mini-sidebar');
 			$('.subdrop + ul').slideDown();
@@ -365,12 +301,12 @@ $(document).on("change", ".uploadProfileInput", function () {
 			$('body').addClass('mini-sidebar');
 			$('.subdrop + ul').slideUp();
 		}
-		setTimeout(function () {
+		setTimeout(function() {
 
 		}, 300);
 		return false;
 	});
-	$(document).on('mouseover', function (e) {
+	$(document).on('mouseover', function(e) {
 		e.stopPropagation();
 		if ($('body').hasClass('mini-sidebar') && $('#toggle_btn').is(':visible')) {
 			var targ = $(e.target).closest('.sidebar').length;
@@ -387,7 +323,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Circle Progress Bar
 	function animateElements() {
-		$('.circle-bar1').each(function () {
+		$('.circle-bar1').each(function() {
 			var elementPos = $(this).offset().top;
 			var topOfWindow = $(window).scrollTop();
 			var percent = $(this).find('.circle-graph1').attr('data-percent');
@@ -404,7 +340,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 				});
 			}
 		});
-		$('.circle-bar2').each(function () {
+		$('.circle-bar2').each(function() {
 			var elementPos = $(this).offset().top;
 			var topOfWindow = $(window).scrollTop();
 			var percent = $(this).find('.circle-graph2').attr('data-percent');
@@ -421,7 +357,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 				});
 			}
 		});
-		$('.circle-bar3').each(function () {
+		$('.circle-bar3').each(function() {
 			var elementPos = $(this).offset().top;
 			var topOfWindow = $(window).scrollTop();
 			var percent = $(this).find('.circle-graph3').attr('data-percent');
@@ -447,7 +383,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Preloader
 
-	$(window).on('load', function () {
+	$(window).on('load', function() {
 		if ($('#loader').length > 0) {
 			$('#loader').delay(350).fadeOut('slow');
 			$('body').delay(350).css({ 'overflow': 'visible' });
@@ -456,12 +392,12 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Checkbox Select
 
-	$('.app-listing .selectBox').on("click", function () {
+	$('.app-listing .selectBox').on("click", function() {
 		$(this).parent().find('#checkBoxes').fadeToggle();
 		$(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
 	});
 
-	$('.invoices-main-form .selectBox').on("click", function () {
+	$('.invoices-main-form .selectBox').on("click", function() {
 		$(this).parent().find('#checkBoxes-one').fadeToggle();
 		$(this).parent().parent().siblings().find('#checkBoxes-one').fadeOut();
 	});
@@ -471,7 +407,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 	if ($('.SortBy').length > 0) {
 		var show = true;
 		var checkbox1 = document.getElementById("checkBox");
-		$('.selectBoxes').on("click", function () {
+		$('.selectBoxes').on("click", function() {
 
 			if (show) {
 				checkbox1.style.display = "block";
@@ -485,8 +421,8 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Invoices Checkbox Show
 
-	$(function () {
-		$("input[name='invoice']").click(function () {
+	$(function() {
+		$("input[name='invoice']").click(function() {
 			if ($("#chkYes").is(":checked")) {
 				$("#show-invoices").show();
 			} else {
@@ -497,12 +433,12 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Invoices Add More
 
-	$(".links-info-one").on('click', '.service-trash', function () {
+	$(".links-info-one").on('click', '.service-trash', function() {
 		$(this).closest('.links-cont').remove();
 		return false;
 	});
 
-	$(document).on("click", ".add-links", function () {
+	$(document).on("click", ".add-links", function() {
 		var experiencecontent = '<div class="links-cont">' +
 			'<div class="service-amount">' +
 			'<a href="#" class="service-trash"><i class="fe fe-minus-circle me-1"></i>Service Charge</a> <span>$ 4</span' +
@@ -513,12 +449,12 @@ $(document).on("change", ".uploadProfileInput", function () {
 		return false;
 	});
 
-	$(".links-info-discount").on('click', '.service-trash-one', function () {
+	$(".links-info-discount").on('click', '.service-trash-one', function() {
 		$(this).closest('.links-cont-discount').remove();
 		return false;
 	});
 
-	$(document).on("click", ".add-links-one", function () {
+	$(document).on("click", ".add-links-one", function() {
 		var experiencecontent = '<div class="links-cont-discount">' +
 			'<div class="service-amount">' +
 			'<a href="#" class="service-trash-one"><i class="fe fe-minus-circle me-1"></i>Offer new</a> <span>$ 4 %</span' +
@@ -578,7 +514,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 		$('#timer-countercallback').countdown({
 			from: 10,
 			to: 0,
-			timerEnd: function () {
+			timerEnd: function() {
 				this.css({ 'text-decoration': 'line-through' }).animate({ 'opacity': .5 }, 500);
 			}
 		});
@@ -595,7 +531,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	if ($('[data-bs-toggle="tooltip"]').length > 0) {
 		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
 			return new bootstrap.Tooltip(tooltipTriggerEl)
 		})
 	}
@@ -604,7 +540,7 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	if ($('.popover-list').length > 0) {
 		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-		var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
 			return new bootstrap.Popover(popoverTriggerEl)
 		})
 	}
@@ -617,12 +553,12 @@ $(document).on("change", ".uploadProfileInput", function () {
 
 	// Invoices Table Add More
 
-	$(".add-table-items").on('click', '.remove-btn', function () {
+	$(".add-table-items").on('click', '.remove-btn', function() {
 		$(this).closest('.add-row').remove();
 		return false;
 	});
 
-	$(document).on("click", ".add-btn", function () {
+	$(document).on("click", ".add-btn", function() {
 		var experiencecontent = '<tr class="add-row">' +
 			'<td>' +
 			'<input type="text" class="form-control">' +

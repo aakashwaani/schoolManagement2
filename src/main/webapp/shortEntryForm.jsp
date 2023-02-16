@@ -22,7 +22,7 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">New Student (Short Entry Form) -</h5>
+								<h5 class="card-title">Add New Student- </h5>
 							</div>
 
 							<div class="card-body">
@@ -86,6 +86,8 @@
 													<select class="form-control form-select"
 														name="castCategory" id="validationCustom01" required>
 
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -143,9 +145,12 @@
 													class="col-lg-3 col-form-label"><span class="mx-1"><i
 														class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
 												<div class="col-lg-12">
-													<input class="form-control form-select"
+													<select class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
-													</input>
+														<option value="" disabled selected hidden>Please
+															Select</option>
+														<option></option>
+													</select>
 												</div>
 											</div>
 
@@ -169,9 +174,7 @@
 														class="fa-solid fa-calendar-days"></i></span>Date Of Admission -</label>
 												<div class="col-lg-12">
 													<input type="date" class="form-control"
-														id="validationCustom01"
-														p
-														name="dateOfAdmission" required>
+														id="validationCustom01" p name="dateOfAdmission" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide valid
 														Date Of Admission</div>
@@ -197,7 +200,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="rseligion"
 														id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -227,6 +231,9 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="selectSection" id="validationCustom01" required>
+
+														<option value="" disabled selected hidden>Please
+															Select</option>
 
 														<%
 														try {
@@ -297,7 +304,11 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
+
 														<option>Please Select</option>
+
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<option>ADMITTED</option>
 														<option>NOT-ADMITTED</option>
 													</select>
@@ -310,7 +321,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="selectClass"
 														id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
