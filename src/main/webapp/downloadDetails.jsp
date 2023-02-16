@@ -73,48 +73,110 @@
 					</div>
 				</div>
 
-				<div class="col-lg-12">
-					<div class="card">
-						<div class="card-header">
-							<h5 class="card-title">Select Details -</h5>
-						</div>
-						<div class="card-body">
-							<div class="table-responsive">
-								<table class="table table-bordered mb-0">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card card-table">
+							<div class="card-body">
 
-									<tbody>
-										<tr>
-											<td>John</td>
-											<td>Doe</td>
-											<td>
-												<div class="checkbox">
-													<label><input type="checkbox" name="checkbox">
-														Student PRN </label>
-												</div>
-											</td>
-											<td>sd</td>
-										</tr>
-										<tr>
-											<td>Mary</td>
-											<td>Moe</td>
-											<td></td>
-											<td></td>
+								<div class="page-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h5>List Of Staff Whose Birthday Dated-</h5>
+										</div>
+										<div class="col-auto text-end float-end ms-auto download-grp">
+											<a href="#" class="btn btn-outline-primary me-2"><i
+												class="fas fa-download"></i> Download</a>
+										</div>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-bordered mb-0">
+
+										<tbody>
+											<tr>
+												<td><input type="checkbox" class="mx-2">Student
+													Prn No</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Registration Number</td>
+												<td><input type="checkbox" class="mx-2">Section
+													Name</td>
+												<td><input type="checkbox" class="mx-2">Class
+													Name</td>
+
+											</tr>
+											<tr>
+												<td><input type="checkbox" class="mx-2">Division
+													Name</td>
+
+												<td><input type="checkbox" class="mx-2">Student
+													First Name</td>
+
+												<td><input type="checkbox" class="mx-2">Student
+													Middle Name</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Last Name</td>
 
 
-										</tr>
-										<tr>
-											<td>July</td>
-											<td>Dooley</td>
-											<td></td>	   		 
-											<td></td>
-										</tr>
-									</tbody>
-								</table>
+											</tr>
+											<tr>
+												<td><input type="checkbox" class="mx-2">Student
+													Roll No</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Date Of Birth</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Birth Place</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Gender</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" class="mx-2">Student
+													Address</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Father Name</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Parents Mobile No</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Mother Name</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" class="mx-2">Student
+													Mother Contact</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Contact No</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Parents Landline</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Parents Email</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" class="mx-2">Student
+													Email</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Admission Date</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Religion</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Nationality</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" class="mx-2">Student
+													Cast Name</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Cast</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Aadhar No</td>
+												<td><input type="checkbox" class="mx-2">Student
+													Prev School</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 

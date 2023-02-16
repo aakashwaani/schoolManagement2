@@ -20,10 +20,10 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Birthday Report </h3>
+							<h3 class="page-title">Birthday Report</h3>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-								<li class="breadcrumb-item active">Academic Year</li>
+								<li class="breadcrumb-item active">BirthDay Report</li>
 							</ul>
 						</div>
 					</div>
@@ -31,180 +31,105 @@
 
 
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-7">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Birthday Report </h5>
+								<h5 class="card-title">Select Date -</h5>
 							</div>
 							<div class="card-body">
-								<form action="DB/academicYearDB.jsp" class="needs-validation"
-									novalidate method="post">
-										<div class="col-md-6">
-									<div class="form-group">
-										<label for="validationCustom01">Select Date of Birth
-											</label>
-											
-											<div class="col-xl-12">
-											<div class="form-group row">
-												
-													<div class="col-lg-12">
-														<input name="schoolRegistrationNo" type="date" class="form-control"
-														id="validationCustom01" required>
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide
-															Date of Birth.</div>
-															
-												</div>
-											</div>
-									
-									</div>
-									<button type="search" class="btn btn-warning"><span> <i class="fas fa-search"></i> </span>Search</button>
-								</div>
-								
+								<form action="#" class="d-flex">
+									<input type="date" class="form-control form-select me-2">
+
+									<button class="btn btn-outline-success" type="submit">Search</button>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-lg-12">
-					<div class="card">
-						<div class="card-header">
 
-							<h5 class="card-title">List of Students Whose Today's Birthday Dated-</h5>
-						</div>
-						<div class="card-body">
-							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
-									<thead class="bg-primary">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card card-table">
+							<div class="card-body">
 
-										<tr>
-											<th>Serial No.</th>
-											<th>Class Name</th>
-											<th>Division</th>
-											<th>Roll No</th>
-											<th>Full Name</th>
-											<th>Date of Birth</th>
-											<th>Age(Years)</th>
-										</tr>
-									</thead>
-									<tbody>
-										<%
-										try {
-											int cnt = 1;
-											Connection con = ConnectionProvider.getConnection();
-											Statement stmt = con.createStatement();
-											ResultSet rs = stmt.executeQuery("select * from academicyear");
-											while (rs.next()) {
-										%>
-
-										<tr>
-											<td><%=cnt%></td>
-											<td><%=rs.getString("academicyear")%></td>
-											<td><%=rs.getString("startmonthNumber")%></td>
-											<td><%=rs.getString("nextAcademicYearDate")%></td>
-											<td class="">
-												<div class="actions ">
-													<a
-														href="updateAcademicYear.jsp?id=<%=rs.getInt("academicYearId")%>"
-														class="btn btn-sm bg-danger-light"> <i
-														class="feather-edit"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
+								<div class="page-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h5>List Of Students Whose Birthday Dated-</h5>
+										</div>
 
 
-										<%
-										cnt++;
-										}
+										<div class="col-auto text-end float-end ms-auto download-grp">
+											<a href="#" class="btn btn-outline-primary me-2"><i
+												class="fas fa-download"></i> Download</a>
+										</div>
+									</div>
+								</div>
 
-										} catch (Exception e) {
-										e.printStackTrace();
-										}
-										%>
+								<div class="table-responsive">
+									<table
+										class="table table-center mb-0 table-bordered  border-primary">
+										<thead>
+											<tr class="text-center">
 
-									</tbody>
-								</table>
+												<th>Sr No</th>
+												<th>Class Name</th>
+												<th>Division</th>
+												<th>Roll No</th>
+												<th>Full Name</th>
+												<th>Date Of Birth </th>
+												<th>Age(Years)</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
 							</div>
-								
 						</div>
-						
 					</div>
 				</div>
-				
-				<div class="col-lg-12">
-					<div class="card">
-						<div class="card-header">
 
-							<h5 class="card-title">List of Staff Whose Today's Birthday Dated-</h5>
-						</div>
-						<div class="card-body">
-							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
-									<thead class="bg-primary">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card card-table">
+							<div class="card-body">
 
-										<tr>
-											<th>Serial No.</th>
-											<th>Staff Name</th>
-											<th>Designation</th>
-											<th>Date of Birth</th>
-											<th>Age(Years)</th>
-										</tr>
-									</thead>
-									<tbody>
-										<%
-										try {
-											int cnt = 1;
-											Connection con = ConnectionProvider.getConnection();
-											Statement stmt = con.createStatement();
-											ResultSet rs = stmt.executeQuery("select * from academicyear");
-											while (rs.next()) {
-										%>
+								<div class="page-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h5>List Of Staff Whose Birthday Dated-</h5>
+										</div>
+										<div class="col-auto text-end float-end ms-auto download-grp">
+											<a href="#" class="btn btn-outline-primary me-2"><i
+												class="fas fa-download"></i> Download</a>
+										</div>
+									</div>
+								</div>
 
-										<tr>
-											<td><%=cnt%></td>
-											<td><%=rs.getString("academicyear")%></td>
-											<td><%=rs.getString("startmonthNumber")%></td>
-											<td><%=rs.getString("nextAcademicYearDate")%></td>
-											<td class="">
-												<div class="actions ">
-													<a
-														href="updateAcademicYear.jsp?id=<%=rs.getInt("academicYearId")%>"
-														class="btn btn-sm bg-danger-light"> <i
-														class="feather-edit"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
+								<div class="table-responsive">
+									<table
+										class="table table-center mb-0 table-bordered  border-primary">
+										<thead>
+											<tr class="text-center">
 
-
-										<%
-										cnt++;
-										}
-
-										} catch (Exception e) {
-										e.printStackTrace();
-										}
-										%>
-
-									</tbody>
-								</table>
+												<th>Sr No</th>
+												<th>Staff Name</th>
+												<th>Designation</th>
+												<th>Date Of Birth</th>
+												<th>Age(Years)</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
 							</div>
-								
 						</div>
-						
 					</div>
 				</div>
 			</div>
-			<div class="text-end" id="buttons">
-		
-
-<div class="text-center">
-										<button type="submit" class="btn btn-success"><i class="fa fa-print"></i>  Print  </button>
-										<button type="submit" class="btn btn-danger"><i class="fa fa-times"></i>  Cancel</button>
-									</div>
-									</div>
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>

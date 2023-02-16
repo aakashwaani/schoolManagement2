@@ -22,7 +22,7 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Add New Student- </h5>
+								<h5 class="card-title">Add New Student-</h5>
 							</div>
 
 							<div class="card-body">
@@ -64,18 +64,13 @@
 													class="px-1"><i
 														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
 												<div class="col-lg-12">
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="gender"
-															id="gender_male" value="option1" checked> <label
-															class="form-check-label" for="gender_male"> Male
-														</label>
-													</div>
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="gender"
-															id="gender_female" value="option2"> <label
-															class="form-check-label" for="gender_female">
-															Female </label>
-													</div>
+													<select class="form-control form-select"
+														name="admissionStatus" id="validationCustom01" required>
+														<option value="" disabled selected hidden>Please
+															Select</option>
+														<option>Male</option>
+														<option>Female</option>
+													</select>
 												</div>
 											</div>
 											<div class="form-group row">
