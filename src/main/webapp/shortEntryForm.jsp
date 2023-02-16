@@ -65,7 +65,11 @@
 														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
+<<<<<<< HEAD
 														name=gender id="validationCustom01" required>
+=======
+														name="gender" id="validationCustom01" required>
+>>>>>>> e283211e1c50b43d230e6a6d729b63c445302892
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option>Male</option>
@@ -80,6 +84,7 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="castCategory" id="validationCustom01" required>
+
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<%
@@ -109,11 +114,29 @@
 													class="col-lg-3 col-form-label"><span class="px-1"><i
 														class="fa-solid fa-calendar-days"></i></span>Academic Year - </label>
 												<div class="col-lg-12">
-													<input type="date" class="form-control"
-														id="validationCustom01" name="academicYear" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide valid
-														Academic Year.</div>
+													<select class="form-control form-select"
+														name="academicYear" id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from academicyear");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("academicYearId")%>">
+															<%=rs.getString("academicYear")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -121,12 +144,19 @@
 													class="col-lg-3 col-form-label"><span class="mx-1"><i
 														class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
 												<div class="col-lg-12">
+<<<<<<< HEAD
 													<select class="form-control form-select"
 														name="feesCategory" id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option></option>
 													</select>
+=======
+													<input type="text" class="form-control"
+														id="validationCustom01" name="selectFeesCategory" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide feesCategory</div>
+>>>>>>> e283211e1c50b43d230e6a6d729b63c445302892
 												</div>
 											</div>
 
@@ -207,8 +237,10 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="selectSection" id="validationCustom01" required>
+
 														<option value="" disabled selected hidden>Please
 															Select</option>
+
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -278,6 +310,9 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
+
+														<option>Please Select</option>
+
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option>ADMITTED</option>
