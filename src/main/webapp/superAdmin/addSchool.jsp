@@ -5,9 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link
-	href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
-	rel="stylesheet"></link>
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet"></link>
 <jsp:include page="link.jsp"></jsp:include>
 </head>
 <body>
@@ -329,11 +327,6 @@
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<jsp:include page="footer.jsp"></jsp:include>
-
-
-
-
-
 
 	<script type="text/javascript">
 		$(document).ready(function() {

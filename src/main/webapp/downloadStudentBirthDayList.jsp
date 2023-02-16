@@ -8,14 +8,6 @@
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
-<style>
-#buttons{
- 
-       
-        text-align: center;
-
-}
-</style>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -66,7 +58,7 @@
 											</div>
 									
 									</div>
-									<button type="search" class="btn btn-warning" ><span> <i class="fas fa-search"></i> </span>Search</button>
+									<button type="search" class="btn btn-warning"><span> <i class="fas fa-search"></i> </span>Search</button>
 								</div>
 								
 								</form>

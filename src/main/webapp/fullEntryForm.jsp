@@ -23,7 +23,7 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">New Student (Full Entry Form)</h5>
+								<h5 class="card-title">New Student  Entry Form -</h5>
 							</div>
 
 							<div class="card-body">

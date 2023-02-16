@@ -148,7 +148,6 @@ body {
 											</div>
 										</div>
 									</div>
-<<<<<<< HEAD
 								</div>
 							</div>
 						</div>
@@ -231,7 +230,6 @@ body {
 
 									</table>
 									</div>
-=======
 
 									<div class="row justify-content-center">
 										<div class="col-12" id="header">
@@ -330,7 +328,6 @@ body {
 										<i class="fa-solid fa-xmark"></i> Reset
 									</button>
 									<br> <br>
->>>>>>> c5effb0506d7b4d61aaa7dce987e4442d206db7b
 								</div>
 
 
