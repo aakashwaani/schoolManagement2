@@ -46,8 +46,8 @@
 								ResultSet rs = stmt.executeQuery("select * from academicyear where academicYearId=" + id + ";");
 								rs.next();
 								%>
-								<form action="DB/updateacademicYearDB.jsp?id=<%=id%>"
-									method="post" id="#updateAcademicYear">
+								<form
+									method="post" id="updateAcademicYear">
 									<div class="form-group">
 										<label> Starting Academic Year (Ex. 2020)</label> <input
 											type="text" name="academicYear"
@@ -89,27 +89,27 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#updateAcademicYear").submit(function(event) {
+			$('#updateAcademicYear').submit(function(event) {
 				event.preventDefault();
 				//let f = new FormData($("#addAcademicYear")[0])
-				   if ($("#updateAcademicYear")[0].checkValidity() === false) {
+				   if ($('#updateAcademicYear')[0].checkValidity() === false) {
 				        event.stopPropagation();
 				    } else {
 						$.ajax({
 							type : 'POST',
-							url : "f",
-							data:$("#updateAcademicYear").serialize(),
+							url : "DB/updateacademicYearDB.jsp?id=<%=id%>",
+							data:$('#updateAcademicYear').serialize(),
 							success : function(responce) {
 								console.log(responce.trim())
 								if (responce.trim() == "1") {
-									$("#updateAcademicYear")[0].reset()
+									$('#updateAcademicYear')[0].reset()
 									Swal.fire({
 										icon: 'success',
 										  title: 'AcademicYear Updated Successfully ' ,
 										  confirmButtonText: 'Ok',
 										}).then((result) => {
 										  /* Read more about isConfirmed, isDenied below */
-											 window.location.reload();
+											 window.location.href="addAcademicYear.jsp";
 										})
 								} else {
 									Swal.fire({
@@ -123,7 +123,7 @@
 							}
 						})
 				    }
-				    $("updateAcademicYear").addClass('was-validated');
+				    $('#updateAcademicYear').addClass('was-validated');
 				});
 			})
 		

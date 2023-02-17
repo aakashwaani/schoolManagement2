@@ -37,8 +37,8 @@
 								<h5 class="card-title">Cast Form</h5>
 							</div>
 							<div class="card-body">
-								<form action="./DB/castDB.jsp" class="needs-validation"
-									novalidate>
+								<form id="addCastForm" class="needs-validation" novalidate
+									method="POST" role="form">
 									<div class="form-group">
 										<label for="validationCustom01"> Cast Name</label> <input
 											type="text" class="form-control" name="castName"
@@ -60,7 +60,7 @@
 									</div>
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Save</button>
-										<button type="submit" class="btn btn-danger">Reset</button>
+										<button type="reset" class="btn btn-danger">Reset</button>
 									</div>
 								</form>
 							</div>
@@ -128,7 +128,54 @@
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#addCastForm").submit(function(event) {
+				event.preventDefault();
+				//let f = new FormData($("#addAcademicYear")[0])
+				   if ($("#addCastForm")[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							url : './DB/castDB.jsp',
+							data:$("#addCastForm").serialize(),
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$("#addCastForm")[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'Cast Added Successfully ' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'Cast cannot be added ' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $("addCastForm").addClass('was-validated');
+				});
+			})
+		
+	</script>
 
 </body>
 </html>

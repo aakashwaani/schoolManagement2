@@ -673,6 +673,8 @@ table.table td h2 span {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: end;
+	align-items:center;
+	justify-content:center;
 }
 
 .actions a {
@@ -7579,9 +7581,7 @@ table.table-inbox tbody tr.checked {
 	padding: 0;
 }
 
-.table tbody tr:last-child {
-	border-color: transparent;
-}
+
 
 .categories-table tr:last-child td {
 	padding-bottom: 0px;

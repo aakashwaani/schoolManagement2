@@ -28,7 +28,8 @@
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
 								<form action="DB/studentShortFormDB.jsp" method="POST"
-									class="needs-validation" novalidate>
+									role="form" id="studentShortForm" class="needs-validation"
+									novalidate>
 
 
 									<div class="row">
@@ -54,8 +55,7 @@
 													<input type="number" class="form-control"
 														name="studentPRNNumber" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Middle
-														Name.</div>
+													<div class="invalid-feedback">Please Provide PRN No.</div>
 
 												</div>
 											</div>
@@ -64,17 +64,14 @@
 													class="px-1"><i
 														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select"
-<<<<<<< HEAD
-														name=gender id="validationCustom01" required>
-=======
-														name="gender" id="validationCustom01" required>
->>>>>>> e283211e1c50b43d230e6a6d729b63c445302892
-														<option value="" disabled selected hidden>Please
-															Select</option>
+													<select class="form-control form-select" name=gender
+														id="validationCustom01" required><option value=""
+															disabled selected hidden>Please Select</option>
 														<option>Male</option>
 														<option>Female</option>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Select Gender.</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -107,6 +104,8 @@
 														}
 														%>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Select Caste Category.</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -116,6 +115,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="academicYear" id="validationCustom01" required>
+														<option value="" disabled selected hidden>Please
+															Select</option>
 
 														<%
 														try {
@@ -137,6 +138,8 @@
 														}
 														%>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Select Academic Year.</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -144,19 +147,16 @@
 													class="col-lg-3 col-form-label"><span class="mx-1"><i
 														class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
 												<div class="col-lg-12">
-<<<<<<< HEAD
 													<select class="form-control form-select"
 														name="feesCategory" id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option></option>
-													</select>
-=======
-													<input type="text" class="form-control"
+													</select> <input type="text" class="form-control"
 														id="validationCustom01" name="selectFeesCategory" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide feesCategory</div>
->>>>>>> e283211e1c50b43d230e6a6d729b63c445302892
+													<div class="invalid-feedback">Please Provide
+														feesCategory</div>
 												</div>
 											</div>
 
@@ -180,7 +180,7 @@
 														class="fa-solid fa-calendar-days"></i></span>Date Of Admission -</label>
 												<div class="col-lg-12">
 													<input type="date" class="form-control"
-														id="validationCustom01" p name="dateOfAdmission" required>
+														id="validationCustom01" name="dateOfAdmission" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide valid
 														Date Of Admission</div>
@@ -196,8 +196,7 @@
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Contact
 														No.</div>
-
-												</div>
+																										</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label"><span
@@ -228,6 +227,8 @@
 														}
 														%>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Religion.</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -261,6 +262,8 @@
 														}
 														%>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Section.</div>
 												</div>
 											</div>
 
@@ -286,8 +289,7 @@
 													<input type="date" class="form-control"
 														id="validationCustom01" name="studentDOB" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide valid
-														Email-Id.</div>
+													<div class="invalid-feedback">Please Provide Students Date Of Birth.</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -299,7 +301,7 @@
 														id="validationCustom01" name="nationality" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide
-														Religion.</div>
+														Nationality.</div>
 
 												</div>
 											</div>
@@ -310,14 +312,13 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
-
-														<option>Please Select</option>
-
 														<option value="" disabled selected hidden>Please
 															Select</option>
 														<option>ADMITTED</option>
 														<option>NOT-ADMITTED</option>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Status.</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -349,12 +350,14 @@
 														}
 														%>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Select Class.</div>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="text-end">
-										<button class="btn btn-primary " type="submit">Submit
+										<button class="btn btn-primary" type="submit">Submit
 											Form</button>
 										<button class="btn btn-danger" type="reset">Reset</button>
 									</div>
@@ -366,7 +369,53 @@
 			</div>
 		</div>
 	</div>
-
+	<script
+		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<jsp:include page="footer.jsp"></jsp:include>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#studentShortForm').submit(function(event) {
+				event.preventDefault();
+				//let f = new FormData($("#addAcademicYear")[0])
+				   if ($('#studentShortForm')[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							url : 'DB/studentShortFormDB.jsp',
+							data:$('#studentShortForm').serialize(),
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$('#studentShortForm')[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'Studenet Entry Successfull' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'Something Went Wrong..' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $("#studentShortForm").addClass('was-validated');
+				});
+			})
+		
+	</script>
+	<br>
 </body>
 </html>

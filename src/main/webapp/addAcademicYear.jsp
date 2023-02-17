@@ -69,7 +69,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 									</div>
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Save</button>
-										<button type="submit" class="btn btn-danger">Reset</button>
+										<button type="reset" class="btn btn-danger">Reset</button>
 									</div>
 								</form>
 							</div>
@@ -85,10 +85,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
-									<thead class="bg-primary">
+								<table class=" mb-0 table table-bordered ">
+									<thead>
 
-										<tr>
+										<tr class="text-center">
 											<th>Serial No.</th>
 											<th>Academic Year</th>
 											<th>Start Month Year</th>
@@ -106,7 +106,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 											while (rs.next()) {
 										%>
 
-										<tr>
+										<tr class="text-center">
 											<td><%=cnt%></td>
 											<td><%=rs.getString("academicYear")%></td>
 											<td><%=rs.getString("startmonthNumber")%></td>
@@ -144,8 +144,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		<jsp:include page="footer.jsp"></jsp:include>
 		<script
 			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<script	src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
-"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	</div>
 
 	<script type="text/javascript">

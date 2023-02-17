@@ -91,8 +91,7 @@
 							<div class="card-header"></div>
 							<div class="card-body">
 								<div class="table-responsive">
-									<table
-										class="table table-center mb-0 table-bordered  border-primary">
+									<table class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 												<th>Serial No.</th>
@@ -105,14 +104,34 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
+											<%
+											try {
+												int cnt = 1;
+												Connection con = ConnectionProvider.getConnection();
+												Statement stmt = con.createStatement();
+												ResultSet rs = stmt.executeQuery(
+												"select s.*, a.* from studentdetails as s inner join academicyear as a on s.academicyearid = a.academicyearid");
+												while (rs.next()) {
+											%>
 
+											<tr class="text-center">
+												<td><%=cnt%></td>
+												<td><%=rs.getString("academicyear")%></td>
+												<td><%=rs.getString("studentPRNNumber")%></td>
+												<td><%=rs.getString("studentFirstName") + " " + rs.getString("studentMiddleName") + " "+ rs.getString("studentLastName")%></td>
+												<td><%=rs.getString("")%></td>
 											</tr>
-											<tr>
 
-											</tr>
-											<tr>
-											</tr>
+
+											<%
+											cnt++;
+											}
+
+											} catch (Exception e) {
+											e.printStackTrace();
+											}
+											%>
+
 										</tbody>
 									</table>
 								</div>
