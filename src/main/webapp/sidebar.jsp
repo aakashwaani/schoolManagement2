@@ -5,7 +5,7 @@
 		<div id="sidebar-menu" class="sidebar-menu">
 			<ul>
 				<li class="menu-title"><span>Main Menu</span></li>
-				
+
 				<li class="submenu"><a href="#"><i
 						class="fas fa-graduation-cap"></i> <span> Prerequisites</span> <span
 						class="menu-arrow"></span></a>
@@ -54,22 +54,22 @@
 						<li><a href="addStaff.jsp">Add Staff</a></li>
 						<li><a href="addStaffRole.jsp">Add Staff Role</a></li>
 						<li><a href="updateStaff.jsp">Update Staff</a></li>
-						
-						
+
+
 					</ul></li>
-				<li class="submenu"><a href="#"><i class="fas fa-user"></i> <span> Student</span> <span
-						class="menu-arrow"></span></a>
+				<li class="submenu"><a href="#"><i class="fas fa-user"></i>
+						<span> Student</span> <span class="menu-arrow"></span></a>
 					<ul>
 						<li><a href="shortEntryForm.jsp">Short Entry Form</a></li>
 						<li><a href="fullEntryForm.jsp">Full Entry Form</a></li>
-						<li><a href="">View</a></li>
-						<li><a href="">Download Details</a></li>
+						<li><a href="studentView.jsp">View</a></li>
+						<li><a href="downloadDetails.jsp">Download Details</a></li>
 						<li><a href="">Generate I-card</a></li>
-						<li><a href="">Other Details</a></li>
-						<li><a href="birthday.jsp">Birthday Details</a></li>
+						<li><a href="otherDetails.jsp">Other Details</a></li>
+						<li><a href="birthdayDetails.jsp">Birthday Details</a></li>
 						<li><a href="">Shift Students</a></li>
-						<li><a href="">Yearly Category Report</a></li>
-						<li><a href="gender.jsp">Classwise Gender Report</a></li>
+						<li><a href="studentCastCategoryWiseDetails.jsp">Yearly Caste Category Report</a></li>
+						<li><a href="studentClassWiseGenderDetails.jsp">Classwise Gender Report</a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span> Roll No</span> <span
@@ -82,8 +82,7 @@
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href="timetable.jsp"><i class="fas fa-table"></i>
-						<span>TimeTable</span></a></li>
+				<li><a href="timetable.jsp"><i class="fas fa-table"></i> <span>TimeTable</span></a></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span>Documents</span> <span
 						class="menu-arrow"></span></a>

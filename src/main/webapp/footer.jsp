@@ -9,7 +9,7 @@
 
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
-
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>

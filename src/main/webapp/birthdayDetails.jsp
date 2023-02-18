@@ -8,12 +8,10 @@
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
-
 </head>
 <body>
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
-
 		<jsp:include page="sidebar.jsp"></jsp:include>
 		<div class="page-wrapper">
 
@@ -22,8 +20,11 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h4 class="page-title">Yearly Cast Category wise Report -</h4>
-
+							<h3 class="page-title">Birthday Report</h3>
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+								<li class="breadcrumb-item active">BirthDay Report</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -33,20 +34,20 @@
 					<div class="col-md-7">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Select Academic Year</h5>
+								<h5 class="card-title">Select Date -</h5>
 							</div>
 							<div class="card-body">
 								<form action="#" class="d-flex">
-									<select class="form-control form-select me-2">
-										<option value="" disabled selected hidden>Select
-											Academic Year -</option>
-									</select>
+									<input type="date" class="form-control form-select me-2">
+
 									<button class="btn btn-outline-success" type="submit">Search</button>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
+
+
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="card card-table">
@@ -55,17 +56,13 @@
 								<div class="page-header">
 									<div class="row align-items-center">
 										<div class="col">
-											<h5>students Cast Category Report -</h5>
+											<h5>List Of Students Whose Birthday Dated-</h5>
 										</div>
-										<div class="col">
-											<h5>Academic Year -</h5>
-										</div>
+
 
 										<div class="col-auto text-end float-end ms-auto download-grp">
 											<a href="#" class="btn btn-outline-primary me-2"><i
-												class="fas fa-download"></i> Download</a> <a href="#"
-												class="btn btn-danger me-2"><i class="fa-solid fa-print"></i>
-												Print</a>
+												class="fas fa-download"></i> Download</a>
 										</div>
 									</div>
 								</div>
@@ -77,9 +74,51 @@
 											<tr class="text-center">
 
 												<th>Sr No</th>
-												<th>Caste Category</th>
-												<th>No of Students</th>
+												<th>Class Name</th>
+												<th>Division</th>
+												<th>Roll No</th>
+												<th>Full Name</th>
+												<th>Date Of Birth </th>
+												<th>Age(Years)</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card card-table">
+							<div class="card-body">
+
+								<div class="page-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h5>List Of Staff Whose Birthday Dated-</h5>
+										</div>
+										<div class="col-auto text-end float-end ms-auto download-grp">
+											<a href="#" class="btn btn-outline-primary me-2"><i
+												class="fas fa-download"></i> Download</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="table-responsive">
+									<table
+										class="table table-center mb-0 table-bordered  border-primary">
+										<thead>
+											<tr class="text-center">
+
+												<th>Sr No</th>
+												<th>Staff Name</th>
+												<th>Designation</th>
+												<th>Date Of Birth</th>
+												<th>Age(Years)</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -92,8 +131,8 @@
 				</div>
 			</div>
 		</div>
-		<jsp:include page="footer.jsp"></jsp:include>
 
+		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
 
 </body>
