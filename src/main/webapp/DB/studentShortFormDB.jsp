@@ -4,13 +4,7 @@
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
 <%@ page language="java" contentType="text; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
 
 	<%
 
@@ -34,23 +28,6 @@
 		String nationality = request.getParameter("nationality");
 		String Status = request.getParameter("Status");
 		String selectClass = request.getParameter("selectClass");
-
-		out.println("studentFirstName ->" + studentFirstName + "\n");
-		out.println("studentPRNNumber ->" + studentPRNNumber + "\n");
-		out.println("gender ->" + gender + "\n");
-		out.println("castCategory ->" + castCategory + "\n");
-		out.println("academicYear ->" + academicYear + "\n");
-		out.println("selectFeesCategory ->" + selectFeesCategory + "\n");
-		out.println("studentMiddleName ->" + studentMiddleName + "\n");
-		out.println("dateOfAdmission ->" + dateOfAdmission + "\n");
-		out.println("contactNo ->" + contactNo + "\n");
-		out.println("rseligion ->" + rseligion + "\n");
-		out.println("selectSection ->" + selectSection + "\n");
-		out.println("studentLastName ->" + studentLastName + "\n");
-		out.println("studentDOB ->" + studentDOB + "\n");
-		out.println("nationality ->" + nationality + "\n");
-		out.println("admissionStatus ->" + Status + "\n");
-		out.println("selectClass ->" + selectClass + "\n");
 
 		String query = "insert into studentdetails (studentFirstName, studentPRNNumber, gender, castId, academicYearId, selectFeeCategory, StudentMiddleName, dateOfAdmission,studentContactNo, religionId,sectionId, studentLastName,dateOfBirth,nationality,status,classId) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
@@ -78,7 +55,14 @@
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
+	if( done == 1){
+		out.print(1);
+		else{
+			out.print(0);		
+			}
+	}
 	%>
+	
 
 </body>
 </html>

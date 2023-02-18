@@ -13,7 +13,6 @@
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 
-
 		<jsp:include page="sidebar.jsp"></jsp:include>
 
 		<div class="page-wrapper">
@@ -92,8 +91,7 @@
 							<div class="card-header"></div>
 							<div class="card-body">
 								<div class="table-responsive">
-									<table
-										class="table table-center mb-0 table-bordered  border-primary">
+									<table class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 												<th>Serial No.</th>

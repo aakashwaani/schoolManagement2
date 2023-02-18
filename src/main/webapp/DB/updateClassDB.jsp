@@ -26,7 +26,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	try {
 		out.print(s1);
 		Connection con = ConnectionProvider.getConnection();
-		String query = "UPDATE studclass SET className = ?,status = ? WHERE classId = ?; ";
+		String query = "UPDATE studclass SET className = ?,status = ? WHERE classId = ?";
 		PreparedStatement pstm = con.prepareStatement(query);
 		pstm.setString(1, s1);
 		pstm.setString(2, s2);
@@ -47,7 +47,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	Swal.fire({
 		
 		icon: 'success',
-		  title: 'Class Updated Successfully ' ,
+		  title: 'Class Updated Successfully' ,
 		  confirmButtonText: 'Ok',
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */

@@ -355,7 +355,7 @@
 										  confirmButtonText: 'Ok',
 										}).then((result) => {
 										  /* Read more about isConfirmed, isDenied below */
-											window.location.href = "./addSchool.jsp";
+											 window.location.reload();
 
 										})
 								} else {
@@ -365,7 +365,6 @@
 									confirmButtonText: 'Ok',
 									}).then((result) => {
 									/* Read more about isConfirmed, isDenied below */
-									window.location.href = "./addSchool.jsp";
 									})												
 								}
 							}
