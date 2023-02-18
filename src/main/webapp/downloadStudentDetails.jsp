@@ -148,90 +148,7 @@ body {
 											</div>
 										</div>
 									</div>
-<<<<<<< HEAD
-								</div>
-							</div>
-						</div>
-						
-						<div class="row justify-content-center">
-								<div class="col-12" id="header">
-									<div class="card">
-										<div class="table-responsive">
-										<table class="table table-bordered table-striped table-highlight" id="t3">
-											<thead>
-												<tr> <td style="text-align: center;"> Select Details </td> </tr> 
-											</thead>
-											
-										</table>
-										</div>
-									</div>
-								</div>
-							</div>
-									
-			</form>
-										
-							<div class="row justify-content-center">
-								<div class="col-12" id="header">
-								<div class="table-responsive">
-								
-									<table class="table table-bordered table-striped">
-										<tbody>
 
-											<tr>
-												<td><input type="checkbox"> Stud Prn</td>
-												<td><input type="checkbox"> Stud Reg Id</td>
-												<td><input type="checkbox"> Sect Name</td>
-												<td><input type="checkbox"> Class Name</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Div Name</td>
-												<td><input type="checkbox"> Stud Rollno</td>
-												<td><input type="checkbox"> Stud Fname</td>
-												<td><input type="checkbox"> Stud Mname</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Lname</td>
-												<td><input type="checkbox"> Stud Dob</td>
-												<td><input type="checkbox"> Stud Birth Place</td>
-												<td><input type="checkbox"> Stud Gender</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Address</td>
-												<td><input type="checkbox"> Stud Father Name</td>
-												<td><input type="checkbox"> Stud Parent Mobile1</td>
-												<td><input type="checkbox"> Stud Mother Name</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Mother Contact</td>
-												<td><input type="checkbox"> Stud Mobile</td>
-												<td><input type="checkbox"> Stud Parent Landline</td>
-												<td><input type="checkbox"> Stud Parent Email</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Stud Email</td>
-												<td><input type="checkbox"> Stud Admission Date </td>
-												<td><input type="checkbox"> Nat Name</td>
-												<td><input type="checkbox"> Rel Name</td>
-											</tr>
-
-											<tr>
-												<td><input type="checkbox"> Cast Name </td>
-												<td><input type="checkbox"> Stud Cast </td>
-												<td><input type="checkbox"> Stud Aadhar </td>
-												<td><input type="checkbox"> Stud Previous School </td>
-											</tr>
-
-										</tbody>
-
-
-									</table>
-									</div>
-=======
 
 									<div class="row justify-content-center">
 										<div class="col-12" id="header">
@@ -330,7 +247,6 @@ body {
 										<i class="fa-solid fa-xmark"></i> Reset
 									</button>
 									<br> <br>
->>>>>>> c5effb0506d7b4d61aaa7dce987e4442d206db7b
 								</div>
 
 
