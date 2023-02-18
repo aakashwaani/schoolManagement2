@@ -2,7 +2,7 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +13,7 @@
 <body>
 
 	<%
+
 	try {
 		int done = 0;
 		Connection con = ConnectionProvider.getConnection();
@@ -31,7 +32,7 @@
 		String studentLastName = request.getParameter("studentLastName");
 		String studentDOB = request.getParameter("studentDOB");
 		String nationality = request.getParameter("nationality");
-		String admissionStatus = request.getParameter("admissionStatus");
+		String Status = request.getParameter("Status");
 		String selectClass = request.getParameter("selectClass");
 
 		out.println("studentFirstName ->" + studentFirstName + "\n");
@@ -48,7 +49,7 @@
 		out.println("studentLastName ->" + studentLastName + "\n");
 		out.println("studentDOB ->" + studentDOB + "\n");
 		out.println("nationality ->" + nationality + "\n");
-		out.println("admissionStatus ->" + admissionStatus + "\n");
+		out.println("admissionStatus ->" + Status + "\n");
 		out.println("selectClass ->" + selectClass + "\n");
 
 		String query = "insert into studentdetails (studentFirstName, studentPRNNumber, gender, castId, academicYearId, selectFeeCategory, StudentMiddleName, dateOfAdmission,studentContactNo, religionId,sectionId, studentLastName,dateOfBirth,nationality,status,classId) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -60,7 +61,7 @@
 		pstmt.setString(3, gender);
 		pstmt.setString(4, castCategory);
 		pstmt.setString(5, academicYear);
-		pstmt.setString(6,selectFeesCategory);
+		pstmt.setString(6, selectFeesCategory);
 		pstmt.setString(7, studentMiddleName);
 		pstmt.setString(8, dateOfAdmission);
 		pstmt.setString(9, contactNo);
@@ -69,10 +70,10 @@
 		pstmt.setString(12, studentLastName);
 		pstmt.setString(13, studentDOB);
 		pstmt.setString(14, nationality);
-		pstmt.setString(15, admissionStatus);
+		pstmt.setString(15, Status);
 		pstmt.setString(16, selectClass);
 		done = pstmt.executeUpdate();
-		System.out.println(done);
+		System.out.println(academicYear);
 
 	} catch (Exception e) {
 		e.printStackTrace();

@@ -296,7 +296,7 @@
 												</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
+														name="Status" id="validationCustom01" required>
 
 														<option>Please Select</option>
 
