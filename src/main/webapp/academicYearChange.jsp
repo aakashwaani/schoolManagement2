@@ -34,15 +34,15 @@
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-header">
-						
+
 							<h5 class="card-title">Section Details -</h5>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
+								<table class="table table-center table-bordered">
 									<thead class="bg-primary">
-	
-										<tr>
+
+										<tr class="text-center">
 											<th>Serial No.</th>
 											<th>Academic Year</th>
 											<th>Start Month Year</th>
@@ -60,14 +60,15 @@
 											while (rs.next()) {
 										%>
 
-										<tr>
+										<tr class="text-center">
 											<td><%=cnt%></td>
 											<td><%=rs.getString("academicyear")%></td>
 											<td><%=rs.getString("startmonthNumber")%></td>
-											<td><%=rs.getString("nextAcademicYearDate") %></td>
+											<td><%=rs.getString("nextAcademicYearDate")%></td>
 											<td class="">
 												<div class="actions ">
-													<a href="updateAcademicYear.jsp?id=<%=rs.getInt("academicYearId") %>"
+													<a
+														href="updateAcademicYear.jsp?id=<%=rs.getInt("academicYearId")%>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>

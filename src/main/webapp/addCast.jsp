@@ -75,11 +75,11 @@
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
+								<table class=" mb-0 table table-bordered ">
 									<thead class="bg-primary">
 
 
-										<tr>
+										<tr class="text-center">
 											<th>Serial No.</th>
 											<th>Cast Name</th>
 											<th>Status</th>
@@ -96,7 +96,7 @@
 											while (rs.next()) {
 										%>
 
-										<tr>
+										<tr class="text-center">
 											<td><%=cnt%></td>
 											<td><%=rs.getString("castName")%></td>
 											<td><%=rs.getString("status")%></td>
