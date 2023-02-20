@@ -130,24 +130,34 @@ body {
 																		<option value="4">D</option>
 																		<option value="5">E</option>
 																		<option value="6">F</option>
-																</select></td>
+																			</select></td>
+															<td style="text-align: center;"><label> Gender </label>
+																		<select class="form-control">
+																		<option value="">Select Gender</option>
+																		<option value="1">Male</option>
+																		<option value="2">Female</option>
+																		</select></td>
+
+
+
 
 																<td style="text-align: center;"><label>
-																		Name/PRN/Mobile No </label> <select class="form-control">
+																		Download Type </label> <select class="form-control">
 																		<option value="">Enter search keyword...</option>
-																		<option value="1">--</option>
-																		<option value="2">---</option>
+																		<option value="1">Excel</option>
+																		<option value="2">DOCS</option>
 																</select></td>
 															</tr>
 
 
 														</tbody>
 													</table>
-
 												</div>
 											</div>
 										</div>
-									</div>
+									</div></form>
+								
+								<div class="row justify-content-center">
 								</div>
 							</div>
 						</div>
@@ -166,9 +176,7 @@ body {
 									</div>
 								</div>
 							</div>
-									
-			</form>
-										
+								
 							<div class="row justify-content-center">
 								<div class="col-12" id="header">
 								<div class="table-responsive">
@@ -230,7 +238,6 @@ body {
 
 									</table>
 									</div>
-
 									<div class="row justify-content-center">
 										<div class="col-12" id="header">
 											<div class="card">
@@ -316,11 +323,21 @@ body {
 										</table>
 									</div>
 								</div>
-								<br>
-
-
-
+								
+								</div>
+								<br> 
+								
+								
 								<div id="button" style="text-align: center;">
+									<a href="" id="button1" class="btn btn-success btn-sm">
+									<i class="fa-solid fa-download"></i> Download </a>
+									
+									<button type="reset" value="reset" class="btn btn-danger btn-sm">
+										<i class="fa-solid fa-xmark"></i> Reset </button>
+								</div>
+								
+								
+
 									<a href="" id="button1" class="btn btn-success btn-sm"><i
 										class="fa-solid fa-download"></i> Download </a>
 									<button type="reset" value="reset"
@@ -329,15 +346,14 @@ body {
 									</button>
 									<br> <br>
 								</div>
-
-
 							</div>
 						</div>
-					</div>
+						
 				</div>
 			</div>
 		</div>
 	</div>
+			
 
 
 	<div>

@@ -175,8 +175,36 @@ ul, ol {
 /*-----------------
 	2. Table
 -----------------------*/
-
-
+table.table td h2 {
+	display: inline-block;
+	font-size: inherit;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+table.table td h2.table-avatar {
+    align-items: center;
+    display: inline-flex;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+	white-space: nowrap;
+}
+table.table td h2 a {
+	color: #333;
+}
+table.table td h2 a:hover {
+	color: #3d5ee1;
+}
+table.table td h2 span {
+	color: #888;
+	display: block;
+	font-size: 12px;
+	margin-top: 3px;
+}
 .settings-form {
 	margin-top: 20px;
 }
@@ -645,6 +673,8 @@ ul, ol {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: end;
+	align-items:center;
+	justify-content:center;
 }
 
 .actions a {
@@ -4099,11 +4129,10 @@ table.table-inbox tbody tr.checked {
 	position: relative;
 }
 
-.search-student-btn .btn-primary {
+.search-student-btn .button-large {
 	min-width: 135px;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 700;
-	text-transform: uppercase;
 	padding: 11px 15px;
 }
 
@@ -7551,9 +7580,7 @@ table.table-inbox tbody tr.checked {
 	padding: 0;
 }
 
-.table tbody tr:last-child {
-	border-color: transparent;
-}
+
 
 .categories-table tr:last-child td {
 	padding-bottom: 0px;

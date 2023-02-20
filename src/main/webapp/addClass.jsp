@@ -40,11 +40,11 @@
 								<h5 class="card-title">Class Form -</h5>
 							</div>
 							<div class="card-body">
-								<form action="DB/addClassDB.jsp" method="post"
-									class="needs-validation" novalidate>
+								<form  id="addClassForm" class="needs-validation" novalidate
+									method="POST" role="form">
 									<div class="form-group">
 										<label for="validationCustom01"> Select Section</label> <select
-											class="form-control" name="sectionId" id="validationCustom01"
+											class="form-control form-select" name="sectionId" id="validationCustom01"
 											required>
 
 											<%
@@ -78,8 +78,7 @@
 											Name.</div>
 									</div>
 									<div class="form-group">
-										<label for="validationCustom01">Status</label> 
-										<select
+										<label for="validationCustom01">Status</label> <select
 											class="form-control" id="validationCustom01" required
 											name="status">
 											<option>Active</option>
@@ -102,12 +101,11 @@
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-header">
-
 							<h5 class="card-title">Class Details -</h5>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class="table table-bordered">
+								<table class="table me-2 table-bordered">
 									<thead class="">
 										<tr class="text-center">
 											<th>Serial No.</th>
@@ -132,7 +130,7 @@
 											<td><%=rs.getString("status")%></td>
 											<td class="text-center">
 												<div class="actions">
-													<a href="updateClass.jsp?id=<%=rs.getInt("classId") %>"
+													<a href="updateClass.jsp?id=<%=rs.getInt("classId")%>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>
@@ -158,9 +156,55 @@
 				</div>
 			</div>
 		</div>
-
 		<jsp:include page="footer.jsp"></jsp:include>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#addClassForm").submit(function(event) {
+				event.preventDefault();
+				//let f = new FormData($("#addAcademicYear")[0])
+				   if ($("#addClassForm")[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							url : 'DB/addClassDB.jsp',
+							data:$("#addClassForm").serialize(),
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$("#addClassForm")[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'Class Added Successfully ' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'Class cannot be added ' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $("addClassForm").addClass('was-validated');
+				});
+			})
+		
+	</script>
 
 </body>
 </html>

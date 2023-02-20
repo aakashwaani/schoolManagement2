@@ -46,7 +46,7 @@
 						class="menu-arrow"></span></a>
 					<ul>
 						<li><a href="addDivision.jsp">Division Add</a></li>
-						<li><a href="updateDivision.jsp">Division Update</a></li>
+						<li><a href="divisionList.jsp">Division Update</a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i class="fas fa-male"></i>
 						<span> Staff</span> <span class="menu-arrow"></span></a>
@@ -64,9 +64,9 @@
 						<li><a href="fullEntryForm.jsp">Full Entry Form</a></li>
 						<li><a href="studentView.jsp">View</a></li>
 						<li><a href="downloadDetails.jsp">Download Details</a></li>
-						<li><a href="">Generate I-card</a></li>
+						<li><a href="selectStudentsICard.jsp">Generate I-card</a></li>
 						<li><a href="otherDetails.jsp">Other Details</a></li>
-						<li><a href="birthday.jsp">Birthday Details</a></li>
+						<li><a href="birthdayDetails.jsp">Birthday Details</a></li>
 						<li><a href="">Shift Students</a></li>
 						<li><a href="studentCastCategoryWiseDetails.jsp">Yearly Caste Category Report</a></li>
 						<li><a href="studentClassWiseGenderDetails.jsp">Classwise Gender Report</a></li>
