@@ -13,7 +13,7 @@
 
 		<div class="content container-fluid">
 
-			<h1>Mai hu Senu !!</h1>
+			<h1>Mai hu vaibhav !!</h1>
 
 		</div>
 
@@ -22,4 +22,4 @@
 	</div>
 
 </body>
-</html>
+</html>  
