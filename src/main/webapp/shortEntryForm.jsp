@@ -175,7 +175,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="sectionId"
 														id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -207,7 +208,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="studentReligion" id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -259,7 +261,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="sectionId"
 														id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -289,9 +292,11 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Select Section -</label>
 												<div class="col-lg-12">
+
 													<select class="form-control form-select"
 														name="studentReligion" id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -321,12 +326,30 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-mobile-android-alt"></i></span>Select Class -</label>
 												<div class="col-lg-12">
+
 													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
+														name="studentReligion" id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>
-														<option>ADMITTED</option>
-														<option>NOT-ADMITTED</option>
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from studclass");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("classId")%>">
+															<%=rs.getString("className")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
 													</select>
 												</div>
 
