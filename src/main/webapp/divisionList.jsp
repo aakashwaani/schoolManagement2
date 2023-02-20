@@ -24,11 +24,8 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Update Division Details</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-								<li class="breadcrumb-item active"> Update Division </li>
-							</ul>
+							<h3 class="page-title">Division List -</h3>
+							
 						</div>
 					</div>
 				</div>
@@ -39,7 +36,7 @@
 						<div class="card">
 							<div class="card-header">
 
-								<h5 class="card-title">Division Details -</h5>
+								<h5 class="card-title">Division List -</h5>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">

@@ -180,14 +180,14 @@
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
+															ResultSet rs = stmt.executeQuery("select * from casts");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
+														<option value="<%=rs.getInt("castId")%>">
+															<%=rs.getString("castName")%></option>
 														<%
 														}
 
@@ -205,21 +205,21 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Religion -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="sectionId"
+													<select class="form-control form-select" name="religion"
 														id="validationCustom01" required>
 
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
+															ResultSet rs = stmt.executeQuery("select * from religion");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
+														<option value="<%=rs.getInt("religionId")%>">
+															<%=rs.getString("religionName")%></option>
 														<%
 														}
 
@@ -262,14 +262,14 @@
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
+															ResultSet rs = stmt.executeQuery("select * from academicYear");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
+														<option value="<%=rs.getInt("academicYearId")%>">
+															<%=rs.getString("academicYear")%></option>
 														<%
 														}
 
@@ -326,14 +326,14 @@
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
+															ResultSet rs = stmt.executeQuery("select * from studclass");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
+														<option value="<%=rs.getInt("classId")%>">
+															<%=rs.getString("className")%></option>
 														<%
 														}
 

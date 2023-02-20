@@ -78,7 +78,7 @@
 							</div>
 							<div class="col-lg-3 col-md-2 text-center">
 								<div class="search-student-btn py-4">
-									<button type="btn" class="btn btn-primary">Search</button>
+									<button type="search" class="btn button-large btn-primary">Search</button>
 								</div>
 							</div>
 						</div>
