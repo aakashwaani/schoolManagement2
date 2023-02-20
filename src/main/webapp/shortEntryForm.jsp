@@ -180,14 +180,14 @@
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
+															ResultSet rs = stmt.executeQuery("select * from casts");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
+														<option value="<%=rs.getInt("castId")%>">
+															<%=rs.getString("castName")%></option>
 														<%
 														}
 
@@ -205,21 +205,21 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Religion -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="sectionId"
-														id="validationCustom01" required>
+													<select class="form-control form-select"
+														name="studentReligion" id="validationCustom01" required>
 
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
+															ResultSet rs = stmt.executeQuery("select * from religion");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
+														<option value="<%=rs.getInt("religionId")%>">
+															<%=rs.getString("religionName")%></option>
 														<%
 														}
 
@@ -245,18 +245,52 @@
 														<option>NOT-ADMITTED</option>
 													</select>
 												</div>
+
 											</div>
 										</div>
 									</div>
+
 									<div class="row">
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>Academic Year -</label>
+														class="fas fa-user"></i></span>Academic Year -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="sectionId"
 														id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from academicyear");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("academicYearId")%>">
+															<%=rs.getString("academicYear")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-user"></i></span>Select Section -</label>
+												<div class="col-lg-12">
+													<select class="form-control form-select"
+														name="studentReligion" id="validationCustom01" required>
 
 														<%
 														try {
@@ -285,69 +319,20 @@
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>Select Section -</label>
+														class="fas fa-mobile-android-alt"></i></span>Select Class -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="sectionId"
-														id="validationCustom01" required>
-
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
+													<select class="form-control form-select"
+														name="admissionStatus" id="validationCustom01" required>
+														<option value="" disabled selected hidden>Please
+															Select</option>
+														<option>ADMITTED</option>
+														<option>NOT-ADMITTED</option>
 													</select>
 												</div>
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>Select Class -</label>
-												<div class="col-lg-12">
-													<select class="form-control form-select" name="sectionId"
-														id="validationCustom01" required>
 
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
-												</div>
 											</div>
 										</div>
 									</div>
-
-
 									<div class="text-end">
 										<button class="btn btn-primary" type="submit">Submit
 											Form</button>

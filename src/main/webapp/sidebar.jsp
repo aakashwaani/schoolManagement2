@@ -46,7 +46,7 @@
 						class="menu-arrow"></span></a>
 					<ul>
 						<li><a href="addDivision.jsp">Division Add</a></li>
-						<li><a href="updateDivision.jsp">Division Update</a></li>
+						<li><a href="divisionList.jsp">Division Update</a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i class="fas fa-male"></i>
 						<span> Staff</span> <span class="menu-arrow"></span></a>
