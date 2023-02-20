@@ -205,9 +205,61 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Religion -</label>
 												<div class="col-lg-12">
+<<<<<<< HEAD
 													<select class="form-control form-select" name="religion"
-														id="validationCustom01" required>
+=======
+													<input type="text" class="form-control"
+														id="validationCustom01" name="studentLastName" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Last
+														Name.</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-calendar-days"></i></span>Date Of Birth - </label>
+												<div class="col-lg-12">
+													<input type="date" class="form-control"
+														id="validationCustom01" name="studentDOB" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Students Date Of Birth.</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-flag"></i></span>Nationality -</label>
+												<div class="col-lg-12">
+													<input type="text" class="form-control"
+														id="validationCustom01" name="nationality" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide
+														Nationality.</div>
 
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label"><span
+													class="px-1"><i class="fa-solid fa-toggle-off"></i></span>Status
+												</label>
+												<div class="col-lg-12">
+													<select class="form-control form-select"
+
+														name="admissionStatus" id="validationCustom01" required>
+														<option value="" disabled selected hidden>Please
+															Select</option>
+														<option>ADMITTED</option>
+														<option>NOT-ADMITTED</option>
+													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Status.</div>
+												</div>
+											</div>
+											<div class="col-lg-12">
+													<select class="form-control form-select" name="sectionId"
+>>>>>>> 43d8d3305914e434e999290c5116eba57748dbfb
+														id="validationCustom01" required>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -215,14 +267,18 @@
 															ResultSet rs = stmt.executeQuery("select * from religion");
 															while (rs.next()) {
 														%>
+<<<<<<< HEAD
 
 
 
 														<option value="<%=rs.getInt("religionId")%>">
 															<%=rs.getString("religionName")%></option>
+=======
+														<option value="<%=rs.getInt("sectionId")%>">
+															<%=rs.getString("sectionName")%></option>
+>>>>>>> 43d8d3305914e434e999290c5116eba57748dbfb
 														<%
 														}
-
 														} catch (Exception e) {
 														e.printStackTrace();
 														}
@@ -230,7 +286,6 @@
 													</select>
 												</div>
 											</div>
-										</div>
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
