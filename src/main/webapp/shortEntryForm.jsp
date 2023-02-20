@@ -208,8 +208,14 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="studentReligion" id="validationCustom01" required>
+<<<<<<< HEAD
+										<option value="" disabled selected hidden>Please
+															Select</option>				
+
+=======
 														<option value="" disabled selected hidden>Please
 															Select</option>
+>>>>>>> b4ea8b3d40573432a173202311a9adecc43f9c9b
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();

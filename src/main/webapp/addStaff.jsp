@@ -26,7 +26,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 						<div class="col">
 							<h3 class="page-title">New Staff Entry</h3>
 							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.jsp">Dashboard</a></li>
+								<li class="breadcrumb-item"><a href="index.jsp"> Dashboard </a></li>
 								<li class="breadcrumb-item active">Add New Staff</li>
 							</ul>
 						</div>
@@ -59,7 +59,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 													class="col-lg-3 col-form-label">Select Staff Role </label>
 												<div class="col-lg-9">
 													<select class="form-control form-select" name="staffRoleId"
-														id="validationCustom01">
+														id="validationCustom01" required>
+														<option value="" disabled selected hidden>Please
+															Select</option>
+														
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -81,6 +84,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 														%>
 
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Staff Role</div>
+													
+													
 												</div>
 											</div>
 
@@ -130,12 +137,16 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 														<option>Male</option>
 														<option>Female</option>
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Gender</div>
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Joining Date</label>
 												<div class="col-lg-9">
-													<input type="date" name="joiningDate" class="form-control">
+													<input type="date" name="joiningDate" class="form-control" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Joining Date</div>
 												</div>
 											</div>
 
@@ -146,19 +157,25 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Employee Id</label>
 												<div class="col-lg-9">
-													<input type="number" name="employeeId" class="form-control">
+													<input type="number" name="employeeId" class="form-control" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Employee Id</div>
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Date Of Birth</label>
 												<div class="col-lg-9">
-													<input type="date" name="dateofBirth" class="form-control">
+													<input type="date" name="dateofBirth" class="form-control" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Date Of Birth</div>
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Email ID</label>
 												<div class="col-lg-9">
-													<input type="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+													<input type="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Email ID</div>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -166,14 +183,17 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 													class="col-lg-3 col-form-label">Qualification</label>
 												<div class="col-lg-9">
 													<input type="text" name="qualification"
-														class="form-control" id="validationCustom01">
+														class="form-control" id="validationCustom01" required>
+														<div class="valid-feedback">Looks good!</div>
+														<div class="invalid-feedback">Please Provide Qualification </div>
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Salary</label>
 												<div class="col-lg-9">
-													<input type="number" name="salary" class="form-control"
-														required>
+													<input type="number" name="salary" class="form-control" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Salary</div>
 												</div>
 											</div>
 
@@ -182,7 +202,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 												<div class="col-lg-9">
 													<select class="form-control form-select"
 														name="designationId" id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
+															
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -202,13 +224,22 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 														e.printStackTrace();
 														}
 														%>
+														
+														
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+														<div class="invalid-feedback">Please Provide Designation</div>
+														
+														
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Caste Id</label>
 												<div class="col-lg-9">
-													<select class="form-control form-select" name="staffCastId">
+													<select class="form-control form-select" name="staffCastId" required>
+													<option value="" disabled selected hidden>Please
+															Select</option>
+													
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -230,14 +261,19 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 														%>
 
 													</select>
+													<div class="valid-feedback">Looks good!</div>
+														<div class="invalid-feedback">Please Provide Caste ID</div>
+														
+													
 												</div>
 											</div>
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label">Caste Category</label>
 												<div class="col-lg-9">
-													<input type="text" name="casteCategory"
-														class="form-control" required>
+													<input type="text" name="casteCategory" class="form-control" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Caste Category</div>
 												</div>
 											</div>
 										</div>
@@ -248,14 +284,15 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 												<label class="col-lg-3 col-form-label">Address </label>
 												<div class="col-lg-12">
 													<textarea rows="6" cols="6" class="form-control"
-														name="staffAddress" placeholder=""></textarea>
+														name="staffAddress" placeholder="" required></textarea>
+														<div class="valid-feedback">Looks good!</div>
+														<div class="invalid-feedback">Please Provide Address</div>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="text-end">
-										<button type="submit" class="btn btn-primary">Submit
-											Form</button>
+										<button type="submit" class="btn btn-primary">Submit Form</button>
 									</div>
 								</form>
 							</div>
