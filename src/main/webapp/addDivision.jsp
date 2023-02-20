@@ -161,7 +161,7 @@
 														class="feather-edit"></i>
 													</a>
 												</div>
-											</td>
+											</td>	
 										</tr>
 
 
