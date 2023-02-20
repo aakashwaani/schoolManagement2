@@ -7,9 +7,8 @@
 
 
 	<%
-
+	int done = 0;
 	try {
-		int done = 0;
 		Connection con = ConnectionProvider.getConnection();
 
 		String studentFirstName = request.getParameter("studentFirstName");
@@ -55,14 +54,5 @@
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	if( done == 1){
-		out.print(1);
-		else{
-			out.print(0);		
-			}
-	}
+	out.print(done);
 	%>
-	
-
-</body>
-</html>
