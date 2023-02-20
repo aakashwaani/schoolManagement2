@@ -218,8 +218,6 @@
 															while (rs.next()) {
 														%>
 
-
-
 														<option value="<%=rs.getInt("religionId")%>">
 															<%=rs.getString("religionName")%></option>
 														<%
