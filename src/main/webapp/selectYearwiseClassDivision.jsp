@@ -9,7 +9,7 @@
 <head>
 <jsp:include page="link.jsp"></jsp:include>
 </head>
-<body>
+<body> 
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 
@@ -102,7 +102,7 @@
 									<th> Status </th>
 									<th> Shift(Y/N) <input type="checkbox"> </th>
 								</tr>
-							</head>
+							</thead>
 						</table>							
 					</div>
 					</div>	
