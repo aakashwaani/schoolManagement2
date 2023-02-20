@@ -94,28 +94,7 @@
 													class="px-1"><i class="fa-solid fa-address-card"></i></span>Caste
 													Category -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="castId"
-														id="validationCustom01" required>
-
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from casts");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("castId")%>">
-															<%=rs.getString("castName")%></option>
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
+										
 												</div>
 											</div>
 
@@ -249,29 +228,7 @@
 													class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion
 													- </label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="rseligionId"
-														id="validationCustom01" required>
-
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from religion");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("religionId")%>">
-															<%=rs.getString("religionName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
+												
 												</div>
 											</div>
 
@@ -474,29 +431,7 @@
 													class="px-1"><i class="fa-solid fa-user-plus"></i></span>Select
 													Section - </label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="sectionId"
-														id="validationCustom01" required>
-
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from section");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("sectionId")%>">
-															<%=rs.getString("sectionName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
+									
 												</div>
 											</div>
 										</div>
@@ -506,29 +441,7 @@
 													class="px-1"><i class="fa-solid fa-graduation-cap"></i></span>Select
 													Class - </label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="classId"
-														id="validationCustom01" required>
-
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from studClass");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("classId")%>">
-															<%=rs.getString("className")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
+										
 												</div>
 											</div>
 										</div>
