@@ -36,154 +36,64 @@
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-user"></i></span>Online Registration No -</label>
+													class="col-form-label col-lg-3"> <span class="px-1">
+														<i class="fas fa-user"></i>
+												</span> Student First Name -
+												</label>
 												<div class="col-lg-12">
-													<input type="number" name="studentAdharNumber"
+													<input type="text" name="schoolRegistrationNo"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
-														aadhar Number.</div>
+													<div class="invalid-feedback">Please Provide First
+														Name.</div>
 
 												</div>
 											</div>
-										</div>
-										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>Student PRN No -</label>
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-address-card"></i></span>Online Registered ID
+													-</label>
 												<div class="col-lg-12">
-													<input type="email" name="prnNumber"
-														class="form-control" id="validationCustom01"
-														pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
-														Email address.</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-mobile-android-alt"></i></span>Gender -</label>
-												<div class="col-lg-12">
-													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
-														<option>Male</option>
-														<option>Female</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-user"></i></span>Date Of Birth -</label>
-												<div class="col-lg-12">
-													<input type="date" name="studentDOB" class="form-control"
+													<input type="number" class="form-control" name="schoolName"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
-														Date Of Birth.</div>
+													<div class="invalid-feedback">Please Provide ID.</div>
 
 												</div>
 											</div>
-										</div>
-										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>Birth Place -</label>
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-calendar-days"></i></span>Date Of Birth - </label>
 												<div class="col-lg-12">
-													<input type="email" name="studentEmail"
-														class="form-control" id="validationCustom01"
-														pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+													<input type="date" class="form-control"
+														id="validationCustom01" name="studentDOB" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
-														Email address.</div>
+													<div class="invalid-feedback">Please Provide valid
+														Email-Id.</div>
 												</div>
 											</div>
-										</div>
-										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-mobile-android-alt"></i></span>Nationality -</label>
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-calendar-days"></i></span>Date Of Admission -
+												</label>
 												<div class="col-lg-12">
-													<input type="number" name="studentAdharNumber"
-														class="form-control" id="validationCustom01" required>
+													<input type="date" class="form-control"
+														id="validationCustom01" name="dateofAdmission" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
-														Contact Number.</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-user"></i></span>Date Of Admission -</label>
-												<div class="col-lg-12">
-													<input type="date" name="admissionDate"
-														class="form-control" id="validationCustom01" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
+													<div class="invalid-feedback">Please Provide valid
 														Admission Date.</div>
-
 												</div>
 											</div>
-										</div>
-										<div class="col-xl-4">
+
+
 											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>PhotoGraph -</label>
+												<label class="col-lg-3 col-form-label"><span
+													class="px-1"><i class="fa-solid fa-address-card"></i></span>Caste
+													Category -</label>
 												<div class="col-lg-12">
-													<input type="file" class="form-control"
-														id="validationCustom01" name="studentPhoto" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Upload Student
-														Photograph.</div>
-
-												</div>
-
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-mobile-android-alt"></i></span>Status -</label>
-												<div class="col-lg-12">
-													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
-														<option>ADMITTED</option>
-														<option>NOT-ADMITTED</option>
-													</select>
-												</div>
-
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-user"></i></span>Cast Category -</label>
-														<div class="col-lg-12">
 													<select class="form-control form-select" name="castId"
 														id="validationCustom01" required>
 
@@ -199,8 +109,8 @@
 
 														<option value="<%=rs.getInt("castId")%>">
 															<%=rs.getString("castName")%></option>
-														<%
 														}
+
 														} catch (Exception e) {
 														e.printStackTrace();
 														}
@@ -208,27 +118,137 @@
 													</select>
 												</div>
 											</div>
+
+
+
 										</div>
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>Cast Name -</label>
+													class="col-lg-3 col-form-label "><span class="px-1"><i
+														class="fas fa-user "></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
-													<input type="text" name="studentEmail"
-														class="form-control" id="validationCustom01" required>
+													<input type="text" class="form-control"
+														id="validationCustom01" name="principalName" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
-														Email address.</div>
+													<div class="invalid-feedback">Please Provide Middle
+														Name.</div>
 												</div>
 											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-address-card"></i></span>Student PRN Number -</label>
+												<div class="col-lg-12">
+													<input type="number" class="form-control" name="schoolName"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide PRN
+														Number.</div>
+
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fas fa-map-marker-alt"></i></span>Birth Place -</label>
+												<div class="col-lg-12">
+													<input type="text" class="form-control"
+														id="validationCustom01" name="birthPlace" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Birth
+														Place.</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fas fa-images"></i></span>Photograph -</label>
+												<div class="col-lg-12">
+													<input type="file" class="form-control"
+														id="validationCustom01" name="studentPhoto" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Upload Student
+														Photograph.</div>
+
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fas fa-address-card"></i></span>Cast Name -</label>
+												<div class="col-lg-12">
+													<input type="number" class="form-control"
+														id="validationCustom01" name="mobileNo" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Cast
+														Name.</div>
+
+												</div>
+											</div>
+
+
+
 										</div>
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-mobile-android-alt"></i></span>Religion -</label>
-													<div class="col-lg-12">
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fas fa-user"></i></span>Student Last Name -</label>
+												<div class="col-lg-12">
+													<input type="text" class="form-control"
+														id="validationCustom01" name="studentFirstName" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Last
+														Name.</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label"><span
+													class="px-1"><i
+														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
+												<div class="col-lg-12">
+													<select class="form-control form-select"
+														name="admissionStatus" id="validationCustom01" required>
+														<option value="" disabled selected hidden>Please
+															Select</option>
+														<option>Male</option>
+														<option>Female</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-flag"></i></span>Nationality -</label>
+												<div class="col-lg-12">
+													<input type="text" class="form-control"
+														id="validationCustom01" name="religion" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide
+														Religion.</div>
+
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label"><span
+													class="px-1"><i class="fa-solid fa-toggle-off"></i></span>Status
+												</label>
+												<div class="col-lg-12">
+													<select class="form-control form-select"
+														name="admissionStatus" id="validationCustom01" required>
+														<option>Please Select</option>
+														<option>ADMITTED</option>
+														<option>NOT-ADMITTED</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-3 col-form-label"><span
+													class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion
+													- </label>
+												<div class="col-lg-12">
 													<select class="form-control form-select" name="rseligionId"
 														id="validationCustom01" required>
 
@@ -246,6 +266,7 @@
 															<%=rs.getString("religionName")%></option>
 														<%
 														}
+
 														} catch (Exception e) {
 														e.printStackTrace();
 														}
@@ -253,6 +274,8 @@
 													</select>
 												</div>
 											</div>
+
+
 										</div>
 									</div>
 									<div class="row">
@@ -418,14 +441,12 @@
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fa-solid fa-blender-phone"></i></span>Landline -</label>
+													class="col-form-label col-lg-3"><span class="px-1"><i class="fa-solid fa-blender-phone"></i></span>Landline -</label>
 												<div class="col-lg-12">
 													<input type="text" name="landlineNumber"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Enter Landline
-														Number.</div>
+													<div class="invalid-feedback">Please Enter Landline Number.</div>
 
 												</div>
 											</div>
