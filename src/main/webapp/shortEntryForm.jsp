@@ -28,41 +28,104 @@
 							<div class="card-body">
 								<h5 class="card-title">General Information</h5>
 								<form action="DB/studentShortFormDB.jsp" method="POST"
-									class="needs-validation" novalidate>
-
-
+									role="form" id="studentShortForm" class="needs-validation"
+									novalidate>
 									<div class="row">
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-user"></i></span> Student First Name -</label>
+														class="fas fa-user"></i></span>Student First Name -</label>
 												<div class="col-lg-12">
 													<input type="text" name="studentFirstName"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide First
+													<div class="invalid-feedback">Please Provide Student
 														Name.</div>
 
 												</div>
 											</div>
+										</div>
+										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-address-card"></i></span>Student PRN Number -</label>
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-user"></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
-													<input type="number" class="form-control"
-														name="studentPRNNumber" id="validationCustom01" required>
+													<input type="email" name="studentLastName"
+														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Middle
-														Name.</div>
+													<div class="invalid-feedback">Please Provide Student
+														Middle Name.</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-user"></i></span>Student Last Name -</label>
+												<div class="col-lg-12">
+													<input type="email" name="studentLastName"
+														class="form-control" id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Student
+														Last Name.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-user"></i></span> Student PRN No -</label>
+												<div class="col-lg-12">
+													<input type="number" name="prnNumber" class="form-control"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Student
+														PRN Number.</div>
 
 												</div>
 											</div>
+										</div>
+										<div class="col-xl-4">
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i
-														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-envelope"></i></span>Date of Admission -</label>
+												<div class="col-lg-12">
+													<input type="date" name="admissionDate"
+														class="form-control" id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Student
+														Admission Date.</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-mobile-android-alt"></i></span>Date Of Birth -</label>
+												<div class="col-lg-12">
+													<input type="date" name="studentDOB" class="form-control"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Student
+														Birth Date.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-mobile-android-alt"></i></span>Gender -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
@@ -73,142 +136,46 @@
 													</select>
 												</div>
 											</div>
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-address-card"></i></span>Caste
-													Category -</label>
-												<div class="col-lg-12">
-													<select class="form-control form-select"
-														name="castCategory" id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from casts");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("castId")%>">
-															<%=rs.getString("castName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-calendar-days"></i></span>Academic Year - </label>
-												<div class="col-lg-12">
-													<input type="date" class="form-control"
-														id="validationCustom01" name="academicYear" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide valid
-														Academic Year.</div>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="mx-1"><i
-														class="fa-solid fa-wallet"></i></span>Select Fees Category -</label>
-												<div class="col-lg-12">
-													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
-														<option></option>
-													</select>
-												</div>
-											</div>
-
 										</div>
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label "><span class="px-1"><i
-														class="fas fa-user "></i></span>Student Middle Name -</label>
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-envelope"></i></span>Student Contact No -</label>
 												<div class="col-lg-12">
-													<input type="text" class="form-control"
-														id="validationCustom01" name="studentMiddleName" required>
+													<input type="email" name="studentContact"
+														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Middle
-														Name.</div>
+													<div class="invalid-feedback">Please Provide Student
+														Contact No.</div>
 												</div>
 											</div>
+										</div>
+										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-calendar-days"></i></span>Date Of Admission -</label>
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-mobile-android-alt"></i></span>Nationality -</label>
 												<div class="col-lg-12">
-													<input type="date" class="form-control"
-														id="validationCustom01" p name="dateOfAdmission" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide valid
-														Date Of Admission</div>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-mobile"></i></span>Contact No -</label>
-												<div class="col-lg-12">
-													<input type="number" class="form-control"
-														id="validationCustom01" name="contactNo" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Contact
-														No.</div>
-
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion
-													- </label>
-												<div class="col-lg-12">
-													<select class="form-control form-select" name="rseligion"
+													<input type="text" name="nationality" class="form-control"
 														id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from religion");
-															while (rs.next()) {
-														%>
-
-
-
-														<option value="<%=rs.getInt("religionId")%>">
-															<%=rs.getString("religionName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
-													</select>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide
+														Nationality.</div>
 												</div>
 											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xl-4">
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-user-plus"></i></span>Select
-													Section - </label>
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-user"></i></span>Caste Category -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select"
-														name="selectSection" id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
+													<select class="form-control form-select" name="sectionId"
+														id="validationCustom01" required>
+
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -231,50 +198,44 @@
 													</select>
 												</div>
 											</div>
-
 										</div>
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fas fa-user"></i></span>Student Last Name -</label>
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-user"></i></span>Religion -</label>
 												<div class="col-lg-12">
-													<input type="text" class="form-control"
-														id="validationCustom01" name="studentLastName" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Last
-														Name.</div>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-calendar-days"></i></span>Date Of Birth - </label>
-												<div class="col-lg-12">
-													<input type="date" class="form-control"
-														id="validationCustom01" name="studentDOB" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide valid
-														Email-Id.</div>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-flag"></i></span>Nationality -</label>
-												<div class="col-lg-12">
-													<input type="text" class="form-control"
-														id="validationCustom01" name="nationality" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide
-														Religion.</div>
+													<select class="form-control form-select" name="sectionId"
+														id="validationCustom01" required>
 
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from section");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("sectionId")%>">
+															<%=rs.getString("sectionName")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
 												</div>
 											</div>
+										</div>
+										<div class="col-xl-4">
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-toggle-off"></i></span>Status
-												</label>
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-mobile-android-alt"></i></span>Status -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="admissionStatus" id="validationCustom01" required>
@@ -285,27 +246,94 @@
 													</select>
 												</div>
 											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xl-4">
 											<div class="form-group row">
-												<label class="col-lg-3 col-form-label"><span
-													class="px-1"><i class="fa-solid fa-graduation-cap"></i></span>Select
-													Class - </label>
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-envelope"></i></span>Academic Year -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select" name="selectClass"
+													<select class="form-control form-select" name="sectionId"
 														id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
+
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from studClass");
+															ResultSet rs = stmt.executeQuery("select * from section");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("classId")%>">
-															<%=rs.getString("className")%></option>
+														<option value="<%=rs.getInt("sectionId")%>">
+															<%=rs.getString("sectionName")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-envelope"></i></span>Select Section -</label>
+												<div class="col-lg-12">
+													<select class="form-control form-select" name="sectionId"
+														id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from section");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("sectionId")%>">
+															<%=rs.getString("sectionName")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-envelope"></i></span>Select Class -</label>
+												<div class="col-lg-12">
+													<select class="form-control form-select" name="sectionId"
+														id="validationCustom01" required>
+
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from section");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("sectionId")%>">
+															<%=rs.getString("sectionName")%></option>
 														<%
 														}
 
@@ -318,8 +346,10 @@
 											</div>
 										</div>
 									</div>
+
+
 									<div class="text-end">
-										<button class="btn btn-primary " type="submit">Submit
+										<button class="btn btn-primary" type="submit">Submit
 											Form</button>
 										<button class="btn btn-danger" type="reset">Reset</button>
 									</div>
@@ -331,7 +361,53 @@
 			</div>
 		</div>
 	</div>
-
+	<script
+		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<jsp:include page="footer.jsp"></jsp:include>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#studentShortForm').submit(function(event) {
+				event.preventDefault();
+				//let f = new FormData($("#addAcademicYear")[0])
+				   if ($('#studentShortForm')[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							url : 'DB/studentShortFormDB.jsp',
+							data:$('#studentShortForm').serialize(),
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$('#studentShortForm')[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'Studenet Entry Successfull' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'Something Went Wrong..' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $("#studentShortForm").addClass('was-validated');
+				});
+			})
+		
+	</script>
+	<br>
 </body>
 </html>

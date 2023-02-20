@@ -40,31 +40,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 								<h5 class="card-title">Add New Staff Entry -</h5>
 							</div>
 							<div class="card-body">
-								<form id="addStaffForm" class="needs-validation" action="DB/addStaffDB.jsp" method="POST"
+								<form id="addStaffForm" class="needs-validation" method="POST" role="form"
 									enctype="multipart/form-data" novalidate>
 									<div class="row">
-										<!--  <div class="profile-pic-wrapper">
-											<div class="pic-holder">
-												<img id="profilePic" class="pic"
-													src="https://source.unsplash.com/random/150x150?person">
-
-												<Input class="uploadProfileInput" type="file"
-													name="staffProfilePic"
-													id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
-												<label for="newProfilePhoto" class="upload-file-block">
-
-													<div class="text-center">
-														<div class="mb-2">
-															<i class="fa fa-camera fa-2x"></i>
-														</div>
-														<div class="text-uppercase">
-															Update <br /> Profile Photo
-														</div>
-													</div>
-												</label>
-											</div>
-										</div>
-										-->
 										<div class="col-xl-6">
 											<div class="form-group row">
 												<label for="validationCustom01"
@@ -109,48 +87,49 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 											<div class="form-group row">
 												<label for="validationCustom01" class="col-lg-3 col-form-label">First Name</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" name="firstName" id="validationCustom01">
+													<input type="text" class="form-control" name="firstName" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please choose a
-														username.</div>
+													<div class="invalid-feedback">Please Provide FirstName.</div>
 												</div>
 											</div>
 
 											<div class="form-group row">
 												<label for="validationCustom01" class="col-lg-3 col-form-label">Middle Name</label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" name="middleName" id="validationCustom01">
+													<input type="text" class="form-control" name="middleName" id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide MiddleName.</div>
 												</div>
 											</div>
 
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Last Name </label>
 												<div class="col-lg-9">
-													<input type="text" class="form-control" name="lastName">
+													<input type="text" class="form-control" name="lastName" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide LastName.</div>
 												</div>
 											</div>
 
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Mobile No</label>
 												<div class="col-lg-9">
-													<input type="number" class="form-control" name="moblileNo">
+													<input type="number" class="form-control" name="moblileNo" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Mobile No.</div>
 												</div>
 											</div>
-											<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Gender</label>
+												<div class="form-group row">
+												<label class="col-lg-3 col-form-label"><span
+													class="px-1"><i
+														class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
 												<div class="col-lg-9">
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="gender"
-															id="gender_male" value="option1" checked> <label
-															class="form-check-label" for="gender_male"> Male
-														</label>
-													</div>
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="gender"
-															id="gender_female" value="option2"> <label
-															class="form-check-label" for="gender_female">
-															Female </label>
-													</div>
+													<select class="form-control form-select" name=gender
+														id="validationCustom01" required><option value=""
+															disabled selected hidden>Please Select</option>
+														<option>Male</option>
+														<option>Female</option>
+													</select>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -292,48 +271,52 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
 "></script>
 	<jsp:include page="footer.jsp"></jsp:include>
 
-	<script type="text/javascript">
-	
-	$(document).ready(function() {
-		$("#addStaffForm").on('submit', function(event) {
-			event.preventDefault();
-			//var f = $(this).serialize();
-			//let f = new FormData($(this)[0])
-			//console.log(f)
 
-			$.ajax({
-				type : 'POST',
-				enctype : 'multipart/form-data',
-				url : 'DB/addStaffDB.jsp',
-				data : f,
-				processData : false,
-				contentType : false,
-				cache : false,
-				success : function(responce) {
-					console.log(responce.trim())
-					if (responce.trim() == "1") {
-						 $("#addStaffForm")[0].reset()
-						Swal.fire({
-							icon: 'success',
-							  title: 'Well Done ! Staff Added Successfully ' ,
-							  confirmButtonText: 'Ok',
-							}).then((result) => {
-							  /* Read more about isConfirmed, isDenied below */
-							})
-					} else {
-						Swal.fire({
-							icon: 'error',
-							  title: 'Staff cannot be added Something went Wrong !' ,
-							  confirmButtonText: 'Ok',
-							}).then((result) => {
-							  /* Read more about isConfirmed, isDenied below */
-							})
-					}
-				}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#addStaffForm").submit(function(event) {
+				event.preventDefault();
+				let f = new FormData($('#addStaffForm')[0])
+				   if ($("#addStaffForm")[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							enctype : "multipart/form-data",
+							url : 'DB/addStaffDB.jsp',
+							data :f,
+							processData : false,
+							contentType : false,
+							cache : false,
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$("#addStaffForm")[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'New Staff Added Successfully ' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'Staff cannot be added ' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $('#addStaffForm').addClass('was-validated');
+				});
 			})
-		})
-	})
-	
+		
 	</script>
 </body>
 </html>
