@@ -44,7 +44,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 		
 		icon: 'success',
 		  title: 'Religion Added Successfully ' ,
-		  confirmButtonText: 'Ok',
+		 g confirmButtonText: 'Ok',
 		}).then((result) => {
 		  /* Read more about isConfirmed, isDenied below */
 			window.location.href = "../addReligion.jsp";
@@ -63,7 +63,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 			  confirmButtonText: 'Ok',
 			}).then((result) => {
 			  /* Read more about isConfirmed, isDenied below */
-				window.location.href = "../addReligion.jsp";
+		gi		window.location.href = "../addReligion.jsp";
 
 			})
 			

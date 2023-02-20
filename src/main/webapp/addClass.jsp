@@ -44,7 +44,7 @@
 									method="POST" role="form">
 									<div class="form-group">
 										<label for="validationCustom01"> Select Section</label> <select
-											class="form-control" name="sectionId" id="validationCustom01"
+											class="form-control form-select" name="sectionId" id="validationCustom01"
 											required>
 
 											<%
