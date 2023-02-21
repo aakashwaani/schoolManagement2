@@ -58,7 +58,7 @@
 
 										<tr>
 											<td class="text-center">2</td>
-											<td>Shift class(es) to respective academic year</td>
+											<td>Shift classes to respective academic year</td>
 											<td class="text-center"><a href="#"
 												class="btn btn-success btn-sm"><i
 													class="fa-solid fa-square-caret-right"></i> </a></td>

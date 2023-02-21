@@ -31,7 +31,6 @@
 
 
 				<div class="row">
-
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-header">
@@ -45,8 +44,7 @@
 								ResultSet rs = stmt.executeQuery("select * from studclass where classId=" + id + ";");
 								rs.next();
 								%>
-								<form action="DB/updateClassDB.jsp?id=<%=id%>"
-									method="post">
+								<form action="DB/updateClassDB.jsp?id=<%=id%>" method="post">
 									<div class="form-group row">
 										<label> Class Name</label> <input type="text" name="className"
 											value="<%=rs.getString("className")%>" class="form-control">
@@ -65,11 +63,9 @@
 											Name.</div>
 									</div>
 
-
-
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Update</button>
-										<button type="submit" class="btn btn-danger">Reset</button>
+										<button type="reset" class="btn btn-danger">Reset</button>
 									</div>
 								</form>
 							</div>

@@ -4,7 +4,7 @@
 	pageEncoding="ISO-8859-1"%>
 
 	<%
-	String s1 = request.getParameter("divisionName");
+	String s1 = request.getParameter("division");
 	String s2 = request.getParameter("status");
 	String id = request.getParameter("id");
 
