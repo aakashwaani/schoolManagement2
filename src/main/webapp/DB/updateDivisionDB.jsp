@@ -4,10 +4,14 @@
 	pageEncoding="ISO-8859-1"%>
 
 	<%
+	
 	String s1 = request.getParameter("division");
 	String s2 = request.getParameter("status");
 	String id = request.getParameter("id");
-
+	System.out.println(s1);
+	System.out.println(s2);
+	System.out.println(id);
+	
 
 	int i = 0;
 	try {

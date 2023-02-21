@@ -5,7 +5,7 @@
 		<div id="sidebar-menu" class="sidebar-menu">
 			<ul>
 				<li class="menu-title"><span>Main Menu</span></li>
-				<li><a href=""><i class="fas fa-graduation-cap"></i>
+				<li><a href="prerequisites.jsp"><i class="fas fa-graduation-cap"></i>
 						<span>Prerequisites</span></a></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-chalkboard-teacher"></i> <span> Academic Year</span>
