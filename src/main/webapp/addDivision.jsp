@@ -42,7 +42,8 @@
 							</div>
 							<div class="card-body">
 								<form action="DB/divisionDB.jsp" method="post"
-									class="needs-validation" no-validate>
+									id="addDivisionForm" role="form" class="needs-validation"
+									no-validate>
 									<div class="form-group row">
 										<label> Select Section</label> <select class="form-control"
 											name="sectionId">
@@ -68,8 +69,8 @@
 										</select>
 									</div>
 									<div class="form-group row">
-										<label> Select Class</label> <select class="form-control form-select"
-											name="classId">
+										<label> Select Class</label> <select
+											class="form-control form-select" name="classId">
 
 
 											<%
@@ -94,13 +95,16 @@
 
 									<div class="form-group row">
 										<label for="validationCustom01"> Division Name</label> <input
-											type="text" id="validationCustom01" name="divisionName"
+											type="text" id="validationCustom01" name="division"
 											class="form-control" required>
+										<div class="valid-feedback">Looks good!</div>
+										<div class="invalid-feedback">Please Enter Division Name.</div>
+
 									</div>
 									<div class="form-group row">
 										<label for="validationCustom01">Status</label> <select
-											class="form-control form-select" id="validationCustom01" required
-											name="status">
+											class="form-control form-select" id="validationCustom01"
+											required name="status">
 											<option>Active</option>
 											<option>In-Active</option>
 										</select>
@@ -126,10 +130,10 @@
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
+								<table class=" mb-0 table table-bordered">
 									<thead class="bg-primary">
 
-										<tr>
+										<tr class="text-center">
 											<th>Serial No.</th>
 											<th>Division Name</th>
 											<th>Status</th>
@@ -146,7 +150,7 @@
 											while (rs.next()) {
 										%>
 
-										<tr>
+										<tr class="text-center">
 											<td><%=cnt%></td>
 											<td><%=rs.getString("division")%></td>
 											<td><%=rs.getString("status")%></td>
@@ -157,7 +161,7 @@
 														class="feather-edit"></i>
 													</a>
 												</div>
-											</td>
+											</td>	
 										</tr>
 
 
@@ -176,12 +180,57 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	</div>
 
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#addDivisionForm").submit(function(event) {
+				event.preventDefault();
+				//let f = new FormData($("#addAcademicYear")[0])
+				   if ($("#addDivisionForm")[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							url : 'DB/divisionDB.jsp',
+							data:$("#addDivisionForm").serialize(),
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$("#addDivisionForm")[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'Division Added Successfully ' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'Division cannot be added ' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $("#addDivisionForm").addClass('was-validated');
+				});
+			})
+		
+	</script>
 </body>
 </html>

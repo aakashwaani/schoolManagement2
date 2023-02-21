@@ -72,7 +72,7 @@
 
 								<div class="table-responsive">
 									<table
-										class="table table-center mb-0 table-bordered  border-primary">
+										class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 

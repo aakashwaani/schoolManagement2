@@ -1,4 +1,4 @@
-
+	
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.Statement"%>
@@ -44,7 +44,7 @@
 									method="POST" role="form">
 									<div class="form-group">
 										<label for="validationCustom01"> Select Section</label> <select
-											class="form-control" name="sectionId" id="validationCustom01"
+											class="form-control form-select" name="sectionId" id="validationCustom01"
 											required>
 
 											<%

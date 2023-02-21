@@ -78,7 +78,7 @@
 							</div>
 							<div class="col-lg-3 col-md-2 text-center">
 								<div class="search-student-btn py-4">
-									<button type="btn" class="btn btn-primary">Search</button>
+									<button type="search" class="btn button-large btn-primary">Search</button>
 								</div>
 							</div>
 						</div>
@@ -88,7 +88,6 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="card">
-							<div class="card-header"></div>
 							<div class="card-body">
 								<div class="table-responsive">
 									<table class="table table-center mb-0 table-bordered">
@@ -105,33 +104,39 @@
 										</thead>
 										<tbody>
 											<%
-											try {
-												int cnt = 1;
-												Connection con = ConnectionProvider.getConnection();
-												Statement stmt = con.createStatement();
-												ResultSet rs = stmt.executeQuery(
-												"select s.*, a.* from studentdetails as s inner join academicyear as a on s.academicyearid = a.academicyearid");
-												while (rs.next()) {
-											%>
+										try {
+											int cnt = 1;
+											Connection con = ConnectionProvider.getConnection();
+											Statement stmt = con.createStatement();
+											ResultSet rs = stmt.executeQuery("select s.*,a.*,c.* from studentdetails as s inner join academicyear as a on s.academicyearid = a.academicyearid inner join studclass as c on s.classId = c.classId");
+											while (rs.next()) {
+										%>
 
-											<tr class="text-center">
-												<td><%=cnt%></td>
-												<td><%=rs.getString("academicyear")%></td>
-												<td><%=rs.getString("studentPRNNumber")%></td>
-												<td><%=rs.getString("studentFirstName") + " " + rs.getString("studentMiddleName") + " "+ rs.getString("studentLastName")%></td>
-												<td><%=rs.getString("")%></td>
+										<tr>
+											<td><%=cnt%></td>
+											<td><%=rs.getString("academicYear")%></td>
+											<td><%=rs.getString("studentPRNNumber") %></td>
+											<td><%=rs.getString("studentFirstName")+" "+rs.getString("studentMiddleName")+" "+rs.getString("studentLastName")%></td>
+											<td><%=rs.getString("className") %></td>
+											<td><%=rs.getString("Status")%></td>
+												<td class="">
+												<div class="actions ">
+													<a
+														href="fullEntryForm.jsp?id=<%=rs.getInt("studentId")%>"
+														class="btn btn-sm bg-danger-light"> <i
+														class="feather-edit"></i>
+													</a>
+												</div>
+											</td>
 											</tr>
+												<%
+										cnt++;
+										}
 
-
-											<%
-											cnt++;
-											}
-
-											} catch (Exception e) {
-											e.printStackTrace();
-											}
-											%>
-
+										} catch (Exception e) {
+										e.printStackTrace();
+										}
+										%>
 										</tbody>
 									</table>
 								</div>
