@@ -207,6 +207,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="studentReligion" id="validationCustom01" required>
+										<option value="" disabled selected hidden>Please
+															Select</option>				
 
 														<%
 														try {
