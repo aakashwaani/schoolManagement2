@@ -68,13 +68,13 @@
 						<li><a href="fees-collections.html">Short Entry Form</a></li>
 						<li><a href="">Full Entry Form</a></li>
 						<li><a href="">View</a></li>
-						<li><a href="">Download Details</a></li>
-						<li><a href="">Generate I-card</a></li>
+						<li><a href="downloadStudentDetails.jsp">Download Details</a></li>
+						<li><a href="generateStudentICard.jsp">Generate I-card</a></li>
 						<li><a href="">Other Details</a></li>
-						<li><a href="">Birthday Details</a></li>
+						<li><a href="downloadStudentBirthDayList.jsp">Birthday Details</a></li>
 						<li><a href="">Shift Students</a></li>
-						<li><a href="">Yearly Category Report</a></li>
-						<li><a href="">Classwise Gender Report</a></li>
+						<li><a href="studentCastCategoryWiseDetails.jsp">Yearly Category Report</a></li>
+						<li><a href="studentClassWiseGenderDetails.jsp">Classwise Gender Report</a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span> Roll No</span> <span

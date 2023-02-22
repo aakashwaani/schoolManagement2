@@ -3,16 +3,6 @@
 <%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<script
-	src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
-"></script>
-<link
-	href="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
-"
-	rel="stylesheet"></link>
-<body>
 
 	<%
 	String sectionName = request.getParameter("sectionName");
@@ -22,60 +12,18 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 	
 	int i = 0;
 	try {
-		
+	
 		Connection con = ConnectionProvider.getConnection();
 		String query = "insert into section(sectionName,status)values(?,?)";
 		PreparedStatement pstm = con.prepareStatement(query);
 		pstm.setString(1, sectionName);
 		pstm.setString(2, status);
 		i = pstm.executeUpdate();
-		out.print(" \n" + i);
+		out.print(i);
+		
 		
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
 	
-	
-	if (i==1) {
 	%>
-
-	<script type="text/javascript">
-
-	Swal.fire({
-		
-		icon: 'success',
-		  title: 'Section Added Successfully ' ,
-		  confirmButtonText: 'Ok',
-		}).then((result) => {
-		  /* Read more about isConfirmed, isDenied below */
-			window.location.href = "../addSection.jsp";
-
-		})
-			</script>
-
-		<%
-	}else{
-		
-		%>
-			<script type="text/javascript">
-		
-		Swal.fire({
-			icon: 'error',
-			  title: 'Section cannot be added ' ,
-			  confirmButtonText: 'Ok',
-			}).then((result) => {
-			  /* Read more about isConfirmed, isDenied below */
-				window.location.href = "../addSection.jsp";
-
-			})
-			
-			</script>
-
-		<%
-	}
-	%>	
-
-	
-
-
-</body>

@@ -6,6 +6,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link
+	href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
+"
+	rel="stylesheet"></link>
 <jsp:include page="link.jsp"></jsp:include>
 </head>
 <body>
@@ -36,7 +42,7 @@
 								<h5 class="card-title">Add New Section</h5>
 							</div>
 							<div class="card-body">
-								<form action="./DB/sectionDB.jsp" method="POST"
+								<form id="addSectionForm"
 									class="needs-validation" novalidate>
 									<div class="form-group row">
 										<label for="validationCustom01" class="">Section Name</label>
@@ -130,10 +136,61 @@
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
+		<script
+	src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
+"></script>
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
 
+//action="./DB/sectionDB.jsp" method="POST"
+$(document).ready(function() {
+	
+			$('#addSectionForm').submit(function(event) {
+				event.preventDefault();
+				//let f = new FormData($("#addAcademicYear")[0])
+				   if ($('#addSectionForm')[0].checkValidity() === false) {
+				        event.stopPropagation();
+				    } else {
+						$.ajax({
+							type : 'POST',
+							url : './DB/sectionDB.jsp',
+							data: $('#addSectionForm').serialize(),
+							success : function(responce) {
+								console.log(responce.trim())
+								if (responce.trim() == "1") {
+									$('#addSectionForm')[0].reset()
+									Swal.fire({
+										icon: 'success',
+										  title: 'Section Added Successfull' ,
+										  confirmButtonText: 'Ok',
+										}).then((result) => {
+										  /* Read more about isConfirmed, isDenied below */
+											 window.location.reload();
+										})
+								} else {
+									Swal.fire({
+									icon: 'error',
+									title: 'Something Went Wrong..' ,
+									confirmButtonText: 'Ok',
+									}).then((result) => {
+									/* Read more about isConfirmed, isDenied below */
+									})												
+								}
+							}
+						})
+				    }
+				    $("#addSectionForm").addClass('was-validated');
+				});
+	
+	
+			})
+		
+
+
+</script>
 	
 </body>
 </html>
