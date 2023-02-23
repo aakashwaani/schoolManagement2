@@ -87,8 +87,8 @@
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href="userInformation.jsp"><i class="fas fa-comment-dollar"></i>
-						<span>User Information</span></a></li>
+				<li><a href="userInformation.jsp"><i
+						class="fas fa-comment-dollar"></i> <span>User Information</span></a></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span>Others</span> <span
 						class="menu-arrow"></span></a>
@@ -123,12 +123,8 @@
 						class="fas fa-file-invoice-dollar"></i> <span>Subject</span> <span
 						class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="newSubjectEntry.jsp">Subject Category </a></li>
+						<li><a href="">SUbject Entry </a></li>
 					</ul></li>
 				<li><a href="exam.html"><i class="fas fa-clipboard-list"></i>
 						<span>Assign Subject</span></a></li>
