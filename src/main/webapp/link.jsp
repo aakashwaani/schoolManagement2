@@ -15,6 +15,8 @@
 
 <link rel="stylesheet" href="assets/plugins/icons/flags/flags.css">
 
+<link rel="stylesheet" href="assets/plugins/twitter-bootstrap-wizard/form-wizard.css">
+
 
 
 <link rel="stylesheet" href="assets/css/style.css">
