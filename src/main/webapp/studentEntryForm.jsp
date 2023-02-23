@@ -464,55 +464,7 @@
 														class="needs-validation" novalidate>
 
 														<div class="row">
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fas fa-user"></i></span>Student
-																		First Name -</label>
-																	<div class="col-lg-12">
-																		<input type="text" name="studentFirstName"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student Name.</div>
-
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fas fa-user"></i></span>Student
-																		Middle Name -</label>
-																	<div class="col-lg-12">
-																		<input type="text" name="studentMiddleName"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student Middle Name.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fas fa-user"></i></span>Student
-																		Last Name -</label>
-																	<div class="col-lg-12">
-																		<input type="text" name="studentLastName"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student Last Name.</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-xl-4">
+															<div class="col-xl-6">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
@@ -528,112 +480,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fas fa-user"></i></span>Student
-																		PRN No -</label>
-																	<div class="col-lg-12">
-																		<input type="email" name="studentPRN"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student PRN No.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i
-																			class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
-																			<option value="" disabled selected hidden>Please
-																				Select</option>
-																			<option>Male</option>
-																			<option>Female</option>
-																		</select>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select
-																			Gender.</div>
-																	</div>
-
-
-																</div>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i
-																			class="fa-solid fa-calendar-days"></i></span>Date Of Birth -</label>
-																	<div class="col-lg-12">
-																		<input type="date" name="studentFirstName"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student Date Of Birth.</div>
-
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i
-																			class="fa-sharp fa-solid fa-location-dot"></i></span>BirthPlace
-																		-</label>
-																	<div class="col-lg-12">
-																		<input type="email" name="studentLastName"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student BirthPlace.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid fa-flag"></i></span>Nationality
-																		-</label>
-																	<div class="col-lg-12">
-																		<input type="text" name="nationality"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student Nationality.</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fas fa-calendar-days"></i></span>Date
-																		Of Admission-</label>
-																	<div class="col-lg-12">
-																		<input type="Date" name="dateOfAdmission"
-																			class="form-control" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student Admission Date.</div>
-
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
+															<div class="col-xl-6">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
@@ -648,45 +495,23 @@
 																	</div>
 																</div>
 															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid	fa-toggle-on"></i></span>Status
-																		-</label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
-																			<option value="" disabled selected hidden>Please
-																				Select</option>
-																			<option>ADMITTED</option>
-																			<option>NOT-ADMITTED</option>
-																		</select>
-																	</div>
-																</div>
-															</div>
 														</div>
+
 														<div class="row">
 															<div class="col-xl-4">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"> <i
-																			class="fa-solid fa-address-card"></i>
-																	</span>Cast Category -</label>
+																		class="px-1"><i
+																			class="fa-sharp fa-solid fa-location-dot"></i></span>BirthPlace
+																		-</label>
 																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="castCategory" id="validationCustom01" required>
-																			<option></option>
-																			<option></option>
-																			<option></option>
-																		</select>
+																		<input type="email" name="studentLastName"
+																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select Cast
-																			Category.</div>
+																		<div class="invalid-feedback">Please Provide
+																			Student BirthPlace.</div>
 																	</div>
-
 																</div>
 															</div>
 															<div class="col-xl-4">
@@ -800,15 +625,14 @@
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i
-																			class="fas fa-mobile-android-alt"></i></span>Student Contact
-																		No -</label>
+																		class="px-1"><i class="far fa-money-bill-alt"></i></span>
+																		Class Fees-</label>
 																	<div class="col-lg-12">
-																		<input type="number" name="studentAdharNumber"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="number" class="form-control"
+																			id="validationCustom01" name="slabFees" required>
 																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student Contact Number.</div>
+																		<div class="invalid-feedback">Please Enter Class
+																			Fees.</div>
 
 																	</div>
 																</div>
@@ -920,41 +744,6 @@
 															</div>
 														</div>
 
-														<div class="row">
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-lg-3 col-form-label"><span
-																		class="px-1"><i
-																			class="fa-solid fa-calendar-days"></i></span>Academic Year -
-																	</label>
-																	<div class="col-lg-12">
-																		<input type="date" class="form-control"
-																			id="validationCustom01" name="academicYear" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			valid Academic Year.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="far fa-money-bill-alt"></i></span>
-																		Class Fees-</label>
-																	<div class="col-lg-12">
-																		<input type="number" class="form-control"
-																			id="validationCustom01" name="slabFees" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Enter Class
-																			Fees.</div>
-
-																	</div>
-																</div>
-															</div>
-
-														</div>
 
 														<h5 class="card-title">Academic & Transport Fee
 															Details -</h5>
@@ -1061,24 +850,8 @@
 													<form action="" enctype="multipart/form-data" method="POST"
 														class="needs-validation" novalidate>
 														<div class="row">
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-lg-3 col-form-label"><span
-																		class="px-1"><i
-																			class="fa-solid fa-address-card"></i></span>Student PRN
-																		Number -</label>
-																	<div class="col-lg-12">
-																		<input type="number" class="form-control"
-																			name="schoolName" id="validationCustom01" required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide PRN
-																			Number.</div>
-
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
+														
+															<div class="col-xl-8">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"> <span
@@ -1548,12 +1321,6 @@
 																	</div>
 																</div>
 															</div>
-														</div>
-
-														<div class="text-end">
-															<button class="btn btn-primary " type="submit">Submit
-																Form</button>
-															<button class="btn btn-danger" type="reset">Reset</button>
 														</div>
 													</form>
 												</div>
