@@ -28,8 +28,6 @@
 						</div>
 					</div>
 				</div>
-
-
 				<div class="row">
 					<div class="col-md-8">
 						<div class="card">
@@ -91,41 +89,6 @@
 											<th>Update</th>
 										</tr>
 									</thead>
-									<tbody>
-										<%
-										try {
-											int cnt = 1;
-											Connection con = ConnectionProvider.getConnection();
-											Statement stmt = con.createStatement();
-											ResultSet rs = stmt.executeQuery("select * from studclass");
-											while (rs.next()) {
-										%>
-
-										<tr class="text-center">
-											<td><%=cnt%></td>
-											<td><%=rs.getString("className")%></td>
-											<td><%=rs.getString("status")%></td>
-											<td class="text-center">
-												<div class="actions">
-													<a href="updateClass.jsp?id=<%=rs.getInt("classId")%>"
-														class="btn btn-sm bg-danger-light"> <i
-														class="feather-edit"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-
-
-										<%
-										cnt++;
-										}
-
-										} catch (Exception e) {
-										e.printStackTrace();
-										}
-										%>
-
-									</tbody>
 								</table>
 							</div>
 						</div>

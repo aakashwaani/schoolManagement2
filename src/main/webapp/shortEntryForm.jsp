@@ -53,7 +53,6 @@
 														class="fas fa-user"></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
 													<input type="email" name="studentMiddleName"
-													<input type="text" name="studentMiddleName"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student

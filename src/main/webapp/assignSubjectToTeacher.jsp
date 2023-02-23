@@ -341,73 +341,33 @@
 										<button class="btn btn-primary" type="submit">Search</button>
 									</div>
 								</form>
-								------------------------------------------
-								<div class="row">
-									<div class="col-lg-12">
-										<div class="card">
-											<div class="card-body">
-												<div class="table-responsive">
-													<table class="table table-center mb-0 table-bordered">
-														<thead>
-															<tr class="text-center">
-																<th>Serial No.</th>
-																<th>Academic Year</th>
-																<th>PRN No</th>
-																<th>Full Name</th>
-																<th>Class & Division</th>
-																<th>Status</th>
-																<th>Action</th>
-															</tr>
-														</thead>
-														<tbody>
-															<%
-															try {
-																int cnt = 1;
-																Connection con = ConnectionProvider.getConnection();
-																Statement stmt = con.createStatement();
-																ResultSet rs = stmt.executeQuery(
-																"select s.*,a.*,c.* from studentdetails as s inner join academicyear as a on s.academicyearid = a.academicyearid inner join studclass as c on s.classId = c.classId");
-																while (rs.next()) {
-															%>
-
-															<tr>
-																<td><%=cnt%></td>
-																<td><%=rs.getString("academicYear")%></td>
-																<td><%=rs.getString("studentPRNNumber")%></td>
-																<td><%=rs.getString("studentFirstName") + " " + rs.getString("studentMiddleName") + " "
-																								+ rs.getString("studentLastName")%></td>
-																<td><%=rs.getString("className")%></td>
-																<td><%=rs.getString("Status")%></td>
-																<td class="">
-																	<div class="actions ">
-																		<a
-																			href="fullEntryForm.jsp?id=<%=rs.getInt("studentId")%>"
-																			class="btn btn-sm bg-danger-light"> <i
-																			class="feather-edit"></i>
-																		</a>
-																	</div>
-																</td>
-															</tr>
-															<%
-															cnt++;
-															}
-
-															} catch (Exception e) {
-															e.printStackTrace();
-															}
-															%>
-														</tbody>
-													</table>
-												</div>
-											</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-center mb-0 table-bordered">
+												<thead>
+													<tr class="text-center">
+														<th>Serial No.</th>
+														<th>Section Name</th>
+														<th>Class Name</th>
+														<th>Division Name</th>
+														<th>Subject Name</th>
+														<th>Teacher Name</th>
+														<th>Status</th>
+														<th>Action</th>
+													</tr>
+												</thead>
+											</table>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					------------------------------------------
 				</div>
 			</div>
 		</div>
