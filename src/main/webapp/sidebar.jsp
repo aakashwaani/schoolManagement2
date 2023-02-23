@@ -87,7 +87,7 @@
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href="fees.html"><i class="fas fa-comment-dollar"></i>
+				<li><a href="userInformation.jsp"><i class="fas fa-comment-dollar"></i>
 						<span>User Information</span></a></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span>Others</span> <span
