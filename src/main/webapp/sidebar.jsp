@@ -69,7 +69,7 @@
 				<li class="submenu"><a href="#"><i class="fas fa-user"></i>
 						<span> Roll No</span> <span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href="">Assign Roll No </a></li>
+						<li><a href="studentAssignRollno.jsp">Assign Roll No </a></li>
 						<li><a href="">Unassign Roll No</a></li>
 						<li><a href="fullEntryForm.jsp">Roll No List</a></li>
 
