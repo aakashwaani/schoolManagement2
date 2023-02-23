@@ -22,16 +22,17 @@
 					<div class="card">
 						<div class="card-body">
 							<h4 class="header-title mb-4"></h4>
-							<ul class="nav nav-pills navtab-bg nav-justified">
+							<ul
+								class="nav nav-pills navtab-bg nav-justified twitter-bs-wizard-nav">
 								<li class="nav-item"><a href="#home1" data-bs-toggle="tab"
-									aria-expanded="true" class="nav-link active"> Short Entry
-										Form </a></li>
+									aria-expanded="true" data-toggle="tab" class="nav-link active">
+										Short Entry Form </a></li>
 								<li class="nav-item"><a href="#profile1"
-									data-bs-toggle="tab" aria-expanded="false" class="nav-link">
-										Long Entry Form </a></li>
+									data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
+									class="nav-link"> Long Entry Form </a></li>
 								<li class="nav-item"><a href="#messages1"
-									data-bs-toggle="tab" aria-expanded="false" class="nav-link">
-										Other Details Form </a></li>
+									data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
+									class="nav-link"> Other Details Form </a></li>
 							</ul>
 							<div class="tab-content">
 								<div class="tab-pane show active" id="home1">
@@ -39,7 +40,8 @@
 										<div class="col-md-12">
 											<div class="card">
 												<div class="card-header">
-													<h5 class="card-title">Add New Student(Short Entry Form)-</h5>
+													<h5 class="card-title">Add New Student(Short Entry
+														Form)-</h5>
 												</div>
 
 												<div class="card-body">
@@ -151,11 +153,11 @@
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
+																		class="px-1"><i
+																			class="fa-solid fa-person-half-dress"></i></span>Gender -</label>
 																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="gender" id="validationCustom01"
-																			required>
+																		<select class="form-control form-select" name="gender"
+																			id="validationCustom01" required>
 																			<option value="" disabled selected hidden>Please
 																				Select</option>
 																			<option>Male</option>
@@ -169,8 +171,8 @@
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
 																		class="px-1"><i
-																			class="fas fa-mobile-android-alt"></i></span>
-																		Student Contact No -</label>
+																			class="fas fa-mobile-android-alt"></i></span> Student
+																		Contact No -</label>
 																	<div class="col-lg-12">
 																		<input type="number" name="studentContactNumber"
 																			class="form-control" id="validationCustom01" required>
@@ -203,8 +205,8 @@
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid fa-address-card"></i></span>Cast
-																		Category -</label>
+																		class="px-1"><i
+																			class="fa-solid fa-address-card"></i></span>Cast Category -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
 																			name="sectionId" id="validationCustom01" required>
@@ -241,8 +243,8 @@
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid fa-address-card"></i></span>Religion
-																		-</label>
+																		class="px-1"><i
+																			class="fa-solid fa-address-card"></i></span>Religion -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
 																			name="studentReligion" id="validationCustom01"
@@ -279,7 +281,8 @@
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid fa-toggle-off"></i></span>Status -</label>
+																		class="px-1"><i class="fa-solid fa-toggle-off"></i></span>Status
+																		-</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
 																			name="admissionStatus" id="validationCustom01"
@@ -299,8 +302,7 @@
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
 																		class="px-1"><i
-																			class="fa-solid fa-calendar-days"></i></span>Academic
-																		Year -</label>
+																			class="fa-solid fa-calendar-days"></i></span>Academic Year -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
 																			name="sectionId" id="validationCustom01" required>
@@ -337,8 +339,8 @@
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid fa-address-card"></i></span>Select
-																		Section -</label>
+																		class="px-1"><i
+																			class="fa-solid fa-address-card"></i></span>Select Section -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
 																			name="studentReligion" id="validationCustom01"
@@ -412,8 +414,9 @@
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fa-solid fa-address-card"></i></span> Select
-																		Fees Category -</label>
+																		class="px-1"><i
+																			class="fa-solid fa-address-card"></i></span> Select Fees
+																		Category -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
 																			name="admissionStatus" id="validationCustom01"
@@ -429,6 +432,13 @@
 														</div>
 
 														<div class="text-end">
+
+
+															<ul class="pager wizard twitter-bs-wizard-pager-link">
+																<li class="next"><a href="javascript: void(0);"
+																	class="btn btn-primary" onclick="nextTab()">Next <i
+																		class="bx bx-chevron-right ms-1"></i></a></li>
+															</ul>
 															<button class="btn btn-primary" type="submit">Submit
 																Form</button>
 															<button class="btn btn-danger" type="reset">Reset</button>
@@ -929,47 +939,6 @@
 															</div>
 															<div class="col-xl-4">
 																<div class="form-group row">
-																	<label class="col-lg-3 col-form-label"><span
-																		class="px-1"><i class="fa-solid fa-user-plus"></i></span>Select
-																		Section - </label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
-																			<option></option>
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select
-																			Section.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label class="col-lg-3 col-form-label"><span
-																		class="px-1"><i
-																			class="fa-solid fa-graduation-cap"></i></span>Select Class -
-																	</label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
-																			<option></option>
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select
-																			Class.</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row">
-															<div class="col-xl-4">
-																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
 																		class="px-1"><i class="far fa-money-bill-alt"></i></span>
@@ -984,7 +953,9 @@
 																	</div>
 																</div>
 															</div>
+
 														</div>
+
 														<h5 class="card-title">Academic & Transport Fee
 															Details -</h5>
 														<div class="row">
@@ -1079,499 +1050,517 @@
 								</div>
 								<div class="tab-pane" id="messages1">
 									<div class="row">
-					<div class="col-md-12">
-						<div class="card">
-							<div class="card-header">
-								<h5 class="">Other Details -</h5>
-							</div>
-
-							<div class="card-body">
-								<h6 class="card-title">Student Information -</h6>
-								<form action="" enctype="multipart/form-data" method="POST"
-									class="needs-validation" novalidate>
-									<div class="row">
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-address-card"></i></span>Student PRN Number -</label>
-												<div class="col-lg-12">
-													<input type="number" class="form-control" name="schoolName"
-														id="validationCustom01" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide PRN
-														Number.</div>
-
+										<div class="col-md-12">
+											<div class="card">
+												<div class="card-header">
+													<h5 class="">Other Details -</h5>
 												</div>
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fas fa-user"></i>
-												</span> Student Full Name -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="schoolRegistrationNo"
-														class="form-control" id="validationCustom01" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Student
-														Full Name.</div>
 
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-language"></i>
-												</span> Mother Tongue -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="schoolRegistrationNo"
-														class="form-control" id="validationCustom01" placeholder="mother tongue.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide First
-														Name.</div>
+												<div class="card-body">
+													<h6 class="card-title">Student Information -</h6>
+													<form action="" enctype="multipart/form-data" method="POST"
+														class="needs-validation" novalidate>
+														<div class="row">
+															<div class="col-xl-4">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-lg-3 col-form-label"><span
+																		class="px-1"><i
+																			class="fa-solid fa-address-card"></i></span>Student PRN
+																		Number -</label>
+																	<div class="col-lg-12">
+																		<input type="number" class="form-control"
+																			name="schoolName" id="validationCustom01" required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide PRN
+																			Number.</div>
 
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-4">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fas fa-user"></i>
+																	</span> Student Full Name -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="schoolRegistrationNo"
+																			class="form-control" id="validationCustom01" required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Student Full Name.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-4">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-language"></i>
+																	</span> Mother Tongue -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="schoolRegistrationNo"
+																			class="form-control" id="validationCustom01"
+																			placeholder="mother tongue.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			First Name.</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h6 class="card-title">Guardian Details -</h6>
+														<div class="row">
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fas fa-user"></i>
+																	</span> Full Name -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="guardianName"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Guardian Full Name.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Guardian Full Name.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-user-tie"></i>
+																	</span> Occupation -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="guardianOccupation"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Guardian Occupation.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Guardian Occupation.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-mobile"></i>
+																	</span> Mobile Number -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="guardianMobNo"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Guardian Moblile No..." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Guardian Mob No.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-user-tie"></i>
+																	</span> Relation -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="guardianRelation"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Relation with Student.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Guardian Relation.</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fas fa-user"></i>
+																	</span> Qualification -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="guardianName"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Educational Qualification.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Guardian Full Name.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-lg-3 col-form-label"><span
+																		class="px-1"><i class="fas fa-images"></i></span>Photograph
+																		-</label>
+																	<div class="col-lg-12">
+																		<input type="file" class="form-control"
+																			id="validationCustom01" name="guardianPhoto" required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Upload
+																			Guardian Photograph.</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h6 class="card-title">Father Details -</h6>
+														<div class="row">
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-user-tie"></i>
+																	</span> Occupation -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="fatherOccupation"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Father's Occupation.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Guardian Occupation.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fas fa-user"></i>
+																	</span> Qualification -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="fatherEduaction"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Educational Qualification.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Father's Qualification.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-money-bill"></i>
+																	</span> Yearly Income -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="fatherYearlyIncome"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Father's Yearly Income.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Yearly Income.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-lg-3 col-form-label"><span
+																		class="px-1"><i class="fas fa-images"></i></span>Photograph
+																		-</label>
+																	<div class="col-lg-12">
+																		<input type="file" class="form-control"
+																			id="validationCustom01" name="FatherPhoto" required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Upload
+																			Father's Photograph.</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h6 class="card-title">Mother Details -</h6>
+														<div class="row">
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-user-tie"></i>
+																	</span> Occupation -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="motherOccupation"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Mother Occupation.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Guardian Occupation.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fas fa-user"></i>
+																	</span> Qualification -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="motherEduaction"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Educational Qualification.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Father's Qualification.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-money-bill"></i>
+																	</span> Yearly Income -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="motherYearlyIncome"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Mother's Yearly Income.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Yearly Income.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-3">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-lg-3 col-form-label"><span
+																		class="px-1"><i class="fas fa-images"></i></span>Photograph
+																		-</label>
+																	<div class="col-lg-12">
+																		<input type="file" class="form-control"
+																			id="validationCustom01" name="motherPhoto" required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Upload
+																			Father's Photograph.</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h6 class="card-title">Bank Details -</h6>
+														<div class="row">
+
+															<div class="col-xl-4">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i
+																			class="fa-sharp fa-solid fa-building-columns"></i>
+																	</span> Bank Name -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="motherEduaction"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Bank Name..." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Bank Name.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-4">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i
+																			class="fa-sharp fa-solid fa-building-columns"></i>
+																	</span> Branch Name -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="BankbranchName"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Bank Branch Name.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Bank Branch Name.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-4">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i
+																			class="fa-sharp fa-solid fa-building-columns"></i>
+																	</span> Account Number -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="accountNumber"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Account Number.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Account Number.</div>
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-4">
+																<div class="form-group row">
+																	<label for="validationCustom01"
+																		class="col-form-label col-lg-3"> <span
+																		class="px-1"> <i class="fa-solid fa-volleyball"></i>
+																	</span> Hobbies -
+																	</label>
+																	<div class="col-lg-12">
+																		<input type="text" name="BankbranchName"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Hobbies.." required>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Bank Branch Name.</div>
+
+																	</div>
+																</div>
+															</div>
+															<h5 class="card-title">Address</h5>
+															<div class="row">
+																<div class="form-group row">
+																	<label id="validationCustom01"
+																		class="col-lg-3 col-form-label"><span
+																		class="mx-2"><i
+																			class="fa-sharp fa-solid fa-location-dot"></i></span>Address
+																		-</label>
+																	<div class="col-lg-8">
+																		<textarea rows="5" cols="5" class="form-control"
+																			placeholder="" id="validationCustom01" name="Address"></textarea>
+																		<div class="valid-feedback">Looks good!</div>
+																		<div class="invalid-feedback">Please Provide
+																			Address.</div>
+																	</div>
+																</div>
+																<div class="col-xl-6">
+																	<div class="form-group row">
+																		<label id="validationCustom01"
+																			class="col-lg-3 col-form-label"><span
+																			class="mx-2"><i
+																				class="fa-sharp fa-solid fa-city"></i></span>Street/Location
+																			-</label>
+																		<div class="col-lg-9">
+																			<input type="text" class="form-control"
+																				id="validationCustom01" name="City">
+																			<div class="valid-feedback">Looks good!</div>
+																			<div class="invalid-feedback">Please Provide
+																				City Name.</div>
+																		</div>
+																	</div>
+																	<div class="form-group row">
+																		<label id="validationCustom01"
+																			class="col-lg-3 col-form-label"><span
+																			class="mx-2"><i
+																				class="fa-sharp fa-solid fa-city"></i></span>City/Village -</label>
+																		<div class="col-lg-9">
+																			<input type="text" class="form-control"
+																				id="validationCustom01" name="City">
+																			<div class="valid-feedback">Looks good!</div>
+																			<div class="invalid-feedback">Please Provide
+																				City Name.</div>
+																		</div>
+																	</div>
+																	<div class="form-group row">
+																		<label id="validationCustom01"
+																			class="col-lg-3 col-form-label"><span
+																			class="mx-2"><i
+																				class="fa-sharp fa-solid fa-city"></i></span>Taluka -</label>
+																		<div class="col-lg-9">
+																			<input type="text" class="form-control"
+																				id="validationCustom01" name="talukaName">
+																			<div class="valid-feedback">Looks good!</div>
+																			<div class="invalid-feedback">Please Provide
+																				Taluka.</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-6">
+																	<div class="form-group row">
+																		<label class="col-lg-3 col-form-label"
+																			id="validationCustom01"><span class="mx-2"><i
+																				class="fa-solid fa-tree-city"></i></span>District -</label>
+																		<div class="col-lg-9">
+																			<input type="text" class="form-control"
+																				id="validationCustom01" name="District">
+																			<div class="valid-feedback">Looks good!</div>
+																			<div class="invalid-feedback">Please Provide
+																				State Name.</div>
+																		</div>
+																	</div>
+																	<div class="form-group row">
+																		<label class="col-lg-3 col-form-label"
+																			id="validationCustom01"><span class="mx-2"><i
+																				class="fa-solid fa-tree-city"></i></span>State -</label>
+																		<div class="col-lg-9">
+																			<input type="text" class="form-control"
+																				id="validationCustom01" name="State">
+																			<div class="valid-feedback">Looks good!</div>
+																			<div class="invalid-feedback">Please Provide
+																				State Name.</div>
+																		</div>
+																	</div>
+
+																	<div class="form-group row">
+																		<label class="col-lg-3 col-form-label"
+																			id="validationCustom01"><span class="mx-2"><i
+																				class="fa-sharp fa-solid fa-location-dot"></i></span>Postal
+																			Code -</label>
+																		<div class="col-lg-9">
+																			<input type="text" class="form-control"
+																				id="validationCustom01" name="postalCode">
+																			<div class="valid-feedback">Looks good!</div>
+																			<div class="invalid-feedback">Please Provide
+																				Postal Code.</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="text-end">
+															<button class="btn btn-primary " type="submit">Submit
+																Form</button>
+															<button class="btn btn-danger" type="reset">Reset</button>
+														</div>
+													</form>
 												</div>
+
 											</div>
 										</div>
 									</div>
-									<h6 class="card-title">Guardian Details -</h6>
-									<div class="row">
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fas fa-user"></i>
-												</span> Full Name -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="guardianName" class="form-control"
-														id="validationCustom01" placeholder="Guardian Full Name.."
-														required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Guardian
-														Full Name.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-user-tie"></i>
-												</span> Occupation -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="guardianOccupation"
-														class="form-control" id="validationCustom01"
-														placeholder="Guardian Occupation.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Guardian
-														Occupation.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-mobile"></i>
-												</span> Mobile Number -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="guardianMobNo"
-														class="form-control" id="validationCustom01" placeholder="Guardian Moblile No..." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Guardian
-														Mob No.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-user-tie"></i>
-												</span> Relation -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="guardianRelation"
-														class="form-control" id="validationCustom01"
-														placeholder="Relation with Student.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Guardian
-														Relation.</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fas fa-user"></i>
-												</span> Qualification -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="guardianName" class="form-control"
-														id="validationCustom01"
-														placeholder="Educational Qualification.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Guardian
-														Full Name.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fas fa-images"></i></span>Photograph -</label>
-												<div class="col-lg-12">
-													<input type="file" class="form-control"
-														id="validationCustom01" name="guardianPhoto" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Upload Guardian
-														Photograph.</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<h6 class="card-title">Father Details -</h6>
-									<div class="row">
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-user-tie"></i>
-												</span> Occupation -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="fatherOccupation"
-														class="form-control" id="validationCustom01"
-														placeholder="Father's Occupation.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Guardian
-														Occupation.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fas fa-user"></i>
-												</span> Qualification -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="fatherEduaction"
-														class="form-control" id="validationCustom01"
-														placeholder="Educational Qualification.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Father's
-														Qualification.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-money-bill"></i>
-												</span> Yearly Income -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="fatherYearlyIncome"
-														class="form-control" id="validationCustom01"
-														placeholder="Father's Yearly Income.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Yearly
-														Income.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fas fa-images"></i></span>Photograph -</label>
-												<div class="col-lg-12">
-													<input type="file" class="form-control"
-														id="validationCustom01" name="FatherPhoto" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Upload Father's
-														Photograph.</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<h6 class="card-title">Mother Details -</h6>
-									<div class="row">
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-user-tie"></i>
-												</span> Occupation -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="motherOccupation"
-														class="form-control" id="validationCustom01"
-														placeholder="Mother Occupation.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Guardian
-														Occupation.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fas fa-user"></i>
-												</span> Qualification -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="motherEduaction"
-														class="form-control" id="validationCustom01"
-														placeholder="Educational Qualification.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Father's
-														Qualification.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-money-bill"></i>
-												</span> Yearly Income -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="motherYearlyIncome"
-														class="form-control" id="validationCustom01"
-														placeholder="Mother's Yearly Income.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Yearly
-														Income.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-3">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fas fa-images"></i></span>Photograph -</label>
-												<div class="col-lg-12">
-													<input type="file" class="form-control"
-														id="validationCustom01" name="motherPhoto" required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Upload Father's
-														Photograph.</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<h6 class="card-title">Bank Details -</h6>
-									<div class="row">
-										
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-sharp fa-solid fa-building-columns"></i>
-												</span> Bank Name -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="motherEduaction"
-														class="form-control" id="validationCustom01"
-														placeholder="Bank Name..." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Bank
-														Name.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-sharp fa-solid fa-building-columns"></i>
-												</span> Branch Name -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="BankbranchName"
-														class="form-control" id="validationCustom01"
-														placeholder="Bank Branch Name.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Bank
-														Branch Name.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-sharp fa-solid fa-building-columns"></i>
-												</span> Account Number -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="accountNumber"
-														class="form-control" id="validationCustom01"
-														placeholder="Account Number.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Account
-														Number.</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-4">
-											<div class="form-group row">
-												<label for="validationCustom01"
-													class="col-form-label col-lg-3"> <span class="px-1">
-														<i class="fa-solid fa-volleyball"></i>
-												</span> Hobbies -
-												</label>
-												<div class="col-lg-12">
-													<input type="text" name="BankbranchName"
-														class="form-control" id="validationCustom01"
-														placeholder="Hobbies.." required>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Bank
-														Branch Name.</div>
-
-												</div>
-											</div>
-										</div>
-										<h5 class="card-title">Address</h5>
-										<div class="row">
-											<div class="form-group row">
-												<label id="validationCustom01"
-													class="col-lg-3 col-form-label"><span class="mx-2"><i
-														class="fa-sharp fa-solid fa-location-dot"></i></span>Address -</label>
-												<div class="col-lg-8">
-													<textarea rows="5" cols="5" class="form-control"
-														placeholder="" id="validationCustom01" name="Address"></textarea>
-													<div class="valid-feedback">Looks good!</div>
-													<div class="invalid-feedback">Please Provide Address.</div>
-												</div>
-											</div>
-											<div class="col-xl-6">
-												<div class="form-group row">
-													<label id="validationCustom01"
-														class="col-lg-3 col-form-label"><span class="mx-2"><i
-															class="fa-sharp fa-solid fa-city"></i></span>Street/Location -</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control"
-															id="validationCustom01" name="City">
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide City
-															Name.</div>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label id="validationCustom01"
-														class="col-lg-3 col-form-label"><span class="mx-2"><i
-															class="fa-sharp fa-solid fa-city"></i></span>City/Village -</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control"
-															id="validationCustom01" name="City">
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide City
-															Name.</div>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label id="validationCustom01"
-														class="col-lg-3 col-form-label"><span class="mx-2"><i
-															class="fa-sharp fa-solid fa-city"></i></span>Taluka -</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control"
-															id="validationCustom01" name="talukaName">
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide Taluka.</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-xl-6">
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"
-														id="validationCustom01"><span class="mx-2"><i
-															class="fa-solid fa-tree-city"></i></span>District -</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control"
-															id="validationCustom01" name="District">
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide State
-															Name.</div>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"
-														id="validationCustom01"><span class="mx-2"><i
-															class="fa-solid fa-tree-city"></i></span>State -</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control"
-															id="validationCustom01" name="State">
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide State
-															Name.</div>
-													</div>
-												</div>
-
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label"
-														id="validationCustom01"><span class="mx-2"><i
-															class="fa-sharp fa-solid fa-location-dot"></i></span>Postal Code
-														-</label>
-													<div class="col-lg-9">
-														<input type="text" class="form-control"
-															id="validationCustom01" name="postalCode">
-														<div class="valid-feedback">Looks good!</div>
-														<div class="invalid-feedback">Please Provide Postal
-															Code.</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="text-end">
-										<button class="btn btn-primary " type="submit">Submit
-											Form</button>
-										<button class="btn btn-danger" type="reset">Reset</button>
-									</div>
-								</form>
-							</div>
-
-						</div>
-					</div>
-				</div>
 								</div>
 							</div>
 						</div>
@@ -1586,6 +1575,11 @@
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<jsp:include page="footer.jsp"></jsp:include>
+	<script src="assets/plugins/twitter-bootstrap-wizard/form-wizard.js"></script>
+	<script
+		src="assets/plugins/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+
 
 	<script type="text/javascript">
 		$(document).ready(function() {

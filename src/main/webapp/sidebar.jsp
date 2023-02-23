@@ -57,7 +57,7 @@
 						<li><a href="fullEntryForm.jsp">Full Entry Form</a></li>-->
 						<li><a href="studentView.jsp">View</a></li>
 						<li><a href="downloadDetails.jsp">Download Details</a></li>
-						<li><a href="selectStudentsICard.jsp">Generate I-card</a></li>
+						<li><a href="generateStudentICard.jsp">Generate I-card</a></li>
 						<!--  <li><a href="otherDetails.jsp">Other Details</a></li>-->
 						<li><a href="birthdayDetails.jsp">Birthday Details</a></li>
 						<li><a href="">Shift Students</a></li>

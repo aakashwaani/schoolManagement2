@@ -53,6 +53,7 @@
 														class="fas fa-user"></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
 													<input type="email" name="studentMiddleName"
+													<input type="text" name="studentMiddleName"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student
@@ -87,7 +88,6 @@
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student
 														PRN Number.</div>
-
 												</div>
 											</div>
 										</div>
@@ -95,10 +95,15 @@
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-lg-3 col-form-label"><span class="px-1"><i
-														class="fa-solid fa-address-card"></i></span>Gender -</label>
+														class="fa-solid fa-address-card"></i></span>Gender -
+												</label>
 												<div class="col-lg-12">
+
 													<input type="number" class="form-control" name="studentGender"
 														id="validationCustom01" required>
+												<input type="number" class="form-control"
+														name="studentPRNNumber" id="validationCustom01" required>
+
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Gender
 														Name.</div>
@@ -178,10 +183,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="studentReligion" id="validationCustom01" required>
-
 														<option value="" disabled selected hidden>Please
 															Select</option>
-
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -189,7 +192,6 @@
 															ResultSet rs = stmt.executeQuery("select * from religion");
 															while (rs.next()) {
 														%>
-
 														<option value="<%=rs.getInt("religionId")%>">
 															<%=rs.getString("religionName")%></option>
 														<%
@@ -274,9 +276,6 @@
 															ResultSet rs = stmt.executeQuery("select * from section");
 															while (rs.next()) {
 														%>
-
-
-
 														<option value="<%=rs.getInt("sectionId")%>">
 															<%=rs.getString("sectionName")%></option>
 														<%
