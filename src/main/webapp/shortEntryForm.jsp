@@ -52,7 +52,7 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
-													<input type="email" name="studentLastName"
+													<input type="email" name="studentMiddleName"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student
@@ -82,7 +82,7 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span> Student PRN No -</label>
 												<div class="col-lg-12">
-													<input type="number" name="prnNumber" class="form-control"
+													<input type="number" name="studentPRNNumber" class="form-control"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student
@@ -94,11 +94,10 @@
 										<div class="col-xl-4">
 											<div class="form-group row">
 												<label for="validationCustom01"
-<<<<<<< HEAD
 													class="col-lg-3 col-form-label"><span class="px-1"><i
 														class="fa-solid fa-address-card"></i></span>Gender -</label>
 												<div class="col-lg-12">
-													<input type="number" class="form-control" name="studentPRNNumber"
+													<input type="number" class="form-control" name="studentGender"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Gender
