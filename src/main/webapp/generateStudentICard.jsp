@@ -69,14 +69,14 @@
 							</div>
 							<div class="col-lg-3 col-md-2">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Name/PRN/Mobile No </label> 
-									<input type="text" class="form-control">
-									
+									<label class="fw-bold"> Name/PRN/Mobile No </label> <input
+										type="text" class="form-control">
+
 								</div>
 							</div>
 							<div class="col-lg-3 col-md-2 text-center">
 								<div class="search-student-btn py-4">
-									<button type="btn" class="btn btn-primary">Search</button>
+									<button type="btn" class="btn btn-primary button-large">Search</button>
 								</div>
 							</div>
 						</div>
@@ -90,7 +90,7 @@
 							<div class="card-body">
 								<div class="table-responsive">
 									<table
-										class="table table-center mb-0 table-bordered  border-primary">
+										class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 												<th>Serial No.</th>
@@ -98,19 +98,13 @@
 												<th>PRN No</th>
 												<th>Roll No</th>
 												<th>Full Name</th>
-												<th> Class & Division</th>
+												<th>Class & Division</th>
 												<th>Action(Y & N)</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-
-											</tr>
-											<tr>
-
-											</tr>
-											<tr>
-											</tr>
+											
+										
 										</tbody>
 									</table>
 								</div>

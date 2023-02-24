@@ -98,7 +98,7 @@
 						<li><a href="addReligion.jsp">Religion</a></li>
 					</ul></li>
 				<li class="menu-title"><span>Attendence</span></li>
-				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>Assigned
+				<li><a href="assignedClassAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Assigned
 							Class</span></a></li>
 				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>Not
 							Assigned Class</span></a></li>
