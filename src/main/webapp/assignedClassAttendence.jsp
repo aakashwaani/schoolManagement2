@@ -22,7 +22,7 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h4 class="page-title">Yearly Gender wise Report -</h4>
+							<h5 class="">Assigned Class Attendence Details-</h5>
 
 						</div>
 					</div>
@@ -33,14 +33,12 @@
 					<div class="col-md-10">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Select Academic Year</h5>
+								<h5 class="card-title">Select Class For Attendence View (Enter Class Name) -</h5>
 							</div>
 							<div class="card-body">
 								<form action="#" class="d-flex">
-									<select class="form-control form-select me-2">
-										<option value="" disabled selected hidden>Select
-											Academic Year -</option>
-									</select>
+								 <input type="text" class="form-control me-2"
+										placeholder="Enter Search Keyword..">
 									<button class="btn btn-outline-success" type="submit">Search</button>
 								</form>
 							</div>
@@ -52,35 +50,19 @@
 						<div class="card card-table">
 							<div class="card-body">
 
-								<div class="page-header">
-									<div class="row align-items-center">
-										<div class="col">
-											<h5>students Gender Report -</h5>
-										</div>
-										<div class="col">
-											<h5>Academic Year -</h5>
-										</div>
-
-										<div class="col-auto text-end float-end ms-auto download-grp">
-											<a href="#" class="btn btn-outline-primary me-2"><i
-												class="fas fa-download"></i> Download</a> <a href="#"
-												class="btn btn-danger me-2"><i class="fa-solid fa-print"></i>
-												Print</a>
-										</div>
-									</div>
-								</div>
-
+								
 								<div class="table-responsive">
-									<table
-										class="table table-center mb-0 table-bordered">
+									<table class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 
 												<th>Sr No</th>
+												<th>Section</th>
 												<th>Class Name</th>
-												<th>Boys</th>
-												<th>Girls</th>
-												<th>Total</th>
+												<th>Division</th>
+												<th>Subject Name</th>
+												<th>Class Teacher</th>
+												<th>Action</th>
 
 											</tr>
 										</thead>
@@ -91,6 +73,9 @@
 									</table>
 								</div>
 							</div>
+							
+								</div>
+							
 						</div>
 					</div>
 				</div>
@@ -98,7 +83,6 @@
 		</div>
 		<jsp:include page="footer.jsp"></jsp:include>
 
-	</div>
 
 </body>
 </html>
