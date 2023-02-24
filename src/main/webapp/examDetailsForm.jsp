@@ -132,36 +132,35 @@
 								</form>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
 
-						<div class="col">
-							<h3 class="page-title">Exam Details -</h3>
-						</div>
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="table-responsive">
-											<table class="table table-center mb-0 table-bordered">
-												<thead>
-													<tr class="text-center">
-														<th>Serial No.</th>
-														<th>Exam Namer</th>
-														<th>Section Name</th>
-														<th>Start Date</th>
-														<th>End Date</th>
-														<th>Status</th>
-														<th>Action</th>
-													</tr>
-												</thead>
-											</table>
-										</div>
-									</div>
-								</div>
+			<div class="row">
+				<h3 class="page-title">Exam Details -</h3>
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-center mb-0 table-bordered">
+									<thead>
+										<tr class="text-center">
+											<th>Serial No.</th>
+											<th>Exam Namer</th>
+											<th>Section Name</th>
+											<th>Start Date</th>
+											<th>End Date</th>
+											<th>Status</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 

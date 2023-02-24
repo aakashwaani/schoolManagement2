@@ -100,9 +100,6 @@
 
 													<input type="number" class="form-control" name="studentGender"
 														id="validationCustom01" required>
-												<input type="number" class="form-control"
-														name="studentPRNNumber" id="validationCustom01" required>
-
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Gender
 														Name.</div>
