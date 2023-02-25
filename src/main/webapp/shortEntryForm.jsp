@@ -53,7 +53,6 @@
 														class="fas fa-user"></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
 													<input type="email" name="studentMiddleName"
-													<input type="text" name="studentMiddleName"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student
@@ -101,9 +100,6 @@
 
 													<input type="number" class="form-control" name="studentGender"
 														id="validationCustom01" required>
-												<input type="number" class="form-control"
-														name="studentPRNNumber" id="validationCustom01" required>
-
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Gender
 														Name.</div>
