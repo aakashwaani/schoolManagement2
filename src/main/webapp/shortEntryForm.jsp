@@ -95,7 +95,7 @@
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-envelope"></i></span>Date of Admission -</label>
+														class="fa-solid fa-calendar-days"></i></span>Date of Admission -</label>
 												<div class="col-lg-12">
 													<input type="date" name="admissionDate"
 														class="form-control" id="validationCustom01" required>
