@@ -99,7 +99,7 @@
 				<li class="menu-title"><span>Attendence</span></li>
 				<li><a href="assignedClassAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Assigned
 							Class</span></a></li>
-				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>Not
+				<li><a href="notEnteredAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Not
 							Assigned Class</span></a></li>
 				<li><a href="monthlyAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Attendence
 							Monthly</span></a></li>
