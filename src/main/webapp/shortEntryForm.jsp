@@ -106,6 +106,52 @@
 
 												</div>
 											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fa-solid fa-calendar-days"></i></span>Date of Admission -</label>
+												<div class="col-lg-12">
+													<input type="date" name="admissionDate"
+														class="form-control" id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Student
+														Admission Date.</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-mobile-android-alt"></i></span>Date Of Birth -</label>
+												<div class="col-lg-12">
+													<input type="date" name="studentDOB" class="form-control"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Student
+														Birth Date.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-form-label col-lg-3"><span class="px-1"><i
+														class="fas fa-mobile-android-alt"></i></span>Gender -</label>
+												<div class="col-lg-12">
+													<select class="form-control form-select"
+														name="admissionStatus" id="validationCustom01" required>
+														<option value="" disabled selected hidden>Please
+															Select</option>
+														<option>Male</option>
+														<option>Female</option>
+													</select>
+												</div>
+											</div>
 
 										</div>
 										<div class="col-xl-4">

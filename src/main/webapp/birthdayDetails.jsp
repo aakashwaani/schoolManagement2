@@ -134,10 +134,10 @@
 
 								<div class="page-header">
 									<div class="row align-items-center">
-										<div class="col">
+									ass="col-a	<div class="col">
 											<h5>List Of Staff Whose Birthday Dated-</h5>
 										</div>
-										<div class="col-auto text-end float-end ms-auto download-grp">
+										<div cluto text-end float-end ms-auto download-grp">
 											<a href="#" class="btn btn-outline-primary me-2"><i
 												class="fas fa-download"></i> Download</a>
 										</div>
