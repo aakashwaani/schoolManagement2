@@ -229,9 +229,12 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
+
+	<jsp:include page="footer.jsp"></jsp:include>
 	<script
 		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	<script
@@ -242,49 +245,48 @@
 		$(document).ready(function() {
 			$("#addSchoolForm").submit(function(event) {
 				event.preventDefault();
-				let f = new FormData($('#addSchoolForm')[0])
-				   if ($("#addSchoolForm")[0].checkValidity() === false) {
-				        event.stopPropagation();
-				    } else {
-						$.ajax({
-							type : 'POST',
-							enctype : "multipart/form-data",
-							url : '../DB/addSchoolDB.jsp',
-							data :f,
-							processData : false,
-							contentType : false,
-							cache : false,
-							success : function(responce) {
-								console.log(responce.trim())
-								if (responce.trim() == "1") {
-									$("#addSchoolForm")[0].reset()
-									Swal.fire({
-										icon: 'success',
-										  title: 'School Added Successfully ' ,
-										  confirmButtonText: 'Ok',
-										}).then((result) => {
-										  /* Read more about isConfirmed, isDenied below */
-											 window.location.reload();
+				//var f = $(this).serialize();
+				let f = new FormData($(this)[0])
+				console.log(f)
+				if(f[0].checkValidity()){
+				
+				
+				$.ajax({
+					type : 'POST',
+					enctype : 'multipart/form-data',
+					url : '../DB/addSchoolDB.jsp',
+					data : f,
+					processData : false,
+					contentType : false,
+					cache : false,
+					success : function(responce) {
+						if (responce.trim() == '1') {
+							 $("#addSchoolForm")[0].reset()
+							Swal.fire({
+								icon: 'success',
+								  title: 'School Added Successfully ' ,
+								  confirmButtonText: 'Ok',
+								}).then((result) => {
+								  /* Read more about isConfirmed, isDenied below */
+								})
+						} else {
+							Swal.fire({
+								icon: 'error',
+								  title: 'School cannot be added Something went Wrong' ,
+								  confirmButtonText: 'Ok',
+								}).then((result) => {
+								  /* Read more about isConfirmed, isDenied below */
+								})
+						}
+					}
+				})
+				
+				
+			}
 
-										})
-								} else {
-									Swal.fire({
-									icon: 'error',
-									title: 'School cannot be added ' ,
-									confirmButtonText: 'Ok',
-									}).then((result) => {
-									/* Read more about isConfirmed, isDenied below */
-									})												
-								}
-							}
-						})
-				    }
-				    $('#addSchoolForm').addClass('was-validated');
-				});
 			})
 		
 	</script>
 
-	<br>
 </body>
 </html>

@@ -95,7 +95,7 @@
 
 									<div class="form-group row">
 										<label for="validationCustom01"> Division Name</label> <input
-											type="text" id="validationCustom01" name="divisionName"
+											type="text" id="validationCustom01" name="division"
 											class="form-control" required>
 										<div class="valid-feedback">Looks good!</div>
 										<div class="invalid-feedback">Please Enter Division Name.</div>
@@ -156,13 +156,12 @@
 											<td><%=rs.getString("status")%></td>
 											<td class="">
 												<div class="actions ">
-													<a
-														href="updateDivision.jsp?id=<%=rs.getInt("divisionId")%>"
+													<a href="updateDivision.jsp?id=<%=rs.getInt("divisionId")%>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>
 												</div>
-											</td>
+											</td>	
 										</tr>
 
 

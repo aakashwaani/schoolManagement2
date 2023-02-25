@@ -36,27 +36,27 @@
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Assign Section to Co-Ordinator</h5>
+								<h5 class="card-title">Assign Class Form</h5>
 							</div>
 							<div class="card-body">
 								<form action="#">
 									<div class="form-group">
-										<label for="validationCustom01"> Select Section</label> <select
-											class="form-control form-select" name="sectionId" id="validationCustom01"
+										<label for="validationCustom01"> Select Class-</label> <select
+											class="form-control form-select" name="classId" id="validationCustom01"
 											required>
 
 											<%
 											try {
 												Connection con = ConnectionProvider.getConnection();
 												Statement stmt = con.createStatement();
-												ResultSet rs = stmt.executeQuery("select * from section");
+												ResultSet rs = stmt.executeQuery("select * from studclass");
 												while (rs.next()) {
 											%>
 
 
 
-											<option value="<%=rs.getInt("sectionId")%>">
-												<%=rs.getString("sectionName")%></option>
+											<option value="<%=rs.getInt("classId")%>">
+												<%=rs.getString("className")%></option>
 											<%
 											}
 

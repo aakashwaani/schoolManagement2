@@ -5,16 +5,8 @@
 		<div id="sidebar-menu" class="sidebar-menu">
 			<ul>
 				<li class="menu-title"><span>Main Menu</span></li>
-
-				<li class="submenu"><a href="#"><i
-						class="fas fa-graduation-cap"></i> <span> Prerequisites</span> <span
-						class="menu-arrow"></span></a>
-					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-					</ul></li>
+				<li><a href="prerequisites.jsp"><i
+						class="fas fa-graduation-cap"></i> <span>Prerequisites</span></a></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-chalkboard-teacher"></i> <span> Academic Year</span>
 						<span class="menu-arrow"></span></a>
@@ -60,28 +52,29 @@
 				<li class="submenu"><a href="#"><i class="fas fa-user"></i>
 						<span> Student</span> <span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href="shortEntryForm.jsp">Short Entry Form</a></li>
-						<li><a href="fullEntryForm.jsp">Full Entry Form</a></li>
+						<li><a href="studentEntryForm.jsp">Student Entry Form </a></li>
+						<!--  <li><a href="shortEntryForm.jsp">Short Entry Form</a></li>
+						<li><a href="fullEntryForm.jsp">Full Entry Form</a></li>-->
 						<li><a href="studentView.jsp">View</a></li>
 						<li><a href="downloadDetails.jsp">Download Details</a></li>
-						<li><a href="selectStudentsICard.jsp">Generate I-card</a></li>
-						<li><a href="otherDetails.jsp">Other Details</a></li>
+						<li><a href="generateStudentICard.jsp">Generate I-card</a></li>
+						<!--  <li><a href="otherDetails.jsp">Other Details</a></li>-->
 						<li><a href="birthdayDetails.jsp">Birthday Details</a></li>
 						<li><a href="">Shift Students</a></li>
-						<li><a href="studentCastCategoryWiseDetails.jsp">Yearly Caste Category Report</a></li>
-						<li><a href="studentClassWiseGenderDetails.jsp">Classwise Gender Report</a></li>
+						<li><a href="studentCastCategoryWiseDetails.jsp">Yearly
+								Caste Category Report</a></li>
+						<li><a href="studentClassWiseGenderDetails.jsp">Classwise
+								Gender Report</a></li>
 					</ul></li>
-				<li class="submenu"><a href="#"><i
-						class="fas fa-file-invoice-dollar"></i> <span> Roll No</span> <span
-						class="menu-arrow"></span></a>
+				<li class="submenu"><a href="#"><i class="fas fa-user"></i>
+						<span> Roll No</span> <span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="studentAssignRollno.jsp">Assign Roll No </a></li>
+						<li><a href="">Unassign Roll No</a></li>
+						<li><a href="fullEntryForm.jsp">Roll No List</a></li>
+
 					</ul></li>
+
 				<li><a href="timetable.jsp"><i class="fas fa-table"></i> <span>TimeTable</span></a></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span>Documents</span> <span
@@ -94,8 +87,8 @@
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href="fees.html"><i class="fas fa-comment-dollar"></i>
-						<span>User Information</span></a></li>
+				<li><a href="userInformation.jsp"><i
+						class="fas fa-comment-dollar"></i> <span>User Information</span></a></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span>Others</span> <span
 						class="menu-arrow"></span></a>
@@ -105,7 +98,7 @@
 						<li><a href="addReligion.jsp">Religion</a></li>
 					</ul></li>
 				<li class="menu-title"><span>Attendence</span></li>
-				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>Assigned
+				<li><a href="assignedClassAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Assigned
 							Class</span></a></li>
 				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>Not
 							Assigned Class</span></a></li>
@@ -130,12 +123,8 @@
 						class="fas fa-file-invoice-dollar"></i> <span>Subject</span> <span
 						class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="newSubjectEntry.jsp">Subject Category </a></li>
+						<li><a href="">SUbject Entry </a></li>
 					</ul></li>
 				<li><a href="exam.html"><i class="fas fa-clipboard-list"></i>
 						<span>Assign Subject</span></a></li>

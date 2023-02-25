@@ -38,7 +38,7 @@
 							</div>
 							<div class="card-body">
 								<form action="#" class="d-flex">
-									<input type="date" class="form-control form-select me-2">
+									<input type="date" class="form-control me-2">
 
 									<button class="btn btn-outline-success" type="submit">Search</button>
 								</form>
@@ -68,8 +68,7 @@
 								</div>
 
 								<div class="table-responsive">
-									<table
-										class="table table-center mb-0 table-bordered">
+									<table class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 
@@ -78,11 +77,48 @@
 												<th>Division</th>
 												<th>Roll No</th>
 												<th>Full Name</th>
-												<th>Date Of Birth </th>
+												<th>Date Of Birth</th>
 												<th>Age(Years)</th>
 											</tr>
 										</thead>
 										<tbody>
+											<%
+										try {
+											int cnt = 1;
+											Connection con = ConnectionProvider.getConnection();
+											Statement stmt = con.createStatement();
+											ResultSet rs = stmt.executeQuery("select s.*, c.* from studentDetails as s inner join studclass as c on s.classId = c.classId");
+											while (rs.next()) {
+										%>
+
+											<tr class="text-center">
+												<td><%=cnt%></td>
+												<td><%=rs.getString("className")%></td>
+												<td><%=rs.getString("division")%></td>
+												<td><%=rs.getString("rollNo")%></td>
+												<td><%=rs.getString("studentFirstName")+" "+rs.getString("studentMiddleName")+" "+rs.getString("studentLastName")%></td>
+												<td><%=rs.getString("dateOfBirth")%></td>
+												<td><%=rs.getString("age")%></td>
+												<td class="">
+													<div class="actions ">
+														<a
+															href="updateAcademicYear.jsp?id=<%=rs.getInt("academicYearId")%>"
+															class="btn btn-sm bg-danger-light"> <i
+															class="feather-edit"></i>
+														</a>
+													</div>
+												</td>
+											</tr>
+
+
+											<%
+										cnt++;
+										}
+
+										} catch (Exception e) {
+										e.printStackTrace();
+										}
+										%>
 										</tbody>
 									</table>
 								</div>
@@ -109,8 +145,7 @@
 								</div>
 
 								<div class="table-responsive">
-									<table
-										class="table table-center table-bordered">
+									<table class="table table-center table-bordered">
 										<thead>
 											<tr class="text-center">
 
@@ -122,6 +157,8 @@
 											</tr>
 										</thead>
 										<tbody>
+
+
 										</tbody>
 									</table>
 								</div>
@@ -131,7 +168,6 @@
 				</div>
 			</div>
 		</div>
-
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
 

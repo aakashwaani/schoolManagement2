@@ -52,7 +52,7 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Student Middle Name -</label>
 												<div class="col-lg-12">
-													<input type="email" name="studentLastName"
+													<input type="email" name="studentMiddleName"
 														class="form-control" id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student
@@ -82,11 +82,27 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span> Student PRN No -</label>
 												<div class="col-lg-12">
-													<input type="number" name="prnNumber" class="form-control"
+													<input type="number" name="studentPRNNumber" class="form-control"
 														id="validationCustom01" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Student
 														PRN Number.</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4">
+											<div class="form-group row">
+												<label for="validationCustom01"
+													class="col-lg-3 col-form-label"><span class="px-1"><i
+														class="fa-solid fa-address-card"></i></span>Gender -
+												</label>
+												<div class="col-lg-12">
+
+													<input type="number" class="form-control" name="studentGender"
+														id="validationCustom01" required>
+													<div class="valid-feedback">Looks good!</div>
+													<div class="invalid-feedback">Please Provide Gender
+														Name.</div>
 
 												</div>
 											</div>
@@ -136,6 +152,7 @@
 													</select>
 												</div>
 											</div>
+
 										</div>
 										<div class="col-xl-4">
 											<div class="form-group row">
@@ -175,7 +192,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="sectionId"
 														id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -207,7 +225,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="studentReligion" id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -215,9 +234,6 @@
 															ResultSet rs = stmt.executeQuery("select * from religion");
 															while (rs.next()) {
 														%>
-
-
-
 														<option value="<%=rs.getInt("religionId")%>">
 															<%=rs.getString("religionName")%></option>
 														<%
@@ -259,7 +275,8 @@
 												<div class="col-lg-12">
 													<select class="form-control form-select" name="sectionId"
 														id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -289,9 +306,11 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Select Section -</label>
 												<div class="col-lg-12">
+
 													<select class="form-control form-select"
 														name="studentReligion" id="validationCustom01" required>
-
+														<option value="" disabled selected hidden>Please
+															Select</option>
 														<%
 														try {
 															Connection con = ConnectionProvider.getConnection();
@@ -299,9 +318,6 @@
 															ResultSet rs = stmt.executeQuery("select * from section");
 															while (rs.next()) {
 														%>
-
-
-
 														<option value="<%=rs.getInt("sectionId")%>">
 															<%=rs.getString("sectionName")%></option>
 														<%
@@ -321,12 +337,30 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-mobile-android-alt"></i></span>Select Class -</label>
 												<div class="col-lg-12">
+
 													<select class="form-control form-select"
-														name="admissionStatus" id="validationCustom01" required>
+														name="studentReligion" id="validationCustom01" required>
 														<option value="" disabled selected hidden>Please
 															Select</option>
-														<option>ADMITTED</option>
-														<option>NOT-ADMITTED</option>
+														<%
+														try {
+															Connection con = ConnectionProvider.getConnection();
+															Statement stmt = con.createStatement();
+															ResultSet rs = stmt.executeQuery("select * from studclass");
+															while (rs.next()) {
+														%>
+
+
+
+														<option value="<%=rs.getInt("classId")%>">
+															<%=rs.getString("className")%></option>
+														<%
+														}
+
+														} catch (Exception e) {
+														e.printStackTrace();
+														}
+														%>
 													</select>
 												</div>
 
