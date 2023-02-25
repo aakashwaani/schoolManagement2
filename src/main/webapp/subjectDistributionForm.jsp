@@ -138,7 +138,7 @@
 								<div class="form-group text-center">
 									<label class="fw-bold"> Enter Distribution Name </label> 
 									<div>
-									<input type="text"  class="form-control">
+									<input type="text"  class="form-control" placeholder="Enter Distribution Name">
 									</div>
 								</div>
 							</div>
