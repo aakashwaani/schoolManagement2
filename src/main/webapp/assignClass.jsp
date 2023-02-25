@@ -18,21 +18,7 @@
 
 			<div class="content container-fluid">
 
-				<div class="page-header">
-					<div class="row">
-						<div class="col">
-							<h3 class="page-title">Assign Section Form</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-								<li class="breadcrumb-item active">Assign Section</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-
 				<div class="row">
-
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-header">
@@ -42,8 +28,8 @@
 								<form action="#">
 									<div class="form-group">
 										<label for="validationCustom01"> Select Class-</label> <select
-											class="form-control form-select" name="classId" id="validationCustom01"
-											required>
+											class="form-control form-select" name="classId"
+											id="validationCustom01" required>
 
 											<%
 											try {

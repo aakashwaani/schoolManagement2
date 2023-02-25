@@ -27,7 +27,6 @@
 					<ul>
 						<li><a href="addClass.jsp"> Class Create </a></li>
 						<li><a href="">Year-Wise Class</a></li>
-						<li><a href="">Assign Class</a></li>
 						<li><a href="">Unassign Class</a></li>
 						<li><a href="shiftClass.jsp">Shift Classes</a></li>
 
@@ -102,7 +101,7 @@
 							Class</span></a></li>
 				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>Not
 							Assigned Class</span></a></li>
-				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>Attendence
+				<li><a href="monthlyAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Attendence
 							Monthly</span></a></li>
 
 				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>
@@ -111,12 +110,9 @@
 						class="fas fa-file-invoice-dollar"></i> <span> Attendence
 							Report</span> <span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=></a></li>
-						<li><a href=""></a></li>
+						<li><a href="dailyAttendenceReport.jsp">Daily Attendence</a></li>
+						<li><a href="">Daywise Attendence</a></li>
+						<li><a href="">ClassWise Attendence Report</a></li>
 					</ul></li>
 				<li class="menu-title"><span>Examination</span></li>
 				<li class="submenu"><a href="#"><i

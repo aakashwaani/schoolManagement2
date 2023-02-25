@@ -29,7 +29,7 @@
 										Short Entry Form </a></li>
 								<li class="nav-item"><a href="#profile1"
 									data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
-									class="nav-link"> Long Entry Form </a></li>
+									class="nav-link" id="nav-tab-manager"> Long Entry Form </a></li>
 								<li class="nav-item"><a href="#messages1"
 									data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
 									class="nav-link"> Other Details Form </a></li>
@@ -435,8 +435,8 @@
 
 
 															<ul class="pager wizard twitter-bs-wizard-pager-link">
-																<li class="next"><a href="javascript: void(0);"
-																	class="btn btn-primary" onclick="nextTab()">Next <i
+																<li class="next"><a href="javascript: void(0);" id="mybut"
+																	class="btn btn-primary" >Next <i
 																		class="bx bx-chevron-right ms-1"></i></a></li>
 															</ul>
 															<button class="btn btn-primary" type="submit">Submit
@@ -850,7 +850,7 @@
 													<form action="" enctype="multipart/form-data" method="POST"
 														class="needs-validation" novalidate>
 														<div class="row">
-														
+
 															<div class="col-xl-8">
 																<div class="form-group row">
 																	<label for="validationCustom01"
@@ -1321,10 +1321,14 @@
 																	</div>
 																</div>
 															</div>
+														</div><div class="text-end">
+															<button class="btn btn-primary " type="submit">Submit
+																Form</button>
+															<button class="btn btn-danger" type="reset">Reset</button>
 														</div>
+														
 													</form>
 												</div>
-
 											</div>
 										</div>
 									</div>
@@ -1346,7 +1350,10 @@
 	<script
 		src="assets/plugins/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 
-
+	<script type="text/javascript">$("#mybut").click(function() {
+	  var sel = document.querySelector('#nav-tab-manager')
+	  bootstrap.Tab.getOrCreateInstance(sel).show()
+	})</script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {

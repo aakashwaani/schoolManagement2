@@ -22,23 +22,22 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h5 class="">Assigned Class Attendence Details-</h5>
-
+							<h5 class="">Daily Attendence Report-</h5>
 						</div>
 					</div>
 				</div>
 
 
 				<div class="row">
-					<div class="col-md-10">
+					<div class="col-md-7">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Select Class For Attendence View (Enter Class Name) -</h5>
+								<h5 class="card-title">Select Date -</h5>
 							</div>
 							<div class="card-body">
 								<form action="#" class="d-flex">
-								 <input type="text" class="form-control me-2"
-										placeholder="Enter Search Keyword..">
+									<input type="date" class="form-control form-select me-2">
+
 									<button class="btn btn-outline-success" type="submit">Search</button>
 								</form>
 							</div>
@@ -48,22 +47,19 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="card card-table">
+						
 							<div class="card-body">
-
-
 								<div class="table-responsive">
 									<table class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 
 												<th>Sr No</th>
-												<th>Section</th>
 												<th>Class Name</th>
 												<th>Division</th>
-												<th>Subject Name</th>
-												<th>Class Teacher</th>
-												<th>Action</th>
-
+												<th>Present</th>
+												<th>Absent</th>
+												<th>Total Students</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -79,9 +75,11 @@
 					</div>
 				</div>
 			</div>
-			</div>
+
 		</div>
-		<jsp:include page="footer.jsp"></jsp:include>
+	</div>
+
+	<jsp:include page="footer.jsp"></jsp:include>
 
 
 </body>
