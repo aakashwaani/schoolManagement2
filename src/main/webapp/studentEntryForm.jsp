@@ -127,7 +127,6 @@
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Student Admission Date.</div>
-
 																	</div>
 																</div>
 															</div>

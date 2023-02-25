@@ -18,108 +18,104 @@
 
 		<div class="page-wrapper">
 			<div class="content container-fluid">
-				<div class=" col-md-12">
+				<div class="col-md-12">
 					<div class="card">
 						<div class="card-header">
-							<h5 class="card-title ">Add New Grade Details-</h5>
+							<h5 class="card-title ">Add New Subject -</h5>
 						</div>
 						<div class="row p-3">
-							<div class="col-md-2">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Academic Year </label> <select
+									<label class="fw-bold">Select Section Name - </label> <select
 										class="form-control form-select">
 										<option value="" disabled selected hidden>Please
 											Select</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Select Exam Name </label> <select
+									<label class="fw-bold"> Select Class Name </label> <select
 										class="form-control form-select">
 										<option value="" disabled selected hidden>Please
 											Select</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Grade Name </label>
+									<label class="fw-bold"> Select Subject Category  </label> <select
+										class="form-control form-select">
+										<option value="" disabled selected hidden>Please
+											Select</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="col-md-4">
+								<div class="form-group text-center">
+									<label class="fw-bold"> Subject  Name </label>
 									<div>
 										<input type="text" class="form-control"
-											placeholder="Enter Grade Name..">
+											placeholder="Enter Subject Distribution Name..">
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Grade Minimum Marks </label>
+									<label class="fw-bold"> Subject Short Name </label>
 									<div>
 										<input type="text" class="form-control"
-											placeholder="Enter Grade Min. Marks..">
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Grade Maximum Marks </label>
-									<div>
-										<input type="text" class="form-control"
-											placeholder="Enter Grade Maxi. Marks..">
+											placeholder="Enter Subject Distribution Marks..">
 									</div>
 								</div>
 							</div>
 
-							<div style="text-align: right">
-								<a href="#" class="btn btn-primary btn-sm"><i
+
+							<div style="text-align: end">
+								<a href="#" class="btn btn-primary"><i
 									class="fa-regular fa-floppy-disk"></i> Save </a>
-								<button type="reset" value="reset" class="btn btn-danger btn-sm">
+								<button type="reset" value="reset" class="btn btn-danger">
 									<i class="fa-sharp fa-solid fa-arrow-rotate-right"></i> Reset
 								</button>
 								<br> <br>
 							</div>
+
 
 						</div>
 					</div>
 
 					<div class="card">
 						<div class="card-header">
-							<h5 class="card-title ">Grade Details-</h5>
+							<h5 class="card-title ">Subject Distribution Details-</h5>
 						</div>
 
 						<div class="row p-3">
-							<div class="col-lg-3 col-md-2">
-								<div class="form-group text-center">
-									<label class="fw-bold">Academic Year - </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
+							
 							<div class="col-lg-3 col-md-3">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Select Exam Name - </label> <select
+									<label class="fw-bold"> Section Name </label> <select
 										class="form-control form-select">
 										<option value="" disabled selected hidden>Please
 											Select</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-lg-3 col-md-2">
+							<div class=" col-md-3">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Select Section - </label> <select
+									<label class="fw-bold"> Class Name </label> <select
 										class="form-control form-select">
 										<option value="" disabled selected hidden>Please
 											Select</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-lg-3 col-md-3">
+							<div class="col-lg-3 col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Enter Grade Name - </label> <input
-										type="text" class="form-control"
-										placeholder="Enter Grade Name..">
+									<label class="fw-bold"> Search by Subject </label>
+									<div>
+										<input type="text" class="form-control" placeholder="search by subject..">
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-3 col-md-2 text-center">
@@ -127,32 +123,38 @@
 									<button type="search" class="btn button-large btn-primary">Search</button>
 								</div>
 							</div>
+						</div>
 
-							<div class="row p-3">
-								<div class="table-responsive">
-									<table class="table table-bordered text-center">
-										<thead>
-											<tr>
-												<th>Sr.No.</th>
-												<th>Exam Name</th>
-												<th>Section Name</th>
-												<th>Grade Name</th>
-												<th>Grade Range</th>
-												<th>Status</th>
-												<th>Action</th>
-											</tr>
-										</thead>
-									</table>
-								</div>
+
+						<div class="row p-3">
+							<div class="table-responsive">
+								<table class="table table-bordered text-center">
+									<thead>
+										<tr>
+											<th>Sr.No.</th>
+											<th>Exam Name</th>
+											<th>Class Name</th>
+											<th>Subject Name</th>
+											<th>Distribution Name</th>
+											<th>Distribution Mark</th>
+											<th>Status</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+								</table>
 							</div>
 						</div>
+
 					</div>
+
+
 				</div>
 			</div>
 		</div>
+	</div>
 
 
 
-		<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
