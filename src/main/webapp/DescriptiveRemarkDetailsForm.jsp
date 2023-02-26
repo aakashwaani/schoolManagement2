@@ -34,7 +34,7 @@
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="px-1"><i
-														class="fas fa-user"></i></span>Descriptive REmark Head -</label>
+														class="fas fa-user"></i></span>Descriptive Remark Head -</label>
 												<div class="col-lg-12">
 													<select class="form-control form-select"
 														name="academicYear" id="validationCustom01" required>
@@ -77,12 +77,13 @@
 												</div>
 											</div>
 										</div>
+									</div>
 
-										<div class="text-end">
-											<button class="btn btn-primary" type="submit">Submit
-												Form</button>
-											<button class="btn btn-danger" type="reset">Reset</button>
-										</div>
+									<div class="text-end">
+										<button class="btn btn-primary" type="submit">Submit
+											Form</button>
+										<button class="btn btn-danger" type="reset">Reset</button>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -95,21 +96,22 @@
 							<div class="row">
 								<div class="col-xl-12">
 									<h3 class="page-title">Enter Remark / Remark Head -</h3>
-								<div class="col-lg-12">
-									<div class="card">
-										<div class="card-body">
-											<div class="table-responsive">
-												<table class="table table-center mb-0 table-bordered">
-													<thead>
-														<tr class="text-center">
-															<th>Serial No.</th>
-															<th>Remark Head</th>
-															<th>Remark</th>
-															<th>Status</th>
-															<th>Action</th>
-														</tr>
-													</thead>
-												</table>
+									<div class="col-lg-12">
+										<div class="card">
+											<div class="card-body">
+												<div class="table-responsive">
+													<table class="table table-center mb-0 table-bordered">
+														<thead>
+															<tr class="text-center">
+																<th>Serial No.</th>
+																<th>Remark Head</th>
+																<th>Remark</th>
+																<th>Status</th>
+																<th>Action</th>
+															</tr>
+														</thead>
+													</table>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -118,14 +120,14 @@
 						</div>
 					</div>
 				</div>
-
-
 			</div>
+		</div>
+	</div>
 
-			<script
-				src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
-			<script
-				src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-			<jsp:include page="footer.jsp"></jsp:include>
+	<script
+		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
