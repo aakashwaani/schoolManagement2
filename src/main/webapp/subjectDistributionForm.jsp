@@ -140,11 +140,7 @@
 								<div class="form-group text-center">
 									<label class="fw-bold"> Enter Distribution Name </label>
 									<div>
-<<<<<<< HEAD
-										<input type="text" class="form-control">
-=======
 									<input type="text"  class="form-control" placeholder="Enter Distribution Name">
->>>>>>> 8c752c99b1b2c4d33d401038952806409918dc1f
 									</div>
 								</div>
 							</div>

@@ -156,11 +156,12 @@
 												</div>
 											</div>
 										</div>
-										<div class="text-end">
-											<button class="btn btn-primary" type="submit">Submit
-												Form</button>
-											<button class="btn btn-danger" type="reset">Reset</button>
-										</div>
+									</div>
+									<div class="text-end">
+										<button class="btn btn-primary" type="submit">Submit
+											Form</button>
+										<button class="btn btn-danger" type="reset">Reset</button>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -169,12 +170,10 @@
 			</div>
 		</div>
 	</div>
-
-
-	<script
-		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
+<script
+	src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </html>
