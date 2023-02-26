@@ -57,7 +57,7 @@
 
 								<div class="col-md-12">
 									<div class="form-group text-left">
-										<label class="fw-bold"> Announcment Title</label> <select
+										<label class="fw-bold"> Announcement Title</label> <select
 											class="form-control form-select">
 											<option value="" disabled selected hidden>Enter
 												Announcment Title ...</option>
@@ -67,19 +67,19 @@
 
 								<div class="col-md-6">
 									<div class="form-group text-left" data-spy="scroll">
-										<label class="fw-bold">Announcment Message </label>
+										<label class="fw-bold">Announcement Message </label>
 
 										<textarea class="form-control form-control"
 											placeholder="please enter message here ..."></textarea>
 										<option value="" disabled selected hidden>Enter
-											Announcment Title ...</option>
+											Announcement Title ...</option>
 
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="form ">
-										<label class="fw-bold">Announcment Date </label> <input
+										<label class="fw-bold">Announcement Date </label> <input
 											type="date" class="form-control me-2">
 									</div>
 									<div clalss="col-md-6">
