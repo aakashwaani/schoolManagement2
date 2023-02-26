@@ -127,16 +127,18 @@
 					</ul></li>
 				<li><a href="subjectDistributionForm.jsp"><i
 						class="fas fa-clipboard-list"></i> <span>Assign Subject</span></a></li>
-				<li class="submenu"><a href="#"><i
+				<li class="submenu"><a href=""><i
 						class="fas fa-file-invoice-dollar"></i> <span>Exam Details</span>
 						<span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="">Main Distribution</a></li>
+						<li><a href="">Add Exam</a></li>
+						<li><a href="">Add Exam Details</a></li>
+						<li><a href="">Add Exam Subjects</a></li>
+						<li><a href="">Subject Distribution</a></li>
+						<li><a href="">Grade System</a></li>
+						<li><a href="">Remark Entry</a></li>
+
 					</ul></li>
 				<li><a href=""><i class="fas fa-calendar-day"></i> <span>Mark
 							Entry</span></a></li>
@@ -188,7 +190,7 @@
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href="time-table.html"><i class="fas fa-table"></i>
+				<li><a href="examDetailsForm.jsp"><i class="fas fa-table"></i>
 						<span>Exam Details</span></a></li>
 				<li><a href="library.html"><i class="fas fa-book"></i> <span>Question
 							Paper</span></a></li>

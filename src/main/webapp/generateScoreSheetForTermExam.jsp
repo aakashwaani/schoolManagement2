@@ -26,9 +26,8 @@
 							</div>
 
 							<div class="card-body">
-								<form action="" method="POST"
-									role="form" id="studentShortForm" class="needs-validation"
-									novalidate>
+								<form action="" method="POST" role="form" id="studentShortForm"
+									class="needs-validation" novalidate>
 
 									<div class="row">
 										<div class="col-xl-6">
@@ -128,7 +127,7 @@
 										</div>
 
 
-									<div class="col-xl-6">
+										<div class="col-xl-6">
 											<div class="form-group row">
 												<label for="validationCustom01"
 													class="col-form-label col-lg-3"><span class="px-1"><i
@@ -159,22 +158,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="text-end">
-											<button class="btn btn-primary" type="submit">Submit
-												Form</button>
-											<button class="btn btn-danger" type="reset">Reset</button>
-										</div>
+									</div>
+									<div class="text-end">
+										<button class="btn btn-primary" type="submit">Submit
+											Form</button>
+										<button class="btn btn-danger" type="reset">Reset</button>
+									</div>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<script
-				src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
-			<script
-				src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-			<jsp:include page="footer.jsp"></jsp:include>
+		</div>
+	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
+<script
+	src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </html>
