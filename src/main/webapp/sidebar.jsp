@@ -27,6 +27,7 @@
 					<ul>
 						<li><a href="addClass.jsp"> Class Create </a></li>
 						<li><a href="">Year-Wise Class</a></li>
+						<li><a href="assignClass.jsp">Assign Class</a>
 						<li><a href="">Unassign Class</a></li>
 						<li><a href="shiftClass.jsp">Shift Classes</a></li>
 
@@ -97,12 +98,12 @@
 						<li><a href="addReligion.jsp">Religion</a></li>
 					</ul></li>
 				<li class="menu-title"><span>Attendence</span></li>
-				<li><a href="assignedClassAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Assigned
-							Class</span></a></li>
-				<li><a href="notEnteredAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Not
-							Assigned Class</span></a></li>
-				<li><a href="monthlyAttendence.jsp"><i class="fas fa-clipboard-list"></i> <span>Attendence
-							Monthly</span></a></li>
+				<li><a href="assignedClassAttendence.jsp"><i
+						class="fas fa-clipboard-list"></i> <span>Assigned Class</span></a></li>
+				<li><a href="notEnteredAttendence.jsp"><i
+						class="fas fa-clipboard-list"></i> <span>Not Assigned Class</span></a></li>
+				<li><a href="monthlyAttendence.jsp"><i
+						class="fas fa-clipboard-list"></i> <span>Attendence Monthly</span></a></li>
 
 				<li><a href=""><i class="fas fa-clipboard-list"></i> <span>
 							Attendence Periodic</span></a></li>
@@ -111,8 +112,10 @@
 							Report</span> <span class="menu-arrow"></span></a>
 					<ul>
 						<li><a href="dailyAttendenceReport.jsp">Daily Attendence</a></li>
-						<li><a href="daywiseAttendenceReport.jsp">Daywise Attendence</a></li>
-						<li><a href="classWiseAttendenceReport.jsp">ClassWise Attendence Report</a></li>
+						<li><a href="daywiseAttendenceReport.jsp">Daywise
+								Attendence</a></li>
+						<li><a href="classWiseAttendenceReport.jsp">ClassWise
+								Attendence Report</a></li>
 					</ul></li>
 				<li class="menu-title"><span>Examination</span></li>
 				<li class="submenu"><a href="#"><i
@@ -122,18 +125,20 @@
 						<li><a href="subjectCategory.jsp">Subject Category </a></li>
 						<li><a href="addNewSubject.jsp">Subject Entry </a></li>
 					</ul></li>
-				<li><a href="subjectDistributionForm.jsp"><i class="fas fa-clipboard-list"></i>
-						<span>Assign Subject</span></a></li>
-				<li class="submenu"><a href="#"><i
+				<li><a href="subjectDistributionForm.jsp"><i
+						class="fas fa-clipboard-list"></i> <span>Assign Subject</span></a></li>
+				<li class="submenu"><a href=""><i
 						class="fas fa-file-invoice-dollar"></i> <span>Exam Details</span>
 						<span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="">Main Distribution</a></li>
+						<li><a href="">Add Exam</a></li>
+						<li><a href="">Add Exam Details</a></li>
+						<li><a href="">Add Exam Subjects</a></li>
+						<li><a href="">Subject Distribution</a></li>
+						<li><a href="">Grade System</a></li>
+						<li><a href="">Remark Entry</a></li>
+
 					</ul></li>
 				<li><a href=""><i class="fas fa-calendar-day"></i> <span>Mark
 							Entry</span></a></li>
@@ -185,7 +190,7 @@
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href="time-table.html"><i class="fas fa-table"></i>
+				<li><a href="examDetailsForm.jsp"><i class="fas fa-table"></i>
 						<span>Exam Details</span></a></li>
 				<li><a href="library.html"><i class="fas fa-book"></i> <span>Question
 							Paper</span></a></li>
