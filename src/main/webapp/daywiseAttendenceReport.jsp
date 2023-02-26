@@ -22,52 +22,67 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h5 class="">Assigned Class Attendence Details-</h5>
-
+							<h5 class="">Daywise Attendence Report-</h5>
 						</div>
 					</div>
 				</div>
-
-
 				<div class="row">
-					<div class="col-md-10">
+					<div class="col-md-8">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Select Class For Attendence View (Enter Class Name) -</h5>
+								<h5 class="card-title">Select Date -</h5>
 							</div>
 							<div class="card-body">
-								<form action="#" class="d-flex">
-								 <input type="text" class="form-control me-2"
-										placeholder="Enter Search Keyword..">
-									<button class="btn btn-outline-success" type="submit">Search</button>
-								</form>
+								<div class="form-group">
+									<label class="fw-bold"> Select From Date - Select To
+										Date</label>
+									<form action="#" class="d-flex">
+										<input type="date" class="form-control  me-2"> <input
+											type="date" class="form-control form-select me-2">
+
+										<button class="btn btn-outline-success" type="submit">Search</button>
+									</form>
+								</div>
+
 							</div>
 						</div>
+
 					</div>
+
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="card card-table">
+							<div class="row p-3">
+								<div class="col-lg-10 col-md-10">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Enter Class Name </label>
+										<div>
+											<input type="text" class="form-control" placeholder="Enter Search Keyword..">
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-2 text-center">
+									<div class="search-student-btn py-4">
+										<button type="search" class="btn button-large btn-primary">Search</button>
+									</div>
+								</div>
+							</div>
 							<div class="card-body">
-
-
 								<div class="table-responsive">
 									<table class="table table-center mb-0 table-bordered">
 										<thead>
 											<tr class="text-center">
 
 												<th>Sr No</th>
-												<th>Section</th>
+												<th>Section Name</th>
 												<th>Class Name</th>
 												<th>Division</th>
-												<th>Subject Name</th>
-												<th>Class Teacher</th>
+												<th>Strength</th>
 												<th>Action</th>
-
 											</tr>
 										</thead>
 										<tbody>
-
 
 										</tbody>
 									</table>
@@ -79,9 +94,11 @@
 					</div>
 				</div>
 			</div>
-			</div>
+
 		</div>
-		<jsp:include page="footer.jsp"></jsp:include>
+	</div>
+
+	<jsp:include page="footer.jsp"></jsp:include>
 
 
 </body>
