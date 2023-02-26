@@ -18,59 +18,61 @@
 
 		<div class="page-wrapper">
 			<div class="content container-fluid">
-				<div class=" col-md-12">
+				<div class="col-md-12">
 					<div class="card">
 						<div class="card-header">
-							<h5 class="card-title ">Add New Remark Details-</h5>
+							<h5 class="card-title ">Add New Subject -</h5>
 						</div>
 						<div class="row p-3">
-							<div class="col-lg-3 col-md-2">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Academic Year </label> <select
+									<label class="fw-bold">Select Section Name - </label> <select
 										class="form-control form-select">
 										<option value="" disabled selected hidden>Please
 											Select</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-lg-3 col-md-2">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Select Exam Name </label> <select
+									<label class="fw-bold"> Select Class Name </label> <select
 										class="form-control form-select">
 										<option value="" disabled selected hidden>Please
 											Select</option>
 									</select>
 								</div>
 							</div>
-							<div class="col-lg-3 col-md-2">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Remark Name </label>
+									<label class="fw-bold"> Select Subject Category  </label> <select
+										class="form-control form-select">
+										<option value="" disabled selected hidden>Please
+											Select</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="col-md-4">
+								<div class="form-group text-center">
+									<label class="fw-bold"> Subject  Name </label>
 									<div>
 										<input type="text" class="form-control"
-											placeholder="Enter Remark Name..">
+											placeholder="Enter Subject Distribution Name..">
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-3 col-md-3">
+							<div class="col-md-4">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Remark Minimum Percentage </label>
+									<label class="fw-bold"> Subject Short Name </label>
 									<div>
 										<input type="text" class="form-control"
-											placeholder="Enter Remark  Minimum %">
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Remark Maximum Percentage </label>
-									<div>
-										<input type="text" class="form-control"
-											placeholder="Enter Remark Maximum %">
+											placeholder="Enter Subject Distribution Marks..">
 									</div>
 								</div>
 							</div>
 
-							<div class="text-end">
+
+							<div style="text-align: end">
 								<a href="#" class="btn btn-primary"><i
 									class="fa-regular fa-floppy-disk"></i> Save </a>
 								<button type="reset" value="reset" class="btn btn-danger">
@@ -79,47 +81,21 @@
 								<br> <br>
 							</div>
 
+
 						</div>
 					</div>
 
 					<div class="card">
 						<div class="card-header">
-							<h5 class="card-title ">Remark Details-</h5>
+							<h5 class="card-title ">Subject Category Details-</h5>
 						</div>
 
 						<div class="row p-3">
-							<div class="col-lg-2 col-md-3">
+							<div class="col-lg-8 col-md-9">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Academic Year </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Select Exam Name </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-2 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Select Section </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Enter Remark Name </label>
+									<label class="fw-bold"> Subject Category Name - </label>
 									<div>
-										<input type="text" class="form-control">
+										<input type="text" class="form-control" placeholder="search by subject..">
 									</div>
 								</div>
 							</div>
@@ -137,11 +113,7 @@
 									<thead>
 										<tr>
 											<th>Sr.No.</th>
-											<th>Exam Name</th>
-											<th>Section Name</th>
-											<th>Remark Name</th>
-											<th>Percentage Range</th>
-											<th>Status</th>
+											<th>Subject Category Name</th>
 											<th>Action</th>
 										</tr>
 									</thead>

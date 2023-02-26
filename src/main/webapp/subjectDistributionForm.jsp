@@ -69,29 +69,31 @@
 									</div>
 								</div>
 							</div>
-								
+
 							<div class="col-md-3">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Subject Distribution Name </label> 
+									<label class="fw-bold"> Subject Distribution Name </label>
 									<div>
-									<input type="text"  class="form-control" placeholder="Enter Subject Distribution Name..">
+										<input type="text" class="form-control"
+											placeholder="Enter Subject Distribution Name..">
 									</div>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Subject Distribution Mark </label> 
+									<label class="fw-bold"> Subject Distribution Mark </label>
 									<div>
-									<input type="text"  class="form-control" placeholder="Enter Subject Distribution Marks..">
+										<input type="text" class="form-control"
+											placeholder="Enter Subject Distribution Marks..">
 									</div>
 								</div>
 							</div>
 
 
-							<div style="text-align: right">
-								<a href="#" class="btn btn-primary btn-sm"><i
+							<div style="text-align: end">
+								<a href="#" class="btn btn-primary"><i
 									class="fa-regular fa-floppy-disk"></i> Save </a>
-								<button type="reset" value="reset" class="btn btn-danger btn-sm">
+								<button type="reset" value="reset" class="btn btn-danger">
 									<i class="fa-sharp fa-solid fa-arrow-rotate-right"></i> Reset
 								</button>
 								<br> <br>
@@ -136,22 +138,20 @@
 							</div>
 							<div class="col-lg-3 col-md-3 col-sm-3">
 								<div class="form-group text-center">
-									<label class="fw-bold"> Enter Distribution Name </label> 
+									<label class="fw-bold"> Enter Distribution Name </label>
 									<div>
+<<<<<<< HEAD
+										<input type="text" class="form-control">
+=======
 									<input type="text"  class="form-control" placeholder="Enter Distribution Name">
+>>>>>>> 8c752c99b1b2c4d33d401038952806409918dc1f
 									</div>
 								</div>
 							</div>
-
-
-							<div class="col-lg-2 col-md-2 col-sm-1">
-								<label> </label>
-
-								<div>
-									<a href="#" class="btn btn-warning btn-sm"><i
-										class="fa-solid fa-magnifying-glass"></i> Search</a>
+							<div class="col-lg-3 col-md-2 text-center">
+								<div class="search-student-btn py-4">
+									<button type="search" class="btn button-large btn-primary">Search</button>
 								</div>
-
 							</div>
 						</div>
 
