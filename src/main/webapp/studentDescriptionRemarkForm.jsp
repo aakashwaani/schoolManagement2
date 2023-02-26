@@ -24,7 +24,7 @@
 							<h5 class="card-title ">Class Details -</h5>
 						</div>
 						<div class="row p-3">
-							<div class="col-md-2">
+							<div class="col-md-3">
 								<div class="form-group text-center">
 									<label class="fw-bold"> Academic Year </label> <select
 										class="form-control form-select">
@@ -51,9 +51,9 @@
 									</select>
 								</div>
 							</div>
-							<div class="col-md-2"></div>
+							<div class="col-md-1"></div>
 
-							<div class="col-md-2">
+							<div class="col-md-3">
 								<div class="form-group text-center">
 									<label class="fw-bold"> Division </label> <select
 										class="form-control form-select">
@@ -72,11 +72,13 @@
 									</select>
 								</div>
 							</div>
-							<div class="col-md-4"></div>
+							<div class="col-md-3"></div>
 							<div class="col-md-2">
+							<div class="container mt-4">
 								<div style="text-align: right">
-									<a href="#" class="btn btn-warning btn-md"><i
+									<a href="#" class="btn btn-warning btn-sm"><i
 										class="fa-solid fa-magnifying-glass"></i> Search </a> <br> <br>
+								</div>
 								</div>
 							</div>
 						</div>
