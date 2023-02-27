@@ -21,18 +21,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 
 		<div class="page-wrapper">
 			<div class="content container-fluid">
-				<div class="page-header">
-					<div class="row">
-						<div class="col">
-							<h3 class="page-title">New Staff Entry</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.jsp"> Dashboard </a></li>
-								<li class="breadcrumb-item active">Add New Staff</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
+				
 				<div class="row">
 					<div class="col-md-12">
 						<div class="card">
