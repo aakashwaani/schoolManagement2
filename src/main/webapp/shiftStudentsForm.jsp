@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.Statement"%>
@@ -85,7 +84,7 @@
 							</div>
 							<div class="col-lg-3 col-md-2 text-center">
 								<div class="search-student-btn py-4">
-									<button type="btn" class="btn button-large btn-primary">Shift</button>
+									<button type="button" class="btn btn-large btn-primary">Shift</button>
 								</div>
 							</div>
 						</div>

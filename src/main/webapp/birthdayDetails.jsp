@@ -83,20 +83,22 @@
 										</thead>
 										<tbody>
 											<%
-										try {
-											int cnt = 1;
-											Connection con = ConnectionProvider.getConnection();
-											Statement stmt = con.createStatement();
-											ResultSet rs = stmt.executeQuery("select s.*, c.* from studentDetails as s inner join studclass as c on s.classId = c.classId");
-											while (rs.next()) {
-										%>
+											try {
+												int cnt = 1;
+												Connection con = ConnectionProvider.getConnection();
+												Statement stmt = con.createStatement();
+												ResultSet rs = stmt.executeQuery(
+												"select s.*, c.* from studentDetails as s inner join studclass as c on s.classId = c.classId");
+												while (rs.next()) {
+											%>
 
 											<tr class="text-center">
 												<td><%=cnt%></td>
 												<td><%=rs.getString("className")%></td>
 												<td><%=rs.getString("division")%></td>
 												<td><%=rs.getString("rollNo")%></td>
-												<td><%=rs.getString("studentFirstName")+" "+rs.getString("studentMiddleName")+" "+rs.getString("studentLastName")%></td>
+												<td><%=rs.getString("studentFirstName") + " " + rs.getString("studentMiddleName") + " "
+		+ rs.getString("studentLastName")%></td>
 												<td><%=rs.getString("dateOfBirth")%></td>
 												<td><%=rs.getString("age")%></td>
 												<td class="">
@@ -112,13 +114,13 @@
 
 
 											<%
-										cnt++;
-										}
+											cnt++;
+											}
 
-										} catch (Exception e) {
-										e.printStackTrace();
-										}
-										%>
+											} catch (Exception e) {
+											e.printStackTrace();
+											}
+											%>
 										</tbody>
 									</table>
 								</div>
@@ -134,10 +136,11 @@
 
 								<div class="page-header">
 									<div class="row align-items-center">
+										ass="col-a
 										<div class="col">
 											<h5>List Of Staff Whose Birthday Dated-</h5>
 										</div>
-										<div class="col-auto text-end float-end ms-auto download-grp">
+										<div cluto text-end float-endms-autodownload-grp">
 											<a href="#" class="btn btn-outline-primary me-2"><i
 												class="fas fa-download"></i> Download</a>
 										</div>
