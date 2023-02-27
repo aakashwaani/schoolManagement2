@@ -124,11 +124,12 @@
 												</div>
 											</div>
 										</div>
-										<div class="text-end">
-											<button class="btn btn-primary" type="submit">Submit
-												Form</button>
-											<button class="btn btn-danger" type="reset">Reset</button>
-										</div>
+									</div>
+									<div class="text-end">
+										<button class="btn btn-primary" type="submit">Submit
+											Form</button>
+										<button class="btn btn-danger" type="reset">Reset</button>
+									</div>
 								</form>
 							</div>
 						</div>

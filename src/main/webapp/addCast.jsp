@@ -92,14 +92,14 @@
 											int cnt = 1;
 											Connection con = ConnectionProvider.getConnection();
 											Statement stmt = con.createStatement();
-											ResultSet rs = stmt.executeQuery("select * from casts");
+											ResultSet rs = stmt.executeQuery("select * from castcategory");
 											while (rs.next()) {
 										%>
 
 										<tr class="text-center">
 											<td><%=cnt%></td>
-											<td><%=rs.getString("castName")%></td>
-											<td><%=rs.getString("status")%></td>
+											<td><%=rs.getString("castCategoryName")%></td>
+											<td><%=rs.getString("castCategoryStatus")%></td>
 											<td class="">
 												<div class="actions ">
 													<a href="" class="btn btn-sm bg-danger-light"> <i

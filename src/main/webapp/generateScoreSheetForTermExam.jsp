@@ -12,8 +12,6 @@
 <body>
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
-
-
 		<jsp:include page="sidebar.jsp"></jsp:include>
 
 		<div class="page-wrapper">
