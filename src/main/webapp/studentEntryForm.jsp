@@ -10,6 +10,9 @@
 <jsp:include page="link.jsp"></jsp:include>
 </head>
 <body>
+	<%
+	Connection con = ConnectionProvider.getConnection();
+	%>
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 
@@ -20,35 +23,36 @@
 			<div class="content container-fluid">
 				<div class="col-xl-12">
 					<div class="card">
-						<div class="card-body">
-							<h4 class="header-title mb-4"></h4>
-							<ul
-								class="nav nav-pills navtab-bg nav-justified twitter-bs-wizard-nav">
-								<li class="nav-item"><a href="#home1" data-bs-toggle="tab"
-									aria-expanded="true" data-toggle="tab" class="nav-link active">
-										Short Entry Form </a></li>
-								<li class="nav-item"><a href="#profile1"
-									data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
-									class="nav-link"> Long Entry Form </a></li>
-								<li class="nav-item"><a href="#messages1"
-									data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
-									class="nav-link"> Other Details Form </a></li>
-							</ul>
-							<div class="tab-content">
-								<div class="tab-pane show active" id="home1">
-									<div class="row">
-										<div class="col-md-12">
-											<div class="card">
-												<div class="card-header">
-													<h5 class="card-title">Add New Student(Short Entry
-														Form)-</h5>
-												</div>
+						<form role="form" id="studentShortForm" class="needs-validation"
+							novalidate>
+							<div class="card-body">
 
-												<div class="card-body">
-													<h5 class="card-title">General Information</h5>
-													<form action="DB/studentShortFormDB.jsp" method="POST"
-														role="form" id="studentShortForm" class="needs-validation"
-														novalidate>
+								<h4 class="header-title mb-4"></h4>
+								<ul
+									class="nav nav-pills navtab-bg nav-justified twitter-bs-wizard-nav">
+									<li class="nav-item"><a href="#home1" data-bs-toggle="tab"
+										aria-expanded="true" data-toggle="tab" class="nav-link active">
+											Short Entry Form </a></li>
+									<li class="nav-item"><a href="#profile1"
+										data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
+										class="nav-link"> Long Entry Form </a></li>
+									<li class="nav-item"><a href="#messages1"
+										data-bs-toggle="tab" aria-expanded="false" data-toggle="tab"
+										class="nav-link"> Other Details Form </a></li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane show active" id="home1">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="card">
+													<div class="card-header">
+														<h5 class="card-title">Add New Student(Short Entry
+															Form)-</h5>
+													</div>
+
+													<div class="card-body">
+														<h5 class="card-title">General Information</h5>
+
 														<div class="row">
 															<div class="col-xl-4">
 																<div class="form-group row">
@@ -73,7 +77,7 @@
 																		class="px-1"><i class="fas fa-user"></i></span>Student
 																		Middle Name -</label>
 																	<div class="col-lg-12">
-																		<input type="email" name="studentLastName"
+																		<input type="text" name="studentMiddleName"
 																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
@@ -88,7 +92,7 @@
 																		class="px-1"><i class="fas fa-user"></i></span>Student
 																		Last Name -</label>
 																	<div class="col-lg-12">
-																		<input type="email" name="studentLastName"
+																		<input type="text" name="studentLastName"
 																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
@@ -105,7 +109,7 @@
 																		class="px-1"><i class="fas fa-user"></i></span>
 																		Student PRN Number -</label>
 																	<div class="col-lg-12">
-																		<input type="number" name="prnNumber"
+																		<input type="number" name="studentPRNNumber"
 																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
@@ -122,7 +126,7 @@
 																			class="fa-solid fa-calendar-days"></i></span>Date Of
 																		Admission -</label>
 																	<div class="col-lg-12">
-																		<input type="date" name="studentadmissionDate"
+																		<input type="date" name="dateOfAdmission"
 																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
@@ -138,7 +142,7 @@
 																		class="px-1"><i
 																			class="fa-solid fa-calendar-days"></i></span>Date Of Birth -</label>
 																	<div class="col-lg-12">
-																		<input type="date" name="studentDateofbirth"
+																		<input type="date" name="studentDOB"
 																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
@@ -174,7 +178,7 @@
 																			class="fas fa-mobile-android-alt"></i></span> Student
 																		Contact No -</label>
 																	<div class="col-lg-12">
-																		<input type="number" name="studentContactNumber"
+																		<input type="number" name="contactNo"
 																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
@@ -190,11 +194,11 @@
 																		class="px-1"><i class="fa-solid fa-flag"></i></span>Nationality
 																		-</label>
 																	<div class="col-lg-12">
-																		<input type="email" name="studentNationality"
+																		<input type="text" name="nationality"
 																			class="form-control" id="validationCustom01" required>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
-																			Student Email address.</div>
+																			Student Nationality address.</div>
 																	</div>
 																</div>
 															</div>
@@ -209,21 +213,20 @@
 																			class="fa-solid fa-address-card"></i></span>Cast Category -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="sectionId" id="validationCustom01" required>
+																			name=castCategory id="validationCustom01" required>
 																			<option value="" disabled selected hidden>Please
 																				Select</option>
 																			<%
 																			try {
-																				Connection con = ConnectionProvider.getConnection();
 																				Statement stmt = con.createStatement();
-																				ResultSet rs = stmt.executeQuery("select * from casts");
+																				ResultSet rs = stmt.executeQuery("select * from castcategory");
 																				while (rs.next()) {
 																			%>
 
 
 
-																			<option value="<%=rs.getInt("castId")%>">
-																				<%=rs.getString("castName")%></option>
+																			<option value="<%=rs.getInt("castCategoryId")%>">
+																				<%=rs.getString("castCategoryName")%></option>
 																			<%
 																			}
 
@@ -234,7 +237,7 @@
 																		</select>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
-																			Student aadhar Number.</div>
+																			Student Cast Category.</div>
 
 																	</div>
 																</div>
@@ -255,7 +258,6 @@
 
 																			<%
 																			try {
-																				Connection con = ConnectionProvider.getConnection();
 																				Statement stmt = con.createStatement();
 																				ResultSet rs = stmt.executeQuery("select * from religion");
 																				while (rs.next()) {
@@ -273,7 +275,7 @@
 																		</select>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
-																			Student Email address.</div>
+																			Student Religion.</div>
 																	</div>
 																</div>
 															</div>
@@ -285,8 +287,7 @@
 																		-</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
+																			name="admissionStatus" id="status" required>
 																			<option value="" disabled selected hidden>Please
 																				Select</option>
 																			<option>ADMITTED</option>
@@ -305,12 +306,11 @@
 																			class="fa-solid fa-calendar-days"></i></span>Academic Year -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="sectionId" id="validationCustom01" required>
+																			name="academicYear" id="validationCustom01" required>
 																			<option value="" disabled selected hidden>Please
 																				Select</option>
 																			<%
 																			try {
-																				Connection con = ConnectionProvider.getConnection();
 																				Statement stmt = con.createStatement();
 																				ResultSet rs = stmt.executeQuery("select * from academicyear");
 																				while (rs.next()) {
@@ -329,8 +329,8 @@
 																			%>
 																		</select>
 																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Student aadhar Number.</div>
+																		<div class="invalid-feedback">Please Provide A
+																			Number.</div>
 
 																	</div>
 																</div>
@@ -343,13 +343,11 @@
 																			class="fa-solid fa-address-card"></i></span>Select Section -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="studentReligion" id="validationCustom01"
-																			required>
+																			name="selectSection" id="validationCustom01" required>
 																			<option value="" disabled selected hidden>Please
 																				Select</option>
 																			<%
 																			try {
-																				Connection con = ConnectionProvider.getConnection();
 																				Statement stmt = con.createStatement();
 																				ResultSet rs = stmt.executeQuery("select * from section");
 																				while (rs.next()) {
@@ -369,7 +367,7 @@
 																		</select>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
-																			Student Email address.</div>
+																			Section.</div>
 																	</div>
 																</div>
 															</div>
@@ -381,13 +379,11 @@
 																			class="fa-solid fa-graduation-cap"></i></span>Select Class -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="studentReligion" id="validationCustom01"
-																			required>
+																			name="selectClass" id="validationCustom01" required>
 																			<option value="" disabled selected hidden>Please
 																				Select</option>
 																			<%
 																			try {
-																				Connection con = ConnectionProvider.getConnection();
 																				Statement stmt = con.createStatement();
 																				ResultSet rs = stmt.executeQuery("select * from studclass");
 																				while (rs.next()) {
@@ -419,49 +415,37 @@
 																		Category -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
+																			name="selectFeesCategory" id="validationCustom01"
 																			required>
 																			<option value="" disabled selected hidden>Please
-																				Select</option>
-																			<option></option>
-																			<option></option>
+																				Select Select Fees Category</option>
+																			<option>temp Option</option>
+																			<option>demo Option</option>
 																		</select>
 																	</div>
 																</div>
 															</div>
 														</div>
 
-														<div class="text-end">
 
 
-															<ul class="pager wizard twitter-bs-wizard-pager-link">
-																<li class="next"><a href="javascript: void(0);"
-																	class="btn btn-primary" onclick="nextTab()">Next <i
-																		class="bx bx-chevron-right ms-1"></i></a></li>
-															</ul>
-															<button class="btn btn-primary" type="submit">Submit
-																Form</button>
-															<button class="btn btn-danger" type="reset">Reset</button>
-														</div>
-													</form>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="tab-pane" id="profile1">
-									<div class="row">
-										<div class="col-md-12">
-											<div class="card">
-												<div class="card-header">
-													<h5 class="card-title">Add New Student (Full Entry
-														Form) -</h5>
-												</div>
+									<div class="tab-pane" id="profile1">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="card">
+													<div class="card-header">
+														<h5 class="card-title">Add New Student (Full Entry
+															Form) -</h5>
+													</div>
 
-												<div class="card-body">
-													<h5 class="card-title">General Information</h5>
-													<form action="" enctype="multipart/form-data" method="POST"
-														class="needs-validation" novalidate>
+													<div class="card-body">
+														<h5 class="card-title">General Information</h5>
+
 
 														<div class="row">
 															<div class="col-xl-6">
@@ -471,8 +455,8 @@
 																		class="px-1"><i class="fas fa-user"></i></span>Online
 																		Registration Id -</label>
 																	<div class="col-lg-12">
-																		<input type="text" name="registrationNumber"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="text" name="onlineRegisteredId"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Student Registration Id.</div>
@@ -487,8 +471,8 @@
 																		class="px-1"><i class="fa-solid fa-camera"></i></span>Student
 																		Photograph -</label>
 																	<div class="col-lg-12">
-																		<input type="file" name="studentPhoto"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="file" name="photograph"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Upload
 																			Student Photo.</div>
@@ -498,7 +482,7 @@
 														</div>
 
 														<div class="row">
-															<div class="col-xl-4">
+															<div class="col-xl-6">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
@@ -506,15 +490,15 @@
 																			class="fa-sharp fa-solid fa-location-dot"></i></span>BirthPlace
 																		-</label>
 																	<div class="col-lg-12">
-																		<input type="email" name="studentLastName"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="text" name="studentBirthPlace"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Student BirthPlace.</div>
 																	</div>
 																</div>
 															</div>
-															<div class="col-xl-4">
+															<div class="col-xl-6">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"><span
@@ -522,31 +506,11 @@
 																			class="fa-solid fa-address-card"></i>
 																	</span>Cast Name -</label>
 																	<div class="col-lg-12">
-																		<input type="text" name="castName"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="text" name="studentCast"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Student Middle Name.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"> <i
-																			class="fa-solid fa-address-card"></i>
-																	</span>Religion -</label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="religion" id="validationCustom01" required>
-																			<option></option>
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select Cast
-																			Religion.</div>
 																	</div>
 																</div>
 															</div>
@@ -558,9 +522,9 @@
 																		class="px-1"><i class="fas fa-map-marked-alt"></i></span>Address
 																		- </label>
 																	<div class="col-lg-9">
-																		<textarea name="Address" rows="6" cols="6"
+																		<textarea name="studentAddress" rows="6" cols="6"
 																			class="form-control" placeholder="Adress...	"
-																			required></textarea>
+																			></textarea>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Enter
 																			Address.</div>
@@ -578,8 +542,8 @@
 																	class="px-1"><i class="fas fa-school"></i></span>Name
 																	Of Previous School -</label>
 																<div class="col-lg-12">
-																	<input type="text" name="studentPreviousSchool"
-																		class="form-control" id="validationCustom01" required>
+																	<input type="text" name="nameOfPreviousSchool"
+																		class="form-control" id="validationCustom01" >
 																	<div class="valid-feedback">Looks good!</div>
 																	<div class="invalid-feedback">Please Provide
 																		Previous School Name Name.</div>
@@ -595,8 +559,8 @@
 																		class="px-1"><i class="fa-solid fa-id-card"></i></span>Aadhar
 																		No -</label>
 																	<div class="col-lg-12">
-																		<input type="number" name="studentAdharNumber"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="number" name="aadharNo"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Student aadhar Number.</div>
@@ -614,7 +578,7 @@
 																		<input type="email" name="studentEmail"
 																			class="form-control" id="validationCustom01"
 																			pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-																			required>
+																			>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Student Email address.</div>
@@ -629,7 +593,7 @@
 																		Class Fees-</label>
 																	<div class="col-lg-12">
 																		<input type="number" class="form-control"
-																			id="validationCustom01" name="slabFees" required>
+																			id="validationCustom01" name="classFees" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Enter Class
 																			Fees.</div>
@@ -648,7 +612,7 @@
 																		Father Name -</label>
 																	<div class="col-lg-12">
 																		<input type="text" name="studentFatherName"
-																			class="form-control" id="validationCustom01" required>
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Enter
 																			Student Father Name.</div>
@@ -663,10 +627,10 @@
 																		class="px-1"><i class="fas fa-envelope"></i></span>Parents
 																		Email -</label>
 																	<div class="col-lg-12">
-																		<input type="email" name="parentEmail"
+																		<input type="email" name="parentsEmail"
 																			class="form-control" id="validationCustom01"
 																			pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-																			required>
+																			>
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Parent's Email address.</div>
@@ -681,8 +645,8 @@
 																			class="fas fa-mobile-android-alt"></i></span>Parent's
 																		Contact No(Father) -</label>
 																	<div class="col-lg-12">
-																		<input type="number" name="studentAdharNumber"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="number" name="fatherContactNo"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Student Contact Number.</div>
@@ -701,7 +665,7 @@
 																		Mother Name -</label>
 																	<div class="col-lg-12">
 																		<input type="text" name="studentMotherName"
-																			class="form-control" id="validationCustom01" required>
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Enter
 																			Student Mother Name.</div>
@@ -717,8 +681,8 @@
 																			class="fas fa-mobile-android-alt"></i></span>Parent's
 																		Contact No(Mother) -</label>
 																	<div class="col-lg-12">
-																		<input type="number" name="studentAdharNumber"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="number" name="motherContactNo"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Mother Contact Number.</div>
@@ -733,8 +697,8 @@
 																		class="px-1"><i
 																			class="fa-solid fa-blender-phone"></i></span>Landline -</label>
 																	<div class="col-lg-12">
-																		<input type="text" name="landlineNumber"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="text" name="landline"
+																			class="form-control" id="validationCustom01" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Enter
 																			Landline Number.</div>
@@ -756,8 +720,8 @@
 																		Select Fee Category -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
+																			name="selectFeeCategory" id="validationCustom01"
+																			>
 																			<option></option>
 																			<option></option>
 																			<option></option>
@@ -776,8 +740,8 @@
 																		Transport Way -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
+																			name="SelectTransportWay" id="validationCustom01"
+																			>
 																			<option></option>
 																			<option></option>
 																			<option></option>
@@ -796,8 +760,8 @@
 																		Slab -</label>
 																	<div class="col-lg-12">
 																		<select class="form-control form-select"
-																			name="admissionStatus" id="validationCustom01"
-																			required>
+																			name="selectSlab" id="validationCustom01"
+																			>
 																			<option></option>
 																			<option></option>
 																			<option></option>
@@ -816,7 +780,7 @@
 																		Slab Fees-</label>
 																	<div class="col-lg-12">
 																		<input type="number" class="form-control"
-																			id="validationCustom01" name="slabFees" required>
+																			id="validationCustom01" name="slabFees" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Enter Slab
 																			Fees.</div>
@@ -825,50 +789,45 @@
 																</div>
 															</div>
 														</div>
-														<div class="text-end">
-															<button class="btn btn-primary " type="submit">Submit
-																Form</button>
-															<button class="btn btn-danger" type="reset">Reset</button>
-														</div>
-													</form>
-												</div>
 
+													</div>
+
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="tab-pane" id="messages1">
-									<div class="row">
-										<div class="col-md-12">
-											<div class="card">
-												<div class="card-header">
-													<h5 class="">Other Details -</h5>
-												</div>
+									<div class="tab-pane" id="messages1">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="card">
+													<div class="card-header">
+														<h5 class="">Other Details -</h5>
+													</div>
 
-												<div class="card-body">
-													<h6 class="card-title">Student Information -</h6>
-													<form action="" enctype="multipart/form-data" method="POST"
-														class="needs-validation" novalidate>
+													<div class="card-body">
+														<h6 class="card-title">Student Information -</h6>
 														<div class="row">
-														
-															<div class="col-xl-8">
+
+															<div class="col-xl-6">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"> <span
-																		class="px-1"> <i class="fas fa-user"></i>
-																	</span> Student Full Name -
+																		class="px-1"> <i class="fa-solid fa-volleyball"></i>
+																	</span> Hobbies -
 																	</label>
 																	<div class="col-lg-12">
-																		<input type="text" name="schoolRegistrationNo"
-																			class="form-control" id="validationCustom01" required>
+																		<input type="text" name="BankbranchName"
+																			class="form-control" id="validationCustom01"
+																			placeholder="Hobbies.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
-																			Student Full Name.</div>
+																			Bank Branch Name.</div>
 
 																	</div>
 																</div>
 															</div>
-															<div class="col-xl-4">
+															
+															<div class="col-xl-6">
 																<div class="form-group row">
 																	<label for="validationCustom01"
 																		class="col-form-label col-lg-3"> <span
@@ -878,7 +837,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="schoolRegistrationNo"
 																			class="form-control" id="validationCustom01"
-																			placeholder="mother tongue.." required>
+																			placeholder="mother tongue.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			First Name.</div>
@@ -899,7 +858,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="guardianName"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Guardian Full Name.." required>
+																			placeholder="Guardian Full Name.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Guardian Full Name.</div>
@@ -917,7 +876,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="guardianOccupation"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Guardian Occupation.." required>
+																			placeholder="Guardian Occupation.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Guardian Occupation.</div>
@@ -935,7 +894,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="guardianMobNo"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Guardian Moblile No..." required>
+																			placeholder="Guardian Moblile No..." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Guardian Mob No.</div>
@@ -953,7 +912,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="guardianRelation"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Relation with Student.." required>
+																			placeholder="Relation with Student.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Guardian Relation.</div>
@@ -973,7 +932,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="guardianName"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Educational Qualification.." required>
+																			placeholder="Educational Qualification.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Guardian Full Name.</div>
@@ -989,7 +948,7 @@
 																		-</label>
 																	<div class="col-lg-12">
 																		<input type="file" class="form-control"
-																			id="validationCustom01" name="guardianPhoto" required>
+																			id="validationCustom01" name="guardianPhoto" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Upload
 																			Guardian Photograph.</div>
@@ -1010,7 +969,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="fatherOccupation"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Father's Occupation.." required>
+																			placeholder="Father's Occupation.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Guardian Occupation.</div>
@@ -1028,7 +987,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="fatherEduaction"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Educational Qualification.." required>
+																			placeholder="Educational Qualification.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Father's Qualification.</div>
@@ -1046,7 +1005,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="fatherYearlyIncome"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Father's Yearly Income.." required>
+																			placeholder="Father's Yearly Income.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Yearly Income.</div>
@@ -1062,7 +1021,7 @@
 																		-</label>
 																	<div class="col-lg-12">
 																		<input type="file" class="form-control"
-																			id="validationCustom01" name="FatherPhoto" required>
+																			id="validationCustom01" name="FatherPhoto" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Upload
 																			Father's Photograph.</div>
@@ -1083,7 +1042,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="motherOccupation"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Mother Occupation.." required>
+																			placeholder="Mother Occupation.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Guardian Occupation.</div>
@@ -1101,7 +1060,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="motherEduaction"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Educational Qualification.." required>
+																			placeholder="Educational Qualification.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Father's Qualification.</div>
@@ -1119,7 +1078,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="motherYearlyIncome"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Mother's Yearly Income.." required>
+																			placeholder="Mother's Yearly Income.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Yearly Income.</div>
@@ -1135,7 +1094,7 @@
 																		-</label>
 																	<div class="col-lg-12">
 																		<input type="file" class="form-control"
-																			id="validationCustom01" name="motherPhoto" required>
+																			id="validationCustom01" name="motherPhoto" >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Upload
 																			Father's Photograph.</div>
@@ -1158,7 +1117,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="motherEduaction"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Bank Name..." required>
+																			placeholder="Bank Name..." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Bank Name.</div>
@@ -1177,7 +1136,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="BankbranchName"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Bank Branch Name.." required>
+																			placeholder="Bank Branch Name.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Bank Branch Name.</div>
@@ -1196,7 +1155,7 @@
 																	<div class="col-lg-12">
 																		<input type="text" name="accountNumber"
 																			class="form-control" id="validationCustom01"
-																			placeholder="Account Number.." required>
+																			placeholder="Account Number.." >
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Provide
 																			Account Number.</div>
@@ -1204,24 +1163,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="col-xl-4">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"> <span
-																		class="px-1"> <i class="fa-solid fa-volleyball"></i>
-																	</span> Hobbies -
-																	</label>
-																	<div class="col-lg-12">
-																		<input type="text" name="BankbranchName"
-																			class="form-control" id="validationCustom01"
-																			placeholder="Hobbies.." required>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Provide
-																			Bank Branch Name.</div>
-
-																	</div>
-																</div>
-															</div>
+															
 															<h5 class="card-title">Address</h5>
 															<div class="row">
 																<div class="form-group row">
@@ -1320,17 +1262,27 @@
 																		</div>
 																	</div>
 																</div>
+
+
 															</div>
 														</div>
-													</form>
-												</div>
+													</div>
 
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+
+							<div class="text-end">
+								<a class="btn btn-primary" href="#profile1" type="next">Next</a>
+								<button class="btn btn-primary" type="submit">Submit
+									Form</button>
+								<button class="btn btn-danger" type="reset">Reset</button>
+							</div>
+						</form>
+
 					</div>
 				</div>
 			</div>
@@ -1347,48 +1299,56 @@
 		src="assets/plugins/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 
 
-
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('#studentShortForm').submit(function(event) {
+			$("#studentShortForm").submit(function(event) {
 				event.preventDefault();
-				//let f = new FormData($("#addAcademicYear")[0])
-				   if ($('#studentShortForm')[0].checkValidity() === false) {
+				//var f = $(this).serialize();
+				let f = new FormData($(this)[0])
+				console.log(f)
+				 if ($("#studentShortForm")[0].checkValidity() === false) {
 				        event.stopPropagation();
 				    } else {
-						$.ajax({
-							type : 'POST',
-							url : 'DB/studentShortFormDB.jsp',
-							data:$('#studentShortForm').serialize(),
-							success : function(responce) {
-								console.log(responce.trim())
-								if (responce.trim() == "1") {
-									$('#studentShortForm')[0].reset()
-									Swal.fire({
-										icon: 'success',
-										  title: 'Studenet Entry Successfull' ,
-										  confirmButtonText: 'Ok',
-										}).then((result) => {
-										  /* Read more about isConfirmed, isDenied below */
-											 window.location.reload();
-										})
-								} else {
-									Swal.fire({
-									icon: 'error',
-									title: 'Something Went Wrong..' ,
-									confirmButtonText: 'Ok',
-									}).then((result) => {
-									/* Read more about isConfirmed, isDenied below */
-									})												
-								}
-							}
-						})
-				    }
-				    $("#studentShortForm").addClass('was-validated');
-				});
+				
+				$.ajax({
+					type : 'POST',
+					enctype : 'multipart/form-data',
+					url : 'DB/studentShortFormDB.jsp',
+					data : f,
+					processData : false,
+					contentType : false,
+					cache : false,
+					success : function(responce) {
+						if (responce.trim() == '1') {
+							 
+							console.log(responce.trim())
+							//$("#studentShortForm")[0].reset()
+							Swal.fire({
+								icon: 'success',
+								  title: 'School Added Successfully ' ,
+								  confirmButtonText: 'Ok',
+								}).then((result) => {
+								  /* Read more about isConfirmed, isDenied below */
+								})
+						} else {
+							Swal.fire({
+								icon: 'error',
+								  title: 'School cannot be added Something went Wrong' ,
+								  confirmButtonText: 'Ok',
+								}).then((result) => {
+								  /* Read more about isConfirmed, isDenied below */
+								})
+						}
+					}
+				})
+				
+			}
+			$("#studentShortForm").addClass('was-validated');
+
 			})
-		
+		})
 	</script>
+
 	<br>
 </body>
 </html>

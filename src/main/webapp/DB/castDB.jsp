@@ -6,7 +6,6 @@
 
 
 <%
-System.out.println("Inside");
 String castName = request.getParameter("castName");
 String status = request.getParameter("status");
 
@@ -15,14 +14,13 @@ int done = 0;
 try {
 
 	Connection con = ConnectionProvider.getConnection();
-	String query = "insert into casts(castName,status)values(?,?)";
+	String query = "insert into castcategory(castCategoryName,castCategoryStatus)values(?,?)";
 	PreparedStatement pstm = con.prepareStatement(query);
 	pstm.setString(1, castName);
 	pstm.setString(2, status);
 	done = pstm.executeUpdate();
 	//out.print(" \n" + i);
 	out.print(done);
-	System.out.println(done);
 
 } catch (Exception e) {
 	e.printStackTrace();

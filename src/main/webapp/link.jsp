@@ -11,9 +11,8 @@
 <link rel="stylesheet"
 	href="assets/plugins/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="assets/plugins/feather/feather.css">
 
-<link rel="stylesheet" href="assets/plugins/icons/flags/flags.css">
+
 
 <link rel="stylesheet" href="assets/plugins/twitter-bootstrap-wizard/form-wizard.css">
 
