@@ -22,14 +22,12 @@
 					<div class="row">
 						<div class="col">
 							<h3 class="page-title">Add Exam Form</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-							</ul>
+							
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
 								<h5 class="card-title">Add Exam Details -</h5>
@@ -56,51 +54,51 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col-md-7">
-						<div class="card">
-							<div class="card-header">
-								<h5 class="card-title">Enter Exam Name -</h5>
-							</div>
-							<div class="card-body">
-								<form action="#" class="d-flex">
-									<input type="text" class="form-control me-2 "
-										placeholder="Enter Search Keyword...">
-									<button class="btn btn-outline-success" type="submit">Search</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
+
 
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-header">
 							<h5 class="card-title">Exam Details -</h5>
 						</div>
-						<div class="card-body">
-							<div class="table-responsive">
-								<table class="table me-2 table-bordered">
-									<thead class="">
-										<tr class="text-center">
-											<th>Serial No.</th>
-											<th>Exam Name</th>
-											<th>Status</th>
-											<th>Update</th>
-										</tr>
-									</thead>
-								</table>
+						<div class="row p-3">
+							<div class="col-lg-10 col-md-2">
+								<div class="form-group text-center">
+									<label class="fw-bold">Enter Exam Name - </label> <select
+										class="form-control form-select">
+										<option value="" disabled selected hidden>Please
+											Select</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-2 col-md-2 text-center">
+								<div class="search-student-btn py-4">
+									<button type="search" class="btn button-large btn-primary">Search</button>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table me-2 table-bordered">
+										<thead class="">
+											<tr class="text-center">
+												<th>Serial No.</th>
+												<th>Exam Name</th>
+												<th>Status</th>
+												<th>Update</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<jsp:include page="footer.jsp"></jsp:include>
+			<script
+				src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 		</div>
-		<jsp:include page="footer.jsp"></jsp:include>
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
-	</div>
 </body>
 </html>

@@ -37,26 +37,12 @@
 													class="col-form-label col-lg-3"><span class="px-1"><i
 														class="fas fa-user"></i></span>Select Exam -</label>
 												<div class="col-lg-12">
-													<select class="form-control form-select"
-														name="studentReligion" id="validationCustom01" required>
-														<option value="" disabled selected hidden>Please
-															Select</option>
-														<%
-														try {
-															Connection con = ConnectionProvider.getConnection();
-															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from religion");
-															while (rs.next()) {
-														%>
-														<option value="<%=rs.getInt("religionId")%>">
-															<%=rs.getString("religionName")%></option>
-														<%
-														}
-
-														} catch (Exception e) {
-														e.printStackTrace();
-														}
-														%>
+													<select class="form-control form-select" name=""
+														id="validationCustom01" required>
+														<option></option>
+														<option></option>
+														<option></option>
+														<option></option>
 													</select>
 												</div>
 											</div>
@@ -135,19 +121,33 @@
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row">
-				<h3 class="page-title">Exam Details -</h3>
-				<div class="col-lg-12">
-					<div class="card">
-						<div class="card-body">
+				<div class="card">
+					<div class="card-header">
+						<h5 class="card-title ">Exam Details-</h5>
+					</div>
+
+					<div class="row p-3">
+						<div class="col-lg-3 col-md-10">
+							<div class="form-group text-center">
+								<label class="fw-bold"> Enter Exam Name - </label> <input
+									type="text" class="form-control"
+									placeholder="Enter Exam Name..">
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-2 text-center">
+							<div class="search-student-btn py-4">
+								<button type="search" class="btn button-large btn-primary">Search</button>
+							</div>
+						</div>
+
+						<div class="row p-3">
 							<div class="table-responsive">
-								<table class="table table-center mb-0 table-bordered">
+								<table class="table table-bordered text-center">
 									<thead>
-										<tr class="text-center">
-											<th>Serial No.</th>
-											<th>Exam Namer</th>
+										<tr>
+											<th>Sr.No.</th>
+											<th>Exam Name</th>
 											<th>Section Name</th>
 											<th>Start Date</th>
 											<th>End Date</th>
@@ -161,7 +161,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 
