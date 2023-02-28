@@ -110,7 +110,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 											<div class="form-group row">
 												<label class="col-lg-3 col-form-label">Mobile No</label>
 												<div class="col-lg-9">
-													<input type="number" class="form-control" name="moblileNo" required>
+													<input type="number" class="form-control" name="moblileNo"  pattern="\d{10}" maxlength="10" required>
 													<div class="valid-feedback">Looks good!</div>
 													<div class="invalid-feedback">Please Provide Mobile No.</div>
 												</div>
@@ -233,14 +233,14 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
 														try {
 															Connection con = ConnectionProvider.getConnection();
 															Statement stmt = con.createStatement();
-															ResultSet rs = stmt.executeQuery("select * from casts");
+															ResultSet rs = stmt.executeQuery("select * from castcategory");
 															while (rs.next()) {
 														%>
 
 
 
-														<option value="<%=rs.getInt("castId")%>">
-															<%=rs.getString("castName")%></option>
+														<option value="<%=rs.getInt("castCategoryId")%>">
+															<%=rs.getString("castCategoryName")%></option>
 														<%
 														}
 

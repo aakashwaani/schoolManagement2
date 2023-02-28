@@ -419,10 +419,6 @@
 															</div>
 														</div>
 													</div>
-
-
-
-
 												</div>
 											</div>
 										</div>
@@ -1254,7 +1250,7 @@
 
 															</div>
 														</div>
-											
+
 
 													</div>
 												</div>
@@ -1264,12 +1260,13 @@
 								</div>
 
 								<div class="text-end">
-									<a class="btn btn-primary" id="mybut" href="#profile1" type="next">Next</a>
+									<a class="btn btn-primary" id="mybut" href="#profile1"
+										type="next">Next</a>
 									<button class="btn btn-primary" type="submit">Submit
 										Form</button>
 									<button class="btn btn-danger" type="reset">Reset</button>
 								</div>
-								
+
 							</form>
 
 						</div>
