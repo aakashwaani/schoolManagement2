@@ -18,163 +18,173 @@
 
 		<div class="page-wrapper">
 			<div class="content container-fluid">
-				<div class=" col-md-12">
+				<div class="col-md-12">
 					<div class="card">
 						<div class="card-header">
 							<h5 class="card-title ">Download Student Details -</h5>
 						</div>
-						<div class="row p-3">
-							<div class="col-lg-3 col-md-2">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Academic Year </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-2">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Selection Section </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-2">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Select Class </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-2">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Gender </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Download Type </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+						<div class="card-body">
+							<form action="" method="POST" class="needs-validation" novalidate>
 
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="card card-table">
-							<div class="card-body">
-
-								<div class="page-header">
-									<div class="row align-items-center">
-										<div class="col">
-											<h5>Select Details-</h5>
+								<div class="row p-3">
+									<div class="col-md-2">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Academic Year </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
 										</div>
-										<div class="col-auto text-end float-end ms-auto download-grp">
-											<a href="#" class="btn btn-outline-primary me-2"><i
-												class="fas fa-download"></i> Download</a>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Selection Section </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Select Class </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Gender </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Download Type </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
 										</div>
 									</div>
 								</div>
-								<div class="table-responsive">
-									<table class="table table-bordered mb-0">
+							</form>
 
-										<tbody>
-											<tr>
-												<td><input type="checkbox" class="mx-2">Student
-													Prn No</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Registration Number</td>
-												<td><input type="checkbox" class="mx-2">Section
-													Name</td>
-												<td><input type="checkbox" class="mx-2">Class
-													Name</td>
+						</div>
+					</div>
 
-											</tr>
-											<tr>
-												<td><input type="checkbox" class="mx-2">Division
-													Name</td>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-table">
+								<div class="card-body">
+									<div class="page-header">
+										<div class="row align-items-center">
+											<div class="col">
+												<h5>Select Details-</h5>
+											</div>
+											<div class="col-auto text-end float-end ms-auto download-grp">
+												<a href="#" class="btn btn-outline-primary me-2"><i
+													class="fas fa-download"></i> Download</a>
+											</div>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-bordered mb-0">
 
-												<td><input type="checkbox" class="mx-2">Student
-													First Name</td>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" class="mx-2">Student
+														Prn No</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Registration Number</td>
+													<td><input type="checkbox" class="mx-2">Section
+														Name</td>
+													<td><input type="checkbox" class="mx-2">Class
+														Name</td>
 
-												<td><input type="checkbox" class="mx-2">Student
-													Middle Name</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Last Name</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="mx-2">Division
+														Name</td>
+
+													<td><input type="checkbox" class="mx-2">Student
+														First Name</td>
+
+													<td><input type="checkbox" class="mx-2">Student
+														Middle Name</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Last Name</td>
 
 
-											</tr>
-											<tr>
-												<td><input type="checkbox" class="mx-2">Student
-													Roll No</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Date Of Birth</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Birth Place</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Gender</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" class="mx-2">Student
-													Address</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Father Name</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Parents Mobile No</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Mother Name</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" class="mx-2">Student
-													Mother Contact</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Contact No</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Parents Landline</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Parents Email</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" class="mx-2">Student
-													Email</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Admission Date</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Religion</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Nationality</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" class="mx-2">Student
-													Cast Name</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Cast</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Aadhar No</td>
-												<td><input type="checkbox" class="mx-2">Student
-													Prev School</td>
-											</tr>
-										</tbody>
-									</table>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="mx-2">Student
+														Roll No</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Date Of Birth</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Birth Place</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Gender</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="mx-2">Student
+														Address</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Father Name</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Parents Mobile No</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Mother Name</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="mx-2">Student
+														Mother Contact</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Contact No</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Parents Landline</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Parents Email</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="mx-2">Student
+														Email</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Admission Date</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Religion</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Nationality</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="mx-2">Student
+														Cast Name</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Cast</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Aadhar No</td>
+													<td><input type="checkbox" class="mx-2">Student
+														Prev School</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
 								</div>
 							</div>
 						</div>
+
 					</div>
+
+
 				</div>
+
 			</div>
 
 		</div>
