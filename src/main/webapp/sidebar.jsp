@@ -190,8 +190,8 @@
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href=""><i class="fas fa-table"></i>
-						<span>Exam Pattern</span></a></li>
+				<li><a href=""><i class="fas fa-table"></i> <span>Exam
+							Pattern</span></a></li>
 				<li><a href="library.html"><i class="fas fa-book"></i> <span>Question
 							Paper</span></a></li>
 				<li class="submenu"><a href="#"><i
@@ -218,15 +218,11 @@
 						<li><a href=""></a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i
-						class="fas fa-file-invoice-dollar"></i> <span>Announcements</span>
+						class="fas fa-file-invwoice-dollar"></i> <span>Announcements</span>
 						<span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="announcementEntry.jsp">Announcement Entry</a></li>
+						<li><a href="">Announcement View</a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span>Assignments</span> <span

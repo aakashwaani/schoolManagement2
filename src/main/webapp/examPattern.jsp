@@ -24,11 +24,8 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Division Form</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-								<li class="breadcrumb-item active">Add Division</li>
-							</ul>
+							<h3 class="page-title">Exam Pattern Form</h3>
+							
 						</div>
 					</div>
 				</div>
@@ -47,49 +44,16 @@
 									<div class="form-group row">
 										<label> Select Section</label> <select class="form-control"
 											name="sectionId">
-
-											<%
-											try {
-
-												ResultSet rs = stmt1.executeQuery("select * from section");
-												while (rs.next()) {
-											%>
-
-
-
-											<option value="<%=rs.getInt("sectionId")%>">
-												<%=rs.getString("sectionName")%></option>
-											<%
-											}
-
-											} catch (Exception e) {
-											e.printStackTrace();
-											}
-											%>
+											<option></option>
+											<option></option>
 										</select>
 									</div>
 									<div class="form-group row">
 										<label> Select Class</label> <select
 											class="form-control form-select" name="classId">
+											<option></option>
+											<option></option>
 
-
-											<%
-											try {
-												ResultSet rs = stmt1.executeQuery("select * from studClass");
-												while (rs.next()) {
-											%>
-
-
-
-											<option value="<%=rs.getInt("classId")%>">
-												<%=rs.getString("className")%></option>
-											<%
-											}
-
-											} catch (Exception e) {
-											e.printStackTrace();
-											}
-											%>
 										</select>
 									</div>
 
@@ -98,7 +62,9 @@
 											type="text" id="validationCustom01" name="division"
 											class="form-control" required>
 										<div class="valid-feedback">Looks good!</div>
-										<div class="invalid-feedback">Please Enter Division Name.</div>
+										<div class="invalid-feedback">Please Enter Division
+											Name.</div>
+
 									</div>
 									<div class="form-group row">
 										<label for="validationCustom01">Status</label> <select
@@ -155,12 +121,13 @@
 											<td><%=rs.getString("status")%></td>
 											<td class="">
 												<div class="actions ">
-													<a href="updateDivision.jsp?id=<%=rs.getInt("divisionId")%>"
+													<a
+														href="updateDivision.jsp?id=<%=rs.getInt("divisionId")%>"
 														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>
 												</div>
-											</td>	
+											</td>
 										</tr>
 
 
@@ -189,47 +156,5 @@
 			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	</div>
 
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#addDivisionForm").submit(function(event) {
-				event.preventDefault();
-				//let f = new FormData($("#addAcademicYear")[0])
-				   if ($("#addDivisionForm")[0].checkValidity() === false) {
-				        event.stopPropagation();
-				    } else {
-						$.ajax({
-							type : 'POST',
-							url : 'DB/divisionDB.jsp',
-							data:$("#addDivisionForm").serialize(),
-							success : function(responce) {
-								console.log(responce.trim())
-								if (responce.trim() == "1") {
-									$("#addDivisionForm")[0].reset()
-									Swal.fire({
-										icon: 'success',
-										  title: 'Division Added Successfully ' ,
-										  confirmButtonText: 'Ok',
-										}).then((result) => {
-										  /* Read more about isConfirmed, isDenied below */
-											 window.location.reload();
-										})
-								} else {
-									Swal.fire({
-									icon: 'error',
-									title: 'Division cannot be added ' ,
-									confirmButtonText: 'Ok',
-									}).then((result) => {
-									/* Read more about isConfirmed, isDenied below */
-									})												
-								}
-							}
-						})
-				    }
-				    $("#addDivisionForm").addClass('was-validated');
-				});
-			})
-		
-	</script>
 </body>
 </html>
