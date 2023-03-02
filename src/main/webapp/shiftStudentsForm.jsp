@@ -23,70 +23,84 @@
 						<div class="card-header">
 							<h5 class="card-title ">SHIFT FROM</h5>
 						</div>
+						<div class="card-body">
+							<form action="" method="POST" class="needs-validation" novalidate>
 
-						<div class="row p-3">
-							<h5 class="card-title text-center">Shift From Previous Year
-								& Class -</h5>
-							<div class="col-lg-1 col-md-1"></div>
+								<div class="row p-2">
+									<div class="page-header">
+										<h5 class="card-title text-center">Shift From Previous
+											Year and Class</h5>
+									</div>
+									<div class="col-lg-1 col-md-1"></div>
 
-							<div class="col-lg-4 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Previous Year </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
+									<div class="col-lg-4 col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Previous Year </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Class of Next Year </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-2 text-center">
+										<div class="search-student-btn py-4">
+											<button type="button" class="btn button-large btn-warning"><i
+												class="fa-solid fa-magnifying-glass"></i>Search</button>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-lg-4 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Class of Next Year </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-2 text-center">
-								<div class="search-student-btn py-4">
-									<button type="btn" class="btn button-large btn-warning">Search</button>
-								</div>
-							</div>	
+							</form>
 						</div>
 					</div>
 					<div class="card">
 						<div class="card-header">
 							<h5 class="card-title ">SHIFT TO</h5>
 						</div>
+						<div class="card-body">
+							<form action="" method="POST" class="needs-validation" novalidate>
 
-						<div class="row p-3">
-							<h5 class="card-title text-center">Shift in to Next Year and
-								Class</h5>
+								<div class="row p-2">
+									<div class="page-header">
 
-							<div class="col-lg-1 col-md-1"></div>
-							<div class="col-lg-4 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Next Year </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
+										<h5 class="card-title text-center">Shift in to Next Year
+											and Class</h5>
+									</div>
+									<div class="col-lg-1 col-md-1"></div>
+									<div class="col-lg-4 col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Next Year </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Class of Next Year </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-2 text-center">
+										<div class="search-student-btn py-4">
+											<button type="button" class="btn button-large btn-primary"><i
+										class="fa-sharp fa-solid fa-arrow-up"></i>Shift</button>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-lg-4 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Class of Next Year </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-2 text-center">
-								<div class="search-student-btn py-4">
-									<button type="button" class="btn btn-large btn-primary">Shift</button>
-								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>

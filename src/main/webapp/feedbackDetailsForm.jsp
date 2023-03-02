@@ -25,59 +25,62 @@
 							Details-</h5>
 					</div>
 
-					<div class="row p-3">
-						<div class="col-lg-4 col-md-5">
-							<div class="form-group text-center">
-								<label class="fw-bold"> Feedback Topic Name </label> <select
-									class="form-control form-select">
-									<option value="" disabled selected hidden>Please
-										Select</option>
-								</select>
-							</div>
-						</div>
+					<div class="card-body">
+						<form action="" method="POST" class="needs-validation" novalidate>
 
-						<div class="col-lg-6 col-md-5">
-							<div class="form-group text-center">
-								<label class="fw-bold"> Search by Feedback Comment </label>
-								<div>
-									<input type="text" class="form-control"
-										placeholder="Enter search Keyword..">
+							<div class="row p-3">
+								<div class="col-lg-4 col-md-5">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Feedback Topic Name </label> <select
+											class="form-control form-select">
+											<option value="" disabled selected hidden>Please
+												Select</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-md-5">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Search by Feedback Comment </label>
+										<div>
+											<input type="text" class="form-control"
+												placeholder="Enter search Keyword..">
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-2 col-md-2 text-center">
+									<div class="search-student-btn py-4">
+										<button type="button" class="btn button-sm btn-warning">
+											Search</button>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-2 col-md-2 text-center">
-							<div class="search-student-btn py-4">
-								<button type="button" class="btn button-sm btn-warning">
-									Search
-								</button>
+
+
+							<div class="row p-3">
+								<div class="table-responsive">
+									<table class="table table-bordered text-center">
+										<thead>
+											<tr>
+												<th class="col-1">Sr.No.</th>
+												<th class="col-3">Feedback Topic Name</th>
+												<th class="col-3">Comment</th>
+												<th class="col-2">Created By</th>
+												<th class="col-2">Date and Time</th>
+												<th class="col-1">Action</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
 							</div>
-						</div>
+						</form>
+
 					</div>
 
-
-					<div class="row p-3">
-						<div class="table-responsive">
-							<table class="table table-bordered text-center">
-								<thead>
-									<tr>
-										<th class="col-1">Sr.No.</th>
-										<th class="col-3">Feedback Topic Name</th>
-										<th class="col-3">Comment</th>
-										<th class="col-2">Created By</th>
-										<th class="col-2">Date and Time</th>
-										<th class="col-1">Action</th>
-									</tr>
-								</thead>
-							</table>
-						</div>
-					</div>
 
 				</div>
-
-
 			</div>
 		</div>
-	</div>
 	</div>
 
 
