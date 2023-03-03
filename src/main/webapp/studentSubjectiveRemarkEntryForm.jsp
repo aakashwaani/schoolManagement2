@@ -20,6 +20,7 @@
 			<div class="content container-fluid">
 				<div class="col-md-12">
 					<div class="card">
+					<form action="" method="POST" class="needs-validation" novalidate>
 						<div class="card-header">
 							<h5 class="card-title ">Class Detail -</h5>
 						</div>
@@ -89,6 +90,7 @@
 								</div>
 							</div>
 						</div>
+						</form>
 					</div>
 
 					<div class="card">

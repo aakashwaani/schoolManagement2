@@ -24,32 +24,45 @@
 							<h5 class="card-title" style="text-align: center">New Mark
 								Entry Details</h5>
 						</div>
-						<div class="row p-3">
+						<div class="row p-2">
 							<div class="col-md-2">
-								<label class="fw-bold"> Exam Name: </label>
-								<label class="fw-bold"> Class Name: </label>
-								<label class="fw-bold"> Div Name: </label>
-								<label class="fw-bold"> Subject Name: </label>
+								<div class="row ">
+									<label class="fw-bold"> Exam Name: </label>
+								</div>
+								<div class="row ">
+									<label class="fw-bold"> Class Name: </label>
+								</div>
+								<div class="row ">
+									<label class="fw-bold"> Div Name: </label>
+								</div>
+								<div class="row ">
+									<label class="fw-bold"> Subject Name: </label>
+								</div>
 							</div>
+
+							<div class="col-md-2"></div>
+
+							<div class="col-md-2"></div>
+
+							<div class="col-md-2"></div>
+
 							<div class="col-md-2">
-								<label class="fw-bold"> </label>
-								<label class="fw-bold"> </label>
-								<label class="fw-bold"> </label>
-								<label class="fw-bold"> </label>
+								<div class="row ">
+									<label class="fw-bold"> Dist Name: </label>
+								</div>
+								<div class="row ">
+									<label class="fw-bold"> Dist Mark: </label>
+								</div>
+								<div class="row ">
+									<label class="fw-bold"> TOday's Date: </label>
+								</div>
+								<div class="row ">
+									<label class="fw-bold"> Current Time: </label>
+								</div>
 							</div>
-							
+
 							<div class="col-md-2"></div>
-							
-							<div class="col-md-2"></div>
-							
-							<div class="col-md-2">
-								<label class="fw-bold"> Dist Name: </label>
-								<label class="fw-bold"> Dist Mark: </label>
-								<label class="fw-bold"> Today's Date: </label>
-								<label class="fw-bold"> Current Time: </label>
-								
-							</div>
-							<div class="col-md-2"></div>
+
 						</div>
 					</div>
 
@@ -62,41 +75,29 @@
 								Class Division: A Student List</h5>
 						</div>
 						<div class="row p-3">
-							<div class="col-md-6">
+							<div class="col-md-2">
 								<div class="form-group">
-									<label class="fw-bold"> Roll No. - 1 </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>.............</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-bold"> Roll No. - 2 </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>.............</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="row p-3">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-bold"> Roll No. - 3 </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>.............</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="fw-bold"> Roll No. - 4 </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>.............</option>
-									</select>
-								</div>
-							</div>
+									<label class="fw-bold"> Roll No </label>
 
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="form-group">
+									<label class="fw-bold"> Student Name </label>
+									<div class="form-check form-switch">
+										<input class="form-check-input" type="checkbox"
+											id="flexSwitchCheckDefault"> <label
+											class="form-check-label" for="flexSwitchCheckDefault">Student Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="form-group">
+									<label class="fw-bold"> Obtain Mark </label> <input type="text"
+										class="form-control" id="enter mark" placeholder="Enter Mark"
+										name="enter mark">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
