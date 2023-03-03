@@ -24,75 +24,75 @@
 							<h5 class="card-title ">Task need to Perform-</h5>
 						</div>
 
+						<div class="card-body">
+							<div class="row p-3">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th class="card-title"><span class="badge bg-info">Prerequisites</span>
+													Following steps are needed to perform operation in next
+													academic year-</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
 
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr class="text-center">
+												<th>Step</th>
+												<th>Task Description</th>
+												<th>Active</th>
+											</tr>
 
-						<div class="row p-3">
-							<div class="table-responsive">
-								<table class="table table-bordered">
-									<thead>
-										<tr>
-											<th class="card-title">  <span class="badge bg-info">Prerequisites</span>
-												Following steps are needed to perform operation in next
-												academic year-</th>
-										</tr>
-									</thead>
-								</table>
+											<tr>
+												<td class="text-center">1</td>
+												<td>Create new academic year</td>
+												<td class="text-center"><a href="#"
+													class="btn btn-success btn-sm"><i
+														class="fa-solid fa-square-caret-right"></i> </a></td>
+											</tr>
+
+											<tr>
+												<td class="text-center">2</td>
+												<td>Shift classes to respective academic year</td>
+												<td class="text-center"><a href="#"
+													class="btn btn-success btn-sm"><i
+														class="fa-solid fa-square-caret-right"></i> </a></td>
+											</tr>
+
+											<tr>
+												<td class="text-center">3</td>
+												<td>Shift students to respective academic year</td>
+												<td class="text-center"><a href="#"
+													class="btn btn-success btn-sm"><i
+														class="fa-solid fa-square-caret-right"></i> </a></td>
+											</tr>
+
+											<tr>
+												<td class="text-center">4</td>
+												<td>Shift fees head to respective academic year</td>
+												<td class="text-center"><a href="#"
+													class="btn btn-success btn-sm"><i
+														class="fa-solid fa-square-caret-right"></i> </a></td>
+											</tr>
+
+											<tr>
+												<td class="text-center">5</td>
+												<td>Shift fees category to respective academic year</td>
+												<td class="text-center"><a href="#"
+													class="btn btn-success btn-sm"><i
+														class="fa-solid fa-square-caret-right"></i> </a></td>
+											</tr>
+
+										</thead>
+
+									</table>
+								</div>
+
 							</div>
-
-							<div class="table-responsive">
-								<table class="table table-bordered">
-									<thead>
-										<tr class="text-center">
-											<th>Step</th>
-											<th>Task Description</th>
-											<th>Active</th>
-										</tr>
-
-										<tr>
-											<td class="text-center">1</td>
-											<td>Create new academic year</td>
-											<td class="text-center"><a href="#"
-												class="btn btn-success btn-sm"><i
-													class="fa-solid fa-square-caret-right"></i> </a></td>
-										</tr>
-
-										<tr>
-											<td class="text-center">2</td>
-											<td>Shift classes to respective academic year</td>
-											<td class="text-center"><a href="#"
-												class="btn btn-success btn-sm"><i
-													class="fa-solid fa-square-caret-right"></i> </a></td>
-										</tr>
-
-										<tr>
-											<td class="text-center">3</td>
-											<td>Shift students to respective academic year</td>
-											<td class="text-center"><a href="#"
-												class="btn btn-success btn-sm"><i
-													class="fa-solid fa-square-caret-right"></i> </a></td>
-										</tr>
-
-										<tr>
-											<td class="text-center">4</td>
-											<td>Shift fees head to respective academic year</td>
-											<td class="text-center"><a href="#"
-												class="btn btn-success btn-sm"><i
-													class="fa-solid fa-square-caret-right"></i> </a></td>
-										</tr>
-
-										<tr>
-											<td class="text-center">5</td>
-											<td>Shift fees category to respective academic year</td>
-											<td class="text-center"><a href="#"
-												class="btn btn-success btn-sm"><i
-													class="fa-solid fa-square-caret-right"></i> </a></td>
-										</tr>
-
-									</thead>
-
-								</table>
-							</div>
-
 						</div>
 
 					</div>
