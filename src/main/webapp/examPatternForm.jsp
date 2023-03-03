@@ -24,6 +24,8 @@
 							<div class="card-header">
 								<h5 class="card-title ">Add New Pattern Details -</h5>
 							</div>
+							<form action="" method="POST" class="needs-validation"
+									novalidate>
 							<div class="container p-3">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -37,16 +39,16 @@
 								<div class="col-md-12">
 									<div class="form-group text-left">
 										<label class="fw-bold"> Enter Pattern Name</label> <input
-											type="email" class="form-control" id="email"
-											placeholder="Enter Exam Pattern Name" name="email">
+											type="exam pattern namel" class="form-control" id="exam pattern name"
+											placeholder="Enter Exam Pattern Name" name="exam pattern name">
 
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group text-left">
 										<label class="fw-bold"> Enter Pattern Mark</label> <input
-											type="email" class="form-control" id="email"
-											placeholder="Enter Exam Pattern Mark" name="email">
+											type="text" class="form-control" id="exam pattern namel"
+											placeholder="Enter Exam Pattern Mark" name="exam pattern name">
 									</div>
 								</div>
 
@@ -66,9 +68,12 @@
 									</div>
 								</div>
 							</div>
+							</form>
 						</div>
 					</div>
 					<div class="col-md-8">
+					<form action="" method="POST" class="needs-validation"
+									novalidate>
 						<div class="card">
 							<div class="card-header">
 								<h5 class="card-title ">Exam Pattern Details -</h5>
@@ -88,8 +93,8 @@
 									<div class="col-md-6">
 										<div class="form-group text-left">
 											<label class="fw-bold"> Enter Exam Pattern Name</label> <input
-												type="email" class="form-control" id="email"
-												placeholder="Enter Search Keyword" name="email">
+												type="text" class="form-control" id="exam pattern name"
+												placeholder="Enter Search Keyword" name="exam pattern name">
 										</div>
 									</div>
 									<div class="col-md-2 mt-4">
@@ -102,6 +107,7 @@
 								</div>
 							</div>
 						</div>
+						</form>
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">

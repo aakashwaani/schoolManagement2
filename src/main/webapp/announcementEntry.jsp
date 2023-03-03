@@ -8,7 +8,7 @@
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
-</head>
+</head>   
 <body>
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
@@ -24,106 +24,105 @@
 							<h5 class="card-title ">New Entry -</h5>
 						</div>
 						<div class="card-body">
-							<div class="row p-3">
-								<div class="col-md-4">
-									<div class="form-groupr">
-										<label class="fw-bold"> Select Selection </label> <select
-											class="form-control form-select">
-											<option value="" disabled selected hidden>Please
-												Select</option>
-										</select>
+							<form action="" method="POST" class="needs-validation" novalidate>
+								<div class="row p-3">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="fw-bold"> Select Selection </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group fw-bold">
-										<label class="fw-bold">Select </label> <input class="fw-bold"
-											type="checkbox"> class or <input class="fw-bold"
-											type="checkbox"> Group <select
-											class="form-control form-select">
+									<div class="col-md-4">
+										<div class="form-group fw-bold">
+											<label class="fw-bold">Select </label> <input class="fw-bold"
+												type="checkbox"> class or <input class="fw-bold"
+												type="checkbox"> Group <select
+												class="form-control form-select">
 
-											<option value="" disabled selected hidden>All</option>
-										</select>
+												<option value="" disabled selected hidden>All</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label class="fw-bold"> Select Division </label> <select
-											class="form-control form-select">
-											<option value="" disabled selected hidden>Please
-												Select</option>
-										</select>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="fw-bold"> Select Division </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
 									</div>
-								</div>
 
-								<div class="col-md-12">
-									<div class="form-group text-left">
-										<label class="fw-bold"> Announcement Title</label> <select
-											class="form-control form-select">
+									<div class="col-md-12">
+										<div class="form-group text-left">
+											<label class="fw-bold"> Announcement Title</label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Enter
+													Announcment Title ...</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form-group text-left" data-spy="scroll">
+											<label class="fw-bold">Announcement Message </label>
+
+											<textarea class="form-control form-control"
+												placeholder="please enter message here ..."></textarea>
 											<option value="" disabled selected hidden>Enter
-												Announcment Title ...</option>
-										</select>
+												Announcement Title ...</option>
+
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form ">
+											<label class="fw-bold">Announcement Date </label> <input
+												type="date" class="form-control me-2">
+										</div>
+										<div class="col-md-6">
+												<label class="fw-bold">Upload Document File </label> <br>
+												<input type="file" id="validationCustom01"
+													class="form-control" name="staffProfilePic" required>
+												<br>
+										</div>
 									</div>
 								</div>
 
-								<div class="col-md-6">
-									<div class="form-group text-left" data-spy="scroll">
-										<label class="fw-bold">Announcement Message </label>
-
-										<textarea class="form-control form-control"
-											placeholder="please enter message here ..."></textarea>
-										<option value="" disabled selected hidden>Enter
-											Announcement Title ...</option>
-
+								<div class="row p-3">
+									<div class="col-md-6">
+										<div style="text-align: left">
+											<button type="reset" value="reset"
+												class="btn btn-success btn-md">
+												<i class="fa-solid fa-eye"></i> View Announcement
+											</button>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div style="text-align: right">
+											<a href="#" class="btn btn-primary btn-md"><i
+												class="fa-regular fa-floppy-disk"></i> Create Announcement </a>
+											<button type="reset" value="reset"
+												class="btn btn-danger btn-md">
+												<i class="fa-sharp fa-solid fa-arrow-rotate-right"></i>
+												Reset Page
+											</button>
+										</div>
 									</div>
 								</div>
-
-								<div class="col-md-6">
-									<div class="form ">
-										<label class="fw-bold">Announcement Date </label> <input
-											type="date" class="form-control me-2">
-									</div>
-									<div clalss="col-md-6">
-										<form action="/action_page.php">
-											<label class="fw-bold">Upload Document File </label> <br>
-											<input type="file" id="validationCustom01"
-												class="form-control" name="staffProfilePic" required>
-											<br>
-										</form>
-									</div>
-								</div>
-							</div>
+							</form>
 						</div>
-						<div class="card-footer">
-							<div class="row p-3">
-								<div class="col-md-6">
-									<div style="text-align: left">
-										<button type="reset" value="reset"
-											class="btn btn-success btn-md">
-											<i class="fa-solid fa-eye"></i> Reset Page
-										</button>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div style="text-align: right">
-										<a href="#" class="btn btn-primary btn-md"><i
-											class="fa-regular fa-floppy-disk"></i> Create Announcement </a>
-										<button type="reset" value="reset"
-											class="btn btn-danger btn-md">
-											<i class="fa-sharp fa-solid fa-arrow-rotate-right"></i> Reset
-											Page
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</div>
-		</div>
+</div>
+</div>
 
 
 
-		<jsp:include page="footer.jsp"></jsp:include>
+			<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

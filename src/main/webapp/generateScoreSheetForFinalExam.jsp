@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.Statement"%>
@@ -23,112 +24,112 @@
 						<div class="card-header">
 							<h5 class="card-title ">Student Details -</h5>
 						</div>
+
 						<div class="card-body">
-							<div class="row p-3">
-								<div class="col-md-2">
-									<div class="form-groupr">
-										<label class="fw-bold"> Academic Year </label> <select
-											class="form-control form-select">
-											<option value="" disabled selected hidden>Please
-												Select</option>
-										</select>
+							<form action="" method="POST" class="needs-validation" novalidate>
+
+								<div class="row p-3">
+									<div class="col-md-2">
+										<div class="form-groupr">
+											<label class="fw-bold"> Academic Year </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-groupr">
-										<label class="fw-bold"> Select Selection </label> <select
-											class="form-control form-select">
-											<option value="" disabled selected hidden>Please
-												Select</option>
-										</select>
+									<div class="col-md-4">
+										<div class="form-groupr">
+											<label class="fw-bold"> Select Selection </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-group">
-										<label class="fw-bold"> Select Class </label> <select
-											class="form-control form-select">
-											<option value="" disabled selected hidden>Please
-												Select</option>
-										</select>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label class="fw-bold"> Select Class </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-group">
-										<label class="fw-bold"> Division </label> <select
-											class="form-control form-select">
-											<option value="" disabled selected hidden>Please
-												Select</option>
-										</select>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label class="fw-bold"> Division </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-2 py-4">
-									<div class="container">
-										<div style="text-align: right">
-											<a href="#" class="btn btn-warning btn-md"><i
-												class="fa-solid fa-magnifying-glass"></i> Search </a> <br>
-											<br>
+									<div class="col-md-2 py-4">
+										<div class="container">
+											<div style="text-align: right">
+												<a href="#" class="btn btn-warning btn-md"><i
+													class="fa-solid fa-magnifying-glass"></i> Search </a> <br>
+												<br>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-2">
+											<div class="card">
+												<div class="form-group text-left">
+													<label class="fw-bold text-center"> Academic Year</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="card">
+												<div class="form-group text-left" data-spy="scroll">
+													<label class="fw-bold">Class and Division </label>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="col-md-7">
+											<div class="card">
+												<div class="form-group text-left" data-spy="scroll">
+													<label class="fw-bold">Select Exam </label>
+
+													<textarea class="form-control form-control"></textarea>
+
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-							
-								
-							<div class="row">
-							
-								<div class="col-md-2">
-								<div class="card">
-									<div class="form-group text-left">
-										<label class="fw-bold" text="center"> Academic Year</label> 
-									</div>
-								</div>
-							</div>
-							
-								<div class="col-md-3">
-								<div class="card">
-									<div class="form-group text-left" data-spy="scroll">
-										<label class="fw-bold">Class and Division </label>
-									</div>
-								</div>
-								</div>
 
-							
-								<div class="col-md-7">
-									<div class="card">
-								<div class="form-group text-left" data-spy="scroll">
-										<label class="fw-bold">Select Exam </label>
 
-										<textarea class="form-control form-control"></textarea>
-										<option value="" disabled selected hidden></option>
-
+								<div class="row p-3">
+									<div class="col-md-12">
+										<div style="text-align: center">
+											<a href="#" class="btn btn-primary btn-md"><i
+												class="fa-regular fa-floppy-disk"></i> All Students </a>
+											<button type="reset" value="reset"
+												class="btn btn-danger btn-md">
+												<i class="fa-sharp fa-solid fa-arrow-rotate-right"></i>
+												Cancel
+											</button>
+										</div>
 									</div>
 								</div>
-							</div>
-							</div>
-						</div>
-						</div>
-						
-						<div class="card-footer">
-						<div class="container">
-							<div class="row p-3">
-								<div class="col-md-12">
-									<div style="text-align: center">
-										<a href="#" class="btn btn-primary btn-md"><i
-											class="fa-regular fa-floppy-disk"></i> All Students </a>
-										<button type="reset" value="reset"
-											class="btn btn-danger btn-md">
-											<i class="fa-sharp fa-solid fa-arrow-rotate-right"></i> Cancel
-										</button>
-									</div>
-								</div>
-							</div>
+							</form>
 						</div>
 					</div>
-					</div>
+
 				</div>
 			</div>
 		</div>
+	</div>
 
 
 
-		<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
