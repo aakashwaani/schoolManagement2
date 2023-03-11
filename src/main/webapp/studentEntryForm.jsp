@@ -21,6 +21,9 @@
 		<div class="page-wrapper">
 			<div class="content container-fluid">
 				<div class="col-xl-12">
+				
+				
+				
 					<div class="card">
 
 						<div class="card-body">
@@ -692,85 +695,6 @@
 																		<div class="valid-feedback">Looks good!</div>
 																		<div class="invalid-feedback">Please Enter
 																			Landline Number.</div>
-
-																	</div>
-																</div>
-															</div>
-														</div>
-
-
-														<h5 class="card-title">Academic & Transport Fee
-															Details -</h5>
-														<div class="row">
-															<div class="col-xl-3">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="far fa-money-bill-alt"></i></span>
-																		Select Fee Category -</label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="selectFeeCategory" id="validationCustom01">
-																			<option></option>
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select Fee
-																			Category.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-3">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fas fa-bus"></i></span> Select
-																		Transport Way -</label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="SelectTransportWay" id="validationCustom01">
-																			<option></option>
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select
-																			Transport Way.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-3">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="fas fa-user"></i></span> Select
-																		Slab -</label>
-																	<div class="col-lg-12">
-																		<select class="form-control form-select"
-																			name="selectSlab" id="validationCustom01">
-																			<option></option>
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Select
-																			Slab.</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-3">
-																<div class="form-group row">
-																	<label for="validationCustom01"
-																		class="col-form-label col-lg-3"><span
-																		class="px-1"><i class="far fa-money-bill-alt"></i></span>
-																		Slab Fees-</label>
-																	<div class="col-lg-12">
-																		<input type="number" class="form-control"
-																			id="validationCustom01" name="slabFees">
-																		<div class="valid-feedback">Looks good!</div>
-																		<div class="invalid-feedback">Please Enter Slab
-																			Fees.</div>
 
 																	</div>
 																</div>

@@ -13,7 +13,9 @@ MultipartRequest m = new MultipartRequest(request,
 int done = 0;
 try {
 	Connection con = ConnectionProvider.getConnection();
+	
 //Student Short Form
+
 	String studentFirstName = m.getParameter("studentFirstName");
 	String studentPRNNumber = m.getParameter("studentPRNNumber");
 	String gender = m.getParameter("gender");
@@ -32,6 +34,7 @@ try {
 	String classId = m.getParameter("selectClass");
 	
 //Student LongForm	
+
 	String onlineRegisteredId  =  m.getParameter("onlineRegisteredId");
 	String photograph ="/img/" + m.getFilesystemName("photograph");  
 	String studentBirthPlace =  m.getParameter("studentBirthPlace");
@@ -54,6 +57,7 @@ try {
 	
 	
 //Student Other Details Form
+
 
 
 String query = "insert into studentdetails(studentFirstName  ,studentLastName  ,studentMiddleName  ,onlineRegisteredId  ,dateOfBirth ,dateOfAdmission ,studentPRNNumber  ,studentBirthPlace  ,photograph  ,studentCast  ,gender  ,nationality  ,studentStatus  ,studentAddress  ,nameOfPreviousSchool  ,aadharNo  ,studentEmail  ,studentContactNo  ,studentFatherName  ,parentsEmail  ,fatherContactNo  ,studentMotherName  ,motherContactNo  ,landline  ,classFees ,selectFeeCategory  ,SelectTransportWay  ,selectSlab  ,slabFees  ,classId  ,sectionId  ,religionId  ,academicYearId  ,castCategoryId ) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
