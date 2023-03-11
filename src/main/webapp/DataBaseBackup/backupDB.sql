@@ -27,7 +27,10 @@ CREATE TABLE `academicyear` (
   `academicYear` int NOT NULL,
   `startmonthNumber` int NOT NULL,
   `nextAcademicYearDate` date NOT NULL,
-  PRIMARY KEY (`academicYearId`)
+  `schoolId` int DEFAULT NULL,
+  PRIMARY KEY (`academicYearId`),
+  KEY `schoolId` (`schoolId`),
+  CONSTRAINT `academicyear_ibfk_1` FOREIGN KEY (`schoolId`) REFERENCES `schools` (`schoolId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,34 +40,250 @@ CREATE TABLE `academicyear` (
 
 LOCK TABLES `academicyear` WRITE;
 /*!40000 ALTER TABLE `academicyear` DISABLE KEYS */;
-INSERT INTO `academicyear` VALUES (1,2023,9,'2023-08-04'),(2,2023,1,'2022-01-01'),(3,2020,7,'2022-07-15');
+INSERT INTO `academicyear` VALUES (1,2023,9,'2023-08-04',NULL),(2,2023,1,'2022-01-01',NULL),(3,2020,7,'2022-07-15',NULL);
 /*!40000 ALTER TABLE `academicyear` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `castecategory`
+-- Table structure for table `attendence`
 --
 
-DROP TABLE IF EXISTS `castecategory`;
+DROP TABLE IF EXISTS `attendence`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `castecategory` (
-  `casteCategoryId` int NOT NULL AUTO_INCREMENT,
-  `casteCategoryName` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL,
-  PRIMARY KEY (`casteCategoryId`),
-  UNIQUE KEY `casteCategoryId` (`casteCategoryId`),
-  UNIQUE KEY `casteCategoryName` (`casteCategoryName`)
+CREATE TABLE `attendence` (
+  `attendenceId` int NOT NULL AUTO_INCREMENT,
+  `attendence` varchar(2) NOT NULL,
+  `attendenceDate` date NOT NULL,
+  `studentId` int DEFAULT NULL,
+  `staffId` int DEFAULT NULL,
+  `subjectId` int DEFAULT NULL,
+  `classId` int DEFAULT NULL,
+  `divisionId` int DEFAULT NULL,
+  PRIMARY KEY (`attendenceId`),
+  KEY `studentId` (`studentId`),
+  KEY `staffId` (`staffId`),
+  KEY `subjectId` (`subjectId`),
+  KEY `classId` (`classId`),
+  KEY `divisionId` (`divisionId`),
+  CONSTRAINT `attendence_ibfk_1` FOREIGN KEY (`studentId`) REFERENCES `studentdetails` (`studentDetailsId`),
+  CONSTRAINT `attendence_ibfk_2` FOREIGN KEY (`staffId`) REFERENCES `staff` (`staffId`),
+  CONSTRAINT `attendence_ibfk_3` FOREIGN KEY (`subjectId`) REFERENCES `subjects` (`subjectId`),
+  CONSTRAINT `attendence_ibfk_4` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`),
+  CONSTRAINT `attendence_ibfk_5` FOREIGN KEY (`divisionId`) REFERENCES `division` (`divisionId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `castecategory`
+-- Dumping data for table `attendence`
 --
 
-LOCK TABLES `castecategory` WRITE;
-/*!40000 ALTER TABLE `castecategory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `castecategory` ENABLE KEYS */;
+LOCK TABLES `attendence` WRITE;
+/*!40000 ALTER TABLE `attendence` DISABLE KEYS */;
+/*!40000 ALTER TABLE `attendence` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ay_assign_class_to_students`
+--
+
+DROP TABLE IF EXISTS `ay_assign_class_to_students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ay_assign_class_to_students` (
+  `classId` int DEFAULT NULL,
+  `studentDetailsId` int DEFAULT NULL,
+  `academicYearId` int DEFAULT NULL,
+  KEY `classId` (`classId`),
+  KEY `studentDetailsId` (`studentDetailsId`),
+  KEY `academicYearId` (`academicYearId`),
+  CONSTRAINT `ay_assign_class_to_students_ibfk_1` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`),
+  CONSTRAINT `ay_assign_class_to_students_ibfk_2` FOREIGN KEY (`studentDetailsId`) REFERENCES `studentdetails` (`studentDetailsId`),
+  CONSTRAINT `ay_assign_class_to_students_ibfk_3` FOREIGN KEY (`academicYearId`) REFERENCES `academicyear` (`academicYearId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ay_assign_class_to_students`
+--
+
+LOCK TABLES `ay_assign_class_to_students` WRITE;
+/*!40000 ALTER TABLE `ay_assign_class_to_students` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ay_assign_class_to_students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ay_assign_class_to_teacher`
+--
+
+DROP TABLE IF EXISTS `ay_assign_class_to_teacher`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ay_assign_class_to_teacher` (
+  `classId` int DEFAULT NULL,
+  `staffId` int DEFAULT NULL,
+  `academicYearId` int DEFAULT NULL,
+  KEY `classId` (`classId`),
+  KEY `staffId` (`staffId`),
+  KEY `academicYearId` (`academicYearId`),
+  CONSTRAINT `ay_assign_class_to_teacher_ibfk_1` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`),
+  CONSTRAINT `ay_assign_class_to_teacher_ibfk_2` FOREIGN KEY (`staffId`) REFERENCES `staff` (`staffId`),
+  CONSTRAINT `ay_assign_class_to_teacher_ibfk_3` FOREIGN KEY (`academicYearId`) REFERENCES `academicyear` (`academicYearId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ay_assign_class_to_teacher`
+--
+
+LOCK TABLES `ay_assign_class_to_teacher` WRITE;
+/*!40000 ALTER TABLE `ay_assign_class_to_teacher` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ay_assign_class_to_teacher` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ay_assign_division_to_class`
+--
+
+DROP TABLE IF EXISTS `ay_assign_division_to_class`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ay_assign_division_to_class` (
+  `divisionId` int DEFAULT NULL,
+  `classId` int DEFAULT NULL,
+  `academicYearId` int DEFAULT NULL,
+  KEY `divisionId` (`divisionId`),
+  KEY `classId` (`classId`),
+  KEY `academicYearId` (`academicYearId`),
+  CONSTRAINT `ay_assign_division_to_class_ibfk_1` FOREIGN KEY (`divisionId`) REFERENCES `division` (`divisionId`),
+  CONSTRAINT `ay_assign_division_to_class_ibfk_2` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`),
+  CONSTRAINT `ay_assign_division_to_class_ibfk_3` FOREIGN KEY (`academicYearId`) REFERENCES `academicyear` (`academicYearId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ay_assign_division_to_class`
+--
+
+LOCK TABLES `ay_assign_division_to_class` WRITE;
+/*!40000 ALTER TABLE `ay_assign_division_to_class` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ay_assign_division_to_class` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ay_assign_section_to_class`
+--
+
+DROP TABLE IF EXISTS `ay_assign_section_to_class`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ay_assign_section_to_class` (
+  `sectionId` int DEFAULT NULL,
+  `classId` int DEFAULT NULL,
+  `academicYearId` int DEFAULT NULL,
+  KEY `sectionId` (`sectionId`),
+  KEY `classId` (`classId`),
+  KEY `academicYearId` (`academicYearId`),
+  CONSTRAINT `ay_assign_section_to_class_ibfk_1` FOREIGN KEY (`sectionId`) REFERENCES `section` (`sectionId`),
+  CONSTRAINT `ay_assign_section_to_class_ibfk_2` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`),
+  CONSTRAINT `ay_assign_section_to_class_ibfk_3` FOREIGN KEY (`academicYearId`) REFERENCES `academicyear` (`academicYearId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ay_assign_section_to_class`
+--
+
+LOCK TABLES `ay_assign_section_to_class` WRITE;
+/*!40000 ALTER TABLE `ay_assign_section_to_class` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ay_assign_section_to_class` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ay_assign_subject_to_class`
+--
+
+DROP TABLE IF EXISTS `ay_assign_subject_to_class`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ay_assign_subject_to_class` (
+  `classId` int DEFAULT NULL,
+  `subjectId` int DEFAULT NULL,
+  `academicYearId` int DEFAULT NULL,
+  KEY `classId` (`classId`),
+  KEY `subjectId` (`subjectId`),
+  KEY `academicYearId` (`academicYearId`),
+  CONSTRAINT `ay_assign_subject_to_class_ibfk_1` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`),
+  CONSTRAINT `ay_assign_subject_to_class_ibfk_2` FOREIGN KEY (`subjectId`) REFERENCES `subjects` (`subjectId`),
+  CONSTRAINT `ay_assign_subject_to_class_ibfk_3` FOREIGN KEY (`academicYearId`) REFERENCES `academicyear` (`academicYearId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ay_assign_subject_to_class`
+--
+
+LOCK TABLES `ay_assign_subject_to_class` WRITE;
+/*!40000 ALTER TABLE `ay_assign_subject_to_class` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ay_assign_subject_to_class` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ay_assign_subject_to_teacher`
+--
+
+DROP TABLE IF EXISTS `ay_assign_subject_to_teacher`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ay_assign_subject_to_teacher` (
+  `staffId` int DEFAULT NULL,
+  `classId` int DEFAULT NULL,
+  `subjectId` int DEFAULT NULL,
+  `academicYearId` int DEFAULT NULL,
+  KEY `staffId` (`staffId`),
+  KEY `classId` (`classId`),
+  KEY `subjectId` (`subjectId`),
+  KEY `academicYearId` (`academicYearId`),
+  CONSTRAINT `ay_assign_subject_to_teacher_ibfk_1` FOREIGN KEY (`staffId`) REFERENCES `staff` (`staffId`),
+  CONSTRAINT `ay_assign_subject_to_teacher_ibfk_2` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`),
+  CONSTRAINT `ay_assign_subject_to_teacher_ibfk_3` FOREIGN KEY (`subjectId`) REFERENCES `subjects` (`subjectId`),
+  CONSTRAINT `ay_assign_subject_to_teacher_ibfk_4` FOREIGN KEY (`academicYearId`) REFERENCES `academicyear` (`academicYearId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ay_assign_subject_to_teacher`
+--
+
+LOCK TABLES `ay_assign_subject_to_teacher` WRITE;
+/*!40000 ALTER TABLE `ay_assign_subject_to_teacher` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ay_assign_subject_to_teacher` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `castcategory`
+--
+
+DROP TABLE IF EXISTS `castcategory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `castcategory` (
+  `castCategoryId` int NOT NULL AUTO_INCREMENT,
+  `castCategoryName` varchar(255) NOT NULL,
+  `castCategoryStatus` varchar(10) NOT NULL,
+  PRIMARY KEY (`castCategoryId`),
+  UNIQUE KEY `castCategoryName` (`castCategoryName`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `castcategory`
+--
+
+LOCK TABLES `castcategory` WRITE;
+/*!40000 ALTER TABLE `castcategory` DISABLE KEYS */;
+INSERT INTO `castcategory` VALUES (1,'Open','Active'),(2,'ST','Active'),(3,'Sc ','Active');
+/*!40000 ALTER TABLE `castcategory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -319,145 +538,117 @@ INSERT INTO `studclass` VALUES (1,'2nd',1,'Active'),(2,'3rd',1,'Active'),(3,'4th
 UNLOCK TABLES;
 
 --
--- Table structure for table `studentguardiandetails`
+-- Table structure for table `studentdetails`
 --
 
-DROP TABLE IF EXISTS `studentguardiandetails`;
+DROP TABLE IF EXISTS `studentdetails`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `studentguardiandetails` (
-  `studentGuardianDetailsId` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `studentdetails` (
+  `studentDetailsId` int NOT NULL AUTO_INCREMENT,
+  `studentFirstName` varchar(255) DEFAULT NULL,
+  `studentLastName` varchar(255) DEFAULT NULL,
+  `studentMiddleName` varchar(255) DEFAULT NULL,
+  `onlineRegisteredId` varchar(50) DEFAULT NULL,
+  `dateOfBirth` date DEFAULT NULL,
+  `dateOfAdmission` date DEFAULT NULL,
+  `studentPRNNumber` varchar(255) DEFAULT NULL,
+  `studentBirthPlace` varchar(100) DEFAULT NULL,
+  `studentPhotograph` varchar(1000) DEFAULT NULL,
+  `studentCast` varchar(255) DEFAULT NULL,
+  `gender` varchar(20) DEFAULT NULL,
+  `nationality` varchar(100) DEFAULT NULL,
+  `studentStatus` varchar(10) DEFAULT NULL,
+  `studentAddress` varchar(255) DEFAULT NULL,
+  `nameOfPreviousSchool` varchar(255) DEFAULT NULL,
+  `aadharNo` varchar(12) DEFAULT NULL,
+  `studentEmail` varchar(255) DEFAULT NULL,
+  `studentContactNo` varchar(10) DEFAULT NULL,
+  `studentFatherName` varchar(255) DEFAULT NULL,
+  `parentsEmail` varchar(255) DEFAULT NULL,
+  `fatherContactNo` varchar(10) DEFAULT NULL,
+  `studentMotherName` varchar(255) DEFAULT NULL,
+  `motherContactNo` varchar(10) DEFAULT NULL,
+  `landline` varchar(13) DEFAULT NULL,
+  `classFees` varchar(20) DEFAULT NULL,
+  `studentHobbies` varchar(255) DEFAULT NULL,
+  `studentMotherTongue` varchar(255) DEFAULT NULL,
   `guardianFullName` varchar(255) DEFAULT NULL,
-  `guardianMOB` varchar(10) DEFAULT NULL,
-  `guardianRelationWithStudent` varchar(255) DEFAULT NULL,
-  `guardianQualification` varchar(10) DEFAULT NULL,
-  `guardianPhotograph` varchar(255) DEFAULT NULL,
-  `fatherFullName` varchar(255) DEFAULT NULL,
-  `fatherEmail` varchar(255) DEFAULT NULL,
-  `fatherMOB` varchar(10) DEFAULT NULL,
+  `guardianOccupation` varchar(255) DEFAULT NULL,
+  `guardianMobileNumber` varchar(255) DEFAULT NULL,
+  `guardianRelationWithStudnet` varchar(255) DEFAULT NULL,
+  `guardianQualification` varchar(255) DEFAULT NULL,
+  `guardianPhotograph` varchar(1000) DEFAULT NULL,
   `fatherOccupation` varchar(255) DEFAULT NULL,
   `fatherQualification` varchar(255) DEFAULT NULL,
   `fatherYearlyIncome` varchar(255) DEFAULT NULL,
-  `fatherPhotograph` varchar(255) DEFAULT NULL,
-  `motherFullName` varchar(255) DEFAULT NULL,
-  `motherEmail` varchar(255) DEFAULT NULL,
-  `motherMOB` varchar(10) DEFAULT NULL,
+  `fatherPhotograph` varchar(1000) DEFAULT NULL,
   `motherOccupation` varchar(255) DEFAULT NULL,
   `motherQualification` varchar(255) DEFAULT NULL,
   `motherYearlyIncome` varchar(255) DEFAULT NULL,
-  `motherPhotograph` varchar(255) DEFAULT NULL,
-  `familyLandlineNumer` varchar(12) DEFAULT NULL,
-  `guardianAccountNumer` varchar(50) DEFAULT NULL,
-  `guardianBankName` varchar(50) DEFAULT NULL,
-  `guardianBranchName` varchar(50) DEFAULT NULL,
+  `motherPhotograph` varchar(1000) DEFAULT NULL,
+  `bankName` varchar(255) DEFAULT NULL,
+  `branchName` varchar(255) DEFAULT NULL,
+  `accountNumber` varchar(255) DEFAULT NULL,
   `guardianAddress` varchar(255) DEFAULT NULL,
-  `streetOrLocation` varchar(255) DEFAULT NULL,
-  `district` varchar(255) DEFAULT NULL,
-  `cityOrVillage` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
-  `taluka` varchar(255) DEFAULT NULL,
-  `postalCode` varchar(255) DEFAULT NULL,
-  `studentId` int DEFAULT NULL,
-  PRIMARY KEY (`studentGuardianDetailsId`),
-  KEY `studentId` (`studentId`),
-  CONSTRAINT `studentguardiandetails_ibfk_1` FOREIGN KEY (`studentId`) REFERENCES `studentsdetails` (`studentId`)
+  `guardianStreetOrLocation` varchar(255) DEFAULT NULL,
+  `guardianDistrict` varchar(255) DEFAULT NULL,
+  `guardianCityOrVillage` varchar(255) DEFAULT NULL,
+  `guardianState` varchar(255) DEFAULT NULL,
+  `guardianTaluka` varchar(255) DEFAULT NULL,
+  `guardianPostalCode` varchar(255) DEFAULT NULL,
+  `classId` int DEFAULT NULL,
+  `sectionId` int DEFAULT NULL,
+  `religionId` int DEFAULT NULL,
+  `academicYearId` int DEFAULT NULL,
+  `castCategoryId` int DEFAULT NULL,
+  PRIMARY KEY (`studentDetailsId`),
+  KEY `religionId` (`religionId`),
+  KEY `academicYearId` (`academicYearId`),
+  KEY `sectionId` (`sectionId`),
+  KEY `castCategoryId` (`castCategoryId`),
+  KEY `classId` (`classId`),
+  CONSTRAINT `studentdetails_ibfk_1` FOREIGN KEY (`religionId`) REFERENCES `religion` (`religionId`),
+  CONSTRAINT `studentdetails_ibfk_2` FOREIGN KEY (`academicYearId`) REFERENCES `academicyear` (`academicYearId`),
+  CONSTRAINT `studentdetails_ibfk_3` FOREIGN KEY (`sectionId`) REFERENCES `section` (`sectionId`),
+  CONSTRAINT `studentdetails_ibfk_4` FOREIGN KEY (`castCategoryId`) REFERENCES `castcategory` (`castCategoryId`),
+  CONSTRAINT `studentdetails_ibfk_5` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `studentguardiandetails`
+-- Dumping data for table `studentdetails`
 --
 
-LOCK TABLES `studentguardiandetails` WRITE;
-/*!40000 ALTER TABLE `studentguardiandetails` DISABLE KEYS */;
-/*!40000 ALTER TABLE `studentguardiandetails` ENABLE KEYS */;
+LOCK TABLES `studentdetails` WRITE;
+/*!40000 ALTER TABLE `studentdetails` DISABLE KEYS */;
+/*!40000 ALTER TABLE `studentdetails` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `studentotherdetails`
+-- Table structure for table `subjects`
 --
 
-DROP TABLE IF EXISTS `studentotherdetails`;
+DROP TABLE IF EXISTS `subjects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `studentotherdetails` (
-  `studentOtherDetailsId` int NOT NULL AUTO_INCREMENT,
-  `nameOfPreviousSchool` varchar(255) DEFAULT NULL,
-  `adharNo` varchar(12) DEFAULT NULL,
-  `classFees` varchar(255) DEFAULT NULL,
-  `transportFeesCategory` varchar(255) DEFAULT NULL,
-  `transportWay` varchar(255) DEFAULT NULL,
-  `transportSlab` varchar(255) DEFAULT NULL,
-  `transportFees` varchar(255) DEFAULT NULL,
-  `studentHobby` varchar(255) DEFAULT NULL,
-  `studentMotherTougue` varchar(255) DEFAULT NULL,
-  `studentId` int DEFAULT NULL,
-  PRIMARY KEY (`studentOtherDetailsId`),
-  KEY `studentId` (`studentId`),
-  CONSTRAINT `studentotherdetails_ibfk_1` FOREIGN KEY (`studentId`) REFERENCES `studentsdetails` (`studentId`)
+CREATE TABLE `subjects` (
+  `subjectId` int NOT NULL AUTO_INCREMENT,
+  `subjectName` varchar(255) NOT NULL,
+  `classId` int DEFAULT NULL,
+  PRIMARY KEY (`subjectId`),
+  KEY `classId` (`classId`),
+  CONSTRAINT `subjects_ibfk_1` FOREIGN KEY (`classId`) REFERENCES `studclass` (`classId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `studentotherdetails`
+-- Dumping data for table `subjects`
 --
 
-LOCK TABLES `studentotherdetails` WRITE;
-/*!40000 ALTER TABLE `studentotherdetails` DISABLE KEYS */;
-/*!40000 ALTER TABLE `studentotherdetails` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `studentsdetails`
---
-
-DROP TABLE IF EXISTS `studentsdetails`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `studentsdetails` (
-  `studentId` int NOT NULL AUTO_INCREMENT,
-  `studentFirstName` varchar(255) NOT NULL,
-  `studentMiddleName` varchar(255) NOT NULL,
-  `studentLasttName` varchar(255) NOT NULL,
-  `studentMOB` varchar(10) NOT NULL,
-  `studentDOB` date NOT NULL,
-  `admissionDate` date NOT NULL,
-  `studentPRN` varchar(20) NOT NULL,
-  `gender` varchar(10) NOT NULL,
-  `studentNationality` varchar(255) NOT NULL,
-  `studentFeesCategory` varchar(255) NOT NULL,
-  `studentBirthPlace` varchar(255) NOT NULL,
-  `studentHomeaddress` varchar(1000) NOT NULL,
-  `studentSatus` varchar(10) NOT NULL,
-  `studentEmail` varchar(255) DEFAULT NULL,
-  `studentAcademicYearId` int DEFAULT NULL,
-  `studentSectionId` int DEFAULT NULL,
-  `studentClassId` int DEFAULT NULL,
-  `studentReligionId` int DEFAULT NULL,
-  `studentCastCategoryId` int DEFAULT NULL,
-  `OtherDetailsId` int DEFAULT NULL,
-  `GuardianDetailsId` int DEFAULT NULL,
-  PRIMARY KEY (`studentId`),
-  KEY `studentAcademicYearId` (`studentAcademicYearId`),
-  KEY `studentSectionId` (`studentSectionId`),
-  KEY `studentClassId` (`studentClassId`),
-  KEY `studentReligionId` (`studentReligionId`),
-  KEY `studentCastCategoryId` (`studentCastCategoryId`),
-  CONSTRAINT `studentsdetails_ibfk_1` FOREIGN KEY (`studentAcademicYearId`) REFERENCES `academicyear` (`academicYearId`),
-  CONSTRAINT `studentsdetails_ibfk_2` FOREIGN KEY (`studentSectionId`) REFERENCES `section` (`sectionId`),
-  CONSTRAINT `studentsdetails_ibfk_3` FOREIGN KEY (`studentClassId`) REFERENCES `studclass` (`classId`),
-  CONSTRAINT `studentsdetails_ibfk_4` FOREIGN KEY (`studentReligionId`) REFERENCES `religion` (`religionId`),
-  CONSTRAINT `studentsdetails_ibfk_5` FOREIGN KEY (`studentCastCategoryId`) REFERENCES `castecategory` (`casteCategoryId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `studentsdetails`
---
-
-LOCK TABLES `studentsdetails` WRITE;
-/*!40000 ALTER TABLE `studentsdetails` DISABLE KEYS */;
-/*!40000 ALTER TABLE `studentsdetails` ENABLE KEYS */;
+LOCK TABLES `subjects` WRITE;
+/*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
+/*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -469,4 +660,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-21 13:19:02
+-- Dump completed on 2023-03-11 14:10:05
