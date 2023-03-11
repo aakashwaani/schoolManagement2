@@ -18,95 +18,105 @@
 
 		<div class="page-wrapper">
 			<div class="content container-fluid">
+				<div class=" col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-title ">Class Details -</h5>
+						</div>
+						<div class="card-body">
+							<div class="row p-3">
+								<div class="col-lg-3 col-md-4">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Academic Year </label> <select
+											class="form-control form-select">
+											<option value="" disabled selected hidden>Please
+												Select</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-4">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Select Section </label> <select
+											class="form-control form-select">
+											<option value="" disabled selected hidden>Please
+												Select</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-4">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Select Class </label> <select
+											class="form-control form-select">
+											<option value="" disabled selected hidden>Please
+												Select</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row p-3">
+								<div class="col-lg-3 col-md-4">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Division </label> <select
+											class="form-control form-select">
+											<option value="" disabled selected hidden>Please
+												Select</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-4">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Select Subject </label> <select
+											class="form-control form-select">
+											<option value="" disabled selected hidden>Please
+												Select</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-4">
+									<div class="form-group text-center">
+										<label class="fw-bold"> Select Exam </label> <select
+											class="form-control form-select">
+											<option value="" disabled selected hidden>Please
+												Select</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="text-end p-2">
+									<button type="button" class="btn btn-outline-success ">Search</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="col-md-12">
 					<div class="card">
-					<form action="" method="POST" class="needs-validation" novalidate>
 						<div class="card-header">
-							<h5 class="card-title ">Class Detail -</h5>
+							<h5 class="card-title ">Class Details -</h5>
 						</div>
 						<div class="row p-3">
-							<div class="col-md-2">
-								<div class="form-group">
-									<label class="fw-bold"> Academic Year </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="fw-bold"> Select Selection </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="fw-bold"> Select Class </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-2"></div>
-						</div>
+							<div class="col-lg-3 col-md-3">
+								<div class="form-group text-center">
+									<label class="fw-bold"> Academic Year </label>
 
-						<div class="row p-3">
-							<div class="col-md-2">
-								<div class="form-group">
-									<label class="fw-bold"> Division </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="fw-bold"> Select Subject </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
+							<div class="col-lg-3 col-md-3">
+								<div class="form-group text-center">
+									<label class="fw-bold"> Class and Division </label>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="fw-bold"> Select Exam </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
+							<div class="col-lg-3 col-md-3">
+								<div class="form-group text-center">
+									<label class="fw-bold"> Subject Name </label>
 								</div>
 							</div>
-							<div class="col-md-2 py-4">
-								<div style="text-align: right">
-									<a href="#" class="btn btn-warning button-large btn-md"><i
-										class="fa-solid fa-magnifying-glass"></i> Search </a>
+							<div class="col-lg-3 col-md-3">
+								<div class="form-group text-center">
+									<label class="fw-bold"> Exam Name </label>
 								</div>
 							</div>
 						</div>
-						</form>
-					</div>
-
-					<div class="card">
-						<div class="container">
-							<div class="row p-3" style="text-align: center">
-								<div class="col-md-2 fw-bold">Academic Year</div>
-								<div class="col-md-2 fw-bold">Class and Division</div>
-								<div class="col-md-4 fw-bold">Subject Name</div>
-								<div class="col-md-4 fw-bold">Exam Name</div>
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="card">
 						<div class="row p-3">
 							<div class="col-md-6">
 								<div class="form-group">
@@ -142,7 +152,6 @@
 									</select>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>

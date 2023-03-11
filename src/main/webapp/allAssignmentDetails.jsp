@@ -81,8 +81,6 @@
 											<a href="#" class="btn btn-warning btn-md"><i
 												class="fa-solid fa-magnifying-glass"></i> Search</a>
 										</div>
-
-
 									</div>
 								</div>
 
