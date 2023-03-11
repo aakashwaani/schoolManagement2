@@ -17,44 +17,48 @@
 						<div class="card-header">
 							<h5 class="card-title ">Upload New Timetable -</h5>
 						</div>
-						<div class="row p-3">
-
-							<div class="col-lg-3 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Selection Section </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
+						<div class="card-body">
+							<form id="timetableForm" class="needs-validation" method="POST"
+								role="form" enctype="multipart/form-data" novalidate>
+								<div class="row p-3">
+									<div class="col-lg-3 col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Selection Section </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-3">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Select Class </label> <select
+												class="form-control form-select">
+												<option value="" disabled selected hidden>Please
+													Select</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-4">
+										<div class="form-group text-center">
+											<label class="fw-bold"> Upload Timetable </label> <input
+												type="file" name="" class="form-control"
+												id="validationCustom01" required>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-2">
+										<div class="form-group text-center">
+											<label class="fw-bold">File Name </label> <input type="text"
+												name="" class="form-control" id="validationCustom01"
+												disabled required>
+										</div>
+									</div>
+									<div class="text-end p-2">
+										<button class="btn btn-primary" type="submit">Upload</button>
+										<button class="btn btn-danger" type="reset">Reset</button>
+									</div>
 								</div>
-							</div>
-							<div class="col-lg-3 col-md-3">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Select Class </label> <select
-										class="form-control form-select">
-										<option value="" disabled selected hidden>Please
-											Select</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-4">
-								<div class="form-group text-center">
-									<label class="fw-bold"> Upload Timetable </label> <input
-										type="file" name="" class="form-control"
-										id="validationCustom01" required>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-2">
-								<div class="form-group text-center">
-									<label class="fw-bold">File Name </label> <input type="text"
-										name="" class="form-control" id="validationCustom01" disabled
-										required>
-								</div>
-							</div>
-							<div class="text-end p-2">
-								<button class="btn btn-primary" type="submit">Upload</button>
-								<button class="btn btn-danger" type="reset">Reset</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -121,12 +125,10 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
-
 </body>
 </html>

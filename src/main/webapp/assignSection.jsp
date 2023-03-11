@@ -17,22 +17,7 @@
 		<div class="page-wrapper">
 
 			<div class="content container-fluid">
-
-				<div class="page-header">
-					<div class="row">
-						<div class="col">
-							<h3 class="page-title">Assign Section Form</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-								<li class="breadcrumb-item active">Assign Section</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-
 				<div class="row">
-
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-header">
@@ -42,8 +27,8 @@
 								<form action="#">
 									<div class="form-group">
 										<label for="validationCustom01"> Select Section</label> <select
-											class="form-control form-select" name="sectionId" id="validationCustom01"
-											required>
+											class="form-control form-select" name="sectionId"
+											id="validationCustom01" required>
 
 											<%
 											try {
@@ -69,17 +54,35 @@
 
 
 									<div class="form-group">
-										<label> Select Co-ordinator</label> <select
-											class="form-control">
-											<option></option>
-											<option></option>
-											<option></option>
+										<label for="validationCustom01"> Select Co-ordinator</label> <select
+											class="form-control form-select" name="sectionId"
+											id="validationCustom01" required>
+
+											<%
+											try {
+												Connection con = ConnectionProvider.getConnection();
+												Statement stmt = con.createStatement();
+												ResultSet rs = stmt.executeQuery("select * from staff");
+												while (rs.next()) {
+											%>
+											<option value="<%=rs.getInt("staffId")%>">
+												<%=rs.getString("firstName")%>
+												<%=rs.getString("middleName")%>
+												<%=rs.getString("lastName")%>
+											</option>
+											<%
+											}
+
+											} catch (Exception e) {
+											e.printStackTrace();
+											}
+											%>
 										</select>
 									</div>
 
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Submit</button>
-										<button type="submit" class="btn btn-danger">Reset</button>
+										<button type="reset" class="btn btn-danger">Reset</button>
 									</div>
 								</form>
 							</div>

@@ -99,7 +99,6 @@
 											class="form-control" required>
 										<div class="valid-feedback">Looks good!</div>
 										<div class="invalid-feedback">Please Enter Division Name.</div>
-
 									</div>
 									<div class="form-group row">
 										<label for="validationCustom01">Status</label> <select

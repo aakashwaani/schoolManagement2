@@ -12,7 +12,7 @@
 
 	try {
 		MultipartRequest m = new MultipartRequest(request,
-		"C:/Users/prati/eclipse-workspace/schoolManagement2/src/main/webapp/img", 1048 * 1048 * 1048);
+		"C:/Users/akash/eclipse-workspace/schoolManagement1/src/main/webapp/img", 1048 * 1048 * 1048);
 
 		Connection con = ConnectionProvider.getConnection();
 		//staffId, firstName, middleName, lastName, email, moblileNo, gender, joiningDate, dateofBirth, staffAddress, qualification, 

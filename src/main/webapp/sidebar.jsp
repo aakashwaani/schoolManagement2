@@ -114,7 +114,7 @@
 						<li><a href="dailyAttendenceReport.jsp">Daily Attendence</a></li>
 						<li><a href="daywiseAttendenceReport.jsp">Daywise
 								Attendence</a></li>
-						<li><a href="classWiseAttendenceReport.jsp">ClassWise
+						<li><a href="yearlyClasswiseAttendanceReport.jsp">ClassWise
 								Attendence Report</a></li>
 					</ul></li>
 				<li class="menu-title"><span>Examination</span></li>
@@ -132,11 +132,11 @@
 						<span class="menu-arrow"></span></a>
 					<ul>
 						<li><a href="">Main Distribution</a></li>
-						<li><a href="">Add Exam</a></li>
-						<li><a href="">Add Exam Details</a></li>
+						<li><a href="addExamForm.jsp">Add Exam</a></li>
+						<li><a href="examDetailsForm.jsp">Add Exam Details</a></li>
 						<li><a href="">Add Exam Subjects</a></li>
 						<li><a href="">Subject Distribution</a></li>
-						<li><a href="">Grade System</a></li>
+						<li><a href="gradeForm.jsp">Grade System</a></li>
 						<li><a href="">Remark Entry</a></li>
 
 					</ul></li>
@@ -185,13 +185,13 @@
 					<ul>
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
-						<li><a href="]"></a></li>
+						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 					</ul></li>
-				<li><a href="examDetailsForm.jsp"><i class="fas fa-table"></i>
-						<span>Exam Details</span></a></li>
+				<li><a href=""><i class="fas fa-table"></i> <span>Exam
+							Pattern</span></a></li>
 				<li><a href="library.html"><i class="fas fa-book"></i> <span>Question
 							Paper</span></a></li>
 				<li class="submenu"><a href="#"><i
@@ -218,15 +218,11 @@
 						<li><a href=""></a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i
-						class="fas fa-file-invoice-dollar"></i> <span>Announcements</span>
+						class="fas fa-file-invwoice-dollar"></i> <span>Announcements</span>
 						<span class="menu-arrow"></span></a>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="announcementEntry.jsp">Announcement Entry</a></li>
+						<li><a href="">Announcement View</a></li>
 					</ul></li>
 				<li class="submenu"><a href="#"><i
 						class="fas fa-file-invoice-dollar"></i> <span>Assignments</span> <span

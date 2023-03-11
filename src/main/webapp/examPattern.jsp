@@ -1,14 +1,19 @@
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="com.schoolmanagement.helper.ConnectionProvider"%>
-<%@page import="java.sql.*"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <jsp:include page="link.jsp"></jsp:include>
 </head>
 <body>
+	<%
+	Connection con1 = ConnectionProvider.getConnection();
+	Statement stmt1 = con1.createStatement();
+	%>
 	<div class="main-wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 		<jsp:include page="sidebar.jsp"></jsp:include>
@@ -19,38 +24,52 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Designation Form</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-								<li class="breadcrumb-item active">Add Designation</li>
-							</ul>
+							<h3 class="page-title">Exam Pattern Form</h3>
+							
 						</div>
 					</div>
 				</div>
 
 
 				<div class="row">
-
-					<div class="col-md-8">
+					<div class="col-xl-8">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Designation Form</h5>
+								<h5 class="card-title">Division Form -</h5>
 							</div>
 							<div class="card-body">
-								<form action="./DB/designationDB.jsp" class="needs-validation"
-									novalidate>
-									<div class="form-group">
-										<label for="validationCustom01"> Designation Name</label> <input
-											type="text" class="form-control" name="designationName"
-											id="validationCustom01" required>
+								<form action="DB/divisionDB.jsp" method="post"
+									id="addDivisionForm" role="form" class="needs-validation"
+									no-validate>
+									<div class="form-group row">
+										<label> Select Section</label> <select class="form-control"
+											name="sectionId">
+											<option></option>
+											<option></option>
+										</select>
+									</div>
+									<div class="form-group row">
+										<label> Select Class</label> <select
+											class="form-control form-select" name="classId">
+											<option></option>
+											<option></option>
+
+										</select>
+									</div>
+
+									<div class="form-group row">
+										<label for="validationCustom01"> Division Name</label> <input
+											type="text" id="validationCustom01" name="division"
+											class="form-control" required>
 										<div class="valid-feedback">Looks good!</div>
-										<div class="invalid-feedback">Please Provide
-											Designation.</div>
+										<div class="invalid-feedback">Please Enter Division
+											Name.</div>
+
 									</div>
 									<div class="form-group row">
 										<label for="validationCustom01">Status</label> <select
-											class="form-control" id="validationCustom01" required
-											name="status">
+											class="form-control form-select" id="validationCustom01"
+											required name="status">
 											<option>Active</option>
 											<option>In-Active</option>
 										</select>
@@ -58,9 +77,10 @@
 										<div class="invalid-feedback">Please Provide Section
 											Name.</div>
 									</div>
+
 									<div class="text-end">
 										<button type="submit" class="btn btn-primary">Save</button>
-										<button type="reset" class="btn btn-danger">Reset</button>
+										<button type="submit" class="btn btn-danger">Reset</button>
 									</div>
 								</form>
 							</div>
@@ -71,16 +91,16 @@
 					<div class="card">
 						<div class="card-header">
 
-							<h5 class="card-title">Designation Details -</h5>
+							<h5 class="card-title">Division Details -</h5>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class=" mb-0 table table-striped ">
+								<table class=" mb-0 table table-bordered">
 									<thead class="bg-primary">
 
-										<tr>
+										<tr class="text-center">
 											<th>Serial No.</th>
-											<th>Section Name</th>
+											<th>Division Name</th>
 											<th>Status</th>
 											<th>Update</th>
 										</tr>
@@ -90,18 +110,20 @@
 										try {
 											int cnt = 1;
 											Connection con = ConnectionProvider.getConnection();
-											Statement stmt = con.createStatement();
-											ResultSet rs = stmt.executeQuery("select * from designation");
+											Statement stmt = con1.createStatement();
+											ResultSet rs = stmt1.executeQuery("select * from division");
 											while (rs.next()) {
 										%>
 
-										<tr>
+										<tr class="text-center">
 											<td><%=cnt%></td>
-											<td><%=rs.getString("designationName")%></td>
+											<td><%=rs.getString("division")%></td>
 											<td><%=rs.getString("status")%></td>
 											<td class="">
 												<div class="actions ">
-													<a href="" class="btn btn-sm bg-danger-light"> <i
+													<a
+														href="updateDivision.jsp?id=<%=rs.getInt("divisionId")%>"
+														class="btn btn-sm bg-danger-light"> <i
 														class="feather-edit"></i>
 													</a>
 												</div>
@@ -128,6 +150,10 @@
 		</div>
 
 		<jsp:include page="footer.jsp"></jsp:include>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 	</div>
 
 </body>

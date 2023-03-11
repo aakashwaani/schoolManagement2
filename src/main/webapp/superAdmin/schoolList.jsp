@@ -80,7 +80,7 @@
 
 												<td class="">
 													<div class="actions ">
-														<a href="updateSection.jsp?id=<%=rs.getInt("schoolId")%>"
+														<a href="updateSchool.jsp?id=<%=rs.getInt("schoolId")%>"
 															class="btn btn-sm bg-danger-light"> <i
 															class="feather-edit"></i>
 														</a>
